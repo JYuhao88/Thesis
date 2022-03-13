@@ -1,0 +1,317 @@
+% !Mode:: "TeX:UTF-8"
+
+\BiChapter{深度学习方法简介}{}
+
+\BiSection{神经网络}{}
+
+一般的神经网络定义为一个函数$N(x): \mathbb{R}^d \rightarrow \mathbb{R}$，由线性变换和非线性变换复合而成。
+\begin{equation}\label{nnet}
+N(x; \theta) = W^{[L]} \sigma( \cdots W^{[2]} \sigma(W^{[1]} x + b^{[1]}) + b^{[2]} \cdots ) + b^{[L]}
+\end{equation}
+其中$\sigma: \mathbb{R} \rightarrow \mathbb{R}$叫做“激活函数”，它作用在向量上相当于作用于每个分量。$L$叫做网络的“层数”，$ W^{[l]} \in \mathbb{R}^{N^{[l-1]} \times N^{[l]}}, b^{[l]} \in \mathbb{R}^{N^{[l]}}$是待定的参数，其中$l = 1, 2, \cdots, L$。所有待定参数的集合定义为$\theta$。$N^{[l]}$称为第$l$层的“宽度”，$N^{[0]}$表示输入维数，$N^{[L]}$表示输出维数。
+
+多层的网络可以通过递推写成如下形式：
+\begin{equation}
+\begin{split}
+x^{[1]} & = x \\
+y^{[l]} & = W^{[l]} x^{[l]} + b^{[l]} \qquad l = 1, 2, \cdots, L \\
+x^{[l+1]} & = \sigma(y^{[l]}) \qquad l = 1, 2, \cdots, L-1 \\
+N(x; \theta) = y & = y^{[L]}
+\end{split}
+\end{equation}
+其中$x^{[1]}$和$y^{[1]}$也叫做每一层的“输入”和“输出”。
+
+常用的激活函数有ReLU，tanh，softplus等函数，下面列出了这几种函数的表达式和图像。函数图像如图\ref{fig1-0}。
+\begin{equation}
+\begin{split}
+\mathrm{ReLU}(x) & = \max\{0, x\} \\
+\tanh(x) & = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \\
+\mathrm{softplus}(x) & = \log(1 + e^{x})
+\end{split}
+\end{equation}
+
+\begin{figure}[htbp]
+\centering
+\subfigure[ReLU]{\includegraphics[width = 0.3\textwidth]{\fpath relu}}
+\subfigure[tanh]{\includegraphics[width = 0.3\textwidth]{\fpath tanh}}
+\subfigure[softplus]{\includegraphics[width = 0.3\textwidth]{\fpath softplus}}
+\caption{常用激活函数图像}
+\label{fig1-0}
+\end{figure}
+
+
+用深度学习方法解决问题，通常需要把问题转化为无约束优化问题，进而求解。这里我们介绍几种现有的问题和处理方法。
+
+\BiSubsection{拟合函数}{}
+
+在拟合函数问题中，我们已知函数在某些点$x_i \in S$上的函数值$f(x_i)$。用网络拟合函数就变成了一个无约束优化问题
+\begin{equation}
+\min_{\theta} L(\theta) = \sum_{x_i \in S} |N(x_i; \theta) - f(x_i)|^2
+\end{equation}
+
+\BiSubsection{Ritz方法求解方程}{}
+
+求解方程的Ritz方法来自文献\cite{weinan2018deep, liao2019deep}。以求解椭圆方程\eqref{prob1}为例。通过数学上的推导我们可以得到，方程的解等价于如下泛函的极小值，因此问题可以转化为如下优化问题
+\begin{equation}
+\begin{split}
+& \min_{u} \int_{\Omega} \frac{1}{2} a(x) \; |\nabla u(x)|^2 + \frac{1}{2} c(x) \; |u(x)|^2 - f(x) \; u(x) \ dx \\
+& \text{s.t.} \quad u(x) = u_0(x) \quad \forall \; x \in \partial \Omega
+\end{split}
+\end{equation}
+
+我们用神经网络$N(x; \theta)$近似待求解的未知函数$u(x)$，问题转化为
+\begin{equation}
+\begin{split}
+& \min_{\theta} \int_{\Omega} \frac{1}{2} a(x) \; |\nabla_x N(x; \theta)|^2 + \frac{1}{2} c(x) \; |N(x; \theta)|^2 - f(x) \; N(x; \theta) \ dx \\
+& \text{s.t.} \quad N(x; \theta) = u_0(x) \quad \forall \; x \in \partial \Omega
+\end{split}
+\end{equation}
+
+这是一个约束优化问题，我们可以通过加惩罚项的方法把它近似转化成无约束优化问题。转化后的无约束优化问题为
+\begin{equation}
+\begin{split}
+\min_{\theta} L(\theta) & = \int_{\Omega} \frac{1}{2} a(x) \; |\nabla_x N(x; \theta)|^2 + \frac{1}{2} c(x) \; |N(x; \theta)|^2 - f(x) \; N(x; \theta) \ dx \\
+& + \beta \int_{\partial \Omega} |N(x; \theta) - u_0(x)|^2 \ dx
+\end{split}
+\end{equation}
+其中$\beta$是惩罚系数，是一个很大的常数。
+
+\BiSubsection{直接法求解方程}{}
+
+直接法求解方程相当于文献\cite{raissi2019physics}中提出的PINN方法。以求解椭圆方程\eqref{prob1}为例，这里我们对网络求二阶导数，直接把右端项和方程相减，得到残量。为了求解方程，我们希望极小化残量，因此问题可以转化为如下优化问题
+\begin{equation}
+\begin{split}
+& \min_{u} \int_{\Omega} |-\nabla(a(x) \; \nabla u(x)) + c(x) \; u(x) - f(x)|^2 \ dx \\
+& \text{s.t.} \quad u(x) = u_0(x) \quad x \in \partial \Omega
+\end{split}
+\end{equation}
+
+通过类似的方法处理，得到最终的损失函数为
+\begin{equation}
+\begin{split}
+\min_{\theta} L(\theta) & = \int_{\Omega} |-\nabla_x(a(x) \; \nabla_x N(x; \theta)) + c(x) \; N(x; \theta) - f(x)|^2 \ dx \\
+& + \beta \int_{\partial \Omega} |N(x; \theta) - u_0(x)|^2 \ dx
+\end{split}
+\end{equation}
+其中$\beta$是惩罚系数。
+
+\BiSubsection{Ritz方法求解特征值问题}{}
+
+以求解椭圆方程特征值问题\eqref{prob2}为例。首先，我们求解特征值问题的最小特征值$\lambda_1$和对应的特征函数$u_1(x)$。特征值问题可以同样的方法转化成泛函极小值问题。其中特征函数对应泛函的极小值点，特征值对应泛函的极小值。对应的泛函极小值问题表示为
+\begin{equation}
+\begin{split}
+\lambda_1 = & \min_{u} \int_{\Omega} a(x) \; |\nabla u(x)|^2 + c(x) \; |u(x)|^2 \ dx \\
+& \text{s.t.} \quad u(x) = 0 \quad x \in \partial \Omega \\
+& \text{and} \quad \int_{\Omega} |u(x)|^2 \ dx = 1
+\end{split}
+\end{equation}
+
+在特征值问题中，特征函数可以在特征子空间内任意选取。也就是说，如果某一个函数是方程的特征函数，它乘以一个倍数也是特征函数。但是在使用神经网络的过程中，我们不希望网络的输出过大或者过小，因此我们限制特征函数的平方在整个区域上积分为$1$。
+
+通过类似的方法处理，得到最终的损失函数为
+\begin{equation}
+\begin{split}
+\min_{\theta} L(\theta) & = \int_{\Omega} a(x) \; |\nabla_x  N(x; \theta)|^2 + c(x) \; | N(x; \theta)|^2 \ dx \\
+& + \beta_1 \int_{\partial \Omega} |N(x; \theta)|^2 \ dx \\
+& + \beta_2 \left( \int_{\Omega} |N(x; \theta)|^2 \ dx - 1 \right)^2
+\end{split}
+\end{equation}
+其中$\beta_1, \beta_2$是惩罚系数。
+
+注意到损失函数中共有两项，$\beta_1$对应的项用于约束网络的边界值满足要求，$\beta_2$对应的项约束网络的输出不能太大或太小。在优化问题中，目标函数的最小值就近似是我们所求的特征值$\lambda_1$，此时的神经网络就近似是对应的特征函数$u_1$。
+
+下面我们考虑求解后面的特征值。在我们已经得到前$n-1$个最小特征值和对应的特征函数的基础上，根据特征函数之间的正交性，我们可以写出第$n$个最小的特征值$\lambda_n$和对应的特征函数$u_n(x)$满足的条件为
+\begin{equation}
+\begin{split}
+\lambda_n = & \min_{u} \int_{\Omega} a(x) \; |\nabla u(x)|^2 + c(x) \; |u(x)|^2 \ dx \\
+& \text{s.t.} \quad u(x) = 0 \quad x \in \partial \Omega \\
+& \text{and} \quad \int_{\Omega} |u(x)|^2 \ dx = 1 \\
+& \text{and} \quad \int_{\Omega} u(x) \; u_k(x) \ dx = 0 \quad \text{for} \; k = 1, 2, \cdots, n-1
+\end{split}
+\end{equation}
+
+通过类似的方法处理，得到最终的损失函数为
+\begin{equation}
+\begin{split}
+\min_{\theta} L(\theta) & = \int_{\Omega} a(x) \; |\nabla_x  N(x; \theta)|^2 + c(x) \; | N(x; \theta)|^2 \ dx \\
+& + \beta_1 \int_{\partial \Omega} |N(x; \theta)|^2 \ dx \\
+& + \beta_2 \left( \int_{\Omega} |N(x; \theta)|^2 \ dx - 1 \right)^2 \\
+& + \beta_3 \sum_{k=1}^{n} \left( \int_{\Omega} N(x; \theta) \; u_k(x) \ dx \right)^2
+\end{split}
+\end{equation}
+其中$\beta_1, \beta_2, \beta_3$是惩罚系数。$\beta_3$对应的项用于约束需要求解的目标函数和已知的特征函数正交。
+
+由于在实际的计算过程中，正交性不可能完全被满足，特征函数的计算也会有误差。因此随着计算的特征值增大，正交性损失会越来越严重，误差也会越来越大。因此Ritz方法只适合计算较小的几个特征值。
+
+\BiSubsection{直接法求解特征值问题}{}
+
+以求解椭圆方程特征值问题\eqref{prob2}为例，这里我们同样直接把右端项和方程相减。由于特征值$\lambda$也是未知量，我们把$\lambda$也作为优化变量。
+
+问题可以转化为
+\begin{equation}
+\begin{split}
+& \min_{u, \lambda} \int_{\Omega} |-\nabla(a(x) \; \nabla u(x)) + c(x) \; u(x) - \lambda \; u(x)|^2 \ dx \\
+& \text{s.t.} \quad u(x) = 0 \quad x \in \partial \Omega
+\end{split}
+\end{equation}
+
+通过类似的方法处理，得到最终的损失函数为
+\begin{equation}
+\begin{split}
+\min_{\theta, \lambda} L(\theta) & = \int_{\Omega} |-\nabla_x(a(x) \; \nabla_x N(x; \theta)) + c(x) \; N(x; \theta) - \lambda \;  N(x; \theta)|^2 \ dx \\
+& + \beta \int_{\partial \Omega} |N(x; \theta)|^2 \ dx
+\end{split}
+\end{equation}
+其中$\beta$是惩罚系数。
+
+这里要注意的是，直接法只能保证优化问题的解近似等于问题的某一个特征值和对应的特征函数，但是我们并不知道它在整体特征值中的顺序。此外，我们需要给待优化的变量$\lambda$和神经网络中的参数一个初始猜测，但并没有理论保证神经网络一定收敛到距离初始猜测最近的特征值。总的来说，直接法只能找到满足特征值问题的某个解，无法告诉我们关于特征值的其它信息。
+
+\BiSection{重要性采样}{}
+
+在求解方程和特征值问题的过程中，我们经常会遇到计算求解区域内部或边界上的积分。这些积分显然无法在理论上计算出表达式。对于高维区域，通常的数值积分方法难以应用，因此我们用蒙特卡洛方法，利用随机数计算积分。
+
+以计算区域$\Omega$上的积分为例。首先，我们在区域上生成服从概率密度函数为$\rho(x)$分布的随机点，这些点组成集合$S$，其中概率密度函数满足$\int_{\Omega} \rho(x) \ dx = 1$且$\rho(x) > 0$。此时，积分可以近似表示为
+\begin{equation}
+\int_{\Omega} u(x) \ dx \approx \frac{1}{|S|} \sum_{x \in S} u(x) \frac{1}{\rho(x)}
+\end{equation}
+其中$\rho(x)$可以根据需要任意选取。最简单的取法就是选取为均匀分布$\rho(x) = 1 / |\Omega|$，此时积分公式变为
+\begin{equation}
+\frac{1}{|\Omega|} \int_{\Omega} u(x) \ dx \approx \frac{1}{|S|} \sum_{x \in S} u(x)
+\end{equation}
+
+由于$\rho(x)$的选取有很大的随意性，因此我们可以在训练网络的过程中，根据实际情况自适应地选取概率密度，在我们关注的区域内生成更密的积分点，从而提高精度。
+
+\BiSection{BP算法}{}
+
+在网络的训练中，最重要的就是计算导数。这里要用到的方法是BP算法。它是一种误差逆向传播的算法，用于训练多层神经网络。
+
+以拟合函数任务为例，在网络\ref{nnet}中，我们首先定义每一层的“误差传递”为
+\begin{equation}
+e^{[l]} = \frac{\partial L(\theta)}{\partial y^{[l]}}
+\end{equation}
+它代表损失函数对每一层的输出求导。
+
+根据链式法则，损失函数对权重和偏移的导数为
+\begin{equation}
+\begin{split}
+\frac{\partial L(\theta)}{W^{[l]}} & = \frac{\partial L(\theta)}{\partial y^{[l]}} \cdot \frac{\partial y^{[l]}}{\partial W^{[l]}} = e^{[l]} {x^{[l]}}^{T} \\
+\frac{\partial L(\theta)}{b^{[l]}} & = \frac{\partial L(\theta)}{\partial y^{[l]}} \cdot \frac{\partial y^{[l]}}{\partial b^{[l]}} = e^{[l]}
+\end{split}
+\end{equation}
+
+最后一层的“误差传递”为
+\begin{equation}
+e^{[L]} = \frac{\partial L(\theta)}{\partial y^{[L]}}
+\end{equation}
+
+已知下一层和上一层之间的关系为
+\begin{equation}
+y^{[l+1]} = W^{[l+1]} \sigma(y^{[l]}) + b^{[l+1]}
+\end{equation}
+所以前一层的“误差传递”可以被后一层表示为
+\begin{equation}
+e^{[l]} = \frac{\partial L(\theta)}{\partial y^{[l]}} = \frac{\partial L(\theta)}{\partial y^{[l+1]}} \frac{\partial y^{[l+1]}}{\partial y^{[l]}} = ({W^{[l+1]}}^T e^{[l+1]}) : \sigma'(y^{[l]})
+\end{equation}
+其中$a : b$代表向量中对应元素相乘。
+
+在BP算法中，首先根据输入，从前到后求出每一层的$x^{[l]}, y^{[l]}$，这个过程叫做“前代”。
+然后根据损失函数，从后到前求出每一层的$e^{[l]}$，这个过程叫做“回传”。
+最后根据所使用的优化算法，用导数值更新参数，进行下一步迭代。
+
+这里需要注意的是，如果某一层的$\sigma'(y^{[l]})$特别小，或者$W^{[l+1]}$特别小，误差传递就会从这一层开始变得特别小，这就是“梯度消失”现象。反之，如果这些量特别大，误差传递也会在深度神经网络中随着层数越来越大，造成“梯度爆炸”现象。这两种现象都会导致训练失败。在实际计算中，我们要尽量避免这两种现象。
+
+\BiSection{优化算法简介}{}
+
+深度学习会把问题转化为一个无约束优化问题来求解，这样的优化问题通常维数很高，而且是非凸的，找到全局最优解十分困难，一般我们用迭代法找到某个可以接受的局部最优解。这里介绍一些常用的优化算法。
+
+\BiSubsection{梯度下降法}{}
+
+在求解无约束优化问题时，梯度下降法是最基本的方法之一。在求解损失函数的最小值时，可以通过梯度下降法来迭代求解，得到最小化的损失函数和模型参数值。
+
+所有待定参数的集合定义为$\theta$。梯度下降法就是选取初值$\theta^{(0)}$，进行迭代。公式为
+\begin{equation}
+\begin{split}
+g^{(n)} & = \frac{\partial L}{\partial \theta}(\theta^{(n)}) \\
+\theta^{(n+1)} & = \theta^{(n)} - \eta \; g^{(n)}
+\end{split}
+\end{equation}
+其中，$\theta^{(n)}$表示第$n$步迭代的参数值，$\eta$表示步长，在深度学习方法中，$\eta$被称为“学习率”。
+在直观上，梯度下降法相当于每次选择损失函数下降最快的方向，向这个方向走一步。
+
+在学习率足够小的情况下，梯度下降方法可以看作参数按照如下的方程进行演化。
+\begin{equation}
+\frac{\partial \theta}{\partial t} = - \eta \frac{\partial L}{\partial \theta}
+\end{equation}
+其中$t$代表演化时间，它可以看作是迭代步数的连续表示。
+
+梯度下降法是最简单的优化方法，但是它处理一些复杂的非线性函数会出现问题。如果损失函数具有平缓的山谷，最小点就在这些山谷之中，此时的优化过程就会出现振荡，速度非常缓慢。
+
+\BiSubsection{带动量的梯度下降法}{}
+
+为了抑制梯度下降法的震荡，我们在梯度下降的过程中加入惯性。在直观上，对于下坡的时候，如果发现是陡坡，就可以利用惯性跑的快一些。
+\begin{equation}
+\begin{split}
+g^{(n)} & = \frac{\partial L}{\partial \theta}(\theta^{(n)}) \\
+m^{(n+1)} & = \beta \; m^{(n)} + (1 - \beta) \; g^{(n+1)} \\
+\theta^{(n+1)} & = \theta^{(n)} - \eta \; m^{(n+1)}
+\end{split}
+\end{equation}
+其中$m^{(n)}$表示一阶动量，它代表整个迭代过程中，梯度的历史加权平均值。距离当前越远的时刻，对应的权重越小。
+
+也就是说，在带动量的梯度下降法中，当前时刻的下降方向不仅由当前点的梯度方向决定，而且由此前累积的梯度方向决定。 算法中$\beta$的经验值为$0.9$，这就意味着下降方向主要是此前累积的下降方向，并略微偏向当前时刻的下降方向。这样在损失函数有陡坡的时候可以达到快速收敛。
+
+\BiSubsection{Adam方法}{}
+
+进一步，我们不仅可以引入一阶动量，还可以引入二阶动量对迭代的步长进行修正。具体的迭代算法如下
+\begin{equation}
+\begin{split}
+g^{(n)} & = \frac{\partial L}{\partial \theta}(\theta^{(n)}) \\
+m^{(n+1)} & = \beta_1 \; m^{(n)} + (1 - \beta_1) \; g^{(n+1)} \\
+V^{(n+1)} & = \beta_2 \; V^{(n)} + (1 - \beta_2) \; (g^{(n+1)})^2 \\
+\theta^{(n+1)} & = \theta^{(n)} - \eta \; m^{(n+1)} / \sqrt{V^{(n+1)}}
+\end{split}
+\end{equation}
+算法中参数的经验值为$\beta_1 = 0.9, \beta_2 = 0.999$，
+
+Adam方法具有鲁棒性强，收敛速度快等特点，在实际计算中经常使用。本文所有数值实验均通过Adam方法进行计算，但是理论推导部分以梯度下降法为主。
+
+\BiSection{过拟合现象}{}
+
+过拟合在机器学习中是一种常见的现象。在机器学习中，我们希望算法能够从有限的数据中提取出模型的一般特征，这样在遇到新样本时才能做出正确的判别。然而，当算法学得“太好”的时候，就会把一些来源于数据的自身特点当做了模型的普遍特征。这时算法的学习能力过强，以至于把训练样本所包含的不太一般的特性都学到了。这样的现象称为过拟合。
+
+作为一个简单的例子，我们用一个规模为1-100-100-100-1的全连接神经网络拟合如图的数据，图\ref{fig1-1}中分别画出了训练20步，100步和2000步的拟合结果。图中绿色的线代表我们要拟合的目标函数，蓝色的点是在目标函数上加上扰动得到的数据点，红色的线是网络得到的结果。从图中可以看出，在训练步数很少的时候，网络的输出离数据点和目标函数都很远，这说明网络还没有学习到数据中的规律，在训练步数合适的时候，网络可以很好地拟合目标函数，过滤掉数据点中的误差，而在训练步数过多的情况下，网络不仅拟合了目标函数，还会学习到数据点中的误差。此时网络在数据点上的损失变小了，对于目标函数来说误差却变大了。
+\begin{figure}[htbp]
+\centering
+\subfigure[训练20步（欠拟合）]{\includegraphics[width = 0.3\textwidth]{\fpath fit20}}
+\subfigure[训练100步]{\includegraphics[width = 0.3\textwidth]{\fpath fit100}}
+\subfigure[训练2000步（过拟合）]{\includegraphics[width = 0.3\textwidth]{\fpath fit2000}}
+\caption{过拟合示意图（拟合函数）}
+\label{fig1-1}
+\end{figure}
+
+在深度学习方法求解方程的过程中，过拟合现象依然存在。在损失函数的表达式中，我们通常无法理论上计算出积分的值，需要通过数值积分的方法近似计算，这相当于只使用了网络在某些点的信息，而不是在整个区域内的全部信息。如果我们选取的积分点很少，或者训练步数很多，也会出现类似的过拟合现象。此时随着训练的进行，网络的损失函数会下降，但是得到的近似解和真实解之间的误差却会增加。
+
+我们选取一个规模为1-100-100-100-1的全连接神经网络，激活函数选为$\mathrm{ReLU}$。用Ritz方法求解如下方程
+\begin{equation}
+\left\{
+\begin{split}
+& -\triangle u(x) = \sin(\pi x) & \text{for} \; x \in (0, 1) \\
+& \quad u(0) = u(1) = 0
+\end{split}
+\right.
+\end{equation}
+方程的精确解为
+\begin{equation}
+u(x) = \frac{1}{\pi^2} \sin(\pi x)
+\end{equation}
+这里的积分点使用的是区间$[0,1]$上的均匀网格，网格步长为$0.05$。
+
+图中分别画出了训练20步，70步和1000步的拟合结果。图中绿线是方程的精确解，红线是对应步数下的网络结果。可以看出，在求解方程的过程中，过拟合现象依然存在。为了克服这一问题，我们在训练过程中，每训练一步就重新采样，生成新的积分点。这样就可以从根本上避免求解方程问题中的过拟合现象了。
+\begin{figure}[htbp]
+\centering
+\subfigure[训练20步（欠拟合）]{\includegraphics[width = 0.3\textwidth]{\fpath solve20}}
+\subfigure[训练70步]{\includegraphics[width = 0.3\textwidth]{\fpath solve70}}
+\subfigure[训练1000步（过拟合）]{\includegraphics[width = 0.3\textwidth]{\fpath solve1000}}
+\caption{过拟合示意图（求解方程）}
+\label{fig1-2}
+\end{figure}
