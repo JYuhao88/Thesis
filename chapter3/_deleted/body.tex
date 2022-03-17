@@ -1,0 +1,194 @@
+% !Mode:: "TeX:UTF-8"
+
+\BiChapter{神经网络的仿射不变性}{Input methods of equations}
+
+在实际问题中，我们通常希望模型和输入数据的尺度无关。但是在实验中，对输入或者输出数据进行线性变换，得到的结果可能完全不同。本章我们从简单的一维例子开始，论述对网络的输入和输出进行线性变换，会对网络产生什么影响。
+
+为了简单，本章中所有的证明仅考虑了两层神经网络，同时也只考虑了在一维区间上的情形。这些证明都可以轻易地推广到高维情况和层数更多的网络。
+
+\BiSection{输入变换对拟合任务的影响}{}
+
+已知函数$f: \Omega = [A, B] \rightarrow \mathbb{R}$，用网络拟合这个函数。
+
+这里我们考虑两层的网络，网络定义为
+\begin{equation}\label{neteq}
+u(x; \theta) = \sum_{j=1}^{H} a_j \sigma(w_j x + b_j) \quad x \in \Omega
+\end{equation}
+
+在拟合任务中，损失函数定义为
+\begin{equation}\label{loss}
+L(\theta) = \frac{1}{B-A} \int_{A}^{B} |f(x) - u(x; \theta)|^2 \ dx
+\end{equation}
+这个损失函数可以看成是离散的损失函数
+$$ \frac{1}{N} \sum_{i=1}^{N} |f(x_i) - u(x_i; \theta)|^2 $$
+对应的连续形式。
+
+我们通过梯度下降法来训练网络，考虑连续情形，参数$\theta$随训练时间的变化为
+\begin{equation}\label{gd}
+\frac{d \theta}{d t} = - \eta \frac{\partial L}{\partial \theta}
+\end{equation}
+其中$\eta$是学习率。
+
+下面我们把一般区间$\Omega = [A, B]$伸缩到单位区间$\hat{\Omega} = [0,1]$上。定义线性变换$S: \hat{\Omega}= [0, 1] \rightarrow \Omega = [A, B]$。它就是普通的伸缩和平移$x = S(\hat{x}) = (B-A)\hat{x} + A$。
+
+把函数$f$伸缩到单位区间上，得到$\hat{f}$，它满足$\hat{f}(\hat{x}) = f(x)$。
+
+在单位区间上定义一个新的两层网络
+\begin{equation}\label{nethat}
+\hat{u}(\hat{x}; \hat{\theta}) = \sum_{j=1}^{H} \hat{a}_j \sigma(\hat{w}_j \hat{x} + \hat{b}_j) \quad \hat{x} \in \hat{\Omega}
+\end{equation}
+
+在相同的学习率下训练单位区间上的网络，我们希望找到单位区间上的网络和原区间上的网络的联系。
+
+首先，在初始化的时候，我们把单位区间上的初值定义成由原区间上的伸缩变换而来。
+定义在参考单元上新的的参数$\hat{\theta}$为
+\begin{equation}\label{trans1}
+\hat{a}_j = a_j \quad \hat{w}_j = (B-A) w_j \quad \hat{b}_j = A w_j + b_j
+\end{equation}
+这个时候，在初始$t=0$的时候，两个区间上的网络就满足$\hat{u}(\hat{x}; \hat{\theta}) = u(x; \theta)$。
+
+在初始时刻，单位区间上的损失函数为
+\begin{equation}\label{losshat}
+\hat{L}(\hat{\theta}) = \int_{0}^{1} |\hat{f}(\hat{x}) - u(\hat{x}; \hat{\theta})|^2 \ d \hat{x} = \frac{1}{B-A} \int_{A}^{B} |f(x) - u(x; \theta)|^2 \ dx = L(\theta)
+\end{equation}
+也就是说，$t=0$的时候，两个问题的损失函数相等。
+
+在初始时刻，损失函数对参数$w$的导数，满足关系
+$$ \frac{\partial \hat{L}}{\partial \hat{w}_j} = (B-A) \frac{\partial L}{\partial w_j} $$
+对参数$b$的导数，满足
+$$ \frac{\partial \hat{L}}{\partial \hat{b}_j} = \frac{\partial L}{\partial b_j} + A \frac{\partial L}{\partial w_j} $$
+对其它参数的导数不变。
+
+对于参数$\hat{w}_j$，它的变化为
+$$ \frac{d \hat{w}_j}{d t} = -\eta \frac{\partial \hat{L}}{\partial \hat{w}_j} = -\eta (B-A) \frac{\partial L}{\partial w_j} = (B-A) \frac{d w_j}{d t} $$
+对于参数$\hat{b}_j$，它的变化为
+$$ \frac{\partial \hat{b}_j}{\partial t} = -\eta \frac{\partial \hat{L}}{\partial \hat{b}_j} = -\eta \frac{\partial L}{\partial b_j} - \eta A \frac{\partial L}{\partial w_j} = \frac{d b_j}{d t} + A \frac{d w_j}{d t} $$
+
+因此可以得到
+$$ \hat{a}_j = a_j \quad \hat{w}_j = (B-A) w_j \quad \hat{b}_j = A w_j + b_j \quad \forall \; t \geq 0 $$
+
+这就说明：只要按照\ref{trans1}中所示选取网络的初值，在所有的训练过程中，两个网络的参数也会一直保持\ref{trans1}中所示的线性关系。
+
+
+类似的结论可以轻易推广到更复杂的情况。这里的结果告诉我们，\textbf{对输入数据进行线性变换相当于改变网络的第一层参数的初始值。}具体来说：在区间$[A,B]$上拟合函数，就相当于在区间$[0,1]$上用相同的学习率拟合函数。初始化参数时第一层的权重变成原来的$(B-A)$倍，第一层的位移在原来的基础上加上$(B-A)w+A$，后面神经元的所有参数不变。而且在训练的过程中，两个网络的所有权重和位移会一直保持这种线性变换的关系。
+
+\BiSection{输出变换对拟合任务的影响}{}
+
+已知函数$f: \Omega = [0, 1] \rightarrow \mathbb{R}$，我们用网络拟合这个函数。网络定义和\ref{neteq}相同，损失函数定义和\ref{loss}相同，参数变化和\ref{gd}相同。
+
+这里我们对目标函数的值域进行变换。定义函数$\hat{f}(x) = A f(x)$，定义域和$f$相同。我们用网络\ref{nethat}拟合函数$\hat{f}$。
+
+首先，在初始化参数的时候，我们同样定义$\hat{u}$是由$u$伸缩变换而来的。
+新的参数$\hat{\theta}$初始化为
+\begin{equation}\label{trans2}
+\hat{a}_j = A a_j \quad \hat{w}_j = w_j \quad \hat{b}_j = b_j
+\end{equation}
+在这种初始化条件下，在未开始训练的时候，两个区间上的网络就满足$\hat{u}(\hat{x}; \hat{\theta}) = A u(x; \theta)$。
+
+在初始时刻，变换后的损失函数为
+$$ \hat{L}(\hat{\theta}) = \int_{0}^{1} |\hat{f}(x) - \hat{u}(x; \hat{\theta})|^2 \ dx = A^2 \int_{0}^{1} |f(x) - u(x; \theta)|^2 \ dx = A^2 L(\theta) $$
+也就是说，$t=0$的时候，两个网络的损失函数相差$A^2$倍。
+
+在初始时刻，损失函数对参数的导数，满足关系
+$$ \frac{\partial \hat{L}}{\partial \hat{w}_j} = A^2 \frac{\partial L}{\partial w} \qquad \frac{\partial \hat{L}}{\partial \hat{b}_j} = A^2 \frac{\partial L}{\partial b} \qquad \frac{\partial \hat{L}}{\partial \hat{a}_j} = A \frac{\partial L}{\partial a} $$
+
+这里，我们以学习率$\eta / A^2$训练新的网络。即$\hat{\eta} = \eta / A^2$。
+
+此时就可以满足
+$$ \frac{d \hat{w}_j}{d t} = \frac{d w_j}{d t} \qquad \frac{d \hat{b}_j}{d t} = \frac{d b_j}{d t} \qquad \frac{d \hat{a}_j}{d t} = A \frac{d a_j}{d t} $$
+
+通过类似的推理可以得到
+$$ \hat{a}_j = A a_j \quad \hat{w}_j = w_j \quad \hat{b}_j = b_j \quad \forall \; t \geq 0 $$
+
+类似的结论同样可以轻易推广到更复杂的情况。这里的结果告诉我们，\textbf{对输出数据进行线性变换相当于改变网络的最后一层参数的初始值，以及训练网络的学习率。}具体来说：用学习率$\eta$拟合函数$f(x)$，就相当于用学习率$\eta / A^2$拟合函数$Af(x)+B$。初始化参数时最后层的权重变成原来的$A$倍，最后一层的位移在原来的基础上加上$B$，其它神经元的所有参数不变。
+
+\BiSection{输入变换对直接法解方程的影响}{}
+
+以求解一维区间上的常系数椭圆方程为例。方程表示为
+\begin{equation}\label{eqn}
+\left\{
+\begin{split}
+& -u''(x) = f(x) & \text{for} \; x \in \Omega = (A, B) \\
+& u(A) = u_A \quad u(B) = u_B
+\end{split}
+\right.
+\end{equation}
+
+两层神经网络的定义如\ref{neteq}，求解方程的过程中，损失函数定义分为两部分。
+
+内部的损失函数为
+\begin{equation}
+L_{it}(\theta) = \frac{1}{B-A} \int_{A}^{B} |f(x) - \frac{d^2 u}{dx^2}(x; \theta)|^2 \ dx
+\end{equation}
+边界的损失函数为
+\begin{equation}
+L_{bd}(\theta) = \frac12 |u(A; \theta) - u_A|^2 + \frac12 |u(B; \theta) - u_B|^2
+\end{equation}
+总体的损失函数是由两部分乘以对应的惩罚系数相加
+\begin{equation}
+L(\theta) = L_{it}(\theta) + \beta L_{bd}(\theta)
+\end{equation}
+
+梯度下降的过程中，参数的变化如\ref{gd}所示。
+
+把方程伸缩到单位区间$[0,1]$上，得到
+\begin{equation}\label{eqnu}
+\left\{
+\begin{split}
+& -\hat{u}''(\hat{x}) = (B-A)^2 \hat{f}(\hat{x}) & \text{for} \; \hat{x} \in \hat{\Omega} = (0, 1) \\
+& \hat{u}(0) = u_A \quad \hat{u}(1) = u_B
+\end{split}
+\right.
+\end{equation}
+其中$\hat{u}$和$\hat{f}$满足$\hat{f}(\hat{x}) = f(x)$和$\hat{u}(\hat{x}) = u(x)$。
+
+在单位区间上定义一个新的网络同\ref{nethat}，新的参数初始值同\ref{trans1}。这个时候，在初始时刻，两个区间上的网络就满足$u(x; \theta) = \hat{u}(\hat{x}; \hat{\theta})$。
+
+在初始时刻，参数满足\ref{trans1}的关系，两个网络的二阶导数满足
+$$ \frac{d^2 \hat{u}}{d\hat{x}^2}(\hat{x}; \hat{\theta}) = (B-A)^2 \frac{d^2 u}{dx^2}(x; \theta)$$
+
+在初始时刻，单位区间上的损失函数为
+$$ \hat{L}_{it}(\hat{\theta}) = \int_{0}^{1} |(B-A)^2 \hat{f}(\hat{x}) - \frac{d^2 \hat{u}}{d\hat{x}^2}(\hat{x}; \hat{\theta})|^2 \ d \hat{x} = \frac{1}{B-A} \int_{A}^{B} (B-A)^2 |f(x) - \frac{d^2 u}{dx^2}(x; \theta)|^2 \ dx = (B-A)^2 L_{it}(\theta) $$
+$$ \hat{L}_{bd}(\theta) = \frac12 |\hat{u}(0; \hat{\theta}) - u_A|^2 + \frac12 |\hat{u}(B; \hat{\theta}) - u_B|^2 = \frac12 |u(A; \theta) - u_A|^2 + \frac12 |u(B; \theta) - u_B|^2 = L_{bd}(\theta) $$
+
+值得注意的是，在伸缩变换后，内部的损失函数变成了原来的$(B-A)^2$倍，而边界上的损失函数不变。为了平衡边界和内部，我们把惩罚系数改成$\hat{\beta} = (B-A)^2 \beta$。
+
+总体的损失函数就变成了
+$$ \hat{L}(\hat{\theta}) = \hat{L}_{it}(\hat{\theta}) + \hat{\beta} \hat{L}_{bd}(\hat{\theta}) = (B-A)^2 L(\theta) $$
+
+我们选取学习率为$\hat{\eta} = \eta / (B-A)^2$训练单位区间上的网络，可以得到对输入进行线性变换的结果。
+
+通过类似的推导可以得到：\textbf{在直接法中，对网络的输入和输出进行线性变换相当于改变网络的最后一层参数的初始值，训练网络的学习率，和边界的惩罚系数。}
+
+\BiSection{输入变换对Ritz法解方程的影响}{}
+
+用Ritz方法求解方程\ref{eqn}，两层神经网络的定义如\ref{neteq}，损失函数的定义同样分为两部分。
+
+内部的损失函数：
+\begin{equation}
+L_{it}(\theta) = \frac{1}{B-A} \int_{A}^{B} \frac12 |u'(x)|^2 + f(x) \; u(x) \ dx
+\end{equation}
+边界的损失函数：
+\begin{equation}
+L_{bd}(\theta) = \frac12 |u(A; \theta) - u_A|^2 + \frac12 |u(B; \theta) - u_B|^2
+\end{equation}
+总体的损失函数是由两部分乘以惩罚系数相加：
+\begin{equation}
+L(\theta) = L_{it}(\theta) + \beta L_{bd}(\theta)
+\end{equation}
+
+梯度下降的过程中，参数的变化如\ref{gd}所示。同样地，我们单位区间$[0,1]$上求解方程\ref{eqnu}。在单位区间上定义一个新的网络同\ref{nethat}，新的参数初始值同\ref{trans1}。
+
+在初始时刻，参数满足\ref{trans1}的关系，网络的导数满足
+$$ \frac{d \hat{u}}{d \hat{x}}(\hat{x}; \hat{\theta}) = (B-A) \frac{d u}{d x}(x; \theta)$$
+
+在初始时刻，单位区间上的内部损失函数为
+$$ \hat{L}_{it}(\hat{\theta}) = \int_{0}^{1} \frac12 |\hat{u}'(\hat{x})|^2 + \hat{f}(\hat{x}) \; \hat{u}(\hat{x})  \ d \hat{x} = \frac{1}{B-A} \int_{A}^{B} (B-A)^2 (\frac12 |u'(x)|^2 + f(x) \; u(x)) \ dx = (B-A)^2 L_{it}(\theta) $$
+
+这里就得到了和直接法相同的结论。在伸缩变换后，内部的损失函数变成了原来的$(B-A)^2$倍，而边界上的损失函数不变。我们把惩罚系数改成$\hat{\beta} = (B-A)^2 \beta$，选取学习率为$\hat{\eta} = \eta / (B-A)^2$训练单位区间上的网络，可以得到完全相同的结果。
+
+\BiSection{小结}{}
+
+一系列的结论表明，无论是拟合函数还是求解方程，对网络的输入和输出进行线性变换，就相当于改变网络的最后一层参数的初始值，训练网络的学习率，和边界的惩罚系数。这些参数通常被认为对网络的性能有很大的影响。因此，调节网络的输入和输出也是提升网络性能的重要手段。
+
+此外，本章中验证了不同输入和输出范围之间的变换关系。对于输入范围不同的问题，我们只要考虑输入范围是单位区域$[0,1]^d$上，输出范围为$[0,1]$的问题，确定最优的学习率和惩罚系数，再伸缩到目标区间就可以得到相同的结果。这可以大大减小我们调节参数过程中的工作量。
