@@ -1,0 +1,148 @@
+% !Mode:: "TeX:UTF-8"
+
+\BiChapter{多尺度神经网络}{}
+
+\BiSection{多尺度网络结构}{}
+
+根据前文所说，对网络的输入进行线性变换可以改变网络的性能，但是针对某个具体的问题和网络，我们并不知道如何确定对网络进行变换的系数。这里我们用不同的系数对网络变换，之后把不同系数下的网络相加。实验表明，这样的策略具有一定的鲁棒性。基于这一思想，我们提出如下的多尺度网络。
+
+如图\ref{net}，我们对输入乘以不同的系数$a_i$，把变换后的数据输入不同的子网络，经过不同子网络的处理后，把所有子网络的输出相加得到结果。通常来说，尺度变换的系数可以选取为均匀划分$a_i = 1,2,3,4,\cdots$，或者选取为指数划分$a_i = 1,2,4,8,\cdots$。通常的全连接网络可以看做是只有一个尺度，且变换系数为$1$的多尺度网络。
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=0.45\linewidth]{\fpath MscaleNet}
+\caption{多尺度网络结构示意图}
+\label{net}
+\end{figure}
+
+为了提升多尺度网络的尺度分离能力，我们借鉴了小波分析中的思想，使用具有紧支集的激活函数。与普通的${\rm ReLU}$激活函数相比，在多尺度网络中，具有紧支集的激活函数通常更有效。两种紧支集的激活函数的具体表达式为
+\begin{equation}
+\mathrm{sReLU}(x) = (x)_{+} (1-x)_{+}
+\end{equation}
+和
+\begin{equation}
+\mathrm{Phi}(x) = (x-0)_{+}^2 - 3(x-1)_{+}^2 + 3(x-2)_{+}^2 - (x-3)_{+}^2
+\end{equation}
+其中$x_{+} = \max\{x, 0\}={\rm ReLU}(x)$。
+
+\BiSection{不同参数下网络的有效性}{}
+
+这里，我们验证多尺度网络在不同的参数设定之间的差别。具体的实验分为以下部分。首先，我们测试不同的网络结构，展示多尺度网络和普通全连接网络之间的区别，同时验证指数划分在多尺度网络中效果更好。随后，我们展示了${\rm sReLU}(x)$和$\mathrm{Phi}(x)$这两种具有紧支集的激活函数远优于常用的${\rm ReLU}(x)$激活函数。最后，我们通过实验，深入探究了多尺度网络改善网络性能的本质。
+
+在接下来的实验中，除非特殊说明，我们用“Normal”表示规模为\textbf{1-900-900-900-1}的普通全连接网络。用“Mscale”表示多尺度网络，具体结构由\textbf{6}个规模为\textbf{1-150-150-150-1}的多尺度网络，系数为$\{1,2,4,8,16,32\}$。激活函数默认为$\mathrm{Phi}(x)$。
+
+\BiSubsection{测试样例}{}
+
+为了测试不同参数下各种网络的表现，这里我们考虑了一维和二维情况下，拟合函数和求解椭圆方程的问题。
+
+\textbf{拟合问题：}拟合目标函数$F: [-1, 1]^d \rightarrow \mathbb{R}$，表达式为
+\begin{equation}
+F(x) = \sum_{j=1}^{d} g(x_{j})  \quad x_{j} \in [-1, 1]
+\end{equation}
+其中$x=(x_1,\cdots,x_d)$，且
+$$ g(x) = e^{-x^2} \sin(\mu x^2) $$
+在一维的情况下，我们选取$\mu=70$，在二维的情况下，选取$\mu=30$。两种情况下的目标函数图像如图\ref{func1}。每步中我们随机在区域$[-1, 1]^d$内选取$5000$个训练数据和$500$个测试数据点。
+
+\begin{figure}[htbp]
+\centering
+\subfigure[一维情况]{\includegraphics[height=0.16\textheight]{\fpath func1-1d}}
+\subfigure[二维情况]{\includegraphics[height=0.16\textheight]{\fpath func1-2d}}
+\caption{目标函数图像}
+\label{func1}
+\end{figure}
+
+\textbf{椭圆方程：}求解椭圆方程\ref{prob1}，其中参数选取为$a(x)=1$，$c(x)=\lambda^2$，求解区域为$\Omega = [-1, 1]^d$，右端项表达式为
+$$ f(x) = \sum_{i=1}^{d} (\lambda^2 + \mu^2) \sin(\mu x_i) $$
+方程的精确解为
+$$ u(x) = \sum_{i=1}^{d} - \frac{\sin \mu}{\sinh \lambda} \sinh(\lambda x_i) + \sin(\mu x_i) $$
+对应的边界条件由精确解生成。
+
+对于一维的情况，参数选取为$\lambda=20$, $\mu=50$，对于二维的情况，选取$\lambda=2$, $\mu=30$。一维和二维的方程的精确解如图\ref{func2}。每步中我们随机在区域$[-1, 1]^d$内选取$5000$个均匀分布的积分点，对于一维的情况，我们在边界上生成$400$个积分点，而二维的情况，我们生成$4000$个积分点。边界惩罚系数选取为$\beta=1000$。
+
+\begin{figure}[htbp]
+\centering
+\subfigure[一维情况]{\includegraphics[height=0.16\textheight]{\fpath func2-1d}}
+\subfigure[二维情况]{\includegraphics[height=0.16\textheight]{\fpath func2-2d}}
+\caption{椭圆方程精确解的图像}
+\label{func2}
+\end{figure}
+
+\BiSubsection{变换系数对网络效果的影响}{}
+
+这里我们测试不同的尺度分割对网络性能的影响，考虑如下的系数选取方案：
+\begin{enumerate}
+\item 规模为\textbf{1-900-900-900-1}的全连接网络。(Normal)
+\item \textbf{6}个规模为\textbf{1-150-150-150-1}的多尺度网络，系数为$\{1,1,1,1,1,1\}$。(Mscale(1))
+\item \textbf{3}个规模为\textbf{1-300-300-300-1}的多尺度网络，系数为$\{1,2,3\}$。(Mscale(3))
+\item \textbf{3}个规模为\textbf{1-300-300-300-1}的多尺度网络，系数为$\{1,2,4\}$。(Mscale(4))
+\item \textbf{6}个规模为\textbf{1-150-150-150-1}的多尺度网络，系数为$\{1,2,3,4,5,6\}$。(Mscale(6))
+\item \textbf{6}个规模为\textbf{1-150-150-150-1}的多尺度网络，系数为$\{1,2,4,8,16,32\}$。(Mscale(32))
+\end{enumerate}
+
+求解结果如图\ref{e3-2}和\ref{e3-1}，图中画出了求解方程的误差随迭代步数下降的图像。由于误差的大小取决于积分点的选取，会受到随机因素的影响，我们对图像进行了平滑。图中浅色部分表示误差波动的范围，深色线是误差下降曲线平滑之后的结果。
+
+从图中可以看出，对于拟合问题，多尺度网络的优势并不明显，但是对于求解椭圆方程，多尺度网络的性能比通常的全连接网络更好。需要注意的是，随着尺度变换范围的扩大，多尺度网络更快地解决了问题。在所有尺度均为$1$的情况下，多尺度网络和普通的全连接网络性能相似。实验表明，具有适当尺度的网络结构在求解椭圆方程中更有效，指数划分的尺度也比均匀划分的尺度更有效。
+
+\begin{figure}[htbp]
+\centering
+\subfigure[一维情况]{\includegraphics[width=0.35\linewidth]{\fpath E1F1}}
+\subfigure[二维情况]{\includegraphics[width=0.35\linewidth]{\fpath E1F2}}
+\caption{不同的尺度分割在一维和二维拟合任务中的表现}
+\label{e3-1}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\subfigure[一维情况]{\includegraphics[width=0.35\linewidth]{\fpath E1R1}}
+\subfigure[二维情况]{\includegraphics[width=0.35\linewidth]{\fpath E1R2}}
+\caption{不同的尺度分割在一维和二维椭圆方程中的表现}
+\label{e3-2}
+\end{figure}
+
+\BiSubsection{激活函数对网络效果的影响}{}
+
+我们通过一维拟合问题和一维椭圆方程问题，检验不同激活函数的有效性。
+
+我们使用三种不同的激活函数，即${\rm ReLU}$、${\rm sReLU}$、$\mathrm{Phi}$，分别在“Normal”和“Mscale”网络结构下求解上述问题。求解结果如图\ref{e1-1}和\ref{e1-2}。图中画出了求解方程和拟合函数的误差随迭代步数下降的图像。
+
+结果表明，在一般的全连接网络结构中，改用紧支集的激活函数对网络的效果提升不大。在求解一维椭圆方程的过程中$\mathrm{Phi}(x)$甚至没有收敛。另一方面，对于多尺度网络结构，紧支集激活函数${\rm sReLU}$、$\mathrm{Phi}$的性能都比${\rm ReLU}$好得多。这说明在多尺度网络中，采用紧支集的激活函数是十分必要的。
+
+\begin{figure}[htbp]
+\centering
+\subfigure[Normal]{\includegraphics[width=0.35\linewidth]{\fpath E2FN}}
+\subfigure[Mscale]{\includegraphics[width=0.35\linewidth]{\fpath E2FM}}
+\caption{不同激活函数在一维拟合问题中的表现}
+\label{e1-1}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\subfigure[Normal]{\includegraphics[width=0.35\linewidth]{\fpath E2RN}}
+\subfigure[Mscale]{\includegraphics[width=0.35\linewidth]{\fpath E2RM}}
+\caption{不同激活函数在一维椭圆方程中的表现}
+\label{e1-2}
+\end{figure}
+
+\BiSubsection{提升网络效果的本质因素}{}
+
+为了揭示多尺度方法提升网络性能的本质因素，我们考虑不同的网络结构，用相同的系数求解前文中一维和二维的椭圆方程。
+
+测试的网络结构如下：
+\begin{enumerate}
+\item \textbf{1}个规模为\textbf{1-900-900-900-1}的多尺度网络，系数为$\{1\}$。(Normal(1))
+\item \textbf{1}个规模为\textbf{1-900-900-900-1}的多尺度网络，系数为$\{16\}$。(Normal(32))
+\item \textbf{6}个规模为\textbf{1-150-150-150-1}的多尺度网络，系数为$\{1,1,1,1,1,1\}$。(Mscale(1))
+\item \textbf{6}个规模为\textbf{1-150-150-150-1}的多尺度网络，系数为$\{1,2,4,8,16,32\}$。(Mscale(s))
+\item \textbf{6}个规模为\textbf{1-150-150-150-1}的多尺度网络，系数为$\{32,32,32,32,32,32\}$。(Mscale(32))
+\end{enumerate}
+
+这里第一个网络就是没有尺度变换的普通全连接网络，第二个网络也并没有采用子网络的结构，只是把全连接网络输入的部分扩大了32倍。第四个网络是我们前文中实验得到的较优的网络结构。而在第三个和第五个网络中，我们对尺度没有做任何划分，所有的子网络输入都扩大了相同的倍数。
+
+求解结果如图\ref{efuck}，图中画出了近似解的误差随迭代步数下降的图像。从图中可以看出，影响多尺度网络性能的主要因素实际上是改变了输入层的初始化参数，只要出现了尺度变换，网络的性能总是与最大的那个尺度变换的系数有关。对尺度进行指数分割可以提升性能，本质上也是提高了尺度变换的最大系数。
+
+\begin{figure}[htbp]
+\centering
+\subfigure[一维情况]{\includegraphics[width=0.35\linewidth]{\fpath E31d}}
+\subfigure[二维情况]{\includegraphics[width=0.35\linewidth]{\fpath E32d}}
+\caption{不同网络在一维和二维椭圆方程中的表现}
+\label{efuck}
+\end{figure}
