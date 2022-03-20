@@ -169,21 +169,23 @@ ST 经验环流无法满足各种涨落定理，ST 经验净环流却是可以�
 =&\; \Pnum\left(\tilde{J}^{c_s}_n=-x^{c_s}/n,\tilde{J}^{c_m}_n=x^{c_m}/n,\;\forall m\neq s\right)\left(\frac{\gamma^{c_s}}{\gamma^{c_s-}}\right)^{x^{c_s}}.
 \end{align*}
 
-
-Thus we finally obtained the following transient fluctuation theorems of empirical LE currents:
+因此最终可得到下列的 LE 环流的暂态涨落定理：
 \begin{equation}\label{strong}
 \Pnum(\tilde{J}^{c_s}_n=x_s,\tilde{J}^{c_m}_n=x_m,\;\forall m\neq s) \\
 = \Pnum(\tilde{J}^{c_s}_n=-x_s,\tilde{J}^{c_m}_n=x_m,\;\forall m\neq s)e^{nx_s\log\frac{\gamma^{c_s}}{\gamma^{c_s-}}}.
 \end{equation}
-This shows that for any cycle $c_s$, the joint distribution of empirical net LE currents satisfies a symmetric relation when $x_s$ is changed to $-x_s$. Note that $\tilde{J}^c_n=0$ for any one-state or two-state cycle $c$ and $\tilde{J}^c_n=-\tilde{J}^{c-}_n$ for any three or more state cycle $c$. Let $c_1,c_1-,c_2,c_2-,\cdots,c_{r*},c_{r*}-$ be all three or more state cycles. If we change $x_s$ to $-x_s$ one by one for $1\leq s\leq r*$ in the above equation, then we obtain
+也就是说，对任意环 $c_s$，LE 经验净环流的联合分布满足对称关系。且一状态和两状态的环 $c$ 满足 $\tilde{J}^c_n=0$，三状态或更多状态的环满足 $\tilde{J}^c_n=-\tilde{J}^{c-}_n$。令 $c_1,c_1-,c_2,c_2-,\cdots,c_{r*},c_{r*}-$ 
+表示所有三状态或更多状态的环。若把上述方程中的 $x_s, 1\leq s\leq r*$ 改为 $-x_s$，则可以得到：
 \begin{equation}\label{weak}
-\begin{split}
-&\;\Pnum\left(\tilde{J}^{c_1}_n=x_1,\tilde{J}^{c_2}_n=x_2,\cdots,\tilde{J}^{c_{r*}}_n=x_{r*}\right)\\
-=&\; \Pnum\left(\tilde{J}^{c_1}_n=-x_1,\tilde{J}^{c_2}_n=-x_2,\cdots,\tilde{J}^{c_{r*}}_n=-x_{r*}\right)
-e^{n\sum_{i=1}^{r*}x_i\log\frac{\gamma^{c_i}}{\gamma^{c_i-}}}.
-\end{split}
+    \begin{split}
+    &\;\Pnum\left(\tilde{J}^{c_1}_n=x_1,\tilde{J}^{c_2}_n=x_2,\cdots,\tilde{J}^{c_{r*}}_n=x_{r*}\right)\\
+    =&\; \Pnum\left(\tilde{J}^{c_1}_n=-x_1,\tilde{J}^{c_2}_n=-x_2,\cdots,\tilde{J}^{c_{r*}}_n=-x_{r*}\right)
+    e^{n\sum_{i=1}^{r*}x_i\log\frac{\gamma^{c_i}}{\gamma^{c_i-}}}.
+    \end{split}
 \end{equation}
-Note that \eqref{weak} is much weaker than \eqref{strong}. As a result, in what follows, we term \eqref{strong} the strong form of the transient fluctuation theorem and term \eqref{weak} the weak form of the transient fluctuation theorem.
+通过对比，可以看到\eqref{weak}式的结论弱于 \eqref{strong}式。因此，本文称 \eqref{strong} 式为强形式的暂态涨落定理，\eqref{weak}式为弱形式的暂态涨落定理。
+
+有关 LE 经验环流和 LE 经验净环流的其他类型的涨落定理都可以通过暂态涨落定理得到。
 
 Other types of fluctuation theorems for empirical LE and net LE currents can be easily derived from the transient fluctuation theorems and are summarized as follows (here we only show the strong form). For an arbitrary family of cycles $c_1,c_2,\cdots,c_r$, let $g_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^r\lambda_iJ^{c_i}_n}]$, $\tilde{g}_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^{r}\lambda_i\tilde{J}^{c_i}_n}]$ be the moment generating function of $(J^{c_i}_n)_{1\le i\le r}$, $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ respectively and let $I_{J}(x)$, $I_{\tilde{J}}(x)$ be the rate function of $(J^{c_i}_n)_{1\le i\le r}$, $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ respectively.
 
