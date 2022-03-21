@@ -49,7 +49,7 @@ cycles formed       &     &       &         & (1,4) & (4)   & (3,4) &       &   
     g_n(\lambda^+,\lambda^-,\cdots)
     = \mathbb{E}\left[e^{\lambda^+N^+_n+\lambda^-N^-_n+\sum_{c\neq C^+,C^-}\lambda^cN^c_n}\right].
 \end{equation*}
-可以得出 Kurchan-Lebowitz-Spohn 类型的涨落定理成立：
+可以得出 Kurchan-Lebowitz-Spohn 类型涨落定理成立：
 \begin{align*}
     g_n(\lambda^+,\lambda^-,\cdots)
     &= \sum_{k}e^{\sum_{c\in\mathcal{C}}\lambda^ck^c}\mathbb{P}\left(\cdots,N^+=k^+,N^-=k^-\right)\\
@@ -84,7 +84,7 @@ $\tilde{g}_n(\lambda) = \mathbb{E}[e^{\lambda n\tilde{J}^+_n}]$ 为 $\tilde{J}^+
 = \left(\frac{\gamma^+}{\gamma^-}\right)^{nx}.
 \end{equation*}
 
-2) Kurchan-Lebowitz-Spohn 类型的涨落定理:
+2) Kurchan-Lebowitz-Spohn 类型涨落定理:
 \begin{equation*}
 \tilde{g}_n(\lambda)=\tilde{g}_n\left(-\left(\lambda+\log\frac{\gamma^+}{\gamma^-}\right)\right).
 \end{equation*}
@@ -94,7 +94,7 @@ $\tilde{g}_n(\lambda) = \mathbb{E}[e^{\lambda n\tilde{J}^+_n}]$ 为 $\tilde{J}^+
 \mathbb{E}\left[e^{\lambda n\tilde{J}^+_n}\right]=1.
 \end{equation*}
 
-4) Gallavotti-Cohen 类型的涨落定理:
+4) Gallavotti-Cohen 类型涨落定理:
 \begin{equation*}
 \tilde{I}_J(x)=\tilde{I}_J(-x)-\left(\log\frac{\gamma^+}{\gamma^-}\right)x.
 \end{equation*}
@@ -111,7 +111,7 @@ $\tilde{g}_n(\lambda) = \mathbb{E}[e^{\lambda n\tilde{J}^+_n}]$ 为 $\tilde{J}^+
 其他形式的涨落定理也有类似形式，在此省略。
 
 \BiSection{单环马氏链 ST 环流的涨落定理}{}
-有关 LE 经验环流和 LE 经验净环流的涨落定理已经很完整了。自然会想到是否 ST 经验环流和 ST 经验净环流是否也满足相似的涨落定理。下面将通过一个例子说明，ST经验环流不具有 Gallavotti-Cohen 类型的涨落定理，即使只考虑单环系统。
+有关 LE 经验环流和 LE 经验净环流的涨落定理已经很完整了。自然会想到是否 ST 经验环流和 ST 经验净环流是否也满足相似的涨落定理。下面将通过一个例子说明，ST经验环流不具有 Gallavotti-Cohen 类型涨落定理，即使只考虑单环系统。
 
 考虑三状态马氏链，并且令 $T = 1\to 2\to 3$ 是一个生成树，那么相应基本集为：
 \begin{equation*}
@@ -126,7 +126,7 @@ I_Q(\mu) = \sum_{\langle i,j\rangle\in E}R^{\mu}(i,j)\log\frac{R^{\mu}(i,j)}{R^{
 I_Q(\cdots,\mu^+,\mu^-)
 \neq I_Q(\cdots,\mu^-,\mu^+)-\left(\log\frac{\gamma^+}{\gamma^-}\right)(\mu^+-\mu^-),
 \end{equation*}
-这说明了 Gallavotti-Cohen 类型涨落定理对于 ST 环流不成立。且由于Gallavotti-Cohen 类型的涨落定理成立条件最弱，所以其他类型的涨落定理也不成立。
+这说明了 Gallavotti-Cohen 类型涨落定理对于 ST 环流不成立。且由于Gallavotti-Cohen 类型涨落定理成立条件最弱，所以其他类型涨落定理也不成立。
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.25]{chart/ratefunction.pdf}
@@ -140,7 +140,7 @@ ST 经验环流无法满足各种涨落定理，ST 经验净环流却是可以�
             =&\;\sum_{c\in \mathcal{C}}J^c_n1_{\{l^+\in c \}}-\sum_{c\in \mathcal{C}}J^{c-}_n1_{\{l^+\in c \}} = \tilde{J}^+_n.
     \end{split}
 \end{equation*}
-因此 ST 净环流的涨落定理自然等同于 LE 环流的涨落定理。然而，\eqref{conversion} 式只在周期边界条件下成立，也就意味着，只能得到 ST 经验净环流满足 Gallavotti-Cohen 类型的涨落定理。并且，容易验证 $\tilde{Q}^+_n$ 对其他三种类型的涨落定理不成立。
+因此 ST 净环流的涨落定理自然等同于 LE 环流的涨落定理。然而，\eqref{conversion} 式只在周期边界条件下成立，也就意味着，只能得到 ST 经验净环流满足 Gallavotti-Cohen 类型涨落定理。并且，容易验证 $\tilde{Q}^+_n$ 对其他三种类型涨落定理不成立。
 
 \BiSection{一般马氏链 LE 环流的涨落定理}{}
 目前，已经验证了单环马氏链环流相关的涨落定理，自然会问到环流涨落定理是否会适用于一般的马氏链。下面从回顾文献 \cite{jia2016cycle} 的相关结论开始。记 $c_1=(i_1,i_2,\cdots,i_s)$ 和 $c_2=(j_1,j_2,\cdots,j_r)$ 是两个环。如果 $s=r$ 且 $\{i_1,i_2,\cdots,i_s\}=\{j_1,j_2,\cdots,j_r\}$，则称环 $c_1$ 和环 $c_2$ 相似。
@@ -185,11 +185,9 @@ ST 经验环流无法满足各种涨落定理，ST 经验净环流却是可以�
 \end{equation}
 通过对比，可以看到\eqref{weak}式的结论弱于 \eqref{strong}式。因此，本文称 \eqref{strong} 式为强形式的暂态涨落定理，\eqref{weak}式为弱形式的暂态涨落定理。
 
-有关 LE 经验环流和 LE 经验净环流的其他类型的涨落定理都可以通过暂态涨落定理得到。
+有关 LE 经验环流和 LE 经验净环流的其他类型涨落定理都可以通过暂态涨落定理得到，下面会整理处这些定理的强形式。考虑任意一族环 $c_1,c_2,\cdots,c_r$，令  $g_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^r\lambda_iJ^{c_i}_n}]$和$\tilde{g}_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^{r}\lambda_i\tilde{J}^{c_i}_n}]$ 分别为 $(J^{c_i}_n)_{1\le i\le r}$ 和 $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ 的矩母函数，并且令 $I_{J}(x)$ 和 $I_{\tilde{J}}(x)$ 为相应的速率函数。
 
-Other types of fluctuation theorems for empirical LE and net LE currents can be easily derived from the transient fluctuation theorems and are summarized as follows (here we only show the strong form). For an arbitrary family of cycles $c_1,c_2,\cdots,c_r$, let $g_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^r\lambda_iJ^{c_i}_n}]$, $\tilde{g}_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^{r}\lambda_i\tilde{J}^{c_i}_n}]$ be the moment generating function of $(J^{c_i}_n)_{1\le i\le r}$, $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ respectively and let $I_{J}(x)$, $I_{\tilde{J}}(x)$ be the rate function of $(J^{c_i}_n)_{1\le i\le r}$, $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ respectively.
-
-Kurchan-Lebowitz-Spohn-type fluctuation theorem: For any cycles $c_s$ and $c_t$ ($1\le s,t\le r$) are similar
+Kurchan-Lebowitz-Spohn 类型涨落定理：对任意互相相似的两个环 $c_s$ 和 $c_t$ ($1\le s,t\le r$)，下列公式成立：
 \begin{equation*}
 	g_n(\cdots,\lambda_s,\cdots,\lambda_t,\cdots) = g_n\left(\cdots,\lambda_t-\log\frac{\gamma^{c_s}}{\gamma^{c_t}},\cdots,\lambda_s+\log\frac{\gamma^{c_s}}{\gamma^{c_t}},\cdots\right).
 \end{equation*}
@@ -197,12 +195,12 @@ Kurchan-Lebowitz-Spohn-type fluctuation theorem: For any cycles $c_s$ and $c_t$ 
 	\tilde{g}_n(\cdots,\lambda_s,\cdots)=\tilde{g}_n\left(\cdots,-\left(\lambda_s+\log\frac{\gamma^{c_s}}{\gamma^{c_s-}}\right),\cdots\right).
 \end{equation*}
 
-Integral fluctuation theorem: 
+积分涨落定理： 
 \begin{equation*}
 	\mathbb{E}\left[e^{-n\sum_{i=1}^r(\log \gamma^{c_i}/\gamma^{c_i-})\tilde{J}^{c_i}_n}\right]=1.
 \end{equation*}
 
-Gallavotti-Cohen-type fluctuation theorem:
+Gallavotti-Cohen 类型涨落定理：
 \begin{equation*}
 	I_J(\cdots,x_s,\cdots,x_t,\cdots)=I_J(\cdots,x_t,\cdots,x_s,\cdots)-\left(\log\frac{\gamma^{c_s}}{\gamma^{c_t}}\right)(x_s-x_t).
 \end{equation*}
@@ -210,27 +208,28 @@ Gallavotti-Cohen-type fluctuation theorem:
 	I_{\tilde{J}}(\cdots,x_s,\cdots) = I_{\tilde{J}}(\cdots,-x_s,\cdots)-\left(\log\frac{\gamma^{c_s}}{\gamma^{c_s-}}\right)x_s.
 \end{equation*}
 
-\subsection{Fluctuation theorems of ST currents for general Markov chains}
-We have seen that for monocyclic Markov chains, the empirical ST currents do not satisfy various types of fluctuation theorems, while the empirical net ST currents satisfy the Gallavotti-Cohen-type fluctuation theorems. Next we focus on general Markov chains. It fact, Andrieux and Gaspard \cite{andrieux2007fluctuation} have proved the weak form of Gallavotti-Cohen-type fluctuation theorem for empirical net ST currents: for all three or more state cycles $c_1,c_1-,c_2,c_2-,\cdots,c_r,c_r-$ in the fundamental set $\mathcal{L}$, we have
+\BiSection{一般马氏链的 ST 环流的涨落定理}{}
+
+关于单环马氏系统，ST 经验环流无法满足各种涨落定理，然而 ST 经验净环流满足 Gallavotti-Cohen 类型涨落定理。对于一般情形的马氏链，Andrieux 和 Gaspard 在文献 \cite{andrieux2007fluctuation} 中已经证实了 ST 经验净环流满足弱形式下的 Gallavotti-Cohen 类型涨落定理：对于基本集 $\mathcal{L}$ 中三状态以上的环  $c_1,c_1-,c_2,c_2-,\cdots,c_r,c_r-$，满足：
 \begin{equation*}
 I_{\tilde{Q}}(x_1,x_2,\cdots,x_r)
 = I_{\tilde{Q}}(-x_1,-x_2,\cdots,-x_r)
 -\sum_{i=1}^rx_i\log\frac{\gamma^{c_i}}{\gamma^{c_i-}}.
 \end{equation*}
-This shows that the joint distribution of empirical net ST currents satisfies a symmetric relation when all variables $x_i$ are changed to $-x_i$. 
+这表明 ST 经验净环流的联合分布具有对称性。
 
-Interestingly, in contrast to empirical net LE currents, we find that empirical net ST currents do not satisfy the strong form of Gallavotti-Cohen-type fluctuation theorems. To give a counterexample, we consider a four-state Markov chain with a fully connected transition diagram illustrated in Fig. \ref{figure:transitiongraph}(b). Let the spanning tree be $T=1\to2\to3\to4$. Since $\tilde{Q}^{c_l}_n=0$ for all one-state or two-state cycles $c_l$, we only need to consider the rest of the cycles
+更加让人难以置信的是，对比 LE 经验净环流，可以发现 ST 经验净环流不满足强形式下的 Gallavotti-Cohen 类型涨落定理。下面将通过举出反例证实。考虑图 \ref{figure:transitiongraph}(b) 中的具有全连接转移图的四状态马氏链，并且令生成树为 $T=1\to2\to3\to4$。由于对所有一状态和两状态的环 $c_l$，有 $\tilde{Q}^{c_l}_n=0$，因此只考虑其余的环：
 \begin{equation*}
 	c_1 = (1,2,3),\;c_2 = (2,3,4),\;c_3 = (1,2,3,4),\;c_4 = (1,3,2),\;
 	c_5 = (2,4,3),\;c_6 = (1,4,3,2).
 \end{equation*}
-Note that $\tilde{Q}^{c_l}_n=-\tilde{Q}^{c_l-}_n$ for all three or more state cycles and $c_1=c_4-$, $c_2=c_5-$, $c_3=c_6-$. Recall that the rate function of empirical ST currents \eqref{I_Q2}, we have the rate function for $(\tilde{Q}^{c_1}_n,\tilde{Q}^{c_2}_n,\tilde{Q}^{c_3}_n)$ is given by
+注意到所有三状态以上的环满足 $\tilde{Q}^{c_l}_n=-\tilde{Q}^{c_l-}_n$ 且 $c_1=c_4-$, $c_2=c_5-$, $c_3=c_6-$。回顾 ST 经验环流的速率函数，可知 $(\tilde{Q}^{c_1}_n,\tilde{Q}^{c_2}_n,\tilde{Q}^{c_3}_n)$ 的速率函数为：
 \begin{equation*}
 	I_{\tilde{Q}}(x)=\inf_{\{\mu\in\mathcal{M}:\mu^{c_i}-\mu^{c_i-}= x_i,\forall 1\le i\le 3\}}I_Q(\mu).
 \end{equation*}
-For cycle $c_1$, if we exchange $\tilde{\mu}^{c_1}$ to $-\tilde{\mu}^{c_1}$, then (see fig. \ref{figure:ratefunction} (b))
+对于环 $c_1$，如果把 $\tilde{\mu}^{c_1}$ 换为 $-\tilde{\mu}^{c_1}$，那么有图 \ref{figure:ratefunction} (b) 可以得到：
 \begin{equation*}
 I_{\tilde{Q}}(\tilde{\mu}^{c_1},\tilde{\mu}^{c_2},\tilde{\mu}^{c_3})\neq I_{\tilde{Q}}(-\tilde{\mu}^{c_1},\tilde{\mu}^{c_2},\tilde{\mu}^{c_3})
 -\left(\log\frac{\gamma^{c_1}}{\gamma^{c_1-}}\right)\tilde{\mu}^{c_1},
 \end{equation*}
-which shows that the strong form of the Gallavotti-Cohen-type fluctuation theorem fails for empirical net ST currents.
+这表明 ST 经验净环流不满足 Gallavotti-Cohen 类型涨落定理的强形式。
