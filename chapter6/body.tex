@@ -1,6 +1,41 @@
 \begin{appendices}
 
-\BiChapter{附录 A：单环马氏链速率函数 }{} \label{appendix:explicit}
-
+\BiChapter{附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{} \label{appendix:explicit} \label{appendix:explicit}
+因此，可以得到速率函数：
+\begin{equation*}\label{ratefunction2}
+	\begin{split}
+		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
+		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
+		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
+		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c,
+	\end{split}
+\end{equation*}
+下面将使用拉格朗日乘子法化简该式。固定 $\nu\in\mathcal{V}$，令拉格朗日函数 \cite{brian1990optimization} $\mathcal{A}_{\nu}:V(\nu)\times \mathbb{R}^{N-2}\to \mathbb{R}$ 为：
+\begin{align*}
+    \mathcal{A}_{\nu}(X,\lambda) = F_{\nu}(X) + \sum_{i=2}^{N-1} \lambda_i \left(x^{i} + y^{i} - \nu^{i,i+1}\right),
+\end{align*}
+其中 $X=(x^i,y^i)_{2\le i\le N-1}\in V(\nu)$ 并且 $\lambda=(\lambda_i)_{2\le i\le N-1}\in \mathbb{R}^{N-2}$。分别对 $x^{i}$，$y^{i}$ 和 $\lambda_i$求导，可以得到下列方程：
+\begin{equation}\label{equation1}
+	\begin{split}
+		\log\left(x^{i}\right) - \log\left(x^{i-1}+x^{i}+\nu^{+}\right)  + \log\left(x^{i}+\nu^{+}\right) -\log\left(x^{i}+x^{i+1}+\nu^{+}\right)+\lambda_i  &= 0, \\
+		\log\left(y^{i}+\nu^{-}\right) -\log\left(y^{i-1}+y^{i}+\nu^{-}\right)  + \log\left(y^{i}\right) - \log\left(y^{i}+y^{i+1}+\nu^{-}\right) +\lambda_i &= 0, \\
+		x^{i} + y^{i} = \nu^{i,i+1},\qquad 2\le i\le N-1.\qquad\qquad\qquad
+	\end{split}
+\end{equation}
+而且，可以把方程组 \eqref{equation1} 写为：
+\begin{equation}\label{equations}
+    \begin{split}
+    \frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}
+    \,\frac{x^{i}+\nu^+}{x^{i}+x^{i+1}+\nu^+}
+    &= \frac{y^{i}+\nu^-}{y^{i-1}+y^{i}+\nu^-}
+    \,\frac{y^{i}}{y^{i}+y^{i+1}+\nu^-}=e^{-\lambda_i},\\
+    x^{i} + y^{i} &= \nu^{i,i+1},\qquad 2\le i\le N-1.
+    \end{split}
+\end{equation}
+其中 $x^1=\nu^{12}$，$x^N=0$，$y^1=0$ 和 $y^N=\nu^{1N}$。
+    \begin{lemma}\label{lemma:existence for equations solution}
+        方程 \eqref{equations} 有解 $X=(x^i,y^i)\in V(\nu)$。
+    \end{lemma}
+\begin{proof}
 
 \end{appendices}
