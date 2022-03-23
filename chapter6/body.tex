@@ -37,5 +37,43 @@
         方程 \eqref{equations} 有解 $X=(x^i,y^i)\in V(\nu)$。
     \end{lemma}
 \begin{proof}
+    若对某些 $2\le k\le N-1$ 存在 $\nu^{k,k+1}=0$，则有 $x^{k}=y^{k}=0$ 成立。那么依据指标 $2\le i\le k-1$ 和 $k+1\le i\le N-1$，方程 \eqref{equations} 可以被分为两个方程。因此对 $\nu^{k,k+1}>0, \forall k, 2\le k\le N-1$ 证明引理，下面会从三种不同情况考虑这个引理。
+
+    情况 1：$\nu^{12}=\nu^{+}=\nu^{1N}=\nu^-=0$。
+    易知，对每个 $\alpha\in (0,1)$，
+    \begin{equation*}
+        x^{i}=\alpha\nu^{i,i+1},\quad y^{i}=(1-\alpha)\nu^{i,i+1},\quad 2\le i\le N-1,
+    \end{equation*}
+    都是 \eqref{equations} 的解。
+
+    情况 2：$\nu^{12}=\nu^{+}=0,\nu^{1N}+\nu^{-}>0$ 或 $\nu^{1N}=\nu^{-}=0,\nu^{12}+\nu^{+}>0$。容易验证若 $\nu^{12}=\nu^{+}=0,\nu^{1N}+\nu^{-}>0$成立，则$x^{i}=0,y^{i}=\nu^{i,i+1}$ 是方程 \eqref{equations} 的解。
+
+    情况 3：$\nu^{12}+\nu^{+}>0$ 或 $\nu^{1N}+\nu^{-}>0$。上述已证明对任意给定的 $x^{k+1}\ge 0$，$y^{k+1}>0$，和 $x^{k+1}+y^{k+1}=\nu^{k+1,k+2}$，下列方程 \eqref{equations2} 满足 $x^{i},y^{i}> 0, \forall i, 2\le i\le k$。
+    \begin{equation}\label{equations2}
+        \begin{split}
+            \frac{x^{i}}{y^{i}}
+            =&\frac{x^{i}+x^{i+1}+\nu^+}{x^{i}+\nu^+}\, \frac{y^{i}+\nu^-}{y^{i-1}+y^{i}+\nu^-}
+            \,\frac{x^{i-1}+x^{i}+\nu^+}{y^{i}+y^{i+1}+\nu^-},\\
+            &\qquad x^{i} + y^{i} = \nu^{i,i+1},\qquad 2\le i\le k.
+        \end{split}
+    \end{equation}
+
+    下面通过归纳法证明。若 $k=2$，方程 \eqref{equations2} 可以简化为：
+    \begin{equation*}\label{equation k=2}
+        \frac{x^{2}}{\nu^{23}-x^2}
+        =\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-}.
+        %,\qquad \nu^+_{23} + \nu^-_{23} = \nu_{23}.
+    \end{equation*}
+    易得：
+    \begin{equation*}
+        \lim_{x^{2}\downarrow 0}\frac{x^{2}}{\nu^{23}-x^2} = 0,\qquad \lim_{x^{2}\downarrow 0}\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-} \ge  \frac{\nu^{12}+\nu^{+}}{\nu^{23}+y^{3}+\nu^-} > 0.
+    \end{equation*} 
+    另外，
+    \begin{equation*}
+        \lim_{x^2\uparrow \nu^{23}}\frac{x^{2}}{\nu^{23}-x^2} = \infty,\qquad \lim_{x^{2}\uparrow \nu^{23}}\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-} =  \frac{\nu^{23}+x^{3}+\nu^+}{\nu^{23}+\nu^+}\frac{\nu^{12}+\nu^{23}+\nu^{+}}{y^{3}+\nu^-} < \infty.
+    \end{equation*}
+    通过中值定理，可以找到满足 $x^{i},y^i>0$ 的方程 \eqref{equations2} 的解，并且有 $x^{i}+y^{i}=\nu^{i,i+1}$ 。假设 $
+
+\end{proof}
 
 \end{appendices}
