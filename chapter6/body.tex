@@ -1,6 +1,6 @@
 \begin{appendices}
 
-\BiChapter{附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{} \label{appendix:explicit} \label{appendix:explicit}
+\section{附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{} \label{appendix:explicit} \label{appendix:explicit}
 因此，可以得到速率函数：
 \begin{equation*}\label{ratefunction2}
 	\begin{split}
@@ -72,8 +72,72 @@
     \begin{equation*}
         \lim_{x^2\uparrow \nu^{23}}\frac{x^{2}}{\nu^{23}-x^2} = \infty,\qquad \lim_{x^{2}\uparrow \nu^{23}}\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-} =  \frac{\nu^{23}+x^{3}+\nu^+}{\nu^{23}+\nu^+}\frac{\nu^{12}+\nu^{23}+\nu^{+}}{y^{3}+\nu^-} < \infty.
     \end{equation*}
-    通过中值定理，可以找到满足 $x^{i},y^i>0$ 的方程 \eqref{equations2} 的解，并且有 $x^{i}+y^{i}=\nu^{i,i+1}$ 。假设 $
+    通过中值定理，可以找到满足 $x^{i},y^i>0$ 的方程 \eqref{equations2} 的解，并且有 $x^{i}+y^{i}=\nu^{i,i+1}$ 。假设对 $k=n-1$ 命题成立，那么可以考虑方程：
+    \begin{equation*}
+        \frac{x^{n}}{\nu^{n,n+1}-x^{n}} = \frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-},
+    \end{equation*}
+    其中 $x^{n-1}$, $y^{n-1}$ 是方程 \eqref{equations2} 在 $k=n-1$ 时的解。可以得到：
+    \begin{equation}\label{limit1}
+        \lim_{x^{n}\downarrow 0}\frac{x^{n}}{\nu^{n,n+1}-x^{n}}=0,
+    \end{equation}
+    并且
+    \begin{equation}\label{limit2}
+        \begin{split}
+            &\;\lim_{x^{n}\downarrow 0}\frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-}\\
+            \ge &\;\frac{\nu^{n,n+1}+\nu^-}{\lim_{x^{n}\downarrow 0}(y^{n-1})+\nu^{n,n+1}+\nu^-}\,\frac{\lim_{x^{n}\downarrow 0}(x^{n-1})+\nu^+}{\nu^{n,n+1}+y^{n+1}+\nu^-}>0.
+        \end{split}
+    \end{equation}
+    利用归纳法得出的结论 $\lim_{x^{n}\downarrow 0}(x^{n-1})>0$，可以得到下面两个式子成立。
+    \begin{equation}\label{limit3}
+        \lim_{x^{n}\uparrow \nu^{n,n+1}}\frac{x^{n}}{\nu^{n,n+1}-x^{n}}=\infty,
+    \end{equation}
+    和
+    \begin{equation}\label{limit4}
+        \begin{split}
+            &\;\lim_{x^{n}\uparrow \nu^{n,n+1}}\frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-}\\
+            \le &\;\frac{\nu^{n,n+1}+x^{n+1}+\nu^+}{\nu^{n,n+1}+\nu^+}\,\frac{\lim_{x^{n}\uparrow \nu^{n,n+1}}x^{n-1}+\nu^{n,n+1}+\nu^+}{y^{n+1}+\nu^-}<\infty.
+        \end{split}
+    \end{equation}
+    那么通过中值定理，可以找到方程 \eqref{equations2} 满足条件 $x^{i},y^i>0, x^{i}+y^{i}=\nu^{i,i+1}, \forall i=2,3, \cdots, n$ 的解，就是说上述命题对 $k=n$ 成立。
+
+    当 $k=N-1$ 时，有 $y^{k+1}=y^N=\nu^{1N}$ 成立。注意到 $\nu^{1N}+\nu^->0$，那么可以得到 \eqref{limit1}，\eqref{limit2}，\eqref{limit3} 和 \eqref{limit4} 成立。通过中值定理，可以找到方程 \eqref{equations2} 满足条件 $x^{i},y^i>0, x^{i}+y^{i}=\nu^{i,i+1}, \forall i=2,3, \cdots, n$ 的解。当 $k=N-1$ 时，方程 \eqref{equations2} 与 方程 \eqref{equations} 等价。证毕。
 
 \end{proof}
+\begin{lemma}\label{lemma:mininum}
+    令 $X=(x^i,y^i)\in V(\nu)$ 是引理 ~\ref{lemma:existence for equations solution} 的解，那么 $X$ 是 $F_{\nu}(\cdot)$ 定义在 $V(\nu)$ 下的最小值点。 
+\end{lemma}
+\begin{proof}
+    对任意 $a_1,a_2,b_1,b_2\ge 0$，通过 log-sum 不等式（见 \eqref{log sum inequality}），可以得到：
+    \begin{align}\label{log sum inequality 2}
+        a_1\log\frac{a_1}{a_1+a_2}+a_2\log\frac{a_2}{a_1+a_2}\ge a_1\log\frac{b_1}{b_1+b_2}+a_2\log\frac{b_2}{b_1+b_2}.
+    \end{align}
+    对任意 $Z=(z^i,w^i)\in V(\nu)$，可以把 \eqref{formula:F} 写为：
+    \begin{align*}
+        F_{\nu}(Z)
+        =&\;\sum_{i=2}^{N-1}\left[ \left(z^{i-1}+\nu^+\right)\log\frac{z^{i-1}+\nu^+}{z^{i-1}+z^{i}+\nu^+} + z^{i}\log\frac{z^{i}}{z^{i-1}+z^{i}+\nu^+}  \right]\\
+        &\;+\sum_{i=2}^{N-1}  \left[w^{i}\log\frac{w^{i}}{w^{i} +w^{i+1} +\nu^-} + \left(w^{i+1} +\nu^-\right)\log\frac{w^{i+1} +\nu^-}{w^{i} +w^{i+1} +\nu^-}\right],
+    \end{align*}
+    其中 $z^{1}=\nu^{12},w^{N}=\nu^{1N}$。再根据方程 \eqref{equations} 和 \eqref{log sum inequality 2}
+    \begin{align*}
+        F_{\nu}(Z)\ge &\;\sum_{i=2}^{N-1}\left[ \left(z^{i-1}+\nu^+\right)\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + z^{i}\log\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
+        &\;+\sum_{i=2}^{N-1}  \left[w^{i}\log\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-} + \left(w^{i+1} +\nu^-\right)\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
+        =&\;\sum_{i=2}^{N-1}\left[ \nu^+\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + z^{i}\log\frac{x^{i}+\nu^{+}}{x^{i-1}+x^{i}+\nu^{+}}\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
+        &\;+\sum_{i=2}^{N-1}  \left[\nu^-\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}+w^{i}\log\frac{y^{i}+\nu^{-}}{y^{i-1}+y^{i}+\nu^{-}}\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-}  \right]\\
+        &\;+\nu^{12}\log\frac{\nu^{12}+\nu^{+}}{\nu^{12}+x^{2}+\nu^{+}}+\nu^{1N}\log\frac{\nu^{1N}+\nu^{-}}{\nu^{1N}+y^{N-1}+\nu^{-}}\\
+        =&\;\sum_{i=2}^{N-1}\left[-\lambda_i\nu^{i,i+1}+\nu^+\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+}+\nu^-\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
+        &\;+\nu^{12}\log\frac{\nu^{12}+\nu^{+}}{\nu^{12}+x^{2}+\nu^{+}}+\nu^{1N}\log\frac{\nu^{1N}+\nu^{-}}{\nu^{1N}+y^{N-1}+\nu^{-}}\\
+        =&\;\sum_{i=2}^{N-1}\left[ \left(x^{i-1}+\nu^+\right)\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + x^{i}\log\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
+        &\;+\sum_{i=2}^{N-1}  \left[y^{i}\log\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-} + \left(y^{i+1} +\nu^-\right)\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
+        =&\;F_{\nu}(X),
+        \end{align*}
+        其中 $\lambda_i$ 被表示为 \eqref{equations}。证毕。
+\end{proof}
 
+\section{速率函数的对称性} \label{appendix:symmetry}
+下面将证明速率函数与初始分布的选择无关（见命题 \ref{corollary:rate function is unrelated to the starting state}）。在开始证明之前，先给出下面的定义。
+
+给定 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$ 和 $\eta=[i_0,i_1,\cdots,i_t]$，记 $|k|=\sum_{c\in\mathcal{C}}k^c|c|$，并且令 $n=|k|+|\eta|=|k|+t$，其中 $|c|$ 和 $|\eta|$ 分别表示环 $c$ 的长度和导出链的长度。令 $G^{\eta}(k)$ 为所有 $n$ 步长的轨道 $(\xi_m)_{0\le m\le n}$ 组成的集合，这些轨道满足环 $c$ 形成 $k^c$ 次，并且去环遗留的轨道是 $\eta$，定义为
+\begin{equation*}
+	G^{\eta}(k)=\left\{(\xi_0,\xi_1,\cdots,\xi_n)\in S^{n+1}:N^c_n=k^c (\forall c\in \mathcal{C}),\tilde{\xi}_n=\eta,\text{ and }n=|k|+|\eta|\right\}.
+\end{equation*}
 \end{appendices}
