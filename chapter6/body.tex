@@ -179,9 +179,120 @@
 			&\xi_{n+\eta(\xi)-m},    && \text{if }\eta(\xi)<m\le n.\\
 		\end{aligned}\right.
 	\end{equation*}
-    所有 $(\xi_m)_{0\le m\le \eta(\xi)}$ 中形成的环，在$(\tilde{\xi}_m)_{0\le m\le \eta(\xi)}$中也有形成。
-\end{proof}
+    所有 $(\xi_m)_{0\le m\le \eta(\xi)}$ 中形成的环，在$(\tilde{\xi}_m)_{0\le m\le \eta(\xi)}$中也有形成。折线轨迹 $(\xi_m)_{\eta(\xi)\le m\le n}$ 在状态 $i$ 时间 $m$ 的水平移动对应于 $(\tilde{\xi}_m)_{\eta(\xi)\le m\le n}$ 在状态 $i-N$ 时间 $n+\eta(\xi)-m$ 的水平移动。类似的，折线轨迹 $(\xi_m)_{\eta(\xi)\le m\le n}$ 在时间 $m$ 从状态$i+1$ 到状态 $i$ 的下落对应于 $(\tilde{\xi}_m)_{\eta(\xi)\le m\le n}$ 在时间 $n+\eta(\xi)-m$ 从状态 $i-N$ 到状态 $i+1-N$ 的下落。那么所有 $(\xi_m)_{0\le m\le \eta(\xi)}$中形成的单状态和两状态环在 $(\tilde{\xi}_m)_{0\le m\le \eta(\xi)}$ 中也有对应。而且，轨迹 $(\tilde{\xi}_m)_{0\le m\le n}$ 在时间 $n$ 和状态 $1-N$第一次到达集合 $\{N+1,1-N\}$，这说明轨迹 $(\tilde{\xi}_m)_{0\le m\le n}$ 最后形成的环是 $(1,N,\cdots,2)$，使得 $\tilde{\xi}\in G^{1,-}(0,1,\tilde{k})$。那么 $\xi\to \tilde{\xi}$ 是从 $G^{1,+}(1,0,\tilde{k})$ 到 $G^{1,-}(0,1,\tilde{k})$ 的一一映射，这说明 $B^1(\tilde{k})=C^1(\tilde{k})$。
 
+    现在已经证明 $B^1(\tilde{k})=B^j(\tilde{k})$。对任意 $\tilde{k}$，令 $\tilde{G}^i(\tilde{k})$ 为满足下列所有条件路径的集合，1）前 $n$ 步（$n=N+\sum_{i \in S}(k^i+2k^{i,i+1})$）是从状态 $i$ 出发。2）边 $\langle i,i\rangle$ 被通过 $k^i$ 次。3）边 $\langle i,i+1\rangle$ 被通过 $k^{i,i+1}$ 次。4）在时间 $n$ 第一次到达状态 $N+i$。
+
+    已经阐明对任意 $j\in S$，$|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|$ 成立。对任意轨迹 $\xi=(\xi_m)_{0\le m\le n}\in \tilde{G}^{1}(\tilde{k})$，令 $\kappa^j(\xi)=\min\{m: 0\le m\le n,\xi_k=j\}$，$\xi$也可以被视为折线图（见图 \ref{fig:linechart} （b））。那么构造 $\xi$ 对应的轨迹 $\tilde{\xi}$ 为：
+    \begin{equation*}
+		\tilde{\xi}_k
+		:=\left\{\begin{aligned}
+			&\xi_{\kappa(\xi)+k},    && \text{if } 0\le k\le n-\kappa(\xi),\\
+			&\xi_{k+\kappa(\xi)-n},    && \text{if }n-\kappa(\xi)<k\le n.\\
+		\end{aligned}\right.
+	\end{equation*}
+    因此 $(\tilde{\xi}_m)_{0\le m\le n} \in \tilde{G}^i(\tilde{k})$。注意到 $\kappa(\xi)$ 是 $\xi$ 第一次到达状态 $j$，这说明 $n$ 也是 $\tilde{\xi}$ 第一次到达状态 $j+N$，那么$\tilde{\xi}\in \tilde{G}^j(\tilde{k})$。显然，$\xi\to\tilde{\xi}$ 是从 $\tilde{G}^1(\tilde{k})$ 到 $\tilde{G}^j(\tilde{k})$的一一映射，这说明 $|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|$。
+
+    对轨迹 $\xi\in\tilde{G}^j(\tilde{k})$，环 $(i)$，$(i,i+1)$，$(1,\cdots,N)$，$(1,N,\cdots,2)$ 分别形成 $k^i$，$k^{i,i+1}-l$，$l+1$，$l$ 次，其中 $l\le \min_{i\in S}k^{i,i+1}$ 依赖于 $\xi$。注意到 $\xi$ 在 $n$ 时到达状态 $N+j$ ，那么 $\xi$ 形成的最后一个环是 $(1,\cdots,N)$，因此
+	\begin{equation*}
+		\tilde{G}^j\left(\tilde{k}\right)=\bigsqcup_{l=0}^{\min_{i\in S}k^{i,i+1}}G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right),
+	\end{equation*}
+	\begin{equation}\label{equality for AjBj}
+		\left|\tilde{G}^j\left(\tilde{k}\right)\right|=\sum_{l=1}^{\min_{i\in S}k^{i,i+1}}\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|+B^j\left(\tilde{k}\right).
+	\end{equation}
+	下面用归纳法证明 $B^1(\tilde{k})=B^j(\tilde{k})$。当 $\min_{i\in S}k^{i,i+1}=0$, 通过方程 \eqref{equality for AjBj}，可以得到 
+    \begin{equation*}
+		B^1(\tilde{k})=|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|=B^j(\tilde{k}).
+	\end{equation*} 
+	假设等式对 $\min_{i\in S}k^{i,i+1}\le m$ 成立。当 $\min_{i\in S}k^{i,i+1}=m+1$ 时，固定 $1\le l\le \min_{i\in S}k^{i,i+1}$，并且令 $\xi\in G^{j,+}_n(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$。那么轨迹 $\xi$ 可以被分为 $2l+1$ 个子轨迹， 是的每一个子轨迹最后形成的环是 $(1,\cdots,N)$ 或 $(1,N,\cdots,2)$。Note that the number of permutations for inserting $l$ cycle $(1,\cdots,N)$ and $l$ cycle $(1,N,\cdots,2)$ into state 1 before the last cycle $(1,\cdots,N)$ is $\binom{2l}{l}$. Fix the partition of the rest cycles (i.e. $\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$), as $B^{i}(\tilde{k})=C^i(\tilde{k})$ for all $i$ and $\tilde{k}$, the number of insertions is $\prod_{s=1}^{2l+1}B^j(\tilde{k}_s)$, so that
+	\begin{align*}
+		&\;\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|\\
+		=&\;\binom{2l}{l}\sum_{\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)}\prod_{s=1}^{2l+1}B^j\left(\tilde{k}_s\right).
+	\end{align*}
+	As $l\ge 1$, we have $B^1(\tilde{k}_s)=B^j(\tilde{k}_s)$, so that
+	\begin{align*}
+		&\left|G^{1,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|\\
+		=&\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|.
+	\end{align*}
+	Then by the claim and \eqref{equality for AjBj}, we have $B^1(\tilde{k})=B^j(\tilde{k})$. By induction, we finish the proof.
+\end{proof}
+\begin{proposition}\label{proposition:E Gin}
+	For any $1\le i,j\le N$, $k\in\mathbb{N}^{2N+2}$, and derived chain $\eta$,
+	\begin{itemize}
+		\item[(i)] 
+		\begin{equation}\label{EGin}
+			\left|G^i\left(k^+,k^-,\tilde{k}\right)\right|=\left|G^i\left(k^-,k^+,\tilde{k}\right)\right|.
+		\end{equation}
+		\item[(ii)] 
+		\begin{equation}\label{E Gi1cdotsNn}
+			\left|G^{i,+}(k)\right|=\left|G^{j,+}(k)\right|,\qquad\left|G^{i,-}(k)\right|=\left|G^{j,-}(k)\right|.
+		\end{equation}
+		\item[(iii)]  
+		\begin{equation}\label{EGetan}
+			\left|G^{\eta}\left(k^+,k^-,\tilde{k}\right)\right|=\left|G^{\eta}\left(k^-,k^+,\tilde{k}\right)\right|.
+		\end{equation}
+	\end{itemize}
+\end{proposition}
+\begin{proof}
+	(i) We first insert $k^+$ cycle $(1,\cdots,N)$ and $k^-$ cycle  $(1,N,\cdots,2)$ into state $i$, then the number of permutations is $\binom{k^++k^-}{k^+}$. 
+	
+	We next divide the rest cycles (i.e. $k^i$ cycle $(i)$ and $k^{i,i+1}$ cycle $(i,i+1)$) into $k^++k^-+1$ parts. Fix the partition of the rest cycles as $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$. By Lemma~\ref{lemma:BiBjCiCj},  the number of insertions is 
+	\begin{equation*}
+		\left[\prod_{s=1}^{k^++k^-}B^i(\tilde{k}_s)\right]\left|G^i(0,0,\tilde{k}_{k^++k^-+1})\right|,
+	\end{equation*}
+	where $B^i(\tilde{k}_s)$ is the number of the insertion of $\tilde{k}_s$ cycles between the $(s-1)$-th and $s-$th long $N$-state cycle, and $|G^i(0,0,\tilde{k}_{k^++k^-+1})|$ is the number of the insertion of $\tilde{k}_{k^++k^-+1}$ cycles after the $(k^++k^-)$-th long $N$-state cycle. Adding the number of the insertions over all partitions $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$, we have
+	\begin{align}\label{E Gin}
+		\left|G^i\left(k^+,k^-,\tilde{k}\right)\right|=\binom{k^++k^-}{k^+}\sum_{\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}}\left[\prod_{s=1}^{k^++k^-}B^i\left(\tilde{k}_s\right)\right]\left|G^i\left(0,0,\tilde{k}_{k^++k^-+1}\right)\right|.
+	\end{align}
+	Note that \eqref{E Gin} is symmetry about $k^+$ and $k^-$, we finish the proof of (i).
+	
+	(ii) We only prove the first equality of \eqref{E Gi1cdotsNn} and the second equality is similar. The proof is similar with (i), but here for trajectory $\xi\in G^{i,+}_n(k)$, the last cycle is $(1,\cdots,N)$, we only need to insert $k^+-1$ cycle $(1,\cdots,N)$ and $k^-$ cycle $(1,N,\cdots,2)$ into state $i$, then we have
+	\begin{align*}
+		&\left|G^{i,+}\left(k\right)\right|=\binom{k^++k^--1}{k^+-1}\sum_{\sum_{s=1}^{k^++k^-}\tilde{k}_s=\tilde{k}}\prod_{s=1}^{k^++k^-}B^i\left(\tilde{k}_s\right)\\
+		&\qquad\qquad=\binom{k^++k^--1}{k^+-1}\sum_{\sum_{s=1}^{k^++k^-}\tilde{k}_s=\tilde{k}}\prod_{s=1}^{k^++k^-}B^j\left(\tilde{k}_s\right)=\left|G^{j,+}\left(k\right)\right|,
+	\end{align*}
+	where the second equality follows from Lemma~\ref{lemma:BiBjCiCj}.
+	
+	(iii) Let $\eta=[i_0,i_1,\cdots,i_t]$. We first divide all cycles into $t+1$ parts. Fix a partition as $\sum_{s=0}^t k_s=k$, so that $k^c_s$ cycle $c$ ($\forall c\in\mathcal{C}$) will be inserted into state $i_s$ ($0\le s\le t$) of $\eta$. Then the number of insertions is $\prod_{s=0}^t |G^{i_s}(k_s)|$. Adding the number of insertions over all partitions $\sum_{s=0}^t k_s=k$, we have
+	\begin{equation*}
+		\left|G^{\eta}(k)\right|=\sum_{\sum_{s=0}^t k_s=k}\prod_{s=0}^t \left|G^{i_s}(k_s)\right|.
+	\end{equation*}
+	Note that for any partition $\sum_{s=0}^t k_s=k$, we have $\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})$ is a partition for $(k^-,k^+,\tilde{k})$. Then by Eq. \eqref{EGin}, we have
+	\begin{align*}
+		\left|G^{\eta}(k^-,k^+,\tilde{k})\right|=&\sum_{\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})}\prod_{s=0}^t \left|G^{i_s}(k_s^-,k_s^+,\tilde{k}_s)\right|\\
+		=&\sum_{\sum_{s=0}^t k_s=k}\prod_{s=0}^t \left|G^{i_s}(k_s)\right|=\left|G^{\eta}(k)\right|.
+	\end{align*}
+\end{proof}
+Next statement, we give a relation between $| (G^i(k)|$ and $|G^{i,c}(k)|$.
+\begin{lemma}\label{lemma:E G1cnk}
+	For any $k\in \mathbb{N}^{2N+2}$ and $i\in S$, let $c\in \mathcal{C}$ satisfies $c$ passing through state $i$, then
+	\begin{align*}
+		\left|G^{i,c}(k)\right| = \frac{k^c}{k_i}\left|G^i(k)\right|.
+	\end{align*}
+\end{lemma}
+\begin{proof}
+	Without loss of generality, we only prove for $i=1$. Recall that the three steps of calculation for $|G^1(k)|$ in Section~\ref{LELDP}. 
+%	let us insert cycle $(1)$ earlier from the third step to the first step, then $A_1$ and $A_3$ turn into
+%	\begin{equation*}
+%		\hat{A}_1=\binom{k^1+k^{12}+k^{1N}+k^{+}+k^{-}}{k^1, k^{12}, k^{1N}, k^{+}, k^{-}},\qquad \hat{A}_3=\prod_{i=2}^N \binom{\sum_{c \ni \{i\}} k^{c} - 1}{ k^{i} },
+%	\end{equation*}
+%	and it is easy to check $A_1A_3=\hat{A}_1\hat{A}_3$.
+%	
+	Let us fix the last cycle as $c$ in the first step and the number of permutations is turning into
+	\begin{equation*}
+		\frac{k^c}{k^{1}+k^{12}+k^{1N}+k^{+}+k^{-}}A_1.
+	\end{equation*}
+	Keep the second step and the third step the same. In this case the last cycle formed by trajectory will be $c$, which means
+	\begin{align*}
+		\left|G^{1,c}(k)\right| = \frac{k^c}{k_1}\left|G^1(k)\right|.
+	\end{align*}
+\end{proof}
+\begin{proposition}\label{corollary:rate function is unrelated to the starting state}
+	$I_J$ is independent of the choice of the initial distribution of $\xi$.
+\end{proposition}
+\begin{proof}
+	Let $c=(1,\cdots,N)$ or $(1,N,\cdots,2)$, by Proposition~\ref{proposition:E Gin} and Lemma~\ref{lemma:E G1cnk}, it is easy to see that $\log|G^1(k)|=\log|G^i(k)|+O(\log n)$. Then by \eqref{ratefunction}, we finish the proof.
+\end{proof}
 
 
 \end{appendices}
