@@ -140,4 +140,48 @@
 \begin{equation*}
 	G^{\eta}(k)=\left\{(\xi_0,\xi_1,\cdots,\xi_n)\in S^{n+1}:N^c_n=k^c (\forall c\in \mathcal{C}),\tilde{\xi}_n=\eta,\text{ and }n=|k|+|\eta|\right\}.
 \end{equation*}
+在此，对只有一个状态的 $\eta =[i]$，用 $G^{i}(k)$ 表示 $G^{\eta}(k)$。对任意包含状态 $i$ 的环 $\tilde{c}\in \mathcal{C}$，$G^i(k)$ 的一个子集 $G^{i,\tilde{c}}(k)$ 定义为：
+\begin{equation*}
+	G^{i,\tilde{c}}(k)=\left\{(\xi_0,\xi_1,\cdots,\xi_n)\in S^{n+1}:N^c_n=k^c (\forall c\in \mathcal{C}),\tilde{\xi}_n=[i],T^{\tilde{c}}_{k^{\tilde{c}}}=n,\text{ and }n=|k|\right\},
+\end{equation*}
+其中 $T^{\tilde{c}}_{k^{\tilde{c}}}$ 表示为第 $k^{\tilde{c}}$ 次形成的环 $\tilde{c}$。即对任意轨道 $(\xi_m)_{0\le m\le n}\in G^{i,\tilde{c}}(k)$，最后一次形成的环是 $\tilde{c}$。
+
+注意到等式 $n=|k|+|\eta|$ 对 $G^{\eta}(k)$ 和 $G^{i,c}(k)$ 成立。因此在章节 ~\ref{LELDP} 省略 $G_n(k)$ 的角标 $n$。
+
+下面将针对 $|G^i(k)|$ 和 $|G^{i,c}(k)|$，给出两个重要的等式。记 
+\begin{equation*}
+	B^i(\tilde{k})=\left|G^{i,+}(1,0,\tilde{k})\right|,\qquad	C^i(\tilde{k})=\left|G^{i,-}(0,1,\tilde{k})\right|,
+\end{equation*}
+其中 $\tilde{k}=(k^1,\cdots,k^N,k^{12},\cdots,k^{N-1,N},k^{1N})$，即 $B^i$ ($C^i$) 表示满足下列条件的轨迹数量：1）环 $c$ 形成 $k^c$ 次；2） $k^+=1,k^-=0$ ($k^+=0,k^-=1$)；3）从状态 $i$ 出发，状态 $i$ 结束；4）最后形成的环是 $(1,\cdots,N)$ ($(1,N,\cdots,2)$)。
+
+\begin{lemma}\label{lemma:BiBjCiCj}
+	对任意 $i,j\in S$，有：
+	\begin{equation*}
+		B^i\left(\tilde{k}\right)=B^j\left(\tilde{k}\right)=C^i\left(\tilde{k}\right)=C^j\left(\tilde{k}\right).
+	\end{equation*}
+\end{lemma}
+
+\begin{proof}
+    不降低一般性，令 $i=1$，只须证 $B^1(\tilde{k})=C^1(\tilde{k})=B^j(\tilde{k})$。
+
+    首先证明 $B^1(\tilde{k})=C^1(\tilde{k})$。
+    \begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.7]{chart/brokenlinegraph.pdf}
+		\caption{$\xi$ 的轨迹对应的折线图。（a）第一种类型的轨迹映射（b）第二种类型的轨迹映射}
+		\label{fig:linechart}
+	\end{figure}
+    注意到该系统是单环马氏链，$\xi$ 的每条轨迹可以被看作是一个折线图（见图 \ref{fig:linechart}（a））折线在状态 $i$ 时间 $m$ 处的水平移动表示环 $(i)$ 在时间 $m$ 处形成。折线从状态$i+1$ ($-j$) 到状态 $i$ ($1-j$) 的每次上升对应于 （其中的加减运算的结果都会经过模 $N$ 运算）。对任意轨迹 $\xi=(\xi_m)_{0\le m\le n}\in G^{1,+}(1,0,\tilde{k})$，令 $\eta(\xi)=\max\{m: 0\le m\le n-1,\xi_m=1\}$。回顾定义 $G^{1,+}(1,0,\tilde{k})$，轨迹 $(\xi_m)_{0\le m\le n}$ 在时间 $n$ 和状态 $N+1$ 到达集合 $\{N+1,1-N\}$。那么构造 $\xi$ 对应的轨迹 $\tilde{\xi}$（见图 \ref{fig:linechart} （a））
+	\begin{equation*}
+		\tilde{\xi}_m
+		:=\left\{\begin{aligned}
+			&\xi_m,    && \text{if } 0\le m\le \eta(\xi),\\
+			&\xi_{n+\eta(\xi)-m},    && \text{if }\eta(\xi)<m\le n.\\
+		\end{aligned}\right.
+	\end{equation*}
+    所有 $(\xi_m)_{0\le m\le \eta(\xi)}$ 中形成的环，在$(\tilde{\xi}_m)_{0\le m\le \eta(\xi)}$中也有形成。
+\end{proof}
+
+
+
 \end{appendices}
