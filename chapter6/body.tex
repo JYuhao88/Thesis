@@ -204,20 +204,21 @@
     \begin{equation*}
 		B^1(\tilde{k})=|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|=B^j(\tilde{k}).
 	\end{equation*} 
-	假设等式对 $\min_{i\in S}k^{i,i+1}\le m$ 成立。当 $\min_{i\in S}k^{i,i+1}=m+1$ 时，固定 $1\le l\le \min_{i\in S}k^{i,i+1}$，并且令 $\xi\in G^{j,+}_n(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$。那么轨迹 $\xi$ 可以被分为 $2l+1$ 个子轨迹， 是的每一个子轨迹最后形成的环是 $(1,\cdots,N)$ 或 $(1,N,\cdots,2)$。Note that the number of permutations for inserting $l$ cycle $(1,\cdots,N)$ and $l$ cycle $(1,N,\cdots,2)$ into state 1 before the last cycle $(1,\cdots,N)$ is $\binom{2l}{l}$. Fix the partition of the rest cycles (i.e. $\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$), as $B^{i}(\tilde{k})=C^i(\tilde{k})$ for all $i$ and $\tilde{k}$, the number of insertions is $\prod_{s=1}^{2l+1}B^j(\tilde{k}_s)$, so that
+	假设等式对 $\min_{i\in S}k^{i,i+1}\le m$ 成立。当 $\min_{i\in S}k^{i,i+1}=m+1$ 时，固定 $1\le l\le \min_{i\in S}k^{i,i+1}$，并且令 $\xi\in G^{j,+}_n(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$。那么轨迹 $\xi$ 可以被分为 $2l+1$ 个子轨迹， 是的每一个子轨迹最后形成的环是 $(1,\cdots,N)$ 或 $(1,N,\cdots,2)$。注意到最后一个环 $(1,\cdots,N)$ is $\binom{2l}{l}$ 形成前，在状态 1 处插入 $l$ 环 $(1,\cdots,N)$ 和 $l$ 个环 $(1,N,\cdots,2)$ 的排列数是 $\binom{2l}{l}$。固定剩余的环的分区（即 $\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$），因为对任意 $i$ 和 $\tilde{k}$，插入方式的排列数为 $\prod_{s=1}^{2l+1}B^j(\tilde{k}_s)$，那么：
 	\begin{align*}
 		&\;\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|\\
 		=&\;\binom{2l}{l}\sum_{\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)}\prod_{s=1}^{2l+1}B^j\left(\tilde{k}_s\right).
 	\end{align*}
-	As $l\ge 1$, we have $B^1(\tilde{k}_s)=B^j(\tilde{k}_s)$, so that
+	
+	因为 $l\ge 1$,，所以有 $B^1(\tilde{k}_s)=B^j(\tilde{k}_s)$，那么：
 	\begin{align*}
 		&\left|G^{1,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|\\
 		=&\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|.
 	\end{align*}
-	Then by the claim and \eqref{equality for AjBj}, we have $B^1(\tilde{k})=B^j(\tilde{k})$. By induction, we finish the proof.
+	依据式 \eqref{equality for AjBj}，可知$B^1(\tilde{k})=B^j(\tilde{k})$。最后通过归纳法，完成证明。
 \end{proof}
 \begin{proposition}\label{proposition:E Gin}
-	For any $1\le i,j\le N$, $k\in\mathbb{N}^{2N+2}$, and derived chain $\eta$,
+	考虑任意 $1\le i,j\le N$, $k\in\mathbb{N}^{2N+2}$ 和导出链 $\eta$，可得下面三条结论：
 	\begin{itemize}
 		\item[(i)] 
 		\begin{equation}\label{EGin}
@@ -234,64 +235,167 @@
 	\end{itemize}
 \end{proposition}
 \begin{proof}
-	(i) We first insert $k^+$ cycle $(1,\cdots,N)$ and $k^-$ cycle  $(1,N,\cdots,2)$ into state $i$, then the number of permutations is $\binom{k^++k^-}{k^+}$. 
-	
-	We next divide the rest cycles (i.e. $k^i$ cycle $(i)$ and $k^{i,i+1}$ cycle $(i,i+1)$) into $k^++k^-+1$ parts. Fix the partition of the rest cycles as $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$. By Lemma~\ref{lemma:BiBjCiCj},  the number of insertions is 
+	(1) 首先考虑在状态 $i$ 插入环 $k^+$ 个环 $(1,\cdots,N)$ 和 $k^-$ 个环  $(1,N,\cdots,2)$，那么相应的排列数为 $\binom{k^++k^-}{k^+}$。接下来把剩余的环 （i.e. $k^i$ 个环 $(i)$ 和 $k^{i,i+1}$ 个环 $(i,i+1)$）分为 $k^++k^-+1$ 个部分。将剩余环的分区固定为 $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$。通过引理 \ref{lemma:BiBjCiCj}，插入的数量为：
 	\begin{equation*}
 		\left[\prod_{s=1}^{k^++k^-}B^i(\tilde{k}_s)\right]\left|G^i(0,0,\tilde{k}_{k^++k^-+1})\right|,
 	\end{equation*}
-	where $B^i(\tilde{k}_s)$ is the number of the insertion of $\tilde{k}_s$ cycles between the $(s-1)$-th and $s-$th long $N$-state cycle, and $|G^i(0,0,\tilde{k}_{k^++k^-+1})|$ is the number of the insertion of $\tilde{k}_{k^++k^-+1}$ cycles after the $(k^++k^-)$-th long $N$-state cycle. Adding the number of the insertions over all partitions $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$, we have
+	其中 $B^i(\tilde{k}_s)$ 是在第 $(s-1)$ 个和 第 $s-$ 个 $N$ 状态环之间插入 $\tilde{k}_s$ 个环的排列数，且 $|G^i(0,0,\tilde{k}_{k^++k^-+1})|$ 是在第 $(k^++k^-)$ 个 $N$ 状态环之后插入 $\tilde{k}_{k^++k^-+1}$ 个环的排列数。在所有分区中增加插入数量 $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$，可以得到：
 	\begin{align}\label{E Gin}
 		\left|G^i\left(k^+,k^-,\tilde{k}\right)\right|=\binom{k^++k^-}{k^+}\sum_{\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}}\left[\prod_{s=1}^{k^++k^-}B^i\left(\tilde{k}_s\right)\right]\left|G^i\left(0,0,\tilde{k}_{k^++k^-+1}\right)\right|.
 	\end{align}
-	Note that \eqref{E Gin} is symmetry about $k^+$ and $k^-$, we finish the proof of (i).
+	注意到 \eqref{E Gin} 是关于 $k^+$ 和 $k^-$ 对称的，故(1)证毕。
 	
-	(ii) We only prove the first equality of \eqref{E Gi1cdotsNn} and the second equality is similar. The proof is similar with (i), but here for trajectory $\xi\in G^{i,+}_n(k)$, the last cycle is $(1,\cdots,N)$, we only need to insert $k^+-1$ cycle $(1,\cdots,N)$ and $k^-$ cycle $(1,N,\cdots,2)$ into state $i$, then we have
+	(ii) 上面只证明了 \eqref{E Gi1cdotsNn} 中的第一个等式，第二个等式的证明与其相似。但是这里考虑的是轨迹 $\xi\in G^{i,+}_n(k)$，最后的环是 $(1,\cdots,N)$，只需在状态 $i$ 处插入 $k^+-1$ 个环 $(1,\cdots,N)$ 和 $k^-$ 个环 $(1,N,\cdots,2)$，可以得到：
 	\begin{align*}
 		&\left|G^{i,+}\left(k\right)\right|=\binom{k^++k^--1}{k^+-1}\sum_{\sum_{s=1}^{k^++k^-}\tilde{k}_s=\tilde{k}}\prod_{s=1}^{k^++k^-}B^i\left(\tilde{k}_s\right)\\
 		&\qquad\qquad=\binom{k^++k^--1}{k^+-1}\sum_{\sum_{s=1}^{k^++k^-}\tilde{k}_s=\tilde{k}}\prod_{s=1}^{k^++k^-}B^j\left(\tilde{k}_s\right)=\left|G^{j,+}\left(k\right)\right|,
 	\end{align*}
-	where the second equality follows from Lemma~\ref{lemma:BiBjCiCj}.
-	
-	(iii) Let $\eta=[i_0,i_1,\cdots,i_t]$. We first divide all cycles into $t+1$ parts. Fix a partition as $\sum_{s=0}^t k_s=k$, so that $k^c_s$ cycle $c$ ($\forall c\in\mathcal{C}$) will be inserted into state $i_s$ ($0\le s\le t$) of $\eta$. Then the number of insertions is $\prod_{s=0}^t |G^{i_s}(k_s)|$. Adding the number of insertions over all partitions $\sum_{s=0}^t k_s=k$, we have
+	其中第二步出自引理 ~\ref{lemma:BiBjCiCj}。
+
+	(iii) 记 $\eta=[i_0,i_1,\cdots,i_t]$，首先把所有的环分为 $t+1$ 个部分，固定一部分为 $\sum_{s=0}^t k_s=k$，那么 $k^c_s$ 个环 $c$ ($\forall c\in\mathcal{C}$) 将被插入在 $\eta$ 的状态 $i_s$ ($0\le s\le t$)。那么可插入方式的数量为 $\prod_{s=0}^t |G^{i_s}(k_s)|$。增加所有分区的数量 $\sum_{s=0}^t k_s=k$，可以得到
 	\begin{equation*}
 		\left|G^{\eta}(k)\right|=\sum_{\sum_{s=0}^t k_s=k}\prod_{s=0}^t \left|G^{i_s}(k_s)\right|.
 	\end{equation*}
-	Note that for any partition $\sum_{s=0}^t k_s=k$, we have $\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})$ is a partition for $(k^-,k^+,\tilde{k})$. Then by Eq. \eqref{EGin}, we have
+	注意到对任意分区 $\sum_{s=0}^t k_s=k$，可知 $\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})$ 是 $(k^-,k^+,\tilde{k})$ 的一个分区。那么由方程 \eqref{EGin}，可得：
 	\begin{align*}
 		\left|G^{\eta}(k^-,k^+,\tilde{k})\right|=&\sum_{\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})}\prod_{s=0}^t \left|G^{i_s}(k_s^-,k_s^+,\tilde{k}_s)\right|\\
 		=&\sum_{\sum_{s=0}^t k_s=k}\prod_{s=0}^t \left|G^{i_s}(k_s)\right|=\left|G^{\eta}(k)\right|.
 	\end{align*}
 \end{proof}
-Next statement, we give a relation between $| (G^i(k)|$ and $|G^{i,c}(k)|$.
+下面将陈述 $| (G^i(k)|$ 和 $|G^{i,c}(k)|$ 的相关性。
 \begin{lemma}\label{lemma:E G1cnk}
-	For any $k\in \mathbb{N}^{2N+2}$ and $i\in S$, let $c\in \mathcal{C}$ satisfies $c$ passing through state $i$, then
+	对任意 $k\in \mathbb{N}^{2N+2}$ 和 $i\in S$，令 $c\in \mathcal{C}$ 包含状态 $i$ 的环，那么：
 	\begin{align*}
 		\left|G^{i,c}(k)\right| = \frac{k^c}{k_i}\left|G^i(k)\right|.
 	\end{align*}
 \end{lemma}
 \begin{proof}
-	Without loss of generality, we only prove for $i=1$. Recall that the three steps of calculation for $|G^1(k)|$ in Section~\ref{LELDP}. 
-%	let us insert cycle $(1)$ earlier from the third step to the first step, then $A_1$ and $A_3$ turn into
-%	\begin{equation*}
-%		\hat{A}_1=\binom{k^1+k^{12}+k^{1N}+k^{+}+k^{-}}{k^1, k^{12}, k^{1N}, k^{+}, k^{-}},\qquad \hat{A}_3=\prod_{i=2}^N \binom{\sum_{c \ni \{i\}} k^{c} - 1}{ k^{i} },
-%	\end{equation*}
-%	and it is easy to check $A_1A_3=\hat{A}_1\hat{A}_3$.
-%	
-	Let us fix the last cycle as $c$ in the first step and the number of permutations is turning into
+	下面只证明 $i=1$ 时的情况，并不降低一般性。 回顾章节~\ref{LELDP} 中计算 $|G^1(k)|$ 的三个步骤。
+	在第一个步骤中固定最后一个环 $c$，并且把排列数转换为
 	\begin{equation*}
 		\frac{k^c}{k^{1}+k^{12}+k^{1N}+k^{+}+k^{-}}A_1.
 	\end{equation*}
-	Keep the second step and the third step the same. In this case the last cycle formed by trajectory will be $c$, which means
+	第二，三个步骤不变。在这种情况下，轨迹形成的最后一个环是 $c$，这意味着：
 	\begin{align*}
 		\left|G^{1,c}(k)\right| = \frac{k^c}{k_1}\left|G^1(k)\right|.
 	\end{align*}
 \end{proof}
 \begin{proposition}\label{corollary:rate function is unrelated to the starting state}
-	$I_J$ is independent of the choice of the initial distribution of $\xi$.
+	$I_J$ 不依赖于初始分布的选择 $\xi$.
 \end{proposition}
 \begin{proof}
-	Let $c=(1,\cdots,N)$ or $(1,N,\cdots,2)$, by Proposition~\ref{proposition:E Gin} and Lemma~\ref{lemma:E G1cnk}, it is easy to see that $\log|G^1(k)|=\log|G^i(k)|+O(\log n)$. Then by \eqref{ratefunction}, we finish the proof.
+	记 $c=(1,\cdots,N)$ 或 $(1,N,\cdots,2)$，通过命题 ~\ref{proposition:E Gin} 和引理 ~\ref{lemma:E G1cnk}，易知 $\log|G^1(k)|=\log|G^i(k)|+O(\log n)$，那么由式 \eqref{ratefunction}，命题得证。
+\end{proof}
+
+
+\section{Proof of Theorem~\ref{thm:LDP}}\label{appendix:LDP}
+这里把大偏差原理的证明 ~\ref{thm:LDP} 分为两部分。首先研究经验环流的速率函数的性质。回顾速率函数 $I_J:\mathcal{V}\to[0,\infty]$ 的形式为：
+\begin{equation*}\label{ratefunction1}
+	\begin{split}
+		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
+		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
+		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
+		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c\\
+		:=&\;I_1(\nu)+I_2(\nu)+I_3(\nu)+I_4(\nu).
+	\end{split}
+\end{equation*}
+\begin{proposition}\label{proposition:I}
+	速率函数 $I_J$ 是有界，连续的凸函数。
+\end{proposition}
+\begin{proof}
+	易知 $I_j$ 有界。首先证明 $I_J$ 连续。易知 $h$ 是定义在 $[0,\infty)$ 的连续函数。那么 $I_1$ 和 $I_3$ 是连续的。注意到  $I_4$ 是关于 $\nu$ 的连续函数，因此还需证明 $I_2$ 是连续函数。令 $Y(\nu)\in V(\nu)$ 是方程 \eqref{equations} 的解，由于 \eqref{equations} 是一个多项式方程组，因此易知 $Y(\nu)$ 是关于变量 $\nu$ 的连续函数。因为 $h$ 是连续的，再根据 \eqref{formula:F}，$\inf_{X\in V(\nu)}F_{\nu}(X)=F_{\nu}(Y(\nu))$ 是关于 $\nu$ 的连续函数。
+	
+	然后证明 $I_J$ 是凸函数。 回顾 log-sum 不等式，对任意 $a_{1},a_{2},b_{1},b_{2}\ge 0$，有：
+	\begin{equation}\label{log sum inequality}
+		(a_1+a_2)\log \frac{a_1+a_2}{b_1+b_2}\le a_{1}\log \frac{a_{1}}{b_{1}}+a_{2}\log \frac{a_{2}}{b_{2}} ,
+	\end{equation}
+	注意到
+	\begin{equation}\label{I_1}
+		I_1(\nu) = \nu^{12}\log\left(\frac{\nu^{12}}{\hat{\nu}}\right)+\nu^{1N}\log\left(\frac{\nu^{1N}}{\hat{\nu}}\right)+\nu^{+}\log\left(\frac{\nu^{+}}{\hat{\nu}}\right)+\nu^{-}\log\left(\frac{\nu^{-}}{\hat{\nu}}\right),
+	\end{equation}
+	其中 $\hat{\nu}=\nu^{12}+\nu^{1N}+\nu^++\nu^-$。对任意满足 $\alpha+\beta=1$ 的 $\alpha,\beta\ge 0$ 和 $\nu,\mu\in \mathcal{V}$，通过log-sum 不等式 \eqref{log sum inequality}，可以得到：
+	\begin{equation*}
+		(\alpha \nu^{12}+\beta \mu^{12})\log\left(\frac{\alpha \nu^{12}+\beta \mu^{12}}{\alpha \hat{\nu}+\beta \hat{\mu}}\right)\le \alpha\nu^{12}\log\left(\frac{\nu^{12}}{\hat{\nu}}\right)+\beta\mu^{12}\log\left(\frac{\mu^{12}}{\hat{\mu}}\right),
+	\end{equation*}
+	其中 $\hat{\mu}=\mu^{12}+\mu^{1N}+\mu^++\mu^-$。这说明 \eqref{I_1} 式的第一项的右边是关于 $\nu$ 的连续函数，同理，其他三项项的右边也是关于 $\nu$ 的连续函数。因此 $I_1(\nu)$ 是凸函数，同理，可以通过log-sum 不等式得到 $I_3(\nu)$也是凸函数。由于 $I_4(\nu)$ 是线性函数，故也是凸函数，最后只需证明 $\inf_{X\in V(\nu)}F_{\nu}(X)$ 是凸函数。 吧\eqref{formula:F} 重写为：
+	\begin{align*}
+		F_{\nu}(X)=&\;\sum_{i=2}^{N-1}\left[(x^{i-1}+\nu^+)\log\left(\frac{x^{i-1}+\nu^+}{x^{i-1}+x^i+\nu^+}\right)+x^i\log\left(\frac{x^{i}}{x^{i-1}+x^i+\nu^+}\right)\right]\\
+		&\;+\sum_{i=2}^{N-1}\left[y^i\log\left(\frac{y^{i}}{y^{i}+y^{i+1}+\nu^-}\right)+(y^{i+1}+\nu^-)\log\left(\frac{y^{i+1}+\nu^-}{y^{i}+y^{i+1}+\nu^-}\right)\right]\\
+		:=&\;\sum_{i=2}^{N-1}[A_1^i(\nu,X)+A_2^i(\nu,X)+A_3^i(\nu,X)+A_4^i(\nu,X)].
+	\end{align*}
+	注意到对任意 $X=(x^i,y^i)\in V(\nu)$ 和 $Z=(z^i,w^i)\in V(\mu)$，有 $\alpha X+\beta Z\in V(\alpha\nu+\beta\mu)$。那么通过 log-sum 不等式，可得：
+	\begin{align*}
+		&\;A_1^i(\alpha\nu+\beta \mu,\alpha X+\beta Y)\\
+		=&\;(\alpha x^{i-1}+\beta z^{i-1}+\alpha\nu^++\beta \mu^+ )\log\left(\frac{\alpha x^{i-1}+\beta z^{i-1}+\alpha\nu^++\beta \mu^+}{\alpha x^{i-1}+\alpha x^i+\beta z^{i-1}+\beta z^i+\alpha\nu^++\beta \mu^+}\right)\\
+		=&\;(\alpha (x^{i-1}+\nu^+)+\beta (z^{i-1}+ \mu^+) )\log\left(\frac{\alpha (x^{i-1}+\nu^+)+\beta (z^{i-1}+ \mu^+)}{\alpha (x^{i-1}+ x^i+\nu^+)+\beta (z^{i-1}+ z^i+ \mu^+)}\right)\\
+		\le &\; \alpha (x^{i-1}+\nu^+)\log\left(\frac{x^{i-1}+\nu^+}{x^{i-1}+ x^i+\nu^+}\right)+\beta (z^{i-1}+ \mu^+)\log\left(\frac{z^{i-1}+ \mu^+}{z^{i-1}+ z^i+ \mu^+}\right)\\
+		=&\;\alpha A^i_1(\nu,X)+\beta A^i_1(\mu,Y).
+	\end{align*}
+	同理, 对任意 $j=2,3,4$ 有 $A^i_j(\alpha \nu+\beta \mu,\alpha X+\beta Y)\le \alpha A^i_j(\nu,X)+\beta A^i_j (\mu,Y)$。这说明
+	\begin{equation*}
+		F_{\alpha \nu+\beta \mu}(\alpha X+\beta Y)\le \alpha F_{\nu}(X)+\beta F_{\mu}(Y).
+	\end{equation*}
+	针对 $X$ 和 $Y$ 取极小，可以得到：
+	\begin{align*}
+		\inf_{Z\in V(\alpha\nu+\beta\mu)}F_{\alpha\nu+\beta\mu}( Z)\le\alpha \inf_{X\in V(\nu)} F_{\nu}(X)+\beta \inf_{Y\in V(\mu)} F_{\mu}(Y).
+	\end{align*}
+	证毕。
+\end{proof}
+下面给出 LDP 原理的严格证明。
+\begin{proposition}\label{theorem:LDP}
+	经验环流 $(J^c_n)_{c\in\mathcal{C}}$ 满足速率为 $n$ 的大偏差原理，并且相应的速率函数为 $I_J:\mathcal{V}\to [0,\infty]$。此外，它的上界可以提升为：对任意集合 $\Gamma \subset \mathcal{V}$，有：
+	\begin{align}\label{upper bound}
+		\varlimsup_{n\to+\infty}\;
+		\frac 1n \log \mathbb  P \left( (J^c_n)_{c\in \mathcal{C}} \in \Gamma \right)
+		\le -\inf_{\nu\in \Gamma} I_J(\nu).
+	\end{align}
+\end{proposition}
+\begin{proof}
+记
+\begin{align}\label{set:K_n}
+K_n := \left\{(k^c)_{c\in \mathcal{C}}\in \mathbb{N}^{2N+2}: \sum_{c \in \mathcal{C}} k^{c} |c| =n \right\}.
+\end{align}
+接下来的证明将假设马氏链从状态 1 出发，这并不会降低命题的一般性。那么，对任意 $k=(k^c)_{c\in\mathcal{C}}\in K_n$，由 \eqref{joint} 式，可得：
+\begin{align}\label{Jnxi}
+\mathbb{P}_1\left(J^c_{n}= \frac{k^c}{n},\ \forall c\in \mathcal{C}\right)
+= |G_n(k)| \prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c},
+\end{align}
+令 $\mu_n(k) = k/n\in\mathcal{V}$。对任意 $\Gamma\subset \mathcal{V}$，令
+\begin{align*}
+Q_n(\Gamma) = \max_{k\in K_n: \mu_n(k) \in \Gamma}
+\mathbb{P}_1\left(J^c_{n} = \frac{k^c}{n},\ \forall c\in\mathcal{C}\right).
+\end{align*}
+显然有：
+\begin{align}\label{Qn gamma}
+	Q_n(\Gamma)
+	\le \mathbb{P}_1\left(J_{n} \in \Gamma\right)
+	\le |K_n| Q_n(\Gamma).
+\end{align}
+易知 $|K_n| \le (2N+2)(n+1)^{2N+3}$，那么有公式 \eqref{Jnxi}，\eqref{Qn gamma}，\eqref{log A1}，\eqref{log A3}，和\eqref{log A2}
+\begin{equation}\label{1 n log P}
+	\begin{split}
+	\frac{1}{n}\log\mathbb{P}_1\left(J_{n} \in \Gamma\right)=&O\left(\frac{\log n}{n}\right)+\frac{1}{n}\log Q_n(\Gamma)\\
+	=&O\left(\frac{\log n}{n}\right)+\max_{k\in K_n: \mu_n(k) \in \Gamma}\left[\frac{1}{n}\log |G_{n}(k)|+\sum_{c \in \mathcal{C}}\frac{k_c}{n}\log \gamma^c\right]\\
+	=&O\left(\frac{\log n}{n}\right)-\min_{k\in K_n: \mu_n(k) \in \Gamma}I_J\left(\mu_{n}(k)\right).
+	\end{split}
+\end{equation}
+由于 $\cup_{n\in\mathbb{N}} \{\mu_{n}(k):k\in K_n\}$ 在 $\mathcal{V}$ 中稠密，且 $\nu\to I_J(\nu)$ 在 $\mathcal{V}$ 中连续（见命题 \ref{proposition:I}），这保证了对每个 $\nu\in \mathcal{V}$，存在序列 $(k_n)_{n\in \mathbb{N}}$，使得：
+\begin{equation*}
+\lim_{n\to\infty} \|\mu_{n}(k_n)-\nu\| = 0, \qquad \lim_{n\to\infty} I_J\left(\mu_{n}(k_n)\right) = I_J(\nu).
+\end{equation*}
+那么对任意开集 $U\subset \mathcal{V}$
+\begin{equation*}
+\varlimsup_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in U}I_J\left(\mu_{n}(k)\right)\le I_J(\nu),\quad\forall\nu\in U.
+\end{equation*}
+对 $\nu\in U$ 取极小，可得：
+\begin{equation}\label{varlimsup}
+\varlimsup_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in U}I_J\left(\mu_{n}(k)\right)\le \inf_{\nu\in U}I_J(\nu).
+\end{equation}
+结合 \eqref{1 n log P} 和 \eqref{varlimsup}，可得大偏差原理的下界 \eqref{def1}。此外，对任意$\Gamma \subset \mathcal{V}$，同理可得反向的不等式，即
+\begin{equation}\label{varliminf}
+\varliminf_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in \Gamma}I_J\left(\mu_{n}(k)\right)\ge \inf_{\nu\in \Gamma}I_J(\nu).
+\end{equation}
+结合 \eqref{1 n log P} 和 \eqref{varliminf}，可得大偏差原理的上界 \eqref{def2}。
 \end{proof}
 
 
