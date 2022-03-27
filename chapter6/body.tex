@@ -399,4 +399,138 @@ Q_n(\Gamma) = \max_{k\in K_n: \mu_n(k) \in \Gamma}
 \end{proof}
 
 
+\section{简化速率函数 $I_J$}\label{appendix:threestate}
+这里将对两种特殊情况，给出速率函数 $I_J$ 的简化形式，1）三状态马氏链。2）状态 1 到状态 N 的转移概率为 0 的单环马氏系统。回顾速率函数 $I_J:\mathcal{V}\to[0,\infty]$ 的公式为：
+\begin{equation*}\label{ratefunction1}
+	\begin{split}
+		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
+		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
+		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
+		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c\\
+		:=&\;I_1(\nu)+I_2(\nu)+I_3(\nu)+I_4(\nu).
+	\end{split}
+\end{equation*}
+\begin{proposition}
+三状态马氏链的速率函数为
+\begin{align*}
+I_J(\nu) =
+\sum_{i\in S} \left[\nu^{i}\log \left(\frac{\nu^{i}/\nu_i}{J^i/J_i}\right) + (\nu_i - \nu^i)\log \left(\frac{(\nu_i - \nu^i)/\nu_i}{(J_i - J^i)/J_i} \right)
+\right]
++ \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \left(\frac{\nu^{c}/\tilde{\nu}}{J^c/\tilde{J}}\right).
+\end{align*}
+\end{proposition}
+\begin{proof}
+	易知 $X=(x^2,y^2)$ 为方程 \eqref{equations} 的解，其中
+\begin{equation*}
+	x^{2}=\frac{\nu^{23}\left(\nu^{12}+\nu^+\right)}{\nu^{12}+\nu^{13}+\nu^++\nu^-},\quad y^{2}=\frac{\nu^{23}\left(\nu^{13}+\nu^-\right)}{\nu^{12}+\nu^{13}+\nu^++\nu^-}.
+\end{equation*}
+根据引理 ~\ref{lemma:mininum}
+\begin{equation*}\label{Fnu2}
+I_2(\nu)=F_{\nu}(X)=\nu^{23}\log\frac{\nu^{23}}{\tilde{\nu}}+\left(\nu^{12}+\nu^{13}+\nu^++\nu^-\right)\log\frac{\tilde{\nu}-\nu^{23}}{\tilde{\nu}}.
+\end{equation*}
+那么通过计算，可以得到：
+\begin{equation}\label{I1I2I3}
+	I_1(\nu)+I_2(\nu)+I_3(\nu) = \sum_{i\in S} \left[\nu^{i}\log \frac{\nu^{i}}{\nu_i} + (\nu_i - \nu^i)\log \frac{\nu_i - \nu^i}{\nu_i} 
+	\right]
+	+ \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \frac{\nu^{c}}{\tilde{\nu}}.
+\end{equation}
+回顾环流的表达 \cite[Theorem.1.3.3]{jiang2004mathematical}，有
+\begin{equation}\label{J+J-Jii+1}
+J^+=\gamma^+\frac{1}{C},\quad J^-=\gamma^-\frac{1}{C},\quad J^{i,i+1}=\gamma^{i,i+1}\frac{1-p_{i-1,i-1}}{C}, \quad 1\le i\le 3,
+\end{equation}
+其中ere $C=3+\sum_{i\in S}[p_{ii}p_{i+1,i+1}-p_{i,i+1}p_{i+1,i}-2(p_{ii}+p_{i+1,i+1})]$. 根据 \eqref{decomposition}，
+\begin{equation}\label{pij}
+	p_{ij}=\frac{\sum_{c \ni \langle i,j\rangle}J^c}{\sum_{c\ni i}J^c}.
+\end{equation}
+结合 \eqref{J+J-Jii+1} 和 \eqref{pij}，有：
+\begin{equation}\label{nucgamma2}
+	\begin{split}
+		&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\left(\nu_i-\nu^i\right)\log\frac{J_i-J^i}{J_i}\right]+ \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \left(\frac{J^c}{\tilde{J}}\right)\\
+		=&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\left(\left(1-\frac{J^i}{J_i}\right)\left(1-\frac{J^{i+1}}{J_{i+1}}\right)\frac{J^{i,i+1}}{\tilde{J}}\right)\right]\\
+		&\;+\nu^+\log\left(\frac{J^+}{\tilde{J}}\prod_{i\in\mathcal{C}}\left(1-\frac{J^i}{J_i}\right)\right)+\nu^-\log\left(\frac{J^-}{\tilde{J}}\prod_{i\in\mathcal{C}}\left(1-\frac{J^i}{J_i}\right)\right)\\
+		=&\;\sum_{c \in \mathcal{C}}\nu^c \log\gamma^c=-I_4(\nu).
+	\end{split}
+\end{equation}
+结合 \eqref{I1I2I3} 和 \eqref{nucgamma2}，得证。
+\end{proof}
+\begin{proposition}
+	状态 1 到状态 N 的转移概率为 0 的单环马氏链的速率函数为：
+	\begin{equation*}
+		\begin{split}
+			I_J(\nu) = \sum_{i\in S}\left[\nu^i\log\left(\frac{\nu^i/\nu_i}{J^i/J_i}\right)
+			+\nu^{i,i+1}\log\left(\frac{\nu^{i,i+1}/\nu_i}{J^{i,i+1}/J_i}\right)+\left(\nu^{i-1,i}+\nu^+\right)\log\left(\frac{\left(\nu^{i-1,i}+\nu^+\right)/\nu_i}
+			{\left(J^{i-1,i}+J^+\right)/J_i}\right)\right].
+		\end{split}
+	\end{equation*}
+\end{proposition}
+\begin{proof}
+	在 $p_{1N}=0$ 的条件下，环 $(1,N)$ 和环 $(1,N,\cdots,2)$ 不会被形成。因此，可以得到\eqref{equation} 中的 $\nu^{1N}=\nu^{-}=0$ ，并且 $x^{i}=\nu^{i,i+1}$, $y^{i}=0$ 是方程 \eqref{equation}的解，那么
+	\begin{equation*}
+		I_2(\nu)=F_{\nu}(x^i,y^i)=\sum_{i=2}^{N-1}\left[-\lambda_{i}\nu^{i,i+1}+\nu^+\log\frac{\nu^{i-1,i}+\nu^+}{\nu^{i-1,i}+\nu^{i,i+1}+\nu^+}\right]+\nu^{12}\log\frac{\nu^{12}+\nu^+}{\nu^{12}+\nu^{23}+\nu^+},
+	\end{equation*}
+	其中 
+	\begin{equation*}
+		\lambda_i=-\log\left(\frac{\nu^{i,i+1}}{\nu^{i-1,i}+\nu^{i,i+1}+\nu^+}\,\frac{\nu^{i,i+1}+\nu^+}{\nu^{i,i+1}+\nu^{i+1,i+2}+\nu^+}\right).
+	\end{equation*}
+	通过 $\nu_i$ 的定义，有
+	\begin{equation*}
+		\nu_1=\nu^{1}+\nu^{12}+\nu^+,\quad \nu_i=\nu^i+\nu^{i-1,i}+\nu^{i,i+1}+\nu^+,\ 2\le i\le N-1,\quad \nu_N=\nu^N+\nu^{N-1,N}+\nu^+.
+	\end{equation*} 
+然后通过计算，可以得到：	
+\begin{equation}\label{I1lack}
+	I_1(\nu)=\nu^{12}\log\frac{\nu^{12}}{\nu_1-\nu^{12}}+\nu^+\log\frac{\nu^+}{\nu_1-\nu^1},
+\end{equation}
+	\begin{align}\label{I2lack}
+	I_2(\nu)
+	=\sum_{i=2}^{N}\left[\nu^{i,i+1}\log\frac{\nu^{i,i+1}}{\nu_i-\nu^i}+\nu^+\log\frac{\nu^{i-1,i}+\nu^+}{\nu_i-\nu^i}\right]+\sum_{i=1}^{N}\nu^{i,i+1}\log\frac{\nu^{i,i+1}+\nu^+}{\nu_{i+1}-\nu^{i+1}},
+   \end{align}
+和
+	\begin{equation}\label{I3lack}
+		\begin{split}
+			I_3(\nu)=\sum_{i\in S}\left[\nu^i\log\frac{\nu^i}{\nu_i}+\nu^+\log\frac{\nu_i-\nu^i}{\nu_i}\right]+\sum_{i\in S}\nu^{i,i+1}\left(\log\frac{\nu_i-\nu^i}{\nu_i}
+			+\log\frac{\nu_{i+1}-\nu^{i+1}}{\nu_{i+1}}\right).
+		\end{split}
+	\end{equation}
+    根据 \eqref{pij}，可得
+	\begin{equation}\label{nucgammac}
+		\begin{split}
+			&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\frac{J^{i,i+1}}{J_i}+(\nu^{i-1,i}+\nu^+)\log\frac{J^{i-1,i}+J^+}{J_i}\right]\\
+			=&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\frac{J^{i,i+1}(J^{i,i+1}+J^+)}{J_{i+1}J_i}\right]+\nu^+\log\frac{\prod_{i=1}^N\left(J^{i,i+1}+J^+\right)}{\prod_{i=1}^N J_i}\\
+			=&\;\sum_{c \in \mathcal{C}}\nu^c \log\gamma^c=-I_4(\nu).
+		\end{split}
+	\end{equation}
+	结合 \eqref{I1lack}，\eqref{I2lack}，\eqref{I3lack}，和 \eqref{nucgammac}，证毕。
+\end{proof}
+
+\section{经验 LE 环流的暂态涨落定理的证明}
+在此，将给出无周期条件下，经验 LE 环流的暂态涨落定理的证明。
+记 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$。在时间步 $n$,轨迹中环 $c$ 形成 $k^c$ 次，因此有：
+\begin{equation*}
+	n=\sum_{c\in\mathcal{C}}k^c|c|+|\eta|,
+\end{equation*}
+其中 $\eta$ 表示剩下的导出链，且 $0\le |\eta|\le N-1$。假设系统从状态 1 出发，这并不降低命题的一般性。令 $[\eta]=t$，那么 $\eta=\eta_1$ 或者 $\eta_2$，其中 $\eta_1=[1,2,\cdots,t+1]$ 且 $\eta_2=[1,N,\cdots,N+1-t]$。同时, \eqref{joint} 可以被写为：
+\begin{equation}\label{joint2}
+	\begin{split}
+		\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C}\right)
+		=&\;\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_1\right)+\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_2\right)\\
+		=&\;\left|G^{\eta_1}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_1}+\left|G^{\eta_2}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_2},
+	\end{split}
+\end{equation}
+其中 $\gamma^{\eta_1}=p_{12}\cdots p_{t,t+1}$ 且 $\gamma^{\eta_2}=p_{1N}\cdots p_{N+2-t,N+1-t}$。那么有
+\begin{align*}
+	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)
+	&= (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
+	&\qquad\left[|G^{\eta_1}(k^+,k^-,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^+,k^-,\cdots)|\gamma^{\eta_2}\right].
+\end{align*}
+同理，如果交换上述方程中的 $k^+$ 和 $k^-$，可以得到：
+\begin{align*}
+	\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)
+	&= (\gamma^+)^{k^-}(\gamma^-)^{k^+}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
+	&\qquad\left[|G^{\eta_1}(k^-,k^+,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^-,k^+,\cdots)|\gamma^{\eta_2}\right].
+\end{align*}
+根据 \eqref{EGetan} 式，可以得到下列的暂态涨落定理成立：
+\begin{equation*}
+	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)=\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)\left(\frac{\gamma^+}{\gamma^-}\right)^{k^+-k^-}.
+\end{equation*}
+
 \end{appendices}
