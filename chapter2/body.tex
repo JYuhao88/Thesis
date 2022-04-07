@@ -31,7 +31,7 @@ $N$状态单环马氏链。系统有一个环拓扑。每个状态转移到自�
     \caption{导出链和形成环的案例}\label{trajectory}
 \end{table}
 
-特别地，导出链的状态用$S$的中状态组成的有限序列表示，即$[i_1,i_2,\cdots,i_s]$。假设$\tilde{\xi}_{n-1}=[i_1,i_2,\cdots,i_s]$且$\xi_n = i_{s+1}$。若$i_{s+1}$不同于$i_1,i_2,\cdots,i_s$，那么$\tilde{\xi}_n$被定义为$\tilde{\xi}_n = [i_1,i_2,\cdots,i_s,i_{s+1}]$。其次，若$i_{n+1}=i_r$，那么$\tilde{\xi}_n$被定义为$\tilde{\xi}_n = [i_1,i_2,\cdots,i_r]$。对于这种情况，称马氏链在时间$n$形成环$(i_r,i_{r+1},\cdots,i_s)$。令$N^c_n$为环$c$在时间$n$时形成的次数。那么在时间$n$时，环$c$的经验环流可以被定义为：
+确切地说，导出链的状态是$S$的中不同状态组成的有限序列，表示为$[i_1,i_2,\cdots,i_s]$。假设$\tilde{\xi}_{n-1}=[i_1,i_2,\cdots,i_s]$且$\xi_n = i_{s+1}$。若$i_{s+1}$不同于$i_1,i_2,\cdots,i_s$中任意一个，那么$\tilde{\xi}_n$被定义为$\tilde{\xi}_n = [i_1,i_2,\cdots,i_s,i_{s+1}]$。其次，若$i_{n+1}=i_r, \forall 1 \le r\le s$，那么$\tilde{\xi}_n$被定义为$\tilde{\xi}_n = [i_1,i_2,\cdots,i_r]$。对于这种情况，称马氏链在时间$n$形成环$(i_r,i_{r+1},\cdots,i_s)$。令$N^c_n$为环$c$在时间$n$时形成的次数。那么在时间$n$时，环$c$的经验环流可以被定义为：
 \begin{equation*}
     J_n^c = \frac{1}{n}N^c_n,
 \end{equation*}
@@ -80,7 +80,7 @@ $，在时间步$n$，$c_l$的净环流定义为：
 \begin{equation*}
     |\mathcal{C}| = \sum_{k=1}^N\frac{N\cdots (N-k+1)}{k}.
 \end{equation*}
-特别地，若$N=4$，可得$|\mathcal{C}|=24$，环空间为：
+确切地说，若$N=4$，可得$|\mathcal{C}|=24$，环空间为：
 \begin{align*}
     \mathcal{C} = \{&(1),(2),(3),(4),(1,2),(1,3),(1,4),(2,3),(2,4),(3,4),\\
     &(1,2,3),(1,2,4),(1,3,2),(1,3,4),(1,4,2),(1,4,3),(2,3,4),(2,4,3),\\
