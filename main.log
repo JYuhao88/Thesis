@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  7 APR 2022 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  7 APR 2022 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1469,32 +1469,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 
  <./chart/transitiongraph.pdf>]
-Underfull \hbox (badness 1253) in paragraph at lines 22--33
-[]\C70/song/m/n/12/6c ¿ \C70/song/m/n/12/77 @ \C70/song/m/n/12/9a l \C70/song/m
-/n/12/6c ^^O \C70/song/m/n/12/94 þ \C70/song/m/n/12/8f h \C70/song/m/n/12/90 S 
-\C70/song/m/n/12/76 „ \C70/song/m/n/12/4f ^^Z \C70/song/m/n/12/4e ^^M \C70/song
-/m/n/12/65 ­ \C70/song/m/n/12/5f b \C70/song/m/n/12/62 ^^P \C70/song/m/n/12/54 
-^^D \C70/song/m/n/12/79 Í \C70/song/m/n/12/7c { \C70/song/m/n/12/57 ‹ \C70/song
-/m/n/12/76 „ \C70/song/b/n/12/73 ¯|\C70/song/m/n/12/30 ^^B| \C70/song/m/n/12/76
- ô \C70/song/m/n/12/89 Â \C70/song/m/n/12/77 |\C70/song/b/n/12/ff ^^L| \C70/so
-ng/b/n/12/59 ‚ \C70/song/m/n/12/67 œ \C70/song/m/n/12/62 ^^Q \C70/song/m/n/12/4
-e ì \C70/song/m/n/12/62 › \C70/song/m/n/12/5f ^^C \C70/song/m/n/12/9a l \C70/so
-ng/m/n/12/6c ^^O
- []
-
-
-Underfull \hbox (badness 1859) in paragraph at lines 22--33
-\C70/song/m/n/12/4e ^^@ * \C70/song/m/n/12/65 ° \C70/song/m/n/12/76 „ \C70/song
-/m/n/12/9a l \C70/song/m/n/12/6c ^^O \C70/song/m/n/12/94 þ$[] \OT1/txr/m/n/12 =
- ([])[]$|\C70/song/b/n/12/ff ^^L| \C70/song/m/n/12/79 ð \C70/song/m/n/12/4e : \
-C70/song/m/n/12/5b ü \C70/song/b/n/12/51 ú \C70/song/m/n/12/94 þ|\C70/song/m/n/
-12/30 ^^B| \C70/song/m/n/12/4f ‹ \C70/song/b/n/12/59 ‚|\C70/song/b/n/12/ff ^^L|
- \C70/song/b/n/12/59 ‚ \C70/song/m/n/12/67 œ \C70/song/m/n/12/53 Ÿ \C70/song/b/
-n/12/59 Ë \C70/song/m/n/12/76 „ \C70/song/m/n/12/9a l \C70/song/m/n/12/6c ^^O \
-C70/song/m/n/12/94 þ$\OML/txmi/m/it/12 ^^X$\C70/song/m/n/12/76 „ \C70/song/m/n/
-12/8f h \C70/song/m/n/12/90 S
- []
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1504,9 +1478,11 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
 [4]
+Missing character: There is no Ž in font txr!
+Missing character: There is no ¯ in font txr!
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
-4.
- (e:/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
+3.
+(e:/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
 
@@ -1539,16 +1515,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 \openout2 = `chapter3/body.aux'.
 
  (./chapter3/body.tex
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 25.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 26.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 25.
+(hyperref)                removing `math shift' on input line 26.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 25.
+(hyperref)                removing `math shift' on input line 26.
 
+Missing character: There is no ¸ in font txr!
+Missing character: There is no € in font txr!
 
 Overfull \hbox (2.28854pt too wide) has occurred while \output is active
 [][] [] 
@@ -1568,7 +1546,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 
 ]
-<chart/insertiongraph.pdf, id=625, 807.51688pt x 465.74pt>
+<chart/insertiongraph.pdf, id=632, 807.51688pt x 465.74pt>
 File: chart/insertiongraph.pdf Graphic file (type pdf)
 <use chart/insertiongraph.pdf>
 Package pdftex.def Info: chart/insertiongraph.pdf  used on input line 56.
@@ -1692,7 +1670,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
 [16]
-<chart/ratefunction.pdf, id=757, 1634.105pt x 691.58376pt>
+<chart/ratefunction.pdf, id=764, 1634.105pt x 691.58376pt>
 File: chart/ratefunction.pdf Graphic file (type pdf)
 <use chart/ratefunction.pdf>
 Package pdftex.def Info: chart/ratefunction.pdf  used on input line 132.
@@ -1849,7 +1827,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 LaTeX Warning: Reference `LELDP' on page 25 undefined on input line 149.
 
-<chart/brokenlinegraph.pdf, id=914, 661.97313pt x 177.16188pt>
+<chart/brokenlinegraph.pdf, id=921, 661.97313pt x 177.16188pt>
 File: chart/brokenlinegraph.pdf Graphic file (type pdf)
 <use chart/brokenlinegraph.pdf>
 Package pdftex.def Info: chart/brokenlinegraph.pdf  used on input line 170.
@@ -2088,14 +2066,14 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: E7F62FAE0C1D45BE51034AE39CE2DE96;4194
-(rerunfilecheck)             After:  F772C7112CA36ADF233C15447CD15DFD;4202.
+(rerunfilecheck)             Before: F772C7112CA36ADF233C15447CD15DFD;4202
+(rerunfilecheck)             After:  F0E4B7018E4D1B0727426DC54C52A5A3;4194.
  ) 
 Here is how much of TeX's memory you used:
- 28913 strings out of 478268
- 506709 string characters out of 5850346
- 728998 words of memory out of 5000000
- 45401 multiletter control sequences out of 15000+600000
+ 28910 strings out of 478268
+ 506664 string characters out of 5850346
+ 729998 words of memory out of 5000000
+ 45398 multiletter control sequences out of 15000+600000
  665950 words of font info for 636 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,19n,78p,1411b,687s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2188,10 +2166,10 @@ xlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb><e:/texlive/2022/tex
 mf-dist/fonts/type1/public/txfonts/txsyc.pfb><e:/texlive/2022/texmf-dist/fonts/
 type1/urw/times/utmb8a.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (47 pages, 3293209 bytes).
+Output written on main.pdf (47 pages, 3293577 bytes).
 PDF statistics:
- 1887 PDF objects out of 2073 (max. 8388607)
- 1411 compressed objects within 15 object streams
+ 1894 PDF objects out of 2073 (max. 8388607)
+ 1418 compressed objects within 15 object streams
  238 named destinations out of 1000 (max. 500000)
  553 words of extra memory for PDF output out of 10000 (max. 10000000)
 
