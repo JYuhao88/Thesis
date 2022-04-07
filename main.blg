@@ -55,6 +55,8 @@ You can't pop an empty literal stack for entry Hill1966StudiesIIa
 while executing---line 7119 of file GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry Hill1966StudiesIIb
 while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry hill2013free
+while executing---line 7119 of file GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry minping1982circulation
 while executing---line 7119 of file GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry jian1984circulations
@@ -89,45 +91,59 @@ You can't pop an empty literal stack for entry bertini2015large
 while executing---line 7119 of file GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry bertini2015large
 while executing---line 7119 of file GBT7714-2005NLang.bst
-You've used 26 entries,
+You can't pop an empty literal stack for entry cornish2013fundamentals
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry sakmann2013single
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry beard2008chemical
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry jia2017nonequilibrium
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry pedraza2008effects
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry jia2022analytical
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry jia2022analytical
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You've used 33 entries,
             6727 wiz_defined-function locations,
-            1389 strings with 13562 characters,
-and the built_in function-call counts, 8971 in all, are:
-= -- 829
-> -- 226
-< -- 18
-+ -- 132
-- -- 52
-* -- 685
-:= -- 1280
-add.period$ -- 91
-call.type$ -- 26
-change.case$ -- 26
-chr.to.int$ -- 24
-cite$ -- 26
-duplicate$ -- 401
-empty$ -- 1082
-format.name$ -- 116
-if$ -- 2096
+            1426 strings with 14499 characters,
+and the built_in function-call counts, 10962 in all, are:
+= -- 999
+> -- 269
+< -- 25
++ -- 159
+- -- 62
+* -- 809
+:= -- 1569
+add.period$ -- 113
+call.type$ -- 33
+change.case$ -- 33
+chr.to.int$ -- 31
+cite$ -- 33
+duplicate$ -- 500
+empty$ -- 1353
+format.name$ -- 142
+if$ -- 2579
 int.to.chr$ -- 3
-int.to.str$ -- 27
-missing$ -- 30
-newline$ -- 151
-num.names$ -- 52
-pop$ -- 183
+int.to.str$ -- 34
+missing$ -- 41
+newline$ -- 187
+num.names$ -- 66
+pop$ -- 235
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 33
 quote$ -- 0
-skip$ -- 276
+skip$ -- 355
 stack$ -- 0
-substring$ -- 541
-swap$ -- 30
+substring$ -- 598
+swap$ -- 37
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 116
 warning$ -- 0
-while$ -- 57
+while$ -- 67
 width$ -- 0
-write$ -- 388
-(There were 45 error messages)
+write$ -- 480
+(There were 53 error messages)

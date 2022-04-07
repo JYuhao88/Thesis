@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -78,6 +78,12 @@ Hill T~L.
 \newblock Studies in irreversible thermodynamics. IV. Diagrammatic
   representation of steady state fluxes for unimolecular systems.[J].
 \newblock Journal of theoretical biology, 1966, 10 3:442--59.
+
+\bibitem[Hill(2013)]{hill2013free}
+Hill T~L.
+\newblock
+\newblock Free energy transduction and biochemical cycle kinetics[M].[S.l.]:
+  Courier Corporation, 2013.
 
 \bibitem[Minping and Min(1982)]{minping1982circulation}
 Minping Q, Min Q.
@@ -175,5 +181,40 @@ Bertini L, Faggionato A, Gabrielli D.
 \newblock Large deviations of the empirical flow for continuous time Markov
   chains[C]//Annales de l'IHP Probabilit{\'e}s et statistiques.
 \newblock .[S.l.]: [s.n.] , 2015{\natexlab{b}}，51:867--900.
+
+\bibitem[Cornish-Bowden(2013)]{cornish2013fundamentals}
+Cornish-Bowden A.
+\newblock
+\newblock Fundamentals of enzyme kinetics[M].[S.l.]: John Wiley \& Sons, 2013.
+
+\bibitem[Sakmann(2013)]{sakmann2013single}
+Sakmann B.
+\newblock
+\newblock Single-channel recording[M].[S.l.]: Springer Science \& Business
+  Media, 2013.
+
+\bibitem[Beard and Qian(2008)]{beard2008chemical}
+Beard D~A, Qian H.
+\newblock Chemical biophysics: quantitative analysis of cellular systems[M].
+\newblock
+\newblock  Vol. 126.[S.l.]: Cambridge University Press Cambridge, 2008.
+
+\bibitem[Jia(2017)]{jia2017nonequilibrium}
+Jia C.
+\newblock Nonequilibrium nature of adaptation in bacterial chemotaxis: A
+  fluctuation-dissipation theorem approach[J].
+\newblock Physical Review E, 2017, 95(4):042116.
+
+\bibitem[Pedraza and Paulsson(2008)]{pedraza2008effects}
+Pedraza J~M, Paulsson J.
+\newblock Effects of molecular memory and bursting on fluctuations in gene
+  expression[J].
+\newblock Science, 2008, 319(5861):339--343.
+
+\bibitem[Jia and Li(2022)]{jia2022analytical}
+Jia C, Li Y.
+\newblock Analytical time-dependent distributions for gene expression models
+  with complex promoter switching mechanisms[J].
+\newblock bioRxiv, 2022.
 
 \end{thebibliography}
