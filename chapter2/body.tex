@@ -19,7 +19,7 @@ $N$状态单环马氏链。系统有一个环拓扑。每个状态转移到自�
 \end{equation*}
 且$r=s$则称两个回路是等价的，其中指标$k+1,k+2,\cdots,k+s$被视为模$n$同余的。回路$i_1 \to i_2 \to\cdots\to i_s \to i_1$在上述等价关系下所属的等价类被表示为环$c = (i_1,i_2,\cdots,i_s)$。例如，$(1,2,3)$,$(2,3,1)$和$(3,1,2)$表示相同的环。定义环$(i_1,i_2,\cdots,i_s)$的反环为$(i_1,i_s,\cdots,i_2)$。系统中所用环的集合称为环空间$\mathcal{C}$。
 
-沿着马氏链轨道的会不断形成各种类型的环。直观看，如果我们抛弃马氏链$\xi$中环，并且在该过程中，持续聚焦在轨道中剩余状态的轨迹，那么将会获得一个新的马氏链$\tilde{\xi} = (\tilde{\xi}_n)_{n\geq 0}$，称为导出链。例如，如果原始的马氏链$\xi$的轨道为$\{1,2,3,3,2,3,4,1,4,\cdots\}$，那么相应的导出链$\tilde{\xi}$的轨迹和形成的环为表 \ref{trajectory}所示。
+沿着马氏链轨道的会不断形成各种类型的环。如果持续去除马氏链$\xi$中的环，并且在该过程中，持续聚焦在轨道中剩余状态的轨迹，那么将会获得一个新的马氏链$\tilde{\xi} = (\tilde{\xi}_n)_{n\geq 0}$，称其为导出链。例如，如果原始的马氏链$\xi$的轨道为$\{1,2,3,3,2,3,4,1,4,\cdots\}$，那么相应的导出链$\tilde{\xi}$的轨迹和形成的环为表 \ref{trajectory}所示。
 \begin{table}[htb!]
     \renewcommand\arraystretch{1}\centering
     \begin{tabular}{cccccccccc} \hline\hline
@@ -39,21 +39,20 @@ $N$状态单环马氏链。系统有一个环拓扑。每个状态转移到自�
 \begin{equation*}
     \tilde{J}^c_n = J^c_n-J^{c-}_n.
 \end{equation*}
-用更直观的表述，$J^c_n$表示环$c$平均每个单位时间形成的数量，$\tilde{J}^c$表示环$c$平均每个单位时间形成的净数量。
+用更直观的表述，$J^c_n$表示环$c$每个单位时间形成的数量，$\tilde{J}^c$表示环$c$每个单位时间形成的净数量。多数研究只多关注净环流的性质 \cite{Schnakenberg1976NetworkTO,andrieux2007fluctuation,andrieux2007network}，本文还会关注环流的性质。
 若令$n\rightarrow\infty$，则有经验环流$J^c_n$和 经验净环流$\tilde{J}^c$分别以概率为 1 趋近于$J^c$和$\tilde{J}^c$。
-极限$J^c$和$\tilde{J}^c$分别被视为环$c$的环流和净环流。关于$J^c_n$和$\tilde{J}^c$更为细致的描述，可以参考文献 [1]。著名的环流分解定理可以用上述定义表示为：
+极限$J^c$和$\tilde{J}^c$分别为环$c$的环流和净环流。关于$J^c_n$和$\tilde{J}^c$更为细致的描述，可以参考文献 \cite{jiang2004mathematical}。著名的环流分解定理 \cite{jiang2004mathematical} 可以用上述定义写为：
 \begin{equation}\label{decomposition}
     \pi_ip_{ij} = \sum_{c\ni\langle i,j\rangle}J^c,
 \end{equation}
-其中$c \ni \langle i, j\rangle$表示环$c$中有边$\langle i, j\rangle$。
+其中求和项考虑到了所有通过边 $\langle i, j\rangle$ 的环 $c$（符号 $c \ni \langle i, j\rangle$表示环$c$通过边$\langle i, j\rangle$）。这表明任意状态对的概率流可以分解为环流的和。
 
-\BiSection{生成树定义下的环流}{}
-环的环流可以用生成树的方式定义。令$T$为$G$的一个有向子图，也就是说$T$的所有边也是$G$的边，再令$\hat{T}$表示$\bar{T}$表示与$T$有关的无向图。
-满足下列三个条件的$T$被称为图$G$的生成树：
+\BiSection{生成树定义的环流}
+环流也可以用生成树的方式定义 \cite{Schnakenberg1976NetworkTO,kalpazidou2007cycle}。令$T$为转移图$G$的有向子图，即$T$的所有边也是$G$的边，且令$\hat{T}$表示$\bar{T}$表示与$T$有关的无向图。满足下列三个条件的$T$被称为图$G$的生成树：
 \begin{itemize}
-    \item$T$是$G$的覆盖子图，也就是说$T$包含$G$的所有顶点。
-    \item$\bar{T}$是连通的。
-    \item$\bar{T}$没有回路，其中无向图的回路是顶点到自身的无向路径。
+    \item $T$是$G$的覆盖子图，也就是说$T$包含$G$的所有顶点。
+    \item $\bar{T}$是连通的。
+    \item $\bar{T}$没有回路，其中无向图的回路是顶点到自身的无向路径。
 \end{itemize}
 
 易知生成树$T$包含$G$的所有顶点，并且$|T| = N -1$。接下来，会通过$T$表示生成树和它的边集合。图的生成树并不唯一，一个图可以有很多完全不同的生成树。
