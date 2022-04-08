@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  7 APR 2022 23:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  8 APR 2022 18:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1486,6 +1486,15 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 File: ts1txr.fd 2000/12/15 v3.1
 )
 
+Package hyperref Warning: Suppressing empty link on input line 58.
+
+
+Package hyperref Warning: Suppressing empty link on input line 62.
+
+
+Package hyperref Warning: Suppressing empty link on input line 62.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.454pt}.
@@ -1546,7 +1555,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 
 ]
-<chart/insertiongraph.pdf, id=632, 807.51688pt x 465.74pt>
+<chart/insertiongraph.pdf, id=633, 807.51688pt x 465.74pt>
 File: chart/insertiongraph.pdf Graphic file (type pdf)
 <use chart/insertiongraph.pdf>
 Package pdftex.def Info: chart/insertiongraph.pdf  used on input line 56.
@@ -1670,7 +1679,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
 [16]
-<chart/ratefunction.pdf, id=764, 1634.105pt x 691.58376pt>
+<chart/ratefunction.pdf, id=765, 1634.105pt x 691.58376pt>
 File: chart/ratefunction.pdf Graphic file (type pdf)
 <use chart/ratefunction.pdf>
 Package pdftex.def Info: chart/ratefunction.pdf  used on input line 132.
@@ -1827,7 +1836,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 LaTeX Warning: Reference `LELDP' on page 25 undefined on input line 149.
 
-<chart/brokenlinegraph.pdf, id=921, 661.97313pt x 177.16188pt>
+<chart/brokenlinegraph.pdf, id=922, 661.97313pt x 177.16188pt>
 File: chart/brokenlinegraph.pdf Graphic file (type pdf)
 <use chart/brokenlinegraph.pdf>
 Package pdftex.def Info: chart/brokenlinegraph.pdf  used on input line 170.
@@ -2060,20 +2069,14 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: F772C7112CA36ADF233C15447CD15DFD;4202
-(rerunfilecheck)             After:  F0E4B7018E4D1B0727426DC54C52A5A3;4194.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F0E4B7018E4D1B0727426DC54C52A5A3;4194.
  ) 
 Here is how much of TeX's memory you used:
- 28910 strings out of 478268
- 506664 string characters out of 5850346
+ 28914 strings out of 478268
+ 506748 string characters out of 5850346
  729998 words of memory out of 5000000
- 45398 multiletter control sequences out of 15000+600000
+ 45402 multiletter control sequences out of 15000+600000
  665950 words of font info for 636 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,19n,78p,1411b,687s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2166,10 +2169,10 @@ xlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb><e:/texlive/2022/tex
 mf-dist/fonts/type1/public/txfonts/txsyc.pfb><e:/texlive/2022/texmf-dist/fonts/
 type1/urw/times/utmb8a.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (47 pages, 3293577 bytes).
+Output written on main.pdf (47 pages, 3295317 bytes).
 PDF statistics:
- 1894 PDF objects out of 2073 (max. 8388607)
- 1418 compressed objects within 15 object streams
+ 1895 PDF objects out of 2073 (max. 8388607)
+ 1419 compressed objects within 15 object streams
  238 named destinations out of 1000 (max. 500000)
  553 words of extra memory for PDF output out of 10000 (max. 10000000)
 
