@@ -38,6 +38,12 @@
 
 \clearpage{\pagestyle{empty}\cleardoublepage}     % 清除目录后面空页的页眉和页脚
 
+% \usepackage{xr}
+% \foreach \n in {1,...,\totalchapternum}{%
+%     \renewcommand{\fpath}{./chapter\n/}
+%     \externaldocument{chapter\n/body}
+% }
+
 \mainmatter\defaultfont\sloppy\raggedbottom
 
 \foreach \n in {1,...,\totalchapternum}{%
