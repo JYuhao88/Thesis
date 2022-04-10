@@ -26,8 +26,6 @@
 首先讨论经验$LE$环流的大偏差原理。一般的马氏链中，速率函数的解析表达式$I_J$很难求出，因此下面将关注单环马氏链。单环系统中所有可能形成的环都已在 (\ref{cycle_space})中列出。
 
 简化叙述推导过程，假设系统从状态$1$出发，这并不会降低命题的一般性。为了求出速率函数$I_J$，需要计算经验$LE$环流的联合分布。对任意环$c=(i_1, i_2, \cdots, i_s)$，令$\gamma^c = p_{i_1i_2}p_{i_2i_3}\cdots p_{i_si_1}$表示沿着环$c$产生的所有转移概率的乘积。对任意满足$\sum_{c \subset \mathcal{C}} |c| k^c=n$的负整数序列$k=(k^c)_{c\subset \mathcal{C}}$，因为假设周期边界条件，经验$LE$环流的联合分布为：
-
-% 为了计算经验$LE$环流的速率函数，下面将证明（7）对某些离散值$\nu$成立。若环$c$形成的速度是$k^c$，那么环$c$的经验环流是$\nu^c = k^c /n$。为书写方便，记$k^i$替代$k^c$表示包含一个状态的环$c=(i)$的形成速度。类似的，记$k^{i,i+1}$表示环$c=(i,i+1)$形成的速度，记$k^+$表示环$c=(1, 2, \dots ,N)$形成的速度，$k^-$表示环$c=(1, N, \dots ,2)$形成的速度 （图1c）。类似地，本文用$\nu^i, \nu^{i,i+1}, \nu^+, \nu^-$表示相应的经验环流，用$J^i, J^{i, i+1}, J^{+}, J^{-}$表示相应的经验净环流。因为上述假设周期边界条件，对于某些$k=(k^c)_{c \in \mathcal{C}} \in \mathbb{N}^{2 \mathbb{N}+2}$，容易得到：
 \begin{equation}\label{joint}
     \begin{split}
     \mathbb{P}\left(J^c_n=\nu^c,\;\forall c\in\mathcal{C}\right)
@@ -109,15 +107,16 @@
 \end{equation*}
 例子 \ref{trajectory_ex}中，步骤3）中的插入方式在图 \ref{figure:insertion}的右部分。
 
-结合上述三个步骤，最终可以得到容许轨迹的数量为：
-\begin{equation}\label{trajectories}
-    |G_n(k)|=A_1A_2A_3.
+结合上述三个步骤，最终可以得到容许轨迹的数量为：$|G_n(k)|=A_1A_2A_3$。因此经验$LE$环流的联合分布为：
+\begin{equation} \label{trajectories}
+    \mathbb{P}\left(J^c_n=\nu^c,\;\forall c\in\mathcal{C}\right)
+    = A_1 A_2 A_3 \Pi_{c\in\mathcal{C}} (\gamma^c)^{K^c}
 \end{equation}
-为了得到更明确的速率函数表达式，先回顾$Stirling$公式：
+为了得到更明确的速率函数表达式$I_J$，先回顾$Stirling$公式：
 \begin{equation*}
     \log n! = n\log n-n+O(\log n)=h(n)-n+O(\log n),
 \end{equation*}
-其中$h(x)=x \log x, x \geqslant 0$。记$k_i=\sum_{c\ni i}k^c$且$\nu_i=\sum_{c\ni i}\nu^c$，那么有：
+其中$h(x)=x \log x, x \geqslant 0$。记$k_i=\sum_{c\ni i}k^c$且$\nu_i=\sum_{c\ni i}\nu^c$，注意到$k_i$和$k^i$的定义是不同的，那么$Stirling$公式有：
 \begin{equation}\label{log A1}
     \begin{split}
     \log A_1&=\log\frac{(k^1+k^{12}+k^{1N}+k^{+}+k^{-})!}{k^1!\;k^{12}!\;k^{1N}!\;k^{+}!\;k^{-}!}\\
@@ -125,19 +124,24 @@
     &= n\left[h(\nu_1)-h(\nu^1)-h(\nu^{12})-h(\nu^{1N})-h(\nu^+)-h(\nu^-)\right]+O(\log n).
     \end{split}
 \end{equation}
-最后，估计$\log A_2$，令：
-\begin{equation*}
-    D = \{(l^i,m^i)_{2\le i\le N-1}:\;l^i,m^i\in\mathbb{N},\;l^i+m^i=k^{i,i+1}\}.
-\end{equation*}
-表示$l^i$和$m^i$可能的组合形成的集合。记$L = (l^i,m^i)\in D$, 令
+类似地，有：
+\begin{equation}\label{log A3}
+    \begin{split}
+    \log A_3&=\log\left[\prod_{i=2}^N\binom{k_i-1}{k^{i}}\right]
+    =\sum_{i=2}^N\log\left(\frac{\left(k_i\right)!}{\left(k^i\right)!\left(k_i-k^i\right)!}\right)+O(\log n)\\
+    &=\sum_{i=2}^N\left[h(k_i)-h(k^i)-h(k_i-k^i)\right]+O(\log n)\\
+    &=\sum_{i=2}^Nn\left[h(\nu_i )-h(\nu^i)-h(\nu_i-\nu^i)\right]+O(\log n).
+    \end{split}
+\end{equation}
+最后，估计$\log A_2$，令$D = \{(l^i,m^i)_{2\le i\le N-1}:\;l^i,m^i\in\mathbb{N},\;l^i+m^i=k^{i,i+1}\}$ 表示$l^i$和$m^i$可能的组合形成的集合。记$L = (l^i,m^i)\in D$, 令
 \begin{equation*}
     B_L=\prod_{i=2}^{N-1}\binom{l^{i}+l^{i-1}+k^{+}-1}{l^{i}}\binom{m^{i}+m^{i+1}+k^{-}-1}{m^{i}}.
 \end{equation*}
-表示在给定$l^i$和$m^i$时，步骤 2）中插入方式的数量。易知$|D| \leqslant (n+1)^{N-2}$，因此，可以得到：
+表示在给定$l^i$和$m^i$时，步骤 2）中插入方式的数量。易知$|D| \leqslant n^{N-2}$，因此，可以得到：
 \begin{equation}\label{inequality}
     \max_{L\in D}B_L \le A_2 \le (n+1)^{N-2} \max_{L\in D}B_L,
 \end{equation}
-该式中还运用了$A_2 = \sum_{L\in D}B_L$。类似于 (11) 式，有：
+该式中还运用了$A_2 = \sum_{L\in D}B_L$。类似于 \ref{log A3} 式，有：
 \begin{equation}\label{log BL}
     \begin{split}
     \log B_L =&\;\sum_{i=2}^{N-1}[h(l^i+l^{i-1}+k^+)-h(l^i)-h(l^{i-1}+k^+)]\\
@@ -146,11 +150,11 @@
     &\;+\sum_{i=2}^{N-1}n[h(y^i+y^{i+1}+\nu^-)-h(y^i)-h(y^{i+1}+\nu^-)]+O(\log n),
     \end{split}
 \end{equation}
-其中$x^i = l^i/n$和$y^i = m^i/n$。对于给定的$\nu \in \mathcal{V}$，考虑其到处的空间：
+其中$x^i = l^i/n$和$y^i = m^i/n$。对于任意的$\nu \in \mathcal{V}$，考虑空间：
 \begin{equation*}
     V(\nu) = \left\{\left(x^{i},y^{i}\right)_{2\le i\le N-1}:\;x^i,y^i\geq0,\;x^{i}+y^{i}=\nu^{i,i+1}\right\},
 \end{equation*}
-且记$X = (x^i, y^i) \in V(\nu)$。定义函数：
+且对任意$X = (x^i, y^i) \in V(\nu)$。定义函数：
 \begin{equation}\label{formula:F}
     \begin{split}
     F_{\nu}(X)
@@ -158,12 +162,12 @@
     &+ \sum_{i=2}^{N-1} \left[h\left(y^{i}\right) + h\left(y^{i+1} +\nu^-\right)-h\left(y^{i} +y^{i+1} +\nu^-\right)\right].
     \end{split}
 \end{equation}
-那么联系（12）式的结果，可知：
+其中$x^1=\nu^{12}$且$y^N=\nu^{N1}$，由式联系 \ref{inequality}的结果，可得：
 \begin{equation}\label{log A2}
     \log A_2 = \max_{L\in D}\log B_L+O(\log n)
     = n\sup_{X\in V(\nu)}F_{\nu}(X)+O(\log n).
 \end{equation}
-结合\eqref{LDP}, \eqref{joint} 和 \eqref{trajectories}可得：
+结合\eqref{LDP}和\eqref{trajectories}，可得：
 \begin{equation*}
     \begin{split}
     I_J(\nu) &= -\lim_{n\to\infty}\frac{1}{n}\log\mathbb{P}\left(J^c_n=\nu^c,\;\forall c\in\mathcal{C}\right)\\
@@ -183,17 +187,25 @@
 \begin{equation*}
     \inf_{X\in V(\nu)}F_{\nu}(X) = F_{\nu}(x^i,y^i),
 \end{equation*}
-其中$x^1=\nu^{12}$，$x^N=0$，$y^1=0$，并且$y^N=\nu^{1N}$。
+其中$(x^i,y^i)_{2\leq i\leq N-1}$是下面代数方程的解：
+\begin{equation}\label{equation}
+    \begin{split}
+    \frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}\cdot\frac{x^{i}+\nu^+}{x^{i}+x^{i+1}+\nu^+}
+    &= \frac{y^{i}+\nu^-}{y^{i-1}+y^{i}+\nu^-}\cdot\frac{y^{i}}{y^{i}+y^{i+1}+\nu^-},\\
+    x^{i} + y^{i} &= \nu^{i,i+1},
+    \end{split}
+\end{equation}
+这里$x^1=\nu^{12}$，$x^N=0$，$y^1=0$，并且$y^N=\nu^{1N}$。
 
-上述论证，都是基于系统的初始状态是$1$，自然会联想到，基于其他初始分布，速率函数的表达式是否与其一致。附录 B 给出了速率函数不依赖初始状态的证明，由 \eqref{ratefunction} 的形式，可以看出这是一个极不平凡的结论。
+上述论证，都是基于系统的初始状态是$1$，自然问到其他初始分布会不会影响速率函数的表达式。由于证明过程非常复杂，所以在附录部分给出了速率函数不依赖初始状态的证明。由 \eqref{ratefunction} 的形式，可以看出这是一个极不平凡的结论。
 
-为建立经验$LE$环流大偏差原理，依然要证明速率函数的水平集是紧的，也就是验证条件 \eqref{def1} 和 \eqref{def2}。大偏差原理严格的证明在附录 \ref{appendix:LDP} 中给出。总结上面的论述，可以得到下面的定理
+为建立经验$LE$环流大偏差原理，依然要证明速率函数的水平集是紧的，也就是验证条件 \eqref{def1} 和 \eqref{def2}。大偏差原理严格的证明在附录 \ref{appendix:LDP} 中给出，经过整理后，得到下面的定理
 
 \begin{theorem}\label{thm:LDP}
     单环马氏链的经验环流$(J^c_n)_{c\in\mathcal{C}}$满足大偏差原理，并且相应的速率函数$I_J:\mathcal{V}\to [0,\infty]$满足上式 \eqref{ratefunction}. 速率函数$I_J$满足有界性，连续性和凸性。并且，速率函数$I_J$并不依赖初始分布的选择。
 \end{theorem}
 
-一般单环马氏链的速率函数表达式 \eqref{ratefunction} 十分复杂。不过，如果令状态$1$到状态$N$的转移概率为 0，或者只考虑三状态的马氏链。若$N=3$，则速率函数可以化简为：（证明细节见 \ref{appendix:threestate}）
+一般单环马氏链的速率函数表达式 \eqref{ratefunction} 十分复杂。不过，如果令状态$1$到状态$N$的转移概率为 0，或者只考虑三状态的马氏链，速率函数表达式会被简化。对于三状态马氏链，则速率函数可以化简为：（证明细节见 \ref{appendix:threestate}）
 \begin{align*}
     I_J(\nu) =
     \sum_{i\in S} \left[\nu^{i}\log \left(\frac{\nu^{i}/\nu_i}{J^i/J_i}\right) + (\nu_i - \nu^i)\log \left(\frac{(\nu_i - \nu^i)/\nu_i}{(J_i - J^i)/J_i} \right)
@@ -207,7 +219,7 @@
     \tilde{J} &=\sum_{c\in\mathcal{C},|c|\neq 1}J^{c}
     = J^{12}+J^{13}+J^{23}+J^++J^-.
 \end{align*}
-若$p_{1N}=0$，速率函数可以化简为（证明细节见 \ref{appendix:threestate}）:
+对于N状态单环马氏链，且$p_{1N}=0$，速率函数可以化简为（证明细节见 \ref{appendix:threestate}）:
 \begin{equation}\label{lack}
     \begin{split}
         I_J(\nu) = \sum_{i\in S}\Bigg[&\;\nu^i\log\left(\frac{\nu^i/\nu_i}{J^i/J_i}\right)
@@ -216,7 +228,9 @@
         {\left(J^{i-1,i}+J^+\right)/J_i}\right)\Bigg].
     \end{split}
 \end{equation}
-最好，考虑经验经验净$LE$环流$(\tilde{J}^{c}_n)_{c\in\mathcal{C}}$的大偏差原理。因为$\tilde{J}^c_n = 0, |S|=1,2$且$\tilde{J}^+_n = -\ {J}^-_n$，所以只需要考虑环$(1, 2, \cdots ,N)$的经验净环流。那么由收缩原理可以得到：
+注意到上述两种情况下的速率函数表达式更简单更对称 \eqref{ratefunction}。易知，上述表达式有着完美的对称性，因此与初始状态的选择无关。这也验证了定理\ref{thm:LDP}的相关结论。
+
+经验LE环流$(J^{c}_n)_{c\in\mathcal{C}}$的大偏差原理结果可以直接应用到经验$LE$净环流$(\tilde{J}^{c}_n)_{c\in\mathcal{C}}$。因为对一状态和两状态马氏链$\tilde{J}^c_n = 0$且$\tilde{J}^+_n = -\ {J}^-_n$，所以只需要考虑环$(1, 2, \cdots ,N)$的经验净环流$\tilde{J}^+_n$。那么由收缩原理可以得到：
 \begin{equation}\label{tilde I J}
 	\begin{split}
 		\mathbb{P}\left(\tilde{J}^{+}_n = x\right)
@@ -225,21 +239,20 @@
 		&\propto\sum_{\nu^{+}-\nu^{-}=x} e^{-nI_J(\nu)}.
 	\end{split}
 \end{equation}
-由此说明$\tilde{J}^+_n$满足大偏差原理， 相应的速率函数$I_{\tilde{J}}:\mathbb{R}\rightarrow[0,\infty]$为：
+由此说明$\tilde{J}^+_n$满足大偏差原理， 相应的速率函数$I_{\tilde{J}}$为：
 \begin{equation*}
 	I_{\tilde{J}}(x)=\inf_{\{\nu\in\mathcal{V}:\nu^{+}-\nu^{-}= x\}}I_J(\nu).
 \end{equation*} 
-从上述表达式，也可以看出$I_{\tilde{J}}$与初始分布的选择无关。
 
 \subsection{一般马氏链的$ST$环流的大偏差}
 
-$ST$经验净环流的大偏差，以及速率函数的对称性已经在文献 \cite{bertini2015flows} 中有过相关介绍。本文将着重研究经验$ST$环流的大偏差原理，涉及对经验测度部分可参考 \cite{den2008large}。
+经验$ST$净环流的大偏差，以及速率函数的对称性已经在文献 \cite{bertini2015flows} 中有过相关介绍。接下来将着重研究经验$ST$环流的大偏差原理，涉及的对经验测度内容可参考 \cite{den2008large}。
 
 $n$时刻的对经验测度$R_n:E\rightarrow[0,1]$，可以定义为
 \begin{equation*}
 R_n(i,j) = \frac{1}{n}\sum_{m=1}^n1_{\{\xi_{m-1}=i,\xi_m=j\}},
 \end{equation*}
-其中假设周期边界条件$X_0 = X_n$。显然$R_n(i,j)$表示边$\langle i,j\rangle$形成的速度。注意到，对经验测度$R_n$处于空间
+显然$R_n(i,j)$表示边$\langle i,j\rangle$形成的速度。注意到在周期边界条件下，对经验测度$R_n$处于空间
 \begin{equation*}
 \mathcal{M} = \left\{R:E\rightarrow[0,1]:\;\sum_{i,j\in S}R(i,j) = 1,\;
 \sum_{j\in S}R(i,j)=\sum_{j\in S}R(j,i)\right\}.
@@ -252,7 +265,7 @@ R_n(i,j) = \frac{1}{n}\sum_{m=1}^n1_{\{\xi_{m-1}=i,\xi_m=j\}},
 \begin{equation*}
 I_{\mathrm{pair}}(R) = \sum_{\langle i,j\rangle\in E}R(i,j)\log\frac{R(i,j)}{R(i)p_{ij}}
 \end{equation*}
-其中$R(i)=\sum_{j\in S}R(i,j)$，可以看到，对经验测度的速率函数可以表示为有着明显的相对熵形式。给定生成树$T$，定义在空间$E$上的函数$H^{c_l}$为：
+其中$R(i)=\sum_{j\in S}R(i,j)$，可以看到，对经验测度的速率函数是相对熵形式。给定生成树$T$，定义在空间$E$上的函数$H^{c_l}$为：
 \begin{equation*}\label{cycle function2}
 H^{c_l}(i,j)
     =\left\{\begin{aligned}
@@ -265,20 +278,30 @@ H^{c_l}(i,j)
 \begin{equation*}
 R_n(i,j) = \sum_{c_l\in\mathcal{L}}H^{c_l}(i,j)Q^{c_l}_n,
 \end{equation*}
-且由文献 \cite{kalpazidou2007cycle}可知，该分解是唯一的。那么有：
+且由文献 \cite{kalpazidou2007cycle}可知，该分解是唯一的。也就是说，如果$R_n =\sum_{c_l \in \mathcal{L}\nu^{c_l}H^{c_l}}$，那么对任意$c_l \in \mathcal{L}$会有$\nu^{c_l}=Q_n^{c_l}$。由上述表达式的唯一性可以得到：
 \begin{equation*}
     \mathbb{P}(Q_n^{c_l}=\mu^{c_l},\;\forall c_l\in\mathcal{L})
     =\mathbb{P}\left(R_n(i,j)=\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}(i,j),\;\forall\langle i,j\rangle\in E\right)
     \propto e^{-n I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right)}.
 \end{equation*}
-这表明 ST 经验环流$(Q_n^{c_l})_{c_l\in\mathcal{L}}$满足大偏差原理，相应的速率函数$I_Q:\mathcal{M}\rightarrow[0,\infty]$为：
+这表明ST经验环流$(Q_n^{c_l})_{c_l\in\mathcal{L}}$满足大偏差原理，相应的速率函数$I_Q:\mathcal{M}\rightarrow[0,\infty]$为：
 \begin{equation}\label{formula:I_Q}
 I_Q(\mu)=I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right).
 \end{equation}
-最终，考虑 ST 经验净环流$(\tilde{Q}^{c_l}_n)_{c_l\in\mathcal{L}}$的大偏差原理。考虑基本集中三状态或者更多状态的环，令$l_1$,$l_1-$,$l_2$,$l_2-$,$\cdots$,$l_s$,$l_s-$为对应的弦。 类似于 LE 经验净环流的论证，只考虑环$c_{l_1}$,$c_{l_2}$,$\cdots$,$c_{l_s}$的经验净环流。 则$(\tilde{Q}^{c_{l_i}})_{1\le i\le s}$满足大偏差原理，且相应的速率函数$I_{\tilde{Q}}:\mathbb{R}^s\rightarrow[0,\infty]$为：
-\begin{equation}\label{I_Q2}
-	I_{\tilde{Q}}(x)=\inf_{\{\mu\in\mathcal{M}:\mu^{c_{l_{i}}}-\mu^{c_{l_{i}}-}= x_i,\forall 1\le i\le s\}}I_Q(\mu).
-\end{equation}
+
+目前，已经得到了单环马氏链经验环流的速率函数，和一般马氏链的经验ST环流的速率函数。自然会想到两种速率函数的关系。前面也说过 ST 环流可以通过 LE 表示为$Q_n^{c_l} = \sum_{c\in\mathcal{C}}J^c_n1_{\{l\in c\}}$。从收缩原理中，可以得到：
+\begin{align*}
+	\mathbb{P}\left(Q_n^{c_l}=\mu^{c_l},\;\forall l\in\mathcal{L}\right)
+	&= \mathbb{P}\left(\sum_{c\in\mathcal{C}}J^c_n1_{\{l\in c\}}=\mu^{c_l},\;\forall l\in\mathcal{L}\right)\\
+	&= \sum_{\{\nu\in\mathcal{V}:\;\sum_c\nu^c1_{\{l\in c\}}=\mu^{c_l}\}}
+	\mathbb{P}\left(J^c_n=\nu^c,\;\forall c\in\mathcal{C}\right)\\
+	&\propto \sum_{\{\nu\in\mathcal{V}:\;\sum_c\nu^c1_{\{l\in c\}}=\mu^{c_l}\}}e^{-nI_J(\nu)}.
+\end{align*}
+这表明 LE 和 ST 经验环流的内部关系为：
+\begin{equation*}
+	I_Q(\mu) = \inf_{\{\nu\in\mathcal{V}:\;\sum_c\nu^c1_{\{l\in c\}}=\mu^{c_l}\}}I_J(\nu).
+\end{equation*}
+易知上式中的$I_Q$和式 \eqref{formula:I_Q} 中的一致。
 
 前面论述已得出单环马氏链 LE 经验环流的速率函数，和一般马氏链的 ST 经验环流的速率函数，下面将探讨两者之间的关系。前面也说过 ST 环流可以通过 LE 表示为$Q_n^{c_l} = \sum_{c\in\mathcal{C}}J^c_n1_{\{l\in c\}}$。从收缩原理中，可以得到：
 \begin{align*}
@@ -299,3 +322,8 @@ I_Q(\mu)=I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right).
 	I_J(\nu) = I_Q(\nu),
 \end{equation*}
 其中$I_J(\nu)$已经在 \eqref{lack} 中给出。
+
+收缩原理也可以建立经验ST净环流$(\tilde{Q}^{c_l}_n)_{c_l\in\mathcal{L}}$的大偏差原理。对于一状态和两状态环，经验ST净环流为0，因此只需考虑三状态或者更多状态的环。令$\{c_{l_1}$,$c_{l_2}$,$\cdots$,$c_{l_s}\} \subset \mathcal{L}$ 表示基本集中所有三状态及更多状态的环，那么环$c$及相应的反环$c^-$只出现一次。再令$l_1$,$l_1-$,$l_2$,$l_2-$,$\cdots$,$l_s$,$l_s-$为基本集中环对应的弦。那么经验ST净环流$(\tilde{Q}^{c_{l_i}})_{1\le i\le s}$满足大偏差原理，且相应的速率函数$I_{\tilde{Q}}$为：
+\begin{equation}\label{I_Q2}
+	I_{\tilde{Q}}(x)=\inf_{\{\mu\in\mathcal{M}:\mu^{c_{l_{i}}}-\mu^{c_{l_{i}}-}= x_i,\forall 1\le i\le s\}}I_Q(\mu).
+\end{equation}
