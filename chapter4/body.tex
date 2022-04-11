@@ -163,8 +163,6 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
 % 值得庆幸的是，这个假设条件可以移除，而且结论依然成立（整理中）
 
 
-% 这与单环系统的暂态涨落定理有着相同的表达形式。针对从 $i$ 出发的马氏链，并且环 $c_1,c_2,\cdots,c_r$ 通过相同状态 $i\in S$ 的情况，并且文献 \cite{jia2016cycle} 已经给出了 \eqref{transient} 式的有关证明。实际上，使这个结论成立的假设，可以简化为对任意一族环，并且任意初始分布。此外，对任意一族环  $c_1,c_2,\cdots,c_r$ ，任意 $1\le s\le r$，下式成立：
-
 接下来考虑经验LE净环流$(\tilde{J}^{c}_n)_{c\in C}$。令$\{c_1,c_2,\cdots,c_r\}$表示所有环的集合，那么环$c$和它的反环$c^-$只出现一次，那么由\ref{transient2}，可得：
 \begin{align*}
     &\; \Pnum\left(\tilde{J}^{c_1}_n=x_1,\tilde{J}^{c_m}_n=x_m,\;\forall 2\le m \le r\right) \\
@@ -187,10 +185,6 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
     =e^{n\sum_{i=1}^{r}x_i\log\frac{\gamma^{c_i}}{\gamma^{c_i-}}}.
     \end{split}
 \end{equation}
-
-% 也就是说，对任意环 $c_s$，LE 经验净环流的联合分布满足对称关系。且一状态和两状态的环 $c$ 满足 $\tilde{J}^c_n=0$，三状态或更多状态的环满足 $\tilde{J}^c_n=-\tilde{J}^{c-}_n$。令 $c_1,c_1-,c_2,c_2-,\cdots,c_{r*},c_{r*}-$ 
-% 表示所有三状态或更多状态的环。若把上述方程中的 $x_s, 1\leq s\leq r*$ 改为 $-x_s$，则可以得到：
-
 通过对比，可以看到\eqref{weak}式的结论弱于 \eqref{strong}式。因此，本文称 \eqref{strong} 式为强形式的暂态涨落定理，\eqref{weak}式为弱形式的暂态涨落定理。
 
 有关 LE 经验环流和 LE 经验净环流的其他类型涨落定理都可以通过暂态涨落定理得到。这里主要关注强形式；弱形式也可以通过类似的方式得到。令$g_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^r\lambda_i J^{c_i}_n}]$和$\tilde{g}_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^{r}\lambda_i\tilde{J}^{c_i}_n}]$ 分别为 $(J^{c_i}_n)_{1\le i\le r}$ 和 $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ 的矩母函数，并且令 $I_{J}(x)$ 和 $I_{\tilde{J}}(x)$ 为相应的速率函数。
@@ -216,14 +210,13 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
 	I_{\tilde{J}}(\cdots,x_s,\cdots) = I_{\tilde{J}}(\cdots,-x_s,\cdots)-\left(\log\frac{\gamma^{c_s}}{\gamma^{c_s-}}\right)x_s.
 \end{equation*}
 
-\BiSection{单环马氏链 ST 环流的涨落定理}
-现已经清楚了 LE 经验环流和 LE 经验净环流满足的各种涨落定理。自然会想到是否 ST 经验环流和 ST 经验净环流是否也满足类似的关系。事实上，所有的涨落定理对于经验ST环流都是不成立的，即使考虑单环系统。考虑全连接三状态马氏链，并且令 $T = 1\to 2\to 3$ 是一个生成树，那么相应基本集为$\mathcal{L} = \{(1),(2),(3),(1,2),(2,3),(1,2,3),(1,3,2)\}.$
-
-回顾式 \eqref{formula:I_Q} 中的 ST 经验环流的速率函数为：
+% \BiSection{单环马氏链 ST 环流的涨落定理}
+\BiSection{一般马氏链 ST 环流的涨落定理}
+现已经清楚了 LE 经验环流和 LE 经验净环流满足的各种涨落定理。自然会想到是否 ST 经验环流和 ST 经验净环流是否也满足类似的关系。事实上，所有的涨落定理对于经验ST环流都是不成立的，即使考虑单环系统。考虑全连接三状态马氏链，并且令 $T = 1\to 2\to 3$ 是一个生成树，那么相应基本集为$\mathcal{L} = \{(1),(2),(3),(1,2),(2,3),(1,2,3),(1,3,2)\}.$回顾式 \eqref{formula:I_Q} 中的 ST 经验环流的速率函数为：
 \begin{equation*}
 I_Q(\mu) = \sum_{\langle i,j\rangle\in E}R^{\mu}(i,j)\log\frac{R^{\mu}(i,j)}{R^{\mu}(i)p_{ij}},
 \end{equation*}
-其中 $R^{\mu}(i,j)=\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}(i,j)$ 且 $R^{\mu}(i)=\sum_{j\in S}R^{\mu}(i,j)$。再记 $\mu^+ = \mu^{(1,2,3)}$ ， $\mu^- = \mu^{(1,3,2)}$，易知 （参考图 \ref{figure:ratefunction} (a)）
+其中 $R^{\mu}(i,j)=\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}(i,j)$ 且 $R^{\mu}(i)=\sum_{j\in S}R^{\mu}(i,j)$。再记 $\mu^+ = \mu^{(1,2,3)}$ ， $\mu^- = \mu^{(1,3,2)}$。图\ref{figure:ratefunction}(a)说明的是在一组适当参数下，$I_Q(\cdots,\mu^+,\mu^-)$和$I_Q(\cdots,\mu^-,\mu^+)-\log(\gamma^+ /\gamma^-) (\mu^+-\mu^-)$之间的差异，易知两者相差不是0，因此有：
 \begin{equation*}
 I_Q(\cdots,\mu^+,\mu^-)
 \neq I_Q(\cdots,\mu^-,\mu^+)-\left(\log\frac{\gamma^+}{\gamma^-}\right)(\mu^+-\mu^-),
@@ -235,7 +228,9 @@ I_Q(\cdots,\mu^+,\mu^-)
 	\caption{ST 经验环流和经验净环流的速率函数图像 (a) $\rho=I_Q(\cdots,\mu^+,\mu^-)-I_Q(\cdots,\mu^-,\mu^+)+(\log\frac{\gamma^+}{\gamma^-})(\mu^+-\mu^-)$. (b) $\rho=I_{\tilde{Q}}(\tilde{\mu}^{c_1},\tilde{\mu}^{c_2},\tilde{\mu}^{c_3})- I_{\tilde{Q}}(-\tilde{\mu}^{c_1},\tilde{\mu}^{c_2},\tilde{\mu}^{c_3})
 		+(\log\frac{\gamma^{c_1}}{\gamma^{c_1-}})\tilde{\mu}^{c_1}$}\label{figure:ratefunction}
 \end{figure}
-ST 经验环流无法满足各种涨落定理，ST 经验净环流却是可以在很多情况下成立（参考 \cite{andrieux2007fluctuation,bertini2015flows}）。对于单环系统，只需考虑环 $C^+$ 的净环流。从 \eqref{conversion} 式中易知环 $C^+$ 的 ST 经验净环流  $\tilde{Q}^+_n$ 等于 该环的 LE 经验净环流 $\tilde{J}^+_n$。记弦 $l^+$ 和 $l^-$ 分别对应于 $C^+$ 和 $C^-$，由于 $l^+=l^--$，则：
+尽管 ST 经验环流无法满足各种涨落定理，ST 经验净环流在很多情况下成立却是可以的（参考 \cite{andrieux2007fluctuation}）。
+
+对于单环系统，只需考虑环 $C^+$ 的净环流。从 \eqref{conversion} 式中易知环 $C^+$ 的 ST 经验净环流  $\tilde{Q}^+_n$ 等于 该环的 LE 经验净环流 $\tilde{J}^+_n$。记弦 $l^+$ 和 $l^-$ 分别对应于 $C^+$ 和 $C^-$，由于 $l^+=l^--$，则：
 \begin{equation*}\label{circulation}
     \begin{split}
             \tilde{Q}^{+}_n =&\;\sum_{c\in \mathcal{C}}J^c_n1_{\{l^+\in c \}}-\sum_{c\in \mathcal{C}}J^c_n1_{\{l^-\in c \}}\\
