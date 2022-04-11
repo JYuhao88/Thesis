@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  11 APR 2022 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  11 APR 2022 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1854,14 +1854,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-
-Package natbib Warning: Citation `brian1990optimization' on page 23 undefined o
-n input line 13.
-
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 36.
+line 38.
 Package CJKpunct Info: punctuation spaces for family 'hei' do not exist. Use fa
-mily 'def' instead. on input line 39.
+mily 'def' instead. on input line 41.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1875,7 +1871,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 
 ]
-Overfull \hbox (7.99948pt too wide) detected at line 74
+Overfull \hbox (7.99948pt too wide) detected at line 76
 [] [] \OT1/txr/m/n/12 = \OMS/txsy/m/n/12 1\OML/txmi/m/it/12 ;  [] [] [] \OT1/tx
 r/m/n/12 = [][] \OML/txmi/m/it/12 < \OMS/txsy/m/n/12 1\OML/txmi/m/it/12 :
  []
@@ -1899,15 +1895,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [25]
 
-LaTeX Warning: Reference `LELDP' on page 26 undefined on input line 149.
+LaTeX Warning: Reference `LELDP' on page 26 undefined on input line 151.
 
 <chart/brokenlinegraph.pdf, id=960, 661.97313pt x 177.16188pt>
 File: chart/brokenlinegraph.pdf Graphic file (type pdf)
 <use chart/brokenlinegraph.pdf>
-Package pdftex.def Info: chart/brokenlinegraph.pdf  used on input line 170.
+Package pdftex.def Info: chart/brokenlinegraph.pdf  used on input line 172.
 (pdftex.def)             Requested size: 463.37804pt x 124.01245pt.
 
-Overfull \hbox (8.13396pt too wide) in paragraph at lines 170--171
+Overfull \hbox (8.13396pt too wide) in paragraph at lines 172--173
  [][] 
  []
 
@@ -1930,7 +1926,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [27]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 220.
+input line 222.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1942,7 +1938,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [28]
 
-LaTeX Warning: Reference `LELDP' on page 29 undefined on input line 273.
+LaTeX Warning: Reference `LELDP' on page 29 undefined on input line 275.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1973,15 +1969,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 [31]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 402.
+(hyperref)                removing `math shift' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 402.
+(hyperref)                removing `subscript' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 402.
+(hyperref)                removing `math shift' on input line 404.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2225,7 +2221,7 @@ ype1/public/txfonts/txsyb.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/tx
 fonts/txsyc.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><e
 :/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><e:/texlive/2022/tex
 mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (48 pages, 3306735 bytes).
+Output written on main.pdf (48 pages, 3306893 bytes).
 PDF statistics:
  1936 PDF objects out of 2073 (max. 8388607)
  1459 compressed objects within 15 object streams
