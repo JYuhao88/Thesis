@@ -1,10 +1,10 @@
 \BiChapter{环流的大偏差原理}{Large deviations of cycle currents}
-大偏差关系到随机过程中小概率事件的长时涨落行为 \cite{varadhan1984large,den2000large}。本文在此考察了经验环流的大偏差。注意到周期边界条件下，单环马氏链的经验$LE$环流$(J_n^c)_{c \in \mathcal{C}}$定义在空间：
+大偏差关系到随机过程中小概率事件的长时涨落行为 \cite{varadhan1984large,den2000large}。本文在此考察了经验环流的大偏差。注意到周期边界条件下，单环马氏链的经验LE环流$(J_n^c)_{c \in \mathcal{C}}$定义在空间：
 \begin{equation*}
     \mathcal{V} = \left\{(\nu^c)_{c\in \mathcal{C}}:\;\nu^c\geq 0,\;
     \sum_{c\in \mathcal{C}}|c|\nu^c  = 1\right\},
 \end{equation*}
-其中$|c|$表示环$c$的长度，即环$c$中状态数量。若满足下列三个条件\cite{varadhan1984large}，则称经验$LE$环流$(J_n^c)_{c \in \mathcal{C}}$满足速率函数为$I_J:\mathcal{V}\rightarrow [0,\infty]$的大偏差原理：
+其中$|c|$表示环$c$的长度，即环$c$中状态数量。若满足下列三个条件\cite{varadhan1984large}，则称经验LE环流$(J_n^c)_{c \in \mathcal{C}}$满足速率函数为$I_J:\mathcal{V}\rightarrow [0,\infty]$的大偏差原理：
 \begin{itemize}
     \item 对$\forall \alpha \geqslant 0$，水平集$\{x \in \mathcal{V}: I_{J}(x) \leqslant \alpha\}$是紧的。
     \item 对任意开集$U \subset \mathcal{V}$,
@@ -20,12 +20,12 @@
 \begin{equation}\label{LDP}
     \mathbb{P}(J^c_n=\nu^c,\;\forall c\in\mathcal{C})\propto e^{-n I_J(\nu)},\;\;\;n\to\infty,
 \end{equation}
-同样地，也可以定义经验$ST$环流的大偏差$(Q_c^{c_l})_{l \subset \mathcal{L}}$。
+同样地，也可以定义经验ST环流的大偏差$(Q_c^{c_l})_{l \subset \mathcal{L}}$。
 
-\BiSection{单环马氏链$LE$环流的大偏差}
-首先讨论经验$LE$环流的大偏差原理。一般的马氏链中，速率函数的解析表达式$I_J$很难求出，因此下面将关注单环马氏链。单环系统中所有可能形成的环都已在 (\ref{cycle_space})中列出。
+\BiSection{单环马氏链LE环流的大偏差}
+首先讨论经验LE环流的大偏差原理。一般的马氏链中，速率函数的解析表达式$I_J$很难求出，因此下面将关注单环马氏链。单环系统中所有可能形成的环都已在 (\ref{cycle_space})中列出。
 
-简化叙述推导过程，假设系统从状态$1$出发，这并不会降低命题的一般性。为了求出速率函数$I_J$，需要计算经验$LE$环流的联合分布。对任意环$c=(i_1, i_2, \cdots, i_s)$，令$\gamma^c = p_{i_1i_2}p_{i_2i_3}\cdots p_{i_si_1}$表示沿着环$c$产生的所有转移概率的乘积。对任意满足$\sum_{c \subset \mathcal{C}} |c| k^c=n$的负整数序列$k=(k^c)_{c\subset \mathcal{C}}$，因为假设周期边界条件，经验$LE$环流的联合分布为：
+简化叙述推导过程，假设系统从状态$1$出发，这并不会降低命题的一般性。为了求出速率函数$I_J$，需要计算经验LE环流的联合分布。对任意环$c=(i_1, i_2, \cdots, i_s)$，令$\gamma^c = p_{i_1i_2}p_{i_2i_3}\cdots p_{i_si_1}$表示沿着环$c$产生的所有转移概率的乘积。对任意满足$\sum_{c \subset \mathcal{C}} |c| k^c=n$的负整数序列$k=(k^c)_{c\subset \mathcal{C}}$，因为假设周期边界条件，经验LE环流的联合分布为：
 \begin{equation}\label{joint}
     \begin{split}
     \mathbb{P}\left(J^c_n=\nu^c,\;\forall c\in\mathcal{C}\right)
@@ -107,7 +107,7 @@
 \end{equation*}
 例子 \ref{trajectory_ex}中，步骤3）中的插入方式在图 \ref{figure:insertion}的右部分。
 
-结合上述三个步骤，最终可以得到容许轨迹的数量为：$|G_n(k)|=A_1A_2A_3$。因此经验$LE$环流的联合分布为：
+结合上述三个步骤，最终可以得到容许轨迹的数量为：$|G_n(k)|=A_1A_2A_3$。因此经验LE环流的联合分布为：
 \begin{equation} \label{trajectories}
     \mathbb{P}\left(J^c_n=\nu^c,\;\forall c\in\mathcal{C}\right)
     = A_1 A_2 A_3 \Pi_{c\in\mathcal{C}} (\gamma^c)^{K^c}
@@ -183,7 +183,7 @@
     -h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c,
     \end{split}
 \end{equation}
-其中$h(x) = x \log x$且$\nu_i=\sum_{c\ni i}\nu^c$。这就是经验$LE$完整的环流速率函数表达式。该式中的$\inf_{X\in V(\nu)}F_{\nu}(X)$难以直接计算，不过可以通过拉格朗日乘子法得到。在附录 A 中，证明了
+其中$h(x) = x \log x$且$\nu_i=\sum_{c\ni i}\nu^c$。这就是经验LE完整的环流速率函数表达式。该式中的$\inf_{X\in V(\nu)}F_{\nu}(X)$难以直接计算，不过可以通过拉格朗日乘子法得到。在附录 A 中，证明了
 \begin{equation*}
     \inf_{X\in V(\nu)}F_{\nu}(X) = F_{\nu}(x^i,y^i),
 \end{equation*}
@@ -199,7 +199,7 @@
 
 上述论证，都是基于系统的初始状态是$1$，自然问到其他初始分布会不会影响速率函数的表达式。由于证明过程非常复杂，所以在附录部分给出了速率函数不依赖初始状态的证明。由 \eqref{ratefunction} 的形式，可以看出这是一个极不平凡的结论。
 
-为建立经验$LE$环流大偏差原理，依然要证明速率函数的水平集是紧的，也就是验证条件 \eqref{def1} 和 \eqref{def2}。大偏差原理严格的证明在附录 \ref{appendix:LDP} 中给出，经过整理后，得到下面的定理
+为建立经验LE环流大偏差原理，依然要证明速率函数的水平集是紧的，也就是验证条件 \eqref{def1} 和 \eqref{def2}。大偏差原理严格的证明在附录 \ref{appendix:LDP} 中给出，经过整理后，得到下面的定理
 
 \begin{theorem}\label{thm:LDP}
     单环马氏链的经验环流$(J^c_n)_{c\in\mathcal{C}}$满足大偏差原理，并且相应的速率函数$I_J:\mathcal{V}\to [0,\infty]$满足上式 \eqref{ratefunction}. 速率函数$I_J$满足有界性，连续性和凸性。并且，速率函数$I_J$并不依赖初始分布的选择。
@@ -230,7 +230,7 @@
 \end{equation}
 注意到上述两种情况下的速率函数表达式更简单更对称 \eqref{ratefunction}。易知，上述表达式有着完美的对称性，因此与初始状态的选择无关。这也验证了定理\ref{thm:LDP}的相关结论。
 
-经验LE环流$(J^{c}_n)_{c\in\mathcal{C}}$的大偏差原理结果可以直接应用到经验$LE$净环流$(\tilde{J}^{c}_n)_{c\in\mathcal{C}}$。因为对一状态和两状态马氏链$\tilde{J}^c_n = 0$且$\tilde{J}^+_n = -\ {J}^-_n$，所以只需要考虑环$(1, 2, \cdots ,N)$的经验净环流$\tilde{J}^+_n$。那么由收缩原理可以得到：
+LE经验环流$(J^{c}_n)_{c\in\mathcal{C}}$的大偏差原理结果可以直接应用到经验LE净环流$(\tilde{J}^{c}_n)_{c\in\mathcal{C}}$。因为对一状态和两状态马氏链$\tilde{J}^c_n = 0$且$\tilde{J}^+_n = -\ {J}^-_n$，所以只需要考虑环$(1, 2, \cdots ,N)$的经验净环流$\tilde{J}^+_n$。那么由收缩原理可以得到：
 \begin{equation}\label{tilde I J}
 	\begin{split}
 		\mathbb{P}\left(\tilde{J}^{+}_n = x\right)
@@ -244,9 +244,9 @@
 	I_{\tilde{J}}(x)=\inf_{\{\nu\in\mathcal{V}:\nu^{+}-\nu^{-}= x\}}I_J(\nu).
 \end{equation*} 
 
-\subsection{一般马氏链的$ST$环流的大偏差}
+\subsection{一般马氏链的ST环流的大偏差}
 
-经验$ST$净环流的大偏差，以及速率函数的对称性已经在文献 \cite{bertini2015flows} 中有过相关介绍。接下来将着重研究经验$ST$环流的大偏差原理，涉及的对经验测度内容可参考 \cite{den2008large}。
+经验ST净环流的大偏差，以及速率函数的对称性已经在文献 \cite{bertini2015flows} 中有过相关介绍。接下来将着重研究经验ST环流的大偏差原理，涉及的对经验测度内容可参考 \cite{den2008large}。
 
 $n$时刻的对经验测度$R_n:E\rightarrow[0,1]$，可以定义为
 \begin{equation*}
@@ -274,7 +274,7 @@ H^{c_l}(i,j)
     0, &   && \text{otherwise}.\\
     \end{aligned}\right.
 \end{equation*}
-对经验测度可以被分解为下面$ST$环流的加权和：
+对经验测度可以被分解为下面ST环流的加权和：
 \begin{equation*}
 R_n(i,j) = \sum_{c_l\in\mathcal{L}}H^{c_l}(i,j)Q^{c_l}_n,
 \end{equation*}
@@ -323,7 +323,7 @@ I_Q(\mu)=I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right).
 \end{equation*}
 其中$I_J(\nu)$已经在 \eqref{lack} 中给出。
 
-收缩原理也可以建立经验ST净环流$(\tilde{Q}^{c_l}_n)_{c_l\in\mathcal{L}}$的大偏差原理。对于一状态和两状态环，经验ST净环流为0，因此只需考虑三状态或者更多状态的环。令$\{c_{l_1}$,$c_{l_2}$,$\cdots$,$c_{l_s}\} \subset \mathcal{L}$ 表示基本集中所有三状态及更多状态的环，那么环$c$及相应的反环$c^-$只出现一次。再令$l_1$,$l_1-$,$l_2$,$l_2-$,$\cdots$,$l_s$,$l_s-$为基本集中环对应的弦。那么经验ST净环流$(\tilde{Q}^{c_{l_i}})_{1\le i\le s}$满足大偏差原理，且相应的速率函数$I_{\tilde{Q}}$为：
+收缩原理也可以建立ST经验净环流$(\tilde{Q}^{c_l}_n)_{c_l\in\mathcal{L}}$的大偏差原理。对于一状态和两状态环，ST经验净环流为0，因此只需考虑三状态或者更多状态的环。令$\{c_{l_1}$,$c_{l_2}$,$\cdots$,$c_{l_s}\} \subset \mathcal{L}$ 表示基本集中所有三状态及更多状态的环，那么环$c$及相应的反环$c^-$只出现一次。再令$l_1$,$l_1-$,$l_2$,$l_2-$,$\cdots$,$l_s$,$l_s-$为基本集中环对应的弦。那么ST经验净环流$(\tilde{Q}^{c_{l_i}})_{1\le i\le s}$满足大偏差原理，且相应的速率函数$I_{\tilde{Q}}$为：
 \begin{equation}\label{I_Q2}
 	I_{\tilde{Q}}(x)=\inf_{\{\mu\in\mathcal{M}:\mu^{c_{l_{i}}}-\mu^{c_{l_{i}}-}= x_i,\forall 1\le i\le s\}}I_Q(\mu).
 \end{equation}

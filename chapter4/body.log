@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  10 APR 2022 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  11 APR 2022 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1634,7 +1634,7 @@ l.4 ...\cdots,N)$ 和 $C^- = (1,N,\cdots,2)$，令
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
  77 strings out of 478268
- 938 string characters out of 5843326
+ 938 string characters out of 5850346
  289375 words of memory out of 5000000
  18384 multiletter control sequences out of 15000+600000
  469567 words of font info for 29 fonts, out of 8000000 for 9000

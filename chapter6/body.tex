@@ -1,7 +1,7 @@
 \section{附录}
 
-\section{附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{} \label{appendix:explicit} \label{appendix:explicit}
-因此，可以得到速率函数：
+\section{附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{} \label{appendix:explicit}
+回顾单环系统，LE经验净环流$(J_n^c)_{c \in \mathcal{C}}$的速率函数为：
 \begin{equation*}\label{ratefunction2}
 	\begin{split}
 		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
@@ -10,7 +10,8 @@
 		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c,
 	\end{split}
 \end{equation*}
-下面将使用拉格朗日乘子法化简该式。固定 $\nu\in\mathcal{V}$，令拉格朗日函数 \cite{brian1990optimization} $\mathcal{A}_{\nu}:V(\nu)\times \mathbb{R}^{N-2}\to \mathbb{R}$ 为：
+% 下面将使用拉格朗日乘子法化简该式。固定 $\nu\in\mathcal{V}$，令拉格朗日函数 \cite{brian1990optimization} $\mathcal{A}_{\nu}:V(\nu)\times \mathbb{R}^{N-2}\to \mathbb{R}$ 为：
+这里$\inf_{X\in V(\nu)}F_{\nu}(X)$不是闭形式，下面利用拉格朗日乘子法求解$\inf_{X\in V(\nu)}F_{\nu}(X)$。对任意$\nu\in\mathcal{V}$，定义拉格朗日函数为：
 \begin{align*}
     \mathcal{A}_{\nu}(X,\lambda) = F_{\nu}(X) + \sum_{i=2}^{N-1} \lambda_i \left(x^{i} + y^{i} - \nu^{i,i+1}\right),
 \end{align*}
@@ -33,9 +34,10 @@
     \end{split}
 \end{equation}
 其中 $x^1=\nu^{12}$，$x^N=0$，$y^1=0$ 和 $y^N=\nu^{1N}$。
-    \begin{lemma}\label{lemma:existence for equations solution}
-        方程 \eqref{equations} 有解 $X=(x^i,y^i)\in V(\nu)$。
-    \end{lemma}
+
+\begin{lemma}\label{lemma:existence for equations solution}
+	方程 \eqref{equations} 有解 $X=(x^i,y^i)\in V(\nu)$。
+\end{lemma}
 \begin{proof}
     若对某些 $2\le k\le N-1$ 存在 $\nu^{k,k+1}=0$，则有 $x^{k}=y^{k}=0$ 成立。那么依据指标 $2\le i\le k-1$ 和 $k+1\le i\le N-1$，方程 \eqref{equations} 可以被分为两个方程。因此对 $\nu^{k,k+1}>0, \forall k, 2\le k\le N-1$ 证明引理，下面会从三种不同情况考虑这个引理。
 

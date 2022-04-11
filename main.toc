@@ -7,21 +7,20 @@
 \contentsline {section}{\numberline {2.2}生成树定义的环流}{5}{section*.23}%
 \contentsline {section}{\numberline {2.3}两种类型环流的比较}{6}{section*.25}%
 \contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 三\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 环流的大偏差原理}{8}{section*.28}%
-\contentsline {section}{\numberline {3.1}单环马氏链$LE$环流的大偏差}{8}{section*.30}%
-\contentsline {subsection}{\numberline {3.1.1}一般马氏链的$ST$环流的大偏差}{14}{section*.35}%
+\contentsline {section}{\numberline {3.1}单环马氏链LE环流的大偏差}{8}{section*.30}%
+\contentsline {subsection}{\numberline {3.1.1}一般马氏链的ST环流的大偏差}{14}{section*.35}%
 \contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 四\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 环流的涨落定理}{16}{section*.37}%
 \contentsline {section}{\numberline {4.1}单环马氏链 LE 环流的涨落定理}{16}{section*.39}%
 \contentsline {section}{\numberline {4.2}一般马氏链 LE 环流的涨落定理}{18}{section*.41}%
-\contentsline {section}{\numberline {4.3}单环马氏链 ST 环流的涨落定理}{20}{section*.43}%
-\contentsline {section}{\numberline {4.4}一般马氏链的 ST 环流的涨落定理}{21}{section*.46}%
-\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 五\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 总结和讨论}{22}{section*.49}%
-\contentsline {section}{\numberline {5.1}附录}{23}{section*.51}%
-\contentsline {section}{\numberline {5.2}附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{23}{section*.52}%
-\contentsline {section}{\numberline {5.3}速率函数的对称性}{25}{section*.55}%
-\contentsline {section}{\numberline {5.4}Proof of Theorem\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \ref {thm:LDP}}{30}{section*.61}%
-\contentsline {section}{\numberline {5.5}简化速率函数 $I_J$}{32}{section*.64}%
-\contentsline {section}{\numberline {5.6}经验 LE 环流的暂态涨落定理的证明}{34}{section*.67}%
-\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont \CJKfamily {song}致\hskip 1em\relax 谢}{35}{section*.70}%
-\contentsline {chapter}{参考文献}{36}{section*.72}%
-\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 附录 6\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 攻读硕士学位期间发表的论文及其他成果}{38}{section*.77}%
+\contentsline {section}{\numberline {4.3}一般马氏链 ST 环流的涨落定理}{20}{section*.43}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 五\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 总结和讨论}{22}{section*.47}%
+\contentsline {section}{\numberline {5.1}附录}{23}{section*.49}%
+\contentsline {section}{\numberline {5.2}附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{23}{section*.50}%
+\contentsline {section}{\numberline {5.3}速率函数的对称性}{25}{section*.53}%
+\contentsline {section}{\numberline {5.4}Proof of Theorem\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \ref {thm:LDP}}{30}{section*.59}%
+\contentsline {section}{\numberline {5.5}简化速率函数 $I_J$}{32}{section*.62}%
+\contentsline {section}{\numberline {5.6}经验 LE 环流的暂态涨落定理的证明}{34}{section*.65}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont \CJKfamily {song}致\hskip 1em\relax 谢}{35}{section*.68}%
+\contentsline {chapter}{参考文献}{36}{section*.70}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 附录 6\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 攻读硕士学位期间发表的论文及其他成果}{38}{section*.75}%
 \contentsfinish 
