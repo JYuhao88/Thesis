@@ -228,7 +228,42 @@ I_Q(\cdots,\mu^+,\mu^-)
     =\sum_{c\ni l}J^c_n-\sum_{c\ni l}J^{c-}_n = \tilde{J}^c_n.
     \end{split}
 \end{equation*}
-因此ST经验净环流可以分解为LE经验净环流的和。由公式\ref{weak}(附录D)，可得：
+因此ST经验净环流可以分解为LE经验净环流的和。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ububsection{经验 LE 环流的暂态涨落定理的证明}
+在此，将给出无周期条件下，经验 LE 环流的暂态涨落定理的证明。
+记 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$。在时间步 $n$,轨迹中环 $c$ 形成 $k^c$ 次，因此有：
+\begin{equation*}
+	n=\sum_{c\in\mathcal{C}}k^c|c|+|\eta|,
+\end{equation*}
+其中 $\eta$ 表示剩下的导出链，且 $0\le |\eta|\le N-1$。假设系统从状态 1 出发，这并不降低命题的一般性。令 $[\eta]=t$，那么 $\eta=\eta_1$ 或者 $\eta_2$，其中 $\eta_1=[1,2,\cdots,t+1]$ 且 $\eta_2=[1,N,\cdots,N+1-t]$。同时, \eqref{joint} 可以被写为：
+\begin{equation}\label{joint2}
+	\begin{split}
+		\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C}\right)
+		=&\;\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_1\right)+\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_2\right)\\
+		=&\;\left|G^{\eta_1}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_1}+\left|G^{\eta_2}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_2},
+	\end{split}
+\end{equation}
+其中 $\gamma^{\eta_1}=p_{12}\cdots p_{t,t+1}$ 且 $\gamma^{\eta_2}=p_{1N}\cdots p_{N+2-t,N+1-t}$。那么有
+\begin{align*}
+	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)
+	&= (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
+	&\qquad\left[|G^{\eta_1}(k^+,k^-,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^+,k^-,\cdots)|\gamma^{\eta_2}\right].
+\end{align*}
+同理，如果交换上述方程中的 $k^+$ 和 $k^-$，可以得到：
+\begin{align*}
+	\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)
+	&= (\gamma^+)^{k^-}(\gamma^-)^{k^+}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
+	&\qquad\left[|G^{\eta_1}(k^-,k^+,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^-,k^+,\cdots)|\gamma^{\eta_2}\right].
+\end{align*}
+根据 \eqref{EGetan} 式，可以得到下列的暂态涨落定理成立：
+\begin{equation*}
+	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)=\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)\left(\frac{\gamma^+}{\gamma^-}\right)^{k^+-k^-}.
+\end{equation*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+由公式\ref{weak}(附录D)，可得：
 \begin{equation}\label{weak}
     \begin{split}
     \frac{\Pnum\left(\tilde{Q}^{c_{l_1}}_n=x_1,\cdots, \tilde{Q}^{c_{l_s}}_n=x_{s}\right)}

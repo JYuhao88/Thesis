@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  11 APR 2022 20:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  12 APR 2022 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -943,9 +943,6 @@ LaTeX Warning: Label `weak' multiply defined.
 
 ) (./chapter5/body.aux) (./chapter6/body.aux
 
-LaTeX Warning: Label `appendix:explicit' multiply defined.
-
-
 LaTeX Warning: Label `ratefunction1' multiply defined.
 
 ) (./appendix/acknowledgements.aux) (./appendix/publications.aux))
@@ -1446,7 +1443,7 @@ Package hyperref Warning: Suppressing empty link on input line 4.
 
 Package hyperref Warning: Suppressing empty link on input line 6.
 
-<chart/transitiongraph.pdf, id=481, 694.595pt x 510.40688pt>
+<chart/transitiongraph.pdf, id=476, 694.595pt x 510.40688pt>
 File: chart/transitiongraph.pdf Graphic file (type pdf)
 <use chart/transitiongraph.pdf>
 Package pdftex.def Info: chart/transitiongraph.pdf  used on input line 10.
@@ -1592,7 +1589,7 @@ it/12 c$\C70/song/m/n/12/5f b \C70/song/m/n/12/62 ^^P$\OML/txmi/m/it/12 k[]$\C7
 0/song/m/n/12/6b !|\C70/song/b/n/12/ff ^^L|
  []
 
-<chart/insertiongraph.pdf, id=642, 807.51688pt x 465.74pt>
+<chart/insertiongraph.pdf, id=637, 807.51688pt x 465.74pt>
 File: chart/insertiongraph.pdf Graphic file (type pdf)
 <use chart/insertiongraph.pdf>
 Package pdftex.def Info: chart/insertiongraph.pdf  used on input line 72.
@@ -1645,10 +1642,12 @@ File: c70hei.fd 2009/09/23 4.8.2
 )
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 204.
-
-
-Package natbib Warning: Citation `den2008large' on page 13 undefined on input l
-ine 249.
+Package CJKpunct Info: punctuation spaces for family 'kai' do not exist. Use fa
+mily 'def' instead. on input line 209.
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
+line 244.
+Package CJKpunct Info: punctuation spaces for family 'hei' do not exist. Use fa
+mily 'def' instead. on input line 247.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1659,6 +1658,11 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
 [13]
+Overfull \hbox (7.99948pt too wide) detected at line 282
+[] [] \OT1/txr/m/n/12 = \OMS/txsy/m/n/12 1\OML/txmi/m/it/12 ;  [] [] [] \OT1/tx
+r/m/n/12 = [][] \OML/txmi/m/it/12 < \OMS/txsy/m/n/12 1\OML/txmi/m/it/12 :
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1669,11 +1673,42 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [14]
 
-Package hyperref Warning: Suppressing empty link on input line 320.
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.454pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.454pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
+
+[15]
+
+Package natbib Warning: Citation `den2008large' on page 16 undefined on input l
+ine 388.
 
 
-LaTeX Warning: Reference `same cycle current' on page 15 undefined on input lin
-e 320.
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.454pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.454pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
+
+[16]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.454pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.454pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
+
+[17]
+
+Package hyperref Warning: Suppressing empty link on input line 459.
+
+
+LaTeX Warning: Reference `same cycle current' on page 18 undefined on input lin
+e 459.
 
 )
 
@@ -1684,7 +1719,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[15]
+[18]
 \openout2 = `chapter4/body.aux'.
 
  (./chapter4/body.tex
@@ -1714,14 +1749,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[16
+[19
 
 
 
 
 ]
 
-LaTeX Warning: Reference `thm:transition fluatuation' on page 17 undefined on i
+LaTeX Warning: Reference `thm:transition fluatuation' on page 20 undefined on i
 nput line 50.
 
 
@@ -1732,9 +1767,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[17]
+[20]
 
-LaTeX Warning: Reference `transition1' on page 18 undefined on input line 142.
+LaTeX Warning: Reference `transition1' on page 21 undefined on input line 142.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1744,7 +1779,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[18]
+[21]
 Missing character: There is no Ž in font txr!
 Missing character: There is no ° in font txr!
 
@@ -1767,8 +1802,8 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[19]
-<chart/ratefunction.pdf, id=818, 1634.105pt x 691.58376pt>
+[22]
+<chart/ratefunction.pdf, id=884, 1634.105pt x 691.58376pt>
 File: chart/ratefunction.pdf Graphic file (type pdf)
 <use chart/ratefunction.pdf>
 Package pdftex.def Info: chart/ratefunction.pdf  used on input line 212.
@@ -1782,25 +1817,25 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[20 <./chart/ratefunction.pdf>]
+[23 <./chart/ratefunction.pdf>]
 
-Package natbib Warning: Citation `Gallavotti' on page 21 undefined on input lin
+Package natbib Warning: Citation `Gallavotti' on page 24 undefined on input lin
 e 239.
 
 
-Package natbib Warning: Citation `mehl2012role' on page 21 undefined on input l
+Package natbib Warning: Citation `mehl2012role' on page 24 undefined on input l
 ine 241.
 
 
-Package natbib Warning: Citation `polettini2017effective' on page 21 undefined 
+Package natbib Warning: Citation `polettini2017effective' on page 24 undefined 
 on input line 241.
 
 
-Package natbib Warning: Citation `uhl2018fluctuations' on page 21 undefined on 
+Package natbib Warning: Citation `uhl2018fluctuations' on page 24 undefined on 
 input line 241.
 
 
-Package natbib Warning: Citation `kahlen2018hidden' on page 21 undefined on inp
+Package natbib Warning: Citation `kahlen2018hidden' on page 24 undefined on inp
 ut line 241.
 
 
@@ -1815,7 +1850,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[21]
+[24]
 \openout2 = `chapter5/body.aux'.
 
  (./chapter5/body.tex)
@@ -1831,7 +1866,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[22
+[25
 
 
 
@@ -1840,24 +1875,20 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 \openout2 = `chapter6/body.aux'.
 
  (./chapter6/body.tex
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 3.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 1.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3.
+(hyperref)                removing `math shift' on input line 1.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 3.
+(hyperref)                removing `subscript' on input line 1.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3.
+(hyperref)                removing `math shift' on input line 1.
 
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 38.
-Package CJKpunct Info: punctuation spaces for family 'hei' do not exist. Use fa
-mily 'def' instead. on input line 41.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1866,12 +1897,12 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[23
+[26
 
 
 
 ]
-Overfull \hbox (7.99948pt too wide) detected at line 76
+Overfull \hbox (7.99948pt too wide) detected at line 74
 [] [] \OT1/txr/m/n/12 = \OMS/txsy/m/n/12 1\OML/txmi/m/it/12 ;  [] [] [] \OT1/tx
 r/m/n/12 = [][] \OML/txmi/m/it/12 < \OMS/txsy/m/n/12 1\OML/txmi/m/it/12 :
  []
@@ -1884,50 +1915,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[24]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.454pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.454pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
-
-[25]
-
-LaTeX Warning: Reference `LELDP' on page 26 undefined on input line 151.
-
-<chart/brokenlinegraph.pdf, id=960, 661.97313pt x 177.16188pt>
-File: chart/brokenlinegraph.pdf Graphic file (type pdf)
-<use chart/brokenlinegraph.pdf>
-Package pdftex.def Info: chart/brokenlinegraph.pdf  used on input line 172.
-(pdftex.def)             Requested size: 463.37804pt x 124.01245pt.
-
-Overfull \hbox (8.13396pt too wide) in paragraph at lines 172--173
- [][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.454pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.454pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
-
-[26 <./chart/brokenlinegraph.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.454pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.454pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
-
 [27]
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 222.
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1937,8 +1925,8 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
 [28]
-
-LaTeX Warning: Reference `LELDP' on page 29 undefined on input line 275.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
+input line 302.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1959,6 +1947,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [30]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 402.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.454pt}.
@@ -1968,17 +1968,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [31]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 404.
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.454pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.454pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 404.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 404.
-
+[32])
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1987,25 +1984,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[32]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.454pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.454pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
-
-[33])
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.454pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.454pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
-
-[34]
+[33]
 \openout2 = `appendix/acknowledgements.aux'.
 
  (./appendix/acknowledgements.tex
@@ -2051,7 +2030,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[35
+[34
 
 
 
@@ -2069,7 +2048,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[36
+[35
 
 
 
@@ -2082,7 +2061,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[37]
+[36]
 \openout2 = `appendix/publications.aux'.
 
  (./appendix/publications.tex)
@@ -2098,7 +2077,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[38
+[37
 
 
 ]
@@ -2121,53 +2100,108 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 58585031AC5AF54C4E8CC874316CCEB4;3953.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 4C8D28D949DAA1B5D0C9F01500CDB286;3858
+(rerunfilecheck)             After:  780D852B216B12D8A08868EB4FE4443A;3715.
  ) 
 Here is how much of TeX's memory you used:
- 28951 strings out of 478268
- 507318 string characters out of 5850346
- 729136 words of memory out of 5000000
- 45434 multiletter control sequences out of 15000+600000
- 665410 words of font info for 634 fonts, out of 8000000 for 9000
+ 29104 strings out of 478268
+ 511609 string characters out of 5850346
+ 728320 words of memory out of 5000000
+ 45566 multiletter control sequences out of 15000+600000
+ 667570 words of font info for 642 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,19n,78p,1411b,700s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
-imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows
-/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:
-/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun
-.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Font
-s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
-ows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf>
-<c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
+ 75i,19n,78p,1411b,709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{equation.5.4.30} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.5.4.29} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.5.4.28} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.5.4.27} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.5.4.23} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.5.4.25} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.5.4.24} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.5.3.15} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.5.3.14} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.50} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.74} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.69} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.64} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.35} has been referenced but does not exist
+, replaced by a fixed one
+
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
 hei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/F
-onts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/W
-indows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.t
-tf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/
-simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Window
-s/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c
-:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhe
+onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/W
+indows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.t
+tf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/
+simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Window
+s/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c
+:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhe
 i.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fon
-ts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Win
+ts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Win
 dows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf
 ><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/si
 mhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/
 Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/
-Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.
-ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts
-/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windo
-ws/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><
-c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sims
-un.ttc>{e:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Windows/Font
-s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
-ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
-sun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
-onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
-indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
-tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
-simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Window
-s/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c
+Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.
+ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts
+/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windo
+ws/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><
+c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simh
+ei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fo
+nts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Wi
+ndows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.tt
+f><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/s
+imhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows
+/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
+/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
+.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Font
+s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>{e:/texl
+ive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Windows/Fonts/simsun.ttc><c
 :/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsu
 n.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fon
 ts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Win
@@ -2188,43 +2222,52 @@ imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
 /Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
 /Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
 .ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Font
-s/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Wind
-ows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf>
-<c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
-sun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/F
+s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
+ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
+sun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
 onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
-indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.t
-tf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/
-simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Window
-s/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c
-:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsu
-n.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fon
-ts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Win
-dows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf
-><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/si
-mkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/
+indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
+tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
+simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Window
+s/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c
+:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simka
+i.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fon
+ts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Win
+dows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc
+><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/si
+msun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/
 Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/
 Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.
-ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts
-/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windo
-ws/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><
-c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sims
-un.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
-nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wi
-ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><e:/texlive/2022/texmf-dist
-/fonts/type1/public/txfonts/rtcxr.pfb><e:/texlive/2022/texmf-dist/fonts/type1/p
-ublic/txfonts/rtxmi.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/
-rtxr.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txex.pfb><e:/te
-xlive/2022/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><e:/texlive/2022/texm
-f-dist/fonts/type1/public/txfonts/txsya.pfb><e:/texlive/2022/texmf-dist/fonts/t
-ype1/public/txfonts/txsyb.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/tx
-fonts/txsyc.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><e
-:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><e:/texlive/2022/tex
-mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (48 pages, 3306893 bytes).
+ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts
+/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windo
+ws/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><
+c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simk
+ai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fo
+nts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Wi
+ndows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.tt
+f><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/s
+imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
+/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
+/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
+.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Font
+s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
+ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
+sun.ttc><c:/Windows/Fonts/simsun.ttc><e:/texlive/2022/texmf-dist/fonts/type1/pu
+blic/txfonts/rtcxr.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/r
+txmi.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><e:/te
+xlive/2022/texmf-dist/fonts/type1/public/txfonts/txex.pfb><e:/texlive/2022/texm
+f-dist/fonts/type1/public/txfonts/txsy.pfb><e:/texlive/2022/texmf-dist/fonts/ty
+pe1/public/txfonts/txsya.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txf
+onts/txsyb.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb
+><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><e:/texlive/2022/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb><e:/texlive/2022/texmf-dist/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on main.pdf (47 pages, 3013742 bytes).
 PDF statistics:
- 1936 PDF objects out of 2073 (max. 8388607)
- 1459 compressed objects within 15 object streams
- 250 named destinations out of 1000 (max. 500000)
- 545 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1933 PDF objects out of 2073 (max. 8388607)
+ 1473 compressed objects within 15 object streams
+ 259 named destinations out of 1000 (max. 500000)
+ 532 words of extra memory for PDF output out of 10000 (max. 10000000)
 
