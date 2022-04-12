@@ -201,7 +201,7 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
 \begin{equation*}
 I_Q(\mu) = \sum_{\langle i,j\rangle\in E}R^{\mu}(i,j)\log\frac{R^{\mu}(i,j)}{R^{\mu}(i)p_{ij}},
 \end{equation*}
-其中 $R^{\mu}(i,j)=\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}(i,j)$ 且 $R^{\mu}(i)=\sum_{j\in S}R^{\mu}(i,j)$。再记 $\mu^+ = \mu^{(1,2,3)}$ ， $\mu^- = \mu^{(1,3,2)}$。图\ref{figure:ratefunction}(a)说明的是在一组适当参数下，$I_Q(\cdots,\mu^+,\mu^-)$和$I_Q(\cdots,\mu^-,\mu^+)-\log(\gamma^+ /\gamma^-) (\mu^+-\mu^-)$之间的差异，易知两者相差不是0，因此有：
+其中 $R^{\mu}(i,j)=\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}(i,j)$ 且 $R^{\mu}(i)=\sum_{j\in S}R^{\mu}(i,j)$。再记 $\mu^+ = \mu^{(1,2,3)}$ ， $\mu^- = \mu^{(1,3,2)}$。图\ref{figure:ratefunction}(a)说明的是在一组适当参数下，$I_Q(\cdots,\mu^+,\mu^-)$和$I_Q(\cdots,\mu^-,\mu^+)-\log(\gamma^+ /\gamma^-) (\mu^+-\mu^-)$之间的差异，易知两者的值并不相同，因此有：
 \begin{equation*}
 I_Q(\cdots,\mu^+,\mu^-)
 \neq I_Q(\cdots,\mu^-,\mu^+)-\left(\log\frac{\gamma^+}{\gamma^-}\right)(\mu^+-\mu^-),
@@ -231,36 +231,36 @@ I_Q(\cdots,\mu^+,\mu^-)
 因此ST经验净环流可以分解为LE经验净环流的和。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ububsection{经验 LE 环流的暂态涨落定理的证明}
-在此，将给出无周期条件下，经验 LE 环流的暂态涨落定理的证明。
-记 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$。在时间步 $n$,轨迹中环 $c$ 形成 $k^c$ 次，因此有：
-\begin{equation*}
-	n=\sum_{c\in\mathcal{C}}k^c|c|+|\eta|,
-\end{equation*}
-其中 $\eta$ 表示剩下的导出链，且 $0\le |\eta|\le N-1$。假设系统从状态 1 出发，这并不降低命题的一般性。令 $[\eta]=t$，那么 $\eta=\eta_1$ 或者 $\eta_2$，其中 $\eta_1=[1,2,\cdots,t+1]$ 且 $\eta_2=[1,N,\cdots,N+1-t]$。同时, \eqref{joint} 可以被写为：
-\begin{equation}\label{joint2}
-	\begin{split}
-		\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C}\right)
-		=&\;\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_1\right)+\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_2\right)\\
-		=&\;\left|G^{\eta_1}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_1}+\left|G^{\eta_2}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_2},
-	\end{split}
-\end{equation}
-其中 $\gamma^{\eta_1}=p_{12}\cdots p_{t,t+1}$ 且 $\gamma^{\eta_2}=p_{1N}\cdots p_{N+2-t,N+1-t}$。那么有
-\begin{align*}
-	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)
-	&= (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
-	&\qquad\left[|G^{\eta_1}(k^+,k^-,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^+,k^-,\cdots)|\gamma^{\eta_2}\right].
-\end{align*}
-同理，如果交换上述方程中的 $k^+$ 和 $k^-$，可以得到：
-\begin{align*}
-	\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)
-	&= (\gamma^+)^{k^-}(\gamma^-)^{k^+}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
-	&\qquad\left[|G^{\eta_1}(k^-,k^+,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^-,k^+,\cdots)|\gamma^{\eta_2}\right].
-\end{align*}
-根据 \eqref{EGetan} 式，可以得到下列的暂态涨落定理成立：
-\begin{equation*}
-	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)=\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)\left(\frac{\gamma^+}{\gamma^-}\right)^{k^+-k^-}.
-\end{equation*}
+% \subsubsection{经验 LE 环流的暂态涨落定理的证明}
+% 在此，将给出无周期条件下，经验 LE 环流的暂态涨落定理的证明。
+% 记 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$。在时间步 $n$,轨迹中环 $c$ 形成 $k^c$ 次，因此有：
+% \begin{equation*}
+% 	n=\sum_{c\in\mathcal{C}}k^c|c|+|\eta|,
+% \end{equation*}
+% 其中 $\eta$ 表示剩下的导出链，且 $0\le |\eta|\le N-1$。假设系统从状态 1 出发，这并不降低命题的一般性。令 $[\eta]=t$，那么 $\eta=\eta_1$ 或者 $\eta_2$，其中 $\eta_1=[1,2,\cdots,t+1]$ 且 $\eta_2=[1,N,\cdots,N+1-t]$。同时, \eqref{joint} 可以被写为：
+% \begin{equation}\label{joint2}
+% 	\begin{split}
+% 		\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C}\right)
+% 		=&\;\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_1\right)+\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_2\right)\\
+% 		=&\;\left|G^{\eta_1}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_1}+\left|G^{\eta_2}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_2},
+% 	\end{split}
+% \end{equation}
+% 其中 $\gamma^{\eta_1}=p_{12}\cdots p_{t,t+1}$ 且 $\gamma^{\eta_2}=p_{1N}\cdots p_{N+2-t,N+1-t}$。那么有
+% \begin{align*}
+% 	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)
+% 	&= (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
+% 	&\qquad\left[|G^{\eta_1}(k^+,k^-,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^+,k^-,\cdots)|\gamma^{\eta_2}\right].
+% \end{align*}
+% 同理，如果交换上述方程中的 $k^+$ 和 $k^-$，可以得到：
+% \begin{align*}
+% 	\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)
+% 	&= (\gamma^+)^{k^-}(\gamma^-)^{k^+}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
+% 	&\qquad\left[|G^{\eta_1}(k^-,k^+,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^-,k^+,\cdots)|\gamma^{\eta_2}\right].
+% \end{align*}
+% 根据 \eqref{EGetan} 式，可以得到下列的暂态涨落定理成立：
+% \begin{equation*}
+% 	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)=\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)\left(\frac{\gamma^+}{\gamma^-}\right)^{k^+-k^-}.
+% \end{equation*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 由公式\ref{weak}(附录D)，可得：
@@ -271,9 +271,76 @@ I_Q(\cdots,\mu^+,\mu^-)
     =e^{n\sum_{i=1}^{s}x_i\log\frac{\gamma^{c_{l_i}}}{\gamma^{c_{l_i}-}}}.
     \end{split}
 \end{equation}
-这表明周期边界条件下，ST净环流满足暂态涨落定理的弱形式。由于是否假设周期边界条件不会影响大偏差速率函数，则Gallavotti-Cohen类型涨落定理的弱形式 \cite{Gallavotti} 成立。
+这表明周期边界条件下，ST净环流满足暂态涨落定理的弱形式。由于是否假设周期边界条件不会影响大偏差速率函数，则Gallavotti-Cohen类型涨落定理的弱形式 \cite{pedraza2008effects} 成立。
 
-对比 LE 经验净环流，会发现 ST 经验净环流不满足强形式下的 Gallavotti-Cohen 类型涨落定理，可以参考文献 \cite{mehl2012role, polettini2017effective, uhl2018fluctuations, kahlen2018hidden}。为举出反例，考虑图 \ref{figure:transitiongraph}(b) 中的具有全连接的四状态马氏链。由于基本集中的其他环要不是它的反环，要不就是就是一状态和两状态环，所以选定生成树为 $T=1\to2\to3\to4$，只需考虑三个环$c_1=(1,2,3)$，$c_2=(2,3,4)$和$c_3=(1,2,3,4)$的ST净环流。回顾ST经验净环流的速率函数$(\tilde{Q}_n^{c_1}, \tilde{Q}_n^{c_2}, \tilde{Q}_n^{c_3})$为：
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+接下来在周期边界条件下证明\ref{weak}。由公式\ref{circulation}，对任意三状态或者更多状态的环$c_l \in \mathcal{L}$，有：
+\begin{equation*}
+    \tilde{Q}_{n}^{c_{t}}=\sum_{i=1}^{r} \tilde{J}_{n}^{c_{i}}\left[1_{\left\{l \in c_{i}\right\}}-1_{\left\{l \in c_{i}-\right\}}\right]
+\end{equation*}
+其中$1_A$是指示函数，若A成立，则为1，否则为0。那么，可以得到：
+\begin{equation*}
+\begin{array}{l}
+    \mathbb{P}\left(\tilde{Q}_{n}^{c_{l_{1}}}=x_{1}, \cdots, \tilde{Q}_{n}^{c_{l_{s}}}=x_{s}\right)\\
+    =\mathbb{P}\left(\sum_{i=1}^{r} \tilde{J}_{n}^{c_{i}}\left[1_{\left\{l_{1} \in c_{i}\right\}}-1_{\left\{l_{1} \in c_{i}-\right\}}\right]=x_{1}, \cdots, \sum_{i=1}^{r} \tilde{J}_{n}^{c_{i}}\left[1_{\left\{l_{s} \in c_{i}\right\}}-1_{\left\{l_{s} \in c_{i}-\right\}}\right]=x_{s}\right)\\
+    =\sum_{\sum_{i=1}^{r} y_{i}\left[1_{\left\{l_{m} \in c_{i}\right\}}-1_{\left\{l_{m} \in c_{i}-\right\}}\right]=x_{m}, 1 \leq m \leq s} \mathbb{P}\left(\tilde{J}_{n}^{c_{1}}=y_{1}, \cdots, \tilde{J}_{n}^{c_{r}}=y_{r}\right)\\
+    =\sum_{\sum_{i=1}^{r} y_{i}\left[1_{\left\{l_{m} \in c_{i}\right\}}-1_{\left\{l_{m} \in c_{i}-\right\}}\right]=x_{m}, 1 \leq m \leq s} \mathbb{P}\left(\tilde{J}_{n}^{c_{1}}=-y_{1}, \cdots, \tilde{J}_{n}^{c_{r}}=-y_{r}\right) e^{n \sum_{i=1}^{r} y_{i} \log \frac{\gamma^{c_{i}}}{\gamma^{c_{i}-}}}\\
+    =\sum_{\sum_{i=1}^{r} y_{i}\left[1_{\left\{l_{m} \in c_{i}\right\}}-1_{\left\{l_{m} \in c_{i}-\right\}}\right]=x_{m}, 1 \leq m \leq s} \mathbb{P}\left(\tilde{J}_{n}^{c_{1}}=-y_{1}, \cdots, \tilde{J}_{n}^{c_{r}}=-y_{r}\right) e^{n \sum_{i=1}^{s} x_{i} \log \frac{\gamma^{c_{l_i}}}{\gamma^{c_{l_i}-}}}\\
+    =\sum_{\sum_{i=1}^{r} y_{i}\left[1_{\left\{l_{m} \in c_{i}\right\}}-1_{\left\{l_{m} \in c_{i}-\right\}}\right]=-x_{m}, 1 \leq m \leq s} \mathbb{P}\left(\tilde{J}_{n}^{c_{1}}=y_{1}, \cdots, \tilde{J}_{n}^{c_{r}}=y_{r}\right) e^{n \sum_{i=1}^{s} x_{i} \log \frac{\gamma^{c_{l_i}}}{\gamma^{c_{l_i}-}}}\\
+    =\mathbb{P}\left(\sum_{i=1}^{r} \tilde{J}_{n}^{c_{i}}\left[1_{\left\{l_{1} \in c_{i}\right\}}-1_{\left\{l_{1} \in c_{i}-\right\}}\right]=-x_{1}, \cdots, \sum_{i=1}^{r} \tilde{J}_{n}^{c_{i}}\left[1_{\left\{l_{s} \in c_{i}\right\}}-1_{\left\{l_{s} \in c_{i}-\right\}}\right]=-x_{s}\right) e^{n \sum_{i=1}^{s} x_{i} \frac{\gamma^{c_{l_i}}}{\gamma^{c_{l_i}-}}}\\
+    =\mathbb{P}\left(\tilde{Q}_{n}^{c_{l_{1}}}=x_{1}, \cdots, \tilde{Q}_{n}^{c_{l_{s}}}=x_{s}\right) e^{n \sum_{i=1}^{s} x_{i} \log \frac{\gamma^{c_{l_i}}}{\gamma^{c_{l_i}-}}},
+\end{array}
+\end{equation*}
+其中使用下面条件，在约束 $\sum_{i=1}^{r} y_{i}\left[1_{\left\{l_{m} \in c_{i}\right\}}-1_{\left\{l_{m} \in c_{i}-\right\}}\right]=x_{m}, 1 \leq m \leq s$下，有：
+\begin{equation} \label{constraint}
+    \sum_{i=1}^{r} y_{i} \log \frac{\gamma^{c_{i}}}{\gamma^{c_{i}-}}=\sum_{j=1}^{s} x_{j} \log \frac{\gamma^{c_{l_{j}}}}{\gamma^{c_{l_{j}}-}}
+\end{equation}
+这个等式是非平凡的，下面将会证明它。对于任意环$c$，令$L^c$为E上的函数：
+\begin{equation*}
+    L^{c}(i, j)= \begin{cases}1, & \text { if }\langle i, j\rangle \in c \\ 0, & \text { otherwise }\end{cases}
+\end{equation*}
+通过$H^c$的定义，可以证明 \cite{kalpazidou2007cycle}：
+\begin{equation*}
+    L^c = \sum_{l \notin T} L^c(l) H^{c_l}
+\end{equation*}
+令E上的函数$w$定义为：
+\begin{equation*}
+    w(i, j) = \log \frac{p_{ij}}{p_{ji}}
+\end{equation*}
+对任意环 $c=(i_1, i_2, \cdots, i_t)$，有：
+\begin{equation*}
+    \log \frac{\gamma^{c}}{\gamma^{c-}} = \sum^t_{k=1} \log \frac{p_{i_k, i_{k+1}}}{p_{i_{k+1}, i_k}} = \langle w, L^c \rangle,
+\end{equation*}
+其中$i_{t+1} = i_1$，且 $\langle w, L^c \rangle = \sum_{\langle i, j \rangle \in E} w(i,j) L^c(i,j)$表示内积。此外，对于任意环$c_l \in \mathcal{L}$，很难证明：
+\begin{equation*}
+    \log \frac{\gamma^{c_l}}{\gamma^{c_l -}} = \langle w, H^{c_l} \rangle
+\end{equation*}
+注意到对任意一状态和两状态环，有$\log (\gamma^c / \gamma^{c-})$。那么对任意环$c$，有：
+\begin{equation*}
+    \sum_{j=1}^{s}\left[L^{c}\left(l_{j}\right)-L^{c-}\left(l_{j}\right)\right] \log \frac{\gamma^{c_{l_{j}}}}{\gamma^{c_{j}-}}=\sum_{l \notin T} L^{c}(l) \log \frac{\gamma^{c_{l}}}{\gamma^{c_{l}-}}
+\end{equation*}
+因此最终可得：
+\begin{equation*}
+    \begin{aligned}
+    \sum_{j=1}^{s} x_{j} \log \frac{\gamma^{c_{i}}}{\gamma^{c_{i}-}} &=\sum_{j=1}^{s} \sum_{i=1}^{r} y_{i}\left[L^{c_{i}}\left(l_{j}\right)-L^{c_{i}-}\left(l_{j}\right)\right] \log \frac{\gamma^{c_{i}}}{\gamma^{c_{i}-}} \\
+    &=\sum_{i=1}^{r} y_{i} \sum_{j=1}^{s}\left[L^{c_{i}}\left(l_{j}\right)-L^{c_{i}-}\left(l_{j}\right)\right] \log \frac{\gamma^{c_{i}}}{\gamma^{c_{i}-}} \\
+    &=\sum_{i=1}^{r} y_{i} \sum_{l \notin T} L^{c_{i}}(l)\left\langle w, H^{c_{l}}\right\rangle \\
+    &=\sum_{i=1}^{r} y_{i}\left\langle w, \sum_{l \notin T} L^{c_{i}}(l) H^{c_{l}}\right\rangle \\
+    &=\sum_{i=1}^{r} y_{i}\left\langle w, L^{c_{i}}\right\rangle=\sum_{i=1}^{r} y_{i} \log \frac{\gamma^{c_{i}}}{\gamma^{c_{i}-}}
+    \end{aligned}
+\end{equation*}
+\ref{constraint}的证明完成了，同时暂态涨落定理的证明也完成了。
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+对比 LE 经验净环流，会发现 ST 经验净环流不满足强形式下的 Gallavotti-Cohen 类型涨落定理，可以参考文献 \cite{mehl2012role,polettini2017effective,uhl2018fluctuations,kahlen2018hidden}。为举出反例，考虑图 \ref{figure:transitiongraph}(b) 中的具有全连接的四状态马氏链。由于基本集中的其他环要不是它的反环，要不就是就是一状态和两状态环，所以选定生成树为 $T=1\to2\to3\to4$，只需考虑三个环$c_1=(1,2,3)$，$c_2=(2,3,4)$和$c_3=(1,2,3,4)$的ST净环流。回顾ST经验净环流的速率函数$(\tilde{Q}_n^{c_1}, \tilde{Q}_n^{c_2}, \tilde{Q}_n^{c_3})$为：
 
 
 \begin{equation}

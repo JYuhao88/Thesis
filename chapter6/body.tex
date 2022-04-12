@@ -1,534 +1,534 @@
-\section{附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{} \label{appendix:explicit}
-回顾单环系统，LE经验净环流$(J_n^c)_{c \in \mathcal{C}}$的速率函数为：
-\begin{equation*}\label{ratefunction2}
-	\begin{split}
-		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
-		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
-		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
-		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c,
-	\end{split}
-\end{equation*}
-% 下面将使用拉格朗日乘子法化简该式。固定 $\nu\in\mathcal{V}$，令拉格朗日函数 \cite{brian1990optimization} $\mathcal{A}_{\nu}:V(\nu)\times \mathbb{R}^{N-2}\to \mathbb{R}$ 为：
-这里$\inf_{X\in V(\nu)}F_{\nu}(X)$不是闭形式，下面利用拉格朗日乘子法求解$\inf_{X\in V(\nu)}F_{\nu}(X)$。对任意$\nu\in\mathcal{V}$，定义拉格朗日函数为：
-\begin{align*}
-    \mathcal{A}_{\nu}(X,\lambda) = F_{\nu}(X) + \sum_{i=2}^{N-1} \lambda_i \left(x^{i} + y^{i} - \nu^{i,i+1}\right),
-\end{align*}
-其中 $X=(x^i,y^i)_{2\le i\le N-1}\in V(\nu)$ 并且 $\lambda=(\lambda_i)_{2\le i\le N-1}\in \mathbb{R}^{N-2}$。分别对 $x^{i}$，$y^{i}$ 和 $\lambda_i$求导，可以得到下列方程：
-\begin{equation}\label{equation1}
-	\begin{split}
-		\log\left(x^{i}\right) - \log\left(x^{i-1}+x^{i}+\nu^{+}\right)  + \log\left(x^{i}+\nu^{+}\right) -\log\left(x^{i}+x^{i+1}+\nu^{+}\right)+\lambda_i  &= 0, \\
-		\log\left(y^{i}+\nu^{-}\right) -\log\left(y^{i-1}+y^{i}+\nu^{-}\right)  + \log\left(y^{i}\right) - \log\left(y^{i}+y^{i+1}+\nu^{-}\right) +\lambda_i &= 0, \\
-		x^{i} + y^{i} = \nu^{i,i+1},\qquad 2\le i\le N-1.\qquad\qquad\qquad
-	\end{split}
-\end{equation}
-而且，可以把方程组 \eqref{equation1} 写为：
-\begin{equation}\label{equations}
-    \begin{split}
-    \frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}
-    \,\frac{x^{i}+\nu^+}{x^{i}+x^{i+1}+\nu^+}
-    &= \frac{y^{i}+\nu^-}{y^{i-1}+y^{i}+\nu^-}
-    \,\frac{y^{i}}{y^{i}+y^{i+1}+\nu^-}=e^{-\lambda_i},\\
-    x^{i} + y^{i} &= \nu^{i,i+1},\qquad 2\le i\le N-1.
-    \end{split}
-\end{equation}
-其中 $x^1=\nu^{12}$，$x^N=0$，$y^1=0$ 和 $y^N=\nu^{1N}$。
-
-\begin{lemma}\label{lemma:existence for equations solution}
-	方程 \eqref{equations} 有解 $X=(x^i,y^i)\in V(\nu)$。
-\end{lemma}
-\begin{proof}
-    若对某些 $2\le k\le N-1$ 存在 $\nu^{k,k+1}=0$，则有 $x^{k}=y^{k}=0$ 成立。那么依据指标 $2\le i\le k-1$ 和 $k+1\le i\le N-1$，方程 \eqref{equations} 可以被分为两个方程。因此对 $\nu^{k,k+1}>0, \forall k, 2\le k\le N-1$ 证明引理，下面会从三种不同情况考虑这个引理。
-
-    情况 1：$\nu^{12}=\nu^{+}=\nu^{1N}=\nu^-=0$。
-    易知，对每个 $\alpha\in (0,1)$，
-    \begin{equation*}
-        x^{i}=\alpha\nu^{i,i+1},\quad y^{i}=(1-\alpha)\nu^{i,i+1},\quad 2\le i\le N-1,
-    \end{equation*}
-    都是 \eqref{equations} 的解。
-
-    情况 2：$\nu^{12}=\nu^{+}=0,\nu^{1N}+\nu^{-}>0$ 或 $\nu^{1N}=\nu^{-}=0,\nu^{12}+\nu^{+}>0$。容易验证若 $\nu^{12}=\nu^{+}=0,\nu^{1N}+\nu^{-}>0$成立，则$x^{i}=0,y^{i}=\nu^{i,i+1}$ 是方程 \eqref{equations} 的解。
-
-    情况 3：$\nu^{12}+\nu^{+}>0$ 或 $\nu^{1N}+\nu^{-}>0$。上述已证明对任意给定的 $x^{k+1}\ge 0$，$y^{k+1}>0$，和 $x^{k+1}+y^{k+1}=\nu^{k+1,k+2}$，下列方程 \eqref{equations2} 满足 $x^{i},y^{i}> 0, \forall i, 2\le i\le k$。
-    \begin{equation}\label{equations2}
-        \begin{split}
-            \frac{x^{i}}{y^{i}}
-            =&\frac{x^{i}+x^{i+1}+\nu^+}{x^{i}+\nu^+}\, \frac{y^{i}+\nu^-}{y^{i-1}+y^{i}+\nu^-}
-            \,\frac{x^{i-1}+x^{i}+\nu^+}{y^{i}+y^{i+1}+\nu^-},\\
-            &\qquad x^{i} + y^{i} = \nu^{i,i+1},\qquad 2\le i\le k.
-        \end{split}
-    \end{equation}
-
-    下面通过归纳法证明。若 $k=2$，方程 \eqref{equations2} 可以简化为：
-    \begin{equation*}\label{equation k=2}
-        \frac{x^{2}}{\nu^{23}-x^2}
-        =\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-}.
-        %,\qquad \nu^+_{23} + \nu^-_{23} = \nu_{23}.
-    \end{equation*}
-    易得：
-    \begin{equation*}
-        \lim_{x^{2}\downarrow 0}\frac{x^{2}}{\nu^{23}-x^2} = 0,\qquad \lim_{x^{2}\downarrow 0}\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-} \ge  \frac{\nu^{12}+\nu^{+}}{\nu^{23}+y^{3}+\nu^-} > 0.
-    \end{equation*} 
-    另外，
-    \begin{equation*}
-        \lim_{x^2\uparrow \nu^{23}}\frac{x^{2}}{\nu^{23}-x^2} = \infty,\qquad \lim_{x^{2}\uparrow \nu^{23}}\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-} =  \frac{\nu^{23}+x^{3}+\nu^+}{\nu^{23}+\nu^+}\frac{\nu^{12}+\nu^{23}+\nu^{+}}{y^{3}+\nu^-} < \infty.
-    \end{equation*}
-    通过中值定理，可以找到满足 $x^{i},y^i>0$ 的方程 \eqref{equations2} 的解，并且有 $x^{i}+y^{i}=\nu^{i,i+1}$ 。假设对 $k=n-1$ 命题成立，那么可以考虑方程：
-    \begin{equation*}
-        \frac{x^{n}}{\nu^{n,n+1}-x^{n}} = \frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-},
-    \end{equation*}
-    其中 $x^{n-1}$, $y^{n-1}$ 是方程 \eqref{equations2} 在 $k=n-1$ 时的解。可以得到：
-    \begin{equation}\label{limit1}
-        \lim_{x^{n}\downarrow 0}\frac{x^{n}}{\nu^{n,n+1}-x^{n}}=0,
-    \end{equation}
-    并且
-    \begin{equation}\label{limit2}
-        \begin{split}
-            &\;\lim_{x^{n}\downarrow 0}\frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-}\\
-            \ge &\;\frac{\nu^{n,n+1}+\nu^-}{\lim_{x^{n}\downarrow 0}(y^{n-1})+\nu^{n,n+1}+\nu^-}\,\frac{\lim_{x^{n}\downarrow 0}(x^{n-1})+\nu^+}{\nu^{n,n+1}+y^{n+1}+\nu^-}>0.
-        \end{split}
-    \end{equation}
-    利用归纳法得出的结论 $\lim_{x^{n}\downarrow 0}(x^{n-1})>0$，可以得到下面两个式子成立。
-    \begin{equation}\label{limit3}
-        \lim_{x^{n}\uparrow \nu^{n,n+1}}\frac{x^{n}}{\nu^{n,n+1}-x^{n}}=\infty,
-    \end{equation}
-    和
-    \begin{equation}\label{limit4}
-        \begin{split}
-            &\;\lim_{x^{n}\uparrow \nu^{n,n+1}}\frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-}\\
-            \le &\;\frac{\nu^{n,n+1}+x^{n+1}+\nu^+}{\nu^{n,n+1}+\nu^+}\,\frac{\lim_{x^{n}\uparrow \nu^{n,n+1}}x^{n-1}+\nu^{n,n+1}+\nu^+}{y^{n+1}+\nu^-}<\infty.
-        \end{split}
-    \end{equation}
-    那么通过中值定理，可以找到方程 \eqref{equations2} 满足条件 $x^{i},y^i>0, x^{i}+y^{i}=\nu^{i,i+1}, \forall i=2,3, \cdots, n$ 的解，就是说上述命题对 $k=n$ 成立。
-
-    当 $k=N-1$ 时，有 $y^{k+1}=y^N=\nu^{1N}$ 成立。注意到 $\nu^{1N}+\nu^->0$，那么可以得到 \eqref{limit1}，\eqref{limit2}，\eqref{limit3} 和 \eqref{limit4} 成立。通过中值定理，可以找到方程 \eqref{equations2} 满足条件 $x^{i},y^i>0, x^{i}+y^{i}=\nu^{i,i+1}, \forall i=2,3, \cdots, n$ 的解。当 $k=N-1$ 时，方程 \eqref{equations2} 与 方程 \eqref{equations} 等价。证毕。
-
-\end{proof}
-\begin{lemma}\label{lemma:mininum}
-    令 $X=(x^i,y^i)\in V(\nu)$ 是引理 ~\ref{lemma:existence for equations solution} 的解，那么 $X$ 是 $F_{\nu}(\cdot)$ 定义在 $V(\nu)$ 下的最小值点。 
-\end{lemma}
-\begin{proof}
-    对任意 $a_1,a_2,b_1,b_2\ge 0$，通过 log-sum 不等式（见 \eqref{log sum inequality}），可以得到：
-    \begin{align}\label{log sum inequality 2}
-        a_1\log\frac{a_1}{a_1+a_2}+a_2\log\frac{a_2}{a_1+a_2}\ge a_1\log\frac{b_1}{b_1+b_2}+a_2\log\frac{b_2}{b_1+b_2}.
-    \end{align}
-    对任意 $Z=(z^i,w^i)\in V(\nu)$，可以把 \eqref{formula:F} 写为：
-    \begin{align*}
-        F_{\nu}(Z)
-        =&\;\sum_{i=2}^{N-1}\left[ \left(z^{i-1}+\nu^+\right)\log\frac{z^{i-1}+\nu^+}{z^{i-1}+z^{i}+\nu^+} + z^{i}\log\frac{z^{i}}{z^{i-1}+z^{i}+\nu^+}  \right]\\
-        &\;+\sum_{i=2}^{N-1}  \left[w^{i}\log\frac{w^{i}}{w^{i} +w^{i+1} +\nu^-} + \left(w^{i+1} +\nu^-\right)\log\frac{w^{i+1} +\nu^-}{w^{i} +w^{i+1} +\nu^-}\right],
-    \end{align*}
-    其中 $z^{1}=\nu^{12},w^{N}=\nu^{1N}$。再根据方程 \eqref{equations} 和 \eqref{log sum inequality 2}
-    \begin{align*}
-        F_{\nu}(Z)\ge &\;\sum_{i=2}^{N-1}\left[ \left(z^{i-1}+\nu^+\right)\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + z^{i}\log\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
-        &\;+\sum_{i=2}^{N-1}  \left[w^{i}\log\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-} + \left(w^{i+1} +\nu^-\right)\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
-        =&\;\sum_{i=2}^{N-1}\left[ \nu^+\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + z^{i}\log\frac{x^{i}+\nu^{+}}{x^{i-1}+x^{i}+\nu^{+}}\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
-        &\;+\sum_{i=2}^{N-1}  \left[\nu^-\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}+w^{i}\log\frac{y^{i}+\nu^{-}}{y^{i-1}+y^{i}+\nu^{-}}\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-}  \right]\\
-        &\;+\nu^{12}\log\frac{\nu^{12}+\nu^{+}}{\nu^{12}+x^{2}+\nu^{+}}+\nu^{1N}\log\frac{\nu^{1N}+\nu^{-}}{\nu^{1N}+y^{N-1}+\nu^{-}}\\
-        =&\;\sum_{i=2}^{N-1}\left[-\lambda_i\nu^{i,i+1}+\nu^+\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+}+\nu^-\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
-        &\;+\nu^{12}\log\frac{\nu^{12}+\nu^{+}}{\nu^{12}+x^{2}+\nu^{+}}+\nu^{1N}\log\frac{\nu^{1N}+\nu^{-}}{\nu^{1N}+y^{N-1}+\nu^{-}}\\
-        =&\;\sum_{i=2}^{N-1}\left[ \left(x^{i-1}+\nu^+\right)\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + x^{i}\log\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
-        &\;+\sum_{i=2}^{N-1}  \left[y^{i}\log\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-} + \left(y^{i+1} +\nu^-\right)\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
-        =&\;F_{\nu}(X),
-        \end{align*}
-        其中 $\lambda_i$ 被表示为 \eqref{equations}。证毕。
-\end{proof}
-
-% \section{速率函数的对称性} \label{appendix:symmetry}
-% 下面将证明速率函数与初始分布的选择无关（见命题 \ref{corollary:rate function is unrelated to the starting state}）。在开始证明之前，先给出下面的定义。
-
-% 给定 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$ 和 $\eta=[i_0,i_1,\cdots,i_t]$，记 $|k|=\sum_{c\in\mathcal{C}}k^c|c|$，并且令 $n=|k|+|\eta|=|k|+t$，其中 $|c|$ 和 $|\eta|$ 分别表示环 $c$ 的长度和导出链的长度。令 $G^{\eta}(k)$ 为所有 $n$ 步长的轨道 $(\xi_m)_{0\le m\le n}$ 组成的集合，这些轨道满足环 $c$ 形成 $k^c$ 次，并且去环遗留的轨道是 $\eta$，定义为
-% \begin{equation*}
-% 	G^{\eta}(k)=\left\{(\xi_0,\xi_1,\cdots,\xi_n)\in S^{n+1}:N^c_n=k^c (\forall c\in \mathcal{C}),\tilde{\xi}_n=\eta,\text{ and }n=|k|+|\eta|\right\}.
+% \section{附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{} \label{appendix:explicit}
+% 回顾单环系统，LE经验净环流$(J_n^c)_{c \in \mathcal{C}}$的速率函数为：
+% \begin{equation*}\label{ratefunction2}
+% 	\begin{split}
+% 		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
+% 		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
+% 		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
+% 		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c,
+% 	\end{split}
 % \end{equation*}
-% 在此，对只有一个状态的 $\eta =[i]$，用 $G^{i}(k)$ 表示 $G^{\eta}(k)$。对任意包含状态 $i$ 的环 $\tilde{c}\in \mathcal{C}$，$G^i(k)$ 的一个子集 $G^{i,\tilde{c}}(k)$ 定义为：
-% \begin{equation*}
-% 	G^{i,\tilde{c}}(k)=\left\{(\xi_0,\xi_1,\cdots,\xi_n)\in S^{n+1}:N^c_n=k^c (\forall c\in \mathcal{C}),\tilde{\xi}_n=[i],T^{\tilde{c}}_{k^{\tilde{c}}}=n,\text{ and }n=|k|\right\},
-% \end{equation*}
-% 其中 $T^{\tilde{c}}_{k^{\tilde{c}}}$ 表示为第 $k^{\tilde{c}}$ 次形成的环 $\tilde{c}$。即对任意轨道 $(\xi_m)_{0\le m\le n}\in G^{i,\tilde{c}}(k)$，最后一次形成的环是 $\tilde{c}$。
+% % 下面将使用拉格朗日乘子法化简该式。固定 $\nu\in\mathcal{V}$，令拉格朗日函数 \cite{brian1990optimization} $\mathcal{A}_{\nu}:V(\nu)\times \mathbb{R}^{N-2}\to \mathbb{R}$ 为：
+% 这里$\inf_{X\in V(\nu)}F_{\nu}(X)$不是闭形式，下面利用拉格朗日乘子法求解$\inf_{X\in V(\nu)}F_{\nu}(X)$。对任意$\nu\in\mathcal{V}$，定义拉格朗日函数为：
+% \begin{align*}
+%     \mathcal{A}_{\nu}(X,\lambda) = F_{\nu}(X) + \sum_{i=2}^{N-1} \lambda_i \left(x^{i} + y^{i} - \nu^{i,i+1}\right),
+% \end{align*}
+% 其中 $X=(x^i,y^i)_{2\le i\le N-1}\in V(\nu)$ 并且 $\lambda=(\lambda_i)_{2\le i\le N-1}\in \mathbb{R}^{N-2}$。分别对 $x^{i}$，$y^{i}$ 和 $\lambda_i$求导，可以得到下列方程：
+% \begin{equation}\label{equation1}
+% 	\begin{split}
+% 		\log\left(x^{i}\right) - \log\left(x^{i-1}+x^{i}+\nu^{+}\right)  + \log\left(x^{i}+\nu^{+}\right) -\log\left(x^{i}+x^{i+1}+\nu^{+}\right)+\lambda_i  &= 0, \\
+% 		\log\left(y^{i}+\nu^{-}\right) -\log\left(y^{i-1}+y^{i}+\nu^{-}\right)  + \log\left(y^{i}\right) - \log\left(y^{i}+y^{i+1}+\nu^{-}\right) +\lambda_i &= 0, \\
+% 		x^{i} + y^{i} = \nu^{i,i+1},\qquad 2\le i\le N-1.\qquad\qquad\qquad
+% 	\end{split}
+% \end{equation}
+% 而且，可以把方程组 \eqref{equation1} 写为：
+% \begin{equation}\label{equations}
+%     \begin{split}
+%     \frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}
+%     \,\frac{x^{i}+\nu^+}{x^{i}+x^{i+1}+\nu^+}
+%     &= \frac{y^{i}+\nu^-}{y^{i-1}+y^{i}+\nu^-}
+%     \,\frac{y^{i}}{y^{i}+y^{i+1}+\nu^-}=e^{-\lambda_i},\\
+%     x^{i} + y^{i} &= \nu^{i,i+1},\qquad 2\le i\le N-1.
+%     \end{split}
+% \end{equation}
+% 其中 $x^1=\nu^{12}$，$x^N=0$，$y^1=0$ 和 $y^N=\nu^{1N}$。
 
-% 注意到等式 $n=|k|+|\eta|$ 对 $G^{\eta}(k)$ 和 $G^{i,c}(k)$ 成立。因此在章节 ~\ref{LELDP} 省略 $G_n(k)$ 的角标 $n$。
-
-% 下面将针对 $|G^i(k)|$ 和 $|G^{i,c}(k)|$，给出两个重要的等式。记 
-% \begin{equation*}
-% 	B^i(\tilde{k})=\left|G^{i,+}(1,0,\tilde{k})\right|,\qquad	C^i(\tilde{k})=\left|G^{i,-}(0,1,\tilde{k})\right|,
-% \end{equation*}
-% 其中 $\tilde{k}=(k^1,\cdots,k^N,k^{12},\cdots,k^{N-1,N},k^{1N})$，即 $B^i$ ($C^i$) 表示满足下列条件的轨迹数量：1）环 $c$ 形成 $k^c$ 次；2） $k^+=1,k^-=0$ ($k^+=0,k^-=1$)；3）从状态 $i$ 出发，状态 $i$ 结束；4）最后形成的环是 $(1,\cdots,N)$ ($(1,N,\cdots,2)$)。
-
-% \begin{lemma}\label{lemma:BiBjCiCj}
-% 	对任意 $i,j\in S$，有：
-% 	\begin{equation*}
-% 		B^i\left(\tilde{k}\right)=B^j\left(\tilde{k}\right)=C^i\left(\tilde{k}\right)=C^j\left(\tilde{k}\right).
-% 	\end{equation*}
+% \begin{lemma}\label{lemma:existence for equations solution}
+% 	方程 \eqref{equations} 有解 $X=(x^i,y^i)\in V(\nu)$。
 % \end{lemma}
-
 % \begin{proof}
-%     不降低一般性，令 $i=1$，只须证 $B^1(\tilde{k})=C^1(\tilde{k})=B^j(\tilde{k})$。
+%     若对某些 $2\le k\le N-1$ 存在 $\nu^{k,k+1}=0$，则有 $x^{k}=y^{k}=0$ 成立。那么依据指标 $2\le i\le k-1$ 和 $k+1\le i\le N-1$，方程 \eqref{equations} 可以被分为两个方程。因此对 $\nu^{k,k+1}>0, \forall k, 2\le k\le N-1$ 证明引理，下面会从三种不同情况考虑这个引理。
 
-%     首先证明 $B^1(\tilde{k})=C^1(\tilde{k})$。
-%     \begin{figure}[h]
-% 		\centering
-% 		\includegraphics[scale=0.7]{chart/brokenlinegraph.pdf}
-% 		\caption{$\xi$ 的轨迹对应的折线图。（a）第一种类型的轨迹映射（b）第二种类型的轨迹映射}
-% 		\label{fig:linechart}
-% 	\end{figure}
-%     注意到该系统是单环马氏链，$\xi$ 的每条轨迹可以被看作是一个折线图（见图 \ref{fig:linechart}（a））折线在状态 $i$ 时间 $m$ 处的水平移动表示环 $(i)$ 在时间 $m$ 处形成。折线从状态$i+1$ ($-j$) 到状态 $i$ ($1-j$) 的每次上升对应于 （其中的加减运算的结果都会经过模 $N$ 运算）。对任意轨迹 $\xi=(\xi_m)_{0\le m\le n}\in G^{1,+}(1,0,\tilde{k})$，令 $\eta(\xi)=\max\{m: 0\le m\le n-1,\xi_m=1\}$。回顾定义 $G^{1,+}(1,0,\tilde{k})$，轨迹 $(\xi_m)_{0\le m\le n}$ 在时间 $n$ 和状态 $N+1$ 到达集合 $\{N+1,1-N\}$。那么构造 $\xi$ 对应的轨迹 $\tilde{\xi}$（见图 \ref{fig:linechart} （a））
-% 	\begin{equation*}
-% 		\tilde{\xi}_m
-% 		:=\left\{\begin{aligned}
-% 			&\xi_m,    && \text{if } 0\le m\le \eta(\xi),\\
-% 			&\xi_{n+\eta(\xi)-m},    && \text{if }\eta(\xi)<m\le n.\\
-% 		\end{aligned}\right.
-% 	\end{equation*}
-%     所有 $(\xi_m)_{0\le m\le \eta(\xi)}$ 中形成的环，在$(\tilde{\xi}_m)_{0\le m\le \eta(\xi)}$中也有形成。折线轨迹 $(\xi_m)_{\eta(\xi)\le m\le n}$ 在状态 $i$ 时间 $m$ 的水平移动对应于 $(\tilde{\xi}_m)_{\eta(\xi)\le m\le n}$ 在状态 $i-N$ 时间 $n+\eta(\xi)-m$ 的水平移动。类似的，折线轨迹 $(\xi_m)_{\eta(\xi)\le m\le n}$ 在时间 $m$ 从状态$i+1$ 到状态 $i$ 的下落对应于 $(\tilde{\xi}_m)_{\eta(\xi)\le m\le n}$ 在时间 $n+\eta(\xi)-m$ 从状态 $i-N$ 到状态 $i+1-N$ 的下落。那么所有 $(\xi_m)_{0\le m\le \eta(\xi)}$中形成的单状态和两状态环在 $(\tilde{\xi}_m)_{0\le m\le \eta(\xi)}$ 中也有对应。而且，轨迹 $(\tilde{\xi}_m)_{0\le m\le n}$ 在时间 $n$ 和状态 $1-N$第一次到达集合 $\{N+1,1-N\}$，这说明轨迹 $(\tilde{\xi}_m)_{0\le m\le n}$ 最后形成的环是 $(1,N,\cdots,2)$，使得 $\tilde{\xi}\in G^{1,-}(0,1,\tilde{k})$。那么 $\xi\to \tilde{\xi}$ 是从 $G^{1,+}(1,0,\tilde{k})$ 到 $G^{1,-}(0,1,\tilde{k})$ 的一一映射，这说明 $B^1(\tilde{k})=C^1(\tilde{k})$。
-
-%     现在已经证明 $B^1(\tilde{k})=B^j(\tilde{k})$。对任意 $\tilde{k}$，令 $\tilde{G}^i(\tilde{k})$ 为满足下列所有条件路径的集合，1）前 $n$ 步（$n=N+\sum_{i \in S}(k^i+2k^{i,i+1})$）是从状态 $i$ 出发。2）边 $\langle i,i\rangle$ 被通过 $k^i$ 次。3）边 $\langle i,i+1\rangle$ 被通过 $k^{i,i+1}$ 次。4）在时间 $n$ 第一次到达状态 $N+i$。
-
-%     已经阐明对任意 $j\in S$，$|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|$ 成立。对任意轨迹 $\xi=(\xi_m)_{0\le m\le n}\in \tilde{G}^{1}(\tilde{k})$，令 $\kappa^j(\xi)=\min\{m: 0\le m\le n,\xi_k=j\}$，$\xi$也可以被视为折线图（见图 \ref{fig:linechart} （b））。那么构造 $\xi$ 对应的轨迹 $\tilde{\xi}$ 为：
+%     情况 1：$\nu^{12}=\nu^{+}=\nu^{1N}=\nu^-=0$。
+%     易知，对每个 $\alpha\in (0,1)$，
 %     \begin{equation*}
-% 		\tilde{\xi}_k
-% 		:=\left\{\begin{aligned}
-% 			&\xi_{\kappa(\xi)+k},    && \text{if } 0\le k\le n-\kappa(\xi),\\
-% 			&\xi_{k+\kappa(\xi)-n},    && \text{if }n-\kappa(\xi)<k\le n.\\
-% 		\end{aligned}\right.
-% 	\end{equation*}
-%     因此 $(\tilde{\xi}_m)_{0\le m\le n} \in \tilde{G}^i(\tilde{k})$。注意到 $\kappa(\xi)$ 是 $\xi$ 第一次到达状态 $j$，这说明 $n$ 也是 $\tilde{\xi}$ 第一次到达状态 $j+N$，那么$\tilde{\xi}\in \tilde{G}^j(\tilde{k})$。显然，$\xi\to\tilde{\xi}$ 是从 $\tilde{G}^1(\tilde{k})$ 到 $\tilde{G}^j(\tilde{k})$的一一映射，这说明 $|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|$。
+%         x^{i}=\alpha\nu^{i,i+1},\quad y^{i}=(1-\alpha)\nu^{i,i+1},\quad 2\le i\le N-1,
+%     \end{equation*}
+%     都是 \eqref{equations} 的解。
 
-%     对轨迹 $\xi\in\tilde{G}^j(\tilde{k})$，环 $(i)$，$(i,i+1)$，$(1,\cdots,N)$，$(1,N,\cdots,2)$ 分别形成 $k^i$，$k^{i,i+1}-l$，$l+1$，$l$ 次，其中 $l\le \min_{i\in S}k^{i,i+1}$ 依赖于 $\xi$。注意到 $\xi$ 在 $n$ 时到达状态 $N+j$ ，那么 $\xi$ 形成的最后一个环是 $(1,\cdots,N)$，因此
-% 	\begin{equation*}
-% 		\tilde{G}^j\left(\tilde{k}\right)=\bigsqcup_{l=0}^{\min_{i\in S}k^{i,i+1}}G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right),
-% 	\end{equation*}
-% 	\begin{equation}\label{equality for AjBj}
-% 		\left|\tilde{G}^j\left(\tilde{k}\right)\right|=\sum_{l=1}^{\min_{i\in S}k^{i,i+1}}\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|+B^j\left(\tilde{k}\right).
+%     情况 2：$\nu^{12}=\nu^{+}=0,\nu^{1N}+\nu^{-}>0$ 或 $\nu^{1N}=\nu^{-}=0,\nu^{12}+\nu^{+}>0$。容易验证若 $\nu^{12}=\nu^{+}=0,\nu^{1N}+\nu^{-}>0$成立，则$x^{i}=0,y^{i}=\nu^{i,i+1}$ 是方程 \eqref{equations} 的解。
+
+%     情况 3：$\nu^{12}+\nu^{+}>0$ 或 $\nu^{1N}+\nu^{-}>0$。上述已证明对任意给定的 $x^{k+1}\ge 0$，$y^{k+1}>0$，和 $x^{k+1}+y^{k+1}=\nu^{k+1,k+2}$，下列方程 \eqref{equations2} 满足 $x^{i},y^{i}> 0, \forall i, 2\le i\le k$。
+%     \begin{equation}\label{equations2}
+%         \begin{split}
+%             \frac{x^{i}}{y^{i}}
+%             =&\frac{x^{i}+x^{i+1}+\nu^+}{x^{i}+\nu^+}\, \frac{y^{i}+\nu^-}{y^{i-1}+y^{i}+\nu^-}
+%             \,\frac{x^{i-1}+x^{i}+\nu^+}{y^{i}+y^{i+1}+\nu^-},\\
+%             &\qquad x^{i} + y^{i} = \nu^{i,i+1},\qquad 2\le i\le k.
+%         \end{split}
+%     \end{equation}
+
+%     下面通过归纳法证明。若 $k=2$，方程 \eqref{equations2} 可以简化为：
+%     \begin{equation*}\label{equation k=2}
+%         \frac{x^{2}}{\nu^{23}-x^2}
+%         =\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-}.
+%         %,\qquad \nu^+_{23} + \nu^-_{23} = \nu_{23}.
+%     \end{equation*}
+%     易得：
+%     \begin{equation*}
+%         \lim_{x^{2}\downarrow 0}\frac{x^{2}}{\nu^{23}-x^2} = 0,\qquad \lim_{x^{2}\downarrow 0}\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-} \ge  \frac{\nu^{12}+\nu^{+}}{\nu^{23}+y^{3}+\nu^-} > 0.
+%     \end{equation*} 
+%     另外，
+%     \begin{equation*}
+%         \lim_{x^2\uparrow \nu^{23}}\frac{x^{2}}{\nu^{23}-x^2} = \infty,\qquad \lim_{x^{2}\uparrow \nu^{23}}\frac{x^{2}+x^{3}+\nu^+}{x^{2}+\nu^+}\, \frac{\nu^{12}+x^{2}+\nu^{+}}{\nu^{23}-x^2+y^3+\nu^-} =  \frac{\nu^{23}+x^{3}+\nu^+}{\nu^{23}+\nu^+}\frac{\nu^{12}+\nu^{23}+\nu^{+}}{y^{3}+\nu^-} < \infty.
+%     \end{equation*}
+%     通过中值定理，可以找到满足 $x^{i},y^i>0$ 的方程 \eqref{equations2} 的解，并且有 $x^{i}+y^{i}=\nu^{i,i+1}$ 。假设对 $k=n-1$ 命题成立，那么可以考虑方程：
+%     \begin{equation*}
+%         \frac{x^{n}}{\nu^{n,n+1}-x^{n}} = \frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-},
+%     \end{equation*}
+%     其中 $x^{n-1}$, $y^{n-1}$ 是方程 \eqref{equations2} 在 $k=n-1$ 时的解。可以得到：
+%     \begin{equation}\label{limit1}
+%         \lim_{x^{n}\downarrow 0}\frac{x^{n}}{\nu^{n,n+1}-x^{n}}=0,
+%     \end{equation}
+%     并且
+%     \begin{equation}\label{limit2}
+%         \begin{split}
+%             &\;\lim_{x^{n}\downarrow 0}\frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-}\\
+%             \ge &\;\frac{\nu^{n,n+1}+\nu^-}{\lim_{x^{n}\downarrow 0}(y^{n-1})+\nu^{n,n+1}+\nu^-}\,\frac{\lim_{x^{n}\downarrow 0}(x^{n-1})+\nu^+}{\nu^{n,n+1}+y^{n+1}+\nu^-}>0.
+%         \end{split}
+%     \end{equation}
+%     利用归纳法得出的结论 $\lim_{x^{n}\downarrow 0}(x^{n-1})>0$，可以得到下面两个式子成立。
+%     \begin{equation}\label{limit3}
+%         \lim_{x^{n}\uparrow \nu^{n,n+1}}\frac{x^{n}}{\nu^{n,n+1}-x^{n}}=\infty,
+%     \end{equation}
+%     和
+%     \begin{equation}\label{limit4}
+%         \begin{split}
+%             &\;\lim_{x^{n}\uparrow \nu^{n,n+1}}\frac{x^{n}+x^{n+1}+\nu^+}{x^{n}+\nu^+}\,\frac{\nu^{n,n+1}-x^{n}+\nu^-}{y^{n-1}+\nu^{n,n+1}-x^{n}+\nu^-}\,\frac{x^{n-1}+x^{n}+\nu^+}{\nu^{n,n+1}-x^{n}+y^{n+1}+\nu^-}\\
+%             \le &\;\frac{\nu^{n,n+1}+x^{n+1}+\nu^+}{\nu^{n,n+1}+\nu^+}\,\frac{\lim_{x^{n}\uparrow \nu^{n,n+1}}x^{n-1}+\nu^{n,n+1}+\nu^+}{y^{n+1}+\nu^-}<\infty.
+%         \end{split}
+%     \end{equation}
+%     那么通过中值定理，可以找到方程 \eqref{equations2} 满足条件 $x^{i},y^i>0, x^{i}+y^{i}=\nu^{i,i+1}, \forall i=2,3, \cdots, n$ 的解，就是说上述命题对 $k=n$ 成立。
+
+%     当 $k=N-1$ 时，有 $y^{k+1}=y^N=\nu^{1N}$ 成立。注意到 $\nu^{1N}+\nu^->0$，那么可以得到 \eqref{limit1}，\eqref{limit2}，\eqref{limit3} 和 \eqref{limit4} 成立。通过中值定理，可以找到方程 \eqref{equations2} 满足条件 $x^{i},y^i>0, x^{i}+y^{i}=\nu^{i,i+1}, \forall i=2,3, \cdots, n$ 的解。当 $k=N-1$ 时，方程 \eqref{equations2} 与 方程 \eqref{equations} 等价。证毕。
+
+% \end{proof}
+% \begin{lemma}\label{lemma:mininum}
+%     令 $X=(x^i,y^i)\in V(\nu)$ 是引理 ~\ref{lemma:existence for equations solution} 的解，那么 $X$ 是 $F_{\nu}(\cdot)$ 定义在 $V(\nu)$ 下的最小值点。 
+% \end{lemma}
+% \begin{proof}
+%     对任意 $a_1,a_2,b_1,b_2\ge 0$，通过 log-sum 不等式（见 \eqref{log sum inequality}），可以得到：
+%     \begin{align}\label{log sum inequality 2}
+%         a_1\log\frac{a_1}{a_1+a_2}+a_2\log\frac{a_2}{a_1+a_2}\ge a_1\log\frac{b_1}{b_1+b_2}+a_2\log\frac{b_2}{b_1+b_2}.
+%     \end{align}
+%     对任意 $Z=(z^i,w^i)\in V(\nu)$，可以把 \eqref{formula:F} 写为：
+%     \begin{align*}
+%         F_{\nu}(Z)
+%         =&\;\sum_{i=2}^{N-1}\left[ \left(z^{i-1}+\nu^+\right)\log\frac{z^{i-1}+\nu^+}{z^{i-1}+z^{i}+\nu^+} + z^{i}\log\frac{z^{i}}{z^{i-1}+z^{i}+\nu^+}  \right]\\
+%         &\;+\sum_{i=2}^{N-1}  \left[w^{i}\log\frac{w^{i}}{w^{i} +w^{i+1} +\nu^-} + \left(w^{i+1} +\nu^-\right)\log\frac{w^{i+1} +\nu^-}{w^{i} +w^{i+1} +\nu^-}\right],
+%     \end{align*}
+%     其中 $z^{1}=\nu^{12},w^{N}=\nu^{1N}$。再根据方程 \eqref{equations} 和 \eqref{log sum inequality 2}
+%     \begin{align*}
+%         F_{\nu}(Z)\ge &\;\sum_{i=2}^{N-1}\left[ \left(z^{i-1}+\nu^+\right)\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + z^{i}\log\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
+%         &\;+\sum_{i=2}^{N-1}  \left[w^{i}\log\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-} + \left(w^{i+1} +\nu^-\right)\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
+%         =&\;\sum_{i=2}^{N-1}\left[ \nu^+\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + z^{i}\log\frac{x^{i}+\nu^{+}}{x^{i-1}+x^{i}+\nu^{+}}\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
+%         &\;+\sum_{i=2}^{N-1}  \left[\nu^-\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}+w^{i}\log\frac{y^{i}+\nu^{-}}{y^{i-1}+y^{i}+\nu^{-}}\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-}  \right]\\
+%         &\;+\nu^{12}\log\frac{\nu^{12}+\nu^{+}}{\nu^{12}+x^{2}+\nu^{+}}+\nu^{1N}\log\frac{\nu^{1N}+\nu^{-}}{\nu^{1N}+y^{N-1}+\nu^{-}}\\
+%         =&\;\sum_{i=2}^{N-1}\left[-\lambda_i\nu^{i,i+1}+\nu^+\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+}+\nu^-\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
+%         &\;+\nu^{12}\log\frac{\nu^{12}+\nu^{+}}{\nu^{12}+x^{2}+\nu^{+}}+\nu^{1N}\log\frac{\nu^{1N}+\nu^{-}}{\nu^{1N}+y^{N-1}+\nu^{-}}\\
+%         =&\;\sum_{i=2}^{N-1}\left[ \left(x^{i-1}+\nu^+\right)\log\frac{x^{i-1}+\nu^+}{x^{i-1}+x^{i}+\nu^+} + x^{i}\log\frac{x^{i}}{x^{i-1}+x^{i}+\nu^+}  \right]\\
+%         &\;+\sum_{i=2}^{N-1}  \left[y^{i}\log\frac{y^{i}}{y^{i} +y^{i+1} +\nu^-} + \left(y^{i+1} +\nu^-\right)\log\frac{y^{i+1} +\nu^-}{y^{i} +y^{i+1} +\nu^-}\right]\\
+%         =&\;F_{\nu}(X),
+%         \end{align*}
+%         其中 $\lambda_i$ 被表示为 \eqref{equations}。证毕。
+% \end{proof}
+
+% % \section{速率函数的对称性} \label{appendix:symmetry}
+% % 下面将证明速率函数与初始分布的选择无关（见命题 \ref{corollary:rate function is unrelated to the starting state}）。在开始证明之前，先给出下面的定义。
+
+% % 给定 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$ 和 $\eta=[i_0,i_1,\cdots,i_t]$，记 $|k|=\sum_{c\in\mathcal{C}}k^c|c|$，并且令 $n=|k|+|\eta|=|k|+t$，其中 $|c|$ 和 $|\eta|$ 分别表示环 $c$ 的长度和导出链的长度。令 $G^{\eta}(k)$ 为所有 $n$ 步长的轨道 $(\xi_m)_{0\le m\le n}$ 组成的集合，这些轨道满足环 $c$ 形成 $k^c$ 次，并且去环遗留的轨道是 $\eta$，定义为
+% % \begin{equation*}
+% % 	G^{\eta}(k)=\left\{(\xi_0,\xi_1,\cdots,\xi_n)\in S^{n+1}:N^c_n=k^c (\forall c\in \mathcal{C}),\tilde{\xi}_n=\eta,\text{ and }n=|k|+|\eta|\right\}.
+% % \end{equation*}
+% % 在此，对只有一个状态的 $\eta =[i]$，用 $G^{i}(k)$ 表示 $G^{\eta}(k)$。对任意包含状态 $i$ 的环 $\tilde{c}\in \mathcal{C}$，$G^i(k)$ 的一个子集 $G^{i,\tilde{c}}(k)$ 定义为：
+% % \begin{equation*}
+% % 	G^{i,\tilde{c}}(k)=\left\{(\xi_0,\xi_1,\cdots,\xi_n)\in S^{n+1}:N^c_n=k^c (\forall c\in \mathcal{C}),\tilde{\xi}_n=[i],T^{\tilde{c}}_{k^{\tilde{c}}}=n,\text{ and }n=|k|\right\},
+% % \end{equation*}
+% % 其中 $T^{\tilde{c}}_{k^{\tilde{c}}}$ 表示为第 $k^{\tilde{c}}$ 次形成的环 $\tilde{c}$。即对任意轨道 $(\xi_m)_{0\le m\le n}\in G^{i,\tilde{c}}(k)$，最后一次形成的环是 $\tilde{c}$。
+
+% % 注意到等式 $n=|k|+|\eta|$ 对 $G^{\eta}(k)$ 和 $G^{i,c}(k)$ 成立。因此在章节 ~\ref{LELDP} 省略 $G_n(k)$ 的角标 $n$。
+
+% % 下面将针对 $|G^i(k)|$ 和 $|G^{i,c}(k)|$，给出两个重要的等式。记 
+% % \begin{equation*}
+% % 	B^i(\tilde{k})=\left|G^{i,+}(1,0,\tilde{k})\right|,\qquad	C^i(\tilde{k})=\left|G^{i,-}(0,1,\tilde{k})\right|,
+% % \end{equation*}
+% % 其中 $\tilde{k}=(k^1,\cdots,k^N,k^{12},\cdots,k^{N-1,N},k^{1N})$，即 $B^i$ ($C^i$) 表示满足下列条件的轨迹数量：1）环 $c$ 形成 $k^c$ 次；2） $k^+=1,k^-=0$ ($k^+=0,k^-=1$)；3）从状态 $i$ 出发，状态 $i$ 结束；4）最后形成的环是 $(1,\cdots,N)$ ($(1,N,\cdots,2)$)。
+
+% % \begin{lemma}\label{lemma:BiBjCiCj}
+% % 	对任意 $i,j\in S$，有：
+% % 	\begin{equation*}
+% % 		B^i\left(\tilde{k}\right)=B^j\left(\tilde{k}\right)=C^i\left(\tilde{k}\right)=C^j\left(\tilde{k}\right).
+% % 	\end{equation*}
+% % \end{lemma}
+
+% % \begin{proof}
+% %     不降低一般性，令 $i=1$，只须证 $B^1(\tilde{k})=C^1(\tilde{k})=B^j(\tilde{k})$。
+
+% %     首先证明 $B^1(\tilde{k})=C^1(\tilde{k})$。
+% %     \begin{figure}[h]
+% % 		\centering
+% % 		\includegraphics[scale=0.7]{chart/brokenlinegraph.pdf}
+% % 		\caption{$\xi$ 的轨迹对应的折线图。（a）第一种类型的轨迹映射（b）第二种类型的轨迹映射}
+% % 		\label{fig:linechart}
+% % 	\end{figure}
+% %     注意到该系统是单环马氏链，$\xi$ 的每条轨迹可以被看作是一个折线图（见图 \ref{fig:linechart}（a））折线在状态 $i$ 时间 $m$ 处的水平移动表示环 $(i)$ 在时间 $m$ 处形成。折线从状态$i+1$ ($-j$) 到状态 $i$ ($1-j$) 的每次上升对应于 （其中的加减运算的结果都会经过模 $N$ 运算）。对任意轨迹 $\xi=(\xi_m)_{0\le m\le n}\in G^{1,+}(1,0,\tilde{k})$，令 $\eta(\xi)=\max\{m: 0\le m\le n-1,\xi_m=1\}$。回顾定义 $G^{1,+}(1,0,\tilde{k})$，轨迹 $(\xi_m)_{0\le m\le n}$ 在时间 $n$ 和状态 $N+1$ 到达集合 $\{N+1,1-N\}$。那么构造 $\xi$ 对应的轨迹 $\tilde{\xi}$（见图 \ref{fig:linechart} （a））
+% % 	\begin{equation*}
+% % 		\tilde{\xi}_m
+% % 		:=\left\{\begin{aligned}
+% % 			&\xi_m,    && \text{if } 0\le m\le \eta(\xi),\\
+% % 			&\xi_{n+\eta(\xi)-m},    && \text{if }\eta(\xi)<m\le n.\\
+% % 		\end{aligned}\right.
+% % 	\end{equation*}
+% %     所有 $(\xi_m)_{0\le m\le \eta(\xi)}$ 中形成的环，在$(\tilde{\xi}_m)_{0\le m\le \eta(\xi)}$中也有形成。折线轨迹 $(\xi_m)_{\eta(\xi)\le m\le n}$ 在状态 $i$ 时间 $m$ 的水平移动对应于 $(\tilde{\xi}_m)_{\eta(\xi)\le m\le n}$ 在状态 $i-N$ 时间 $n+\eta(\xi)-m$ 的水平移动。类似的，折线轨迹 $(\xi_m)_{\eta(\xi)\le m\le n}$ 在时间 $m$ 从状态$i+1$ 到状态 $i$ 的下落对应于 $(\tilde{\xi}_m)_{\eta(\xi)\le m\le n}$ 在时间 $n+\eta(\xi)-m$ 从状态 $i-N$ 到状态 $i+1-N$ 的下落。那么所有 $(\xi_m)_{0\le m\le \eta(\xi)}$中形成的单状态和两状态环在 $(\tilde{\xi}_m)_{0\le m\le \eta(\xi)}$ 中也有对应。而且，轨迹 $(\tilde{\xi}_m)_{0\le m\le n}$ 在时间 $n$ 和状态 $1-N$第一次到达集合 $\{N+1,1-N\}$，这说明轨迹 $(\tilde{\xi}_m)_{0\le m\le n}$ 最后形成的环是 $(1,N,\cdots,2)$，使得 $\tilde{\xi}\in G^{1,-}(0,1,\tilde{k})$。那么 $\xi\to \tilde{\xi}$ 是从 $G^{1,+}(1,0,\tilde{k})$ 到 $G^{1,-}(0,1,\tilde{k})$ 的一一映射，这说明 $B^1(\tilde{k})=C^1(\tilde{k})$。
+
+% %     现在已经证明 $B^1(\tilde{k})=B^j(\tilde{k})$。对任意 $\tilde{k}$，令 $\tilde{G}^i(\tilde{k})$ 为满足下列所有条件路径的集合，1）前 $n$ 步（$n=N+\sum_{i \in S}(k^i+2k^{i,i+1})$）是从状态 $i$ 出发。2）边 $\langle i,i\rangle$ 被通过 $k^i$ 次。3）边 $\langle i,i+1\rangle$ 被通过 $k^{i,i+1}$ 次。4）在时间 $n$ 第一次到达状态 $N+i$。
+
+% %     已经阐明对任意 $j\in S$，$|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|$ 成立。对任意轨迹 $\xi=(\xi_m)_{0\le m\le n}\in \tilde{G}^{1}(\tilde{k})$，令 $\kappa^j(\xi)=\min\{m: 0\le m\le n,\xi_k=j\}$，$\xi$也可以被视为折线图（见图 \ref{fig:linechart} （b））。那么构造 $\xi$ 对应的轨迹 $\tilde{\xi}$ 为：
+% %     \begin{equation*}
+% % 		\tilde{\xi}_k
+% % 		:=\left\{\begin{aligned}
+% % 			&\xi_{\kappa(\xi)+k},    && \text{if } 0\le k\le n-\kappa(\xi),\\
+% % 			&\xi_{k+\kappa(\xi)-n},    && \text{if }n-\kappa(\xi)<k\le n.\\
+% % 		\end{aligned}\right.
+% % 	\end{equation*}
+% %     因此 $(\tilde{\xi}_m)_{0\le m\le n} \in \tilde{G}^i(\tilde{k})$。注意到 $\kappa(\xi)$ 是 $\xi$ 第一次到达状态 $j$，这说明 $n$ 也是 $\tilde{\xi}$ 第一次到达状态 $j+N$，那么$\tilde{\xi}\in \tilde{G}^j(\tilde{k})$。显然，$\xi\to\tilde{\xi}$ 是从 $\tilde{G}^1(\tilde{k})$ 到 $\tilde{G}^j(\tilde{k})$的一一映射，这说明 $|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|$。
+
+% %     对轨迹 $\xi\in\tilde{G}^j(\tilde{k})$，环 $(i)$，$(i,i+1)$，$(1,\cdots,N)$，$(1,N,\cdots,2)$ 分别形成 $k^i$，$k^{i,i+1}-l$，$l+1$，$l$ 次，其中 $l\le \min_{i\in S}k^{i,i+1}$ 依赖于 $\xi$。注意到 $\xi$ 在 $n$ 时到达状态 $N+j$ ，那么 $\xi$ 形成的最后一个环是 $(1,\cdots,N)$，因此
+% % 	\begin{equation*}
+% % 		\tilde{G}^j\left(\tilde{k}\right)=\bigsqcup_{l=0}^{\min_{i\in S}k^{i,i+1}}G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right),
+% % 	\end{equation*}
+% % 	\begin{equation}\label{equality for AjBj}
+% % 		\left|\tilde{G}^j\left(\tilde{k}\right)\right|=\sum_{l=1}^{\min_{i\in S}k^{i,i+1}}\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|+B^j\left(\tilde{k}\right).
+% % 	\end{equation}
+% % 	下面用归纳法证明 $B^1(\tilde{k})=B^j(\tilde{k})$。当 $\min_{i\in S}k^{i,i+1}=0$, 通过方程 \eqref{equality for AjBj}，可以得到 
+% %     \begin{equation*}
+% % 		B^1(\tilde{k})=|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|=B^j(\tilde{k}).
+% % 	\end{equation*} 
+% % 	假设等式对 $\min_{i\in S}k^{i,i+1}\le m$ 成立。当 $\min_{i\in S}k^{i,i+1}=m+1$ 时，固定 $1\le l\le \min_{i\in S}k^{i,i+1}$，并且令 $\xi\in G^{j,+}_n(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$。那么轨迹 $\xi$ 可以被分为 $2l+1$ 个子轨迹， 是的每一个子轨迹最后形成的环是 $(1,\cdots,N)$ 或 $(1,N,\cdots,2)$。注意到最后一个环 $(1,\cdots,N)$ is $\binom{2l}{l}$ 形成前，在状态 1 处插入 $l$ 环 $(1,\cdots,N)$ 和 $l$ 个环 $(1,N,\cdots,2)$ 的排列数是 $\binom{2l}{l}$。固定剩余的环的分区（即 $\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$），因为对任意 $i$ 和 $\tilde{k}$，插入方式的排列数为 $\prod_{s=1}^{2l+1}B^j(\tilde{k}_s)$，那么：
+% % 	\begin{align*}
+% % 		&\;\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|\\
+% % 		=&\;\binom{2l}{l}\sum_{\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)}\prod_{s=1}^{2l+1}B^j\left(\tilde{k}_s\right).
+% % 	\end{align*}
+	
+% % 	因为 $l\ge 1$,，所以有 $B^1(\tilde{k}_s)=B^j(\tilde{k}_s)$，那么：
+% % 	\begin{align*}
+% % 		&\left|G^{1,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|\\
+% % 		=&\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|.
+% % 	\end{align*}
+% % 	依据式 \eqref{equality for AjBj}，可知$B^1(\tilde{k})=B^j(\tilde{k})$。最后通过归纳法，完成证明。
+% % \end{proof}
+% % \begin{proposition}\label{proposition:E Gin}
+% % 	考虑任意 $1\le i,j\le N$, $k\in\mathbb{N}^{2N+2}$ 和导出链 $\eta$，可得下面三条结论：
+% % 	\begin{itemize}
+% % 		\item[(i)] 
+% % 		\begin{equation}\label{EGin}
+% % 			\left|G^i\left(k^+,k^-,\tilde{k}\right)\right|=\left|G^i\left(k^-,k^+,\tilde{k}\right)\right|.
+% % 		\end{equation}
+% % 		\item[(ii)] 
+% % 		\begin{equation}\label{E Gi1cdotsNn}
+% % 			\left|G^{i,+}(k)\right|=\left|G^{j,+}(k)\right|,\qquad\left|G^{i,-}(k)\right|=\left|G^{j,-}(k)\right|.
+% % 		\end{equation}
+% % 		\item[(iii)]  
+% % 		\begin{equation}\label{EGetan}
+% % 			\left|G^{\eta}\left(k^+,k^-,\tilde{k}\right)\right|=\left|G^{\eta}\left(k^-,k^+,\tilde{k}\right)\right|.
+% % 		\end{equation}
+% % 	\end{itemize}
+% % \end{proposition}
+% % \begin{proof}
+% % 	(1) 首先考虑在状态 $i$ 插入环 $k^+$ 个环 $(1,\cdots,N)$ 和 $k^-$ 个环  $(1,N,\cdots,2)$，那么相应的排列数为 $\binom{k^++k^-}{k^+}$。接下来把剩余的环 （i.e. $k^i$ 个环 $(i)$ 和 $k^{i,i+1}$ 个环 $(i,i+1)$）分为 $k^++k^-+1$ 个部分。将剩余环的分区固定为 $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$。通过引理 \ref{lemma:BiBjCiCj}，插入的数量为：
+% % 	\begin{equation*}
+% % 		\left[\prod_{s=1}^{k^++k^-}B^i(\tilde{k}_s)\right]\left|G^i(0,0,\tilde{k}_{k^++k^-+1})\right|,
+% % 	\end{equation*}
+% % 	其中 $B^i(\tilde{k}_s)$ 是在第 $(s-1)$ 个和 第 $s-$ 个 $N$ 状态环之间插入 $\tilde{k}_s$ 个环的排列数，且 $|G^i(0,0,\tilde{k}_{k^++k^-+1})|$ 是在第 $(k^++k^-)$ 个 $N$ 状态环之后插入 $\tilde{k}_{k^++k^-+1}$ 个环的排列数。在所有分区中增加插入数量 $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$，可以得到：
+% % 	\begin{align}\label{E Gin}
+% % 		\left|G^i\left(k^+,k^-,\tilde{k}\right)\right|=\binom{k^++k^-}{k^+}\sum_{\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}}\left[\prod_{s=1}^{k^++k^-}B^i\left(\tilde{k}_s\right)\right]\left|G^i\left(0,0,\tilde{k}_{k^++k^-+1}\right)\right|.
+% % 	\end{align}
+% % 	注意到 \eqref{E Gin} 是关于 $k^+$ 和 $k^-$ 对称的，故(1)证毕。
+	
+% % 	(ii) 上面只证明了 \eqref{E Gi1cdotsNn} 中的第一个等式，第二个等式的证明与其相似。但是这里考虑的是轨迹 $\xi\in G^{i,+}_n(k)$，最后的环是 $(1,\cdots,N)$，只需在状态 $i$ 处插入 $k^+-1$ 个环 $(1,\cdots,N)$ 和 $k^-$ 个环 $(1,N,\cdots,2)$，可以得到：
+% % 	\begin{align*}
+% % 		&\left|G^{i,+}\left(k\right)\right|=\binom{k^++k^--1}{k^+-1}\sum_{\sum_{s=1}^{k^++k^-}\tilde{k}_s=\tilde{k}}\prod_{s=1}^{k^++k^-}B^i\left(\tilde{k}_s\right)\\
+% % 		&\qquad\qquad=\binom{k^++k^--1}{k^+-1}\sum_{\sum_{s=1}^{k^++k^-}\tilde{k}_s=\tilde{k}}\prod_{s=1}^{k^++k^-}B^j\left(\tilde{k}_s\right)=\left|G^{j,+}\left(k\right)\right|,
+% % 	\end{align*}
+% % 	其中第二步出自引理 ~\ref{lemma:BiBjCiCj}。
+
+% % 	(iii) 记 $\eta=[i_0,i_1,\cdots,i_t]$，首先把所有的环分为 $t+1$ 个部分，固定一部分为 $\sum_{s=0}^t k_s=k$，那么 $k^c_s$ 个环 $c$ ($\forall c\in\mathcal{C}$) 将被插入在 $\eta$ 的状态 $i_s$ ($0\le s\le t$)。那么可插入方式的数量为 $\prod_{s=0}^t |G^{i_s}(k_s)|$。增加所有分区的数量 $\sum_{s=0}^t k_s=k$，可以得到
+% % 	\begin{equation*}
+% % 		\left|G^{\eta}(k)\right|=\sum_{\sum_{s=0}^t k_s=k}\prod_{s=0}^t \left|G^{i_s}(k_s)\right|.
+% % 	\end{equation*}
+% % 	注意到对任意分区 $\sum_{s=0}^t k_s=k$，可知 $\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})$ 是 $(k^-,k^+,\tilde{k})$ 的一个分区。那么由方程 \eqref{EGin}，可得：
+% % 	\begin{align*}
+% % 		\left|G^{\eta}(k^-,k^+,\tilde{k})\right|=&\sum_{\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})}\prod_{s=0}^t \left|G^{i_s}(k_s^-,k_s^+,\tilde{k}_s)\right|\\
+% % 		=&\sum_{\sum_{s=0}^t k_s=k}\prod_{s=0}^t \left|G^{i_s}(k_s)\right|=\left|G^{\eta}(k)\right|.
+% % 	\end{align*}
+% % \end{proof}
+% % 下面将陈述 $| (G^i(k)|$ 和 $|G^{i,c}(k)|$ 的相关性。
+% % \begin{lemma}\label{lemma:E G1cnk}
+% % 	对任意 $k\in \mathbb{N}^{2N+2}$ 和 $i\in S$，令 $c\in \mathcal{C}$ 包含状态 $i$ 的环，那么：
+% % 	\begin{align*}
+% % 		\left|G^{i,c}(k)\right| = \frac{k^c}{k_i}\left|G^i(k)\right|.
+% % 	\end{align*}
+% % \end{lemma}
+% % \begin{proof}
+% % 	下面只证明 $i=1$ 时的情况，并不降低一般性。 回顾章节~\ref{LELDP} 中计算 $|G^1(k)|$ 的三个步骤。
+% % 	在第一个步骤中固定最后一个环 $c$，并且把排列数转换为
+% % 	\begin{equation*}
+% % 		\frac{k^c}{k^{1}+k^{12}+k^{1N}+k^{+}+k^{-}}A_1.
+% % 	\end{equation*}
+% % 	第二，三个步骤不变。在这种情况下，轨迹形成的最后一个环是 $c$，这意味着：
+% % 	\begin{align*}
+% % 		\left|G^{1,c}(k)\right| = \frac{k^c}{k_1}\left|G^1(k)\right|.
+% % 	\end{align*}
+% % \end{proof}
+% % \begin{proposition}\label{corollary:rate function is unrelated to the starting state}
+% % 	$I_J$ 不依赖于初始分布的选择 $\xi$.
+% % \end{proposition}
+% % \begin{proof}
+% % 	记 $c=(1,\cdots,N)$ 或 $(1,N,\cdots,2)$，通过命题 ~\ref{proposition:E Gin} 和引理 ~\ref{lemma:E G1cnk}，易知 $\log|G^1(k)|=\log|G^i(k)|+O(\log n)$，那么由式 \eqref{ratefunction}，命题得证。
+% % \end{proof}
+
+
+% \section{Proof of Theorem~\ref{thm:LDP}}\label{appendix:LDP}
+% 这里把大偏差原理的证明 ~\ref{thm:LDP} 分为两部分。首先研究经验环流的速率函数的性质。回顾速率函数 $I_J:\mathcal{V}\to[0,\infty]$ 的形式为：
+% \begin{equation*}\label{ratefunction1}
+% 	\begin{split}
+% 		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
+% 		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
+% 		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
+% 		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c\\
+% 		:=&\;I_1(\nu)+I_2(\nu)+I_3(\nu)+I_4(\nu).
+% 	\end{split}
+% \end{equation*}
+% \begin{proposition}\label{proposition:I}
+% 	速率函数 $I_J$ 是有界，连续的凸函数。
+% \end{proposition}
+% \begin{proof}
+% 	易知 $I_j$ 有界。首先证明 $I_J$ 连续。易知 $h$ 是定义在 $[0,\infty)$ 的连续函数。那么 $I_1$ 和 $I_3$ 是连续的。注意到  $I_4$ 是关于 $\nu$ 的连续函数，因此还需证明 $I_2$ 是连续函数。令 $Y(\nu)\in V(\nu)$ 是方程 \eqref{equations} 的解，由于 \eqref{equations} 是一个多项式方程组，因此易知 $Y(\nu)$ 是关于变量 $\nu$ 的连续函数。因为 $h$ 是连续的，再根据 \eqref{formula:F}，$\inf_{X\in V(\nu)}F_{\nu}(X)=F_{\nu}(Y(\nu))$ 是关于 $\nu$ 的连续函数。
+	
+% 	然后证明 $I_J$ 是凸函数。 回顾 log-sum 不等式，对任意 $a_{1},a_{2},b_{1},b_{2}\ge 0$，有：
+% 	\begin{equation}\label{log sum inequality}
+% 		(a_1+a_2)\log \frac{a_1+a_2}{b_1+b_2}\le a_{1}\log \frac{a_{1}}{b_{1}}+a_{2}\log \frac{a_{2}}{b_{2}} ,
 % 	\end{equation}
-% 	下面用归纳法证明 $B^1(\tilde{k})=B^j(\tilde{k})$。当 $\min_{i\in S}k^{i,i+1}=0$, 通过方程 \eqref{equality for AjBj}，可以得到 
-%     \begin{equation*}
-% 		B^1(\tilde{k})=|\tilde{G}^1(\tilde{k})|=|\tilde{G}^j(\tilde{k})|=B^j(\tilde{k}).
-% 	\end{equation*} 
-% 	假设等式对 $\min_{i\in S}k^{i,i+1}\le m$ 成立。当 $\min_{i\in S}k^{i,i+1}=m+1$ 时，固定 $1\le l\le \min_{i\in S}k^{i,i+1}$，并且令 $\xi\in G^{j,+}_n(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$。那么轨迹 $\xi$ 可以被分为 $2l+1$ 个子轨迹， 是的每一个子轨迹最后形成的环是 $(1,\cdots,N)$ 或 $(1,N,\cdots,2)$。注意到最后一个环 $(1,\cdots,N)$ is $\binom{2l}{l}$ 形成前，在状态 1 处插入 $l$ 环 $(1,\cdots,N)$ 和 $l$ 个环 $(1,N,\cdots,2)$ 的排列数是 $\binom{2l}{l}$。固定剩余的环的分区（即 $\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)$），因为对任意 $i$ 和 $\tilde{k}$，插入方式的排列数为 $\prod_{s=1}^{2l+1}B^j(\tilde{k}_s)$，那么：
-% 	\begin{align*}
-% 		&\;\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|\\
-% 		=&\;\binom{2l}{l}\sum_{\sum_{s=1}^{2l+1}\tilde{k}_s=(k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l)}\prod_{s=1}^{2l+1}B^j\left(\tilde{k}_s\right).
-% 	\end{align*}
-	
-% 	因为 $l\ge 1$,，所以有 $B^1(\tilde{k}_s)=B^j(\tilde{k}_s)$，那么：
-% 	\begin{align*}
-% 		&\left|G^{1,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|\\
-% 		=&\left|G^{j,+}\left(l+1,l,k^1,\cdots,k^N,k^{12}-l,\cdots,k^{N1}-l\right)\right|.
-% 	\end{align*}
-% 	依据式 \eqref{equality for AjBj}，可知$B^1(\tilde{k})=B^j(\tilde{k})$。最后通过归纳法，完成证明。
-% \end{proof}
-% \begin{proposition}\label{proposition:E Gin}
-% 	考虑任意 $1\le i,j\le N$, $k\in\mathbb{N}^{2N+2}$ 和导出链 $\eta$，可得下面三条结论：
-% 	\begin{itemize}
-% 		\item[(i)] 
-% 		\begin{equation}\label{EGin}
-% 			\left|G^i\left(k^+,k^-,\tilde{k}\right)\right|=\left|G^i\left(k^-,k^+,\tilde{k}\right)\right|.
-% 		\end{equation}
-% 		\item[(ii)] 
-% 		\begin{equation}\label{E Gi1cdotsNn}
-% 			\left|G^{i,+}(k)\right|=\left|G^{j,+}(k)\right|,\qquad\left|G^{i,-}(k)\right|=\left|G^{j,-}(k)\right|.
-% 		\end{equation}
-% 		\item[(iii)]  
-% 		\begin{equation}\label{EGetan}
-% 			\left|G^{\eta}\left(k^+,k^-,\tilde{k}\right)\right|=\left|G^{\eta}\left(k^-,k^+,\tilde{k}\right)\right|.
-% 		\end{equation}
-% 	\end{itemize}
-% \end{proposition}
-% \begin{proof}
-% 	(1) 首先考虑在状态 $i$ 插入环 $k^+$ 个环 $(1,\cdots,N)$ 和 $k^-$ 个环  $(1,N,\cdots,2)$，那么相应的排列数为 $\binom{k^++k^-}{k^+}$。接下来把剩余的环 （i.e. $k^i$ 个环 $(i)$ 和 $k^{i,i+1}$ 个环 $(i,i+1)$）分为 $k^++k^-+1$ 个部分。将剩余环的分区固定为 $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$。通过引理 \ref{lemma:BiBjCiCj}，插入的数量为：
+% 	注意到
+% 	\begin{equation}\label{I_1}
+% 		I_1(\nu) = \nu^{12}\log\left(\frac{\nu^{12}}{\hat{\nu}}\right)+\nu^{1N}\log\left(\frac{\nu^{1N}}{\hat{\nu}}\right)+\nu^{+}\log\left(\frac{\nu^{+}}{\hat{\nu}}\right)+\nu^{-}\log\left(\frac{\nu^{-}}{\hat{\nu}}\right),
+% 	\end{equation}
+% 	其中 $\hat{\nu}=\nu^{12}+\nu^{1N}+\nu^++\nu^-$。对任意满足 $\alpha+\beta=1$ 的 $\alpha,\beta\ge 0$ 和 $\nu,\mu\in \mathcal{V}$，通过log-sum 不等式 \eqref{log sum inequality}，可以得到：
 % 	\begin{equation*}
-% 		\left[\prod_{s=1}^{k^++k^-}B^i(\tilde{k}_s)\right]\left|G^i(0,0,\tilde{k}_{k^++k^-+1})\right|,
+% 		(\alpha \nu^{12}+\beta \mu^{12})\log\left(\frac{\alpha \nu^{12}+\beta \mu^{12}}{\alpha \hat{\nu}+\beta \hat{\mu}}\right)\le \alpha\nu^{12}\log\left(\frac{\nu^{12}}{\hat{\nu}}\right)+\beta\mu^{12}\log\left(\frac{\mu^{12}}{\hat{\mu}}\right),
 % 	\end{equation*}
-% 	其中 $B^i(\tilde{k}_s)$ 是在第 $(s-1)$ 个和 第 $s-$ 个 $N$ 状态环之间插入 $\tilde{k}_s$ 个环的排列数，且 $|G^i(0,0,\tilde{k}_{k^++k^-+1})|$ 是在第 $(k^++k^-)$ 个 $N$ 状态环之后插入 $\tilde{k}_{k^++k^-+1}$ 个环的排列数。在所有分区中增加插入数量 $\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}$，可以得到：
-% 	\begin{align}\label{E Gin}
-% 		\left|G^i\left(k^+,k^-,\tilde{k}\right)\right|=\binom{k^++k^-}{k^+}\sum_{\sum_{s=1}^{k^++k^-+1}\tilde{k}_s=\tilde{k}}\left[\prod_{s=1}^{k^++k^-}B^i\left(\tilde{k}_s\right)\right]\left|G^i\left(0,0,\tilde{k}_{k^++k^-+1}\right)\right|.
+% 	其中 $\hat{\mu}=\mu^{12}+\mu^{1N}+\mu^++\mu^-$。这说明 \eqref{I_1} 式的第一项的右边是关于 $\nu$ 的连续函数，同理，其他三项项的右边也是关于 $\nu$ 的连续函数。因此 $I_1(\nu)$ 是凸函数，同理，可以通过log-sum 不等式得到 $I_3(\nu)$也是凸函数。由于 $I_4(\nu)$ 是线性函数，故也是凸函数，最后只需证明 $\inf_{X\in V(\nu)}F_{\nu}(X)$ 是凸函数。 吧\eqref{formula:F} 重写为：
+% 	\begin{align*}
+% 		F_{\nu}(X)=&\;\sum_{i=2}^{N-1}\left[(x^{i-1}+\nu^+)\log\left(\frac{x^{i-1}+\nu^+}{x^{i-1}+x^i+\nu^+}\right)+x^i\log\left(\frac{x^{i}}{x^{i-1}+x^i+\nu^+}\right)\right]\\
+% 		&\;+\sum_{i=2}^{N-1}\left[y^i\log\left(\frac{y^{i}}{y^{i}+y^{i+1}+\nu^-}\right)+(y^{i+1}+\nu^-)\log\left(\frac{y^{i+1}+\nu^-}{y^{i}+y^{i+1}+\nu^-}\right)\right]\\
+% 		:=&\;\sum_{i=2}^{N-1}[A_1^i(\nu,X)+A_2^i(\nu,X)+A_3^i(\nu,X)+A_4^i(\nu,X)].
+% 	\end{align*}
+% 	注意到对任意 $X=(x^i,y^i)\in V(\nu)$ 和 $Z=(z^i,w^i)\in V(\mu)$，有 $\alpha X+\beta Z\in V(\alpha\nu+\beta\mu)$。那么通过 log-sum 不等式，可得：
+% 	\begin{align*}
+% 		&\;A_1^i(\alpha\nu+\beta \mu,\alpha X+\beta Y)\\
+% 		=&\;(\alpha x^{i-1}+\beta z^{i-1}+\alpha\nu^++\beta \mu^+ )\log\left(\frac{\alpha x^{i-1}+\beta z^{i-1}+\alpha\nu^++\beta \mu^+}{\alpha x^{i-1}+\alpha x^i+\beta z^{i-1}+\beta z^i+\alpha\nu^++\beta \mu^+}\right)\\
+% 		=&\;(\alpha (x^{i-1}+\nu^+)+\beta (z^{i-1}+ \mu^+) )\log\left(\frac{\alpha (x^{i-1}+\nu^+)+\beta (z^{i-1}+ \mu^+)}{\alpha (x^{i-1}+ x^i+\nu^+)+\beta (z^{i-1}+ z^i+ \mu^+)}\right)\\
+% 		\le &\; \alpha (x^{i-1}+\nu^+)\log\left(\frac{x^{i-1}+\nu^+}{x^{i-1}+ x^i+\nu^+}\right)+\beta (z^{i-1}+ \mu^+)\log\left(\frac{z^{i-1}+ \mu^+}{z^{i-1}+ z^i+ \mu^+}\right)\\
+% 		=&\;\alpha A^i_1(\nu,X)+\beta A^i_1(\mu,Y).
+% 	\end{align*}
+% 	同理, 对任意 $j=2,3,4$ 有 $A^i_j(\alpha \nu+\beta \mu,\alpha X+\beta Y)\le \alpha A^i_j(\nu,X)+\beta A^i_j (\mu,Y)$。这说明
+% 	\begin{equation*}
+% 		F_{\alpha \nu+\beta \mu}(\alpha X+\beta Y)\le \alpha F_{\nu}(X)+\beta F_{\mu}(Y).
+% 	\end{equation*}
+% 	针对 $X$ 和 $Y$ 取极小，可以得到：
+% 	\begin{align*}
+% 		\inf_{Z\in V(\alpha\nu+\beta\mu)}F_{\alpha\nu+\beta\mu}( Z)\le\alpha \inf_{X\in V(\nu)} F_{\nu}(X)+\beta \inf_{Y\in V(\mu)} F_{\mu}(Y).
+% 	\end{align*}
+% 	证毕。
+% \end{proof}
+% 下面给出 LDP 原理的严格证明。
+% \begin{proposition}\label{theorem:LDP}
+% 	经验环流 $(J^c_n)_{c\in\mathcal{C}}$ 满足速率为 $n$ 的大偏差原理，并且相应的速率函数为 $I_J:\mathcal{V}\to [0,\infty]$。此外，它的上界可以提升为：对任意集合 $\Gamma \subset \mathcal{V}$，有：
+% 	\begin{align}\label{upper bound}
+% 		\varlimsup_{n\to+\infty}\;
+% 		\frac 1n \log \mathbb  P \left( (J^c_n)_{c\in \mathcal{C}} \in \Gamma \right)
+% 		\le -\inf_{\nu\in \Gamma} I_J(\nu).
 % 	\end{align}
-% 	注意到 \eqref{E Gin} 是关于 $k^+$ 和 $k^-$ 对称的，故(1)证毕。
-	
-% 	(ii) 上面只证明了 \eqref{E Gi1cdotsNn} 中的第一个等式，第二个等式的证明与其相似。但是这里考虑的是轨迹 $\xi\in G^{i,+}_n(k)$，最后的环是 $(1,\cdots,N)$，只需在状态 $i$ 处插入 $k^+-1$ 个环 $(1,\cdots,N)$ 和 $k^-$ 个环 $(1,N,\cdots,2)$，可以得到：
-% 	\begin{align*}
-% 		&\left|G^{i,+}\left(k\right)\right|=\binom{k^++k^--1}{k^+-1}\sum_{\sum_{s=1}^{k^++k^-}\tilde{k}_s=\tilde{k}}\prod_{s=1}^{k^++k^-}B^i\left(\tilde{k}_s\right)\\
-% 		&\qquad\qquad=\binom{k^++k^--1}{k^+-1}\sum_{\sum_{s=1}^{k^++k^-}\tilde{k}_s=\tilde{k}}\prod_{s=1}^{k^++k^-}B^j\left(\tilde{k}_s\right)=\left|G^{j,+}\left(k\right)\right|,
-% 	\end{align*}
-% 	其中第二步出自引理 ~\ref{lemma:BiBjCiCj}。
-
-% 	(iii) 记 $\eta=[i_0,i_1,\cdots,i_t]$，首先把所有的环分为 $t+1$ 个部分，固定一部分为 $\sum_{s=0}^t k_s=k$，那么 $k^c_s$ 个环 $c$ ($\forall c\in\mathcal{C}$) 将被插入在 $\eta$ 的状态 $i_s$ ($0\le s\le t$)。那么可插入方式的数量为 $\prod_{s=0}^t |G^{i_s}(k_s)|$。增加所有分区的数量 $\sum_{s=0}^t k_s=k$，可以得到
-% 	\begin{equation*}
-% 		\left|G^{\eta}(k)\right|=\sum_{\sum_{s=0}^t k_s=k}\prod_{s=0}^t \left|G^{i_s}(k_s)\right|.
-% 	\end{equation*}
-% 	注意到对任意分区 $\sum_{s=0}^t k_s=k$，可知 $\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})$ 是 $(k^-,k^+,\tilde{k})$ 的一个分区。那么由方程 \eqref{EGin}，可得：
-% 	\begin{align*}
-% 		\left|G^{\eta}(k^-,k^+,\tilde{k})\right|=&\sum_{\sum_{s=0}^t (k_s^-,k_s^+,\tilde{k}_s)=(k^-,k^+,\tilde{k})}\prod_{s=0}^t \left|G^{i_s}(k_s^-,k_s^+,\tilde{k}_s)\right|\\
-% 		=&\sum_{\sum_{s=0}^t k_s=k}\prod_{s=0}^t \left|G^{i_s}(k_s)\right|=\left|G^{\eta}(k)\right|.
-% 	\end{align*}
-% \end{proof}
-% 下面将陈述 $| (G^i(k)|$ 和 $|G^{i,c}(k)|$ 的相关性。
-% \begin{lemma}\label{lemma:E G1cnk}
-% 	对任意 $k\in \mathbb{N}^{2N+2}$ 和 $i\in S$，令 $c\in \mathcal{C}$ 包含状态 $i$ 的环，那么：
-% 	\begin{align*}
-% 		\left|G^{i,c}(k)\right| = \frac{k^c}{k_i}\left|G^i(k)\right|.
-% 	\end{align*}
-% \end{lemma}
-% \begin{proof}
-% 	下面只证明 $i=1$ 时的情况，并不降低一般性。 回顾章节~\ref{LELDP} 中计算 $|G^1(k)|$ 的三个步骤。
-% 	在第一个步骤中固定最后一个环 $c$，并且把排列数转换为
-% 	\begin{equation*}
-% 		\frac{k^c}{k^{1}+k^{12}+k^{1N}+k^{+}+k^{-}}A_1.
-% 	\end{equation*}
-% 	第二，三个步骤不变。在这种情况下，轨迹形成的最后一个环是 $c$，这意味着：
-% 	\begin{align*}
-% 		\left|G^{1,c}(k)\right| = \frac{k^c}{k_1}\left|G^1(k)\right|.
-% 	\end{align*}
-% \end{proof}
-% \begin{proposition}\label{corollary:rate function is unrelated to the starting state}
-% 	$I_J$ 不依赖于初始分布的选择 $\xi$.
 % \end{proposition}
 % \begin{proof}
-% 	记 $c=(1,\cdots,N)$ 或 $(1,N,\cdots,2)$，通过命题 ~\ref{proposition:E Gin} 和引理 ~\ref{lemma:E G1cnk}，易知 $\log|G^1(k)|=\log|G^i(k)|+O(\log n)$，那么由式 \eqref{ratefunction}，命题得证。
+% 记
+% \begin{align}\label{set:K_n}
+% K_n := \left\{(k^c)_{c\in \mathcal{C}}\in \mathbb{N}^{2N+2}: \sum_{c \in \mathcal{C}} k^{c} |c| =n \right\}.
+% \end{align}
+% 接下来的证明将假设马氏链从状态 1 出发，这并不会降低命题的一般性。那么，对任意 $k=(k^c)_{c\in\mathcal{C}}\in K_n$，由 \eqref{joint} 式，可得：
+% \begin{align}\label{Jnxi}
+% \mathbb{P}_1\left(J^c_{n}= \frac{k^c}{n},\ \forall c\in \mathcal{C}\right)
+% = |G_n(k)| \prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c},
+% \end{align}
+% 令 $\mu_n(k) = k/n\in\mathcal{V}$。对任意 $\Gamma\subset \mathcal{V}$，令
+% \begin{align*}
+% Q_n(\Gamma) = \max_{k\in K_n: \mu_n(k) \in \Gamma}
+% \mathbb{P}_1\left(J^c_{n} = \frac{k^c}{n},\ \forall c\in\mathcal{C}\right).
+% \end{align*}
+% 显然有：
+% \begin{align}\label{Qn gamma}
+% 	Q_n(\Gamma)
+% 	\le \mathbb{P}_1\left(J_{n} \in \Gamma\right)
+% 	\le |K_n| Q_n(\Gamma).
+% \end{align}
+% 易知 $|K_n| \le (2N+2)(n+1)^{2N+3}$，那么有公式 \eqref{Jnxi}，\eqref{Qn gamma}，\eqref{log A1}，\eqref{log A3}，和\eqref{log A2}
+% \begin{equation}\label{1 n log P}
+% 	\begin{split}
+% 	\frac{1}{n}\log\mathbb{P}_1\left(J_{n} \in \Gamma\right)=&O\left(\frac{\log n}{n}\right)+\frac{1}{n}\log Q_n(\Gamma)\\
+% 	=&O\left(\frac{\log n}{n}\right)+\max_{k\in K_n: \mu_n(k) \in \Gamma}\left[\frac{1}{n}\log |G_{n}(k)|+\sum_{c \in \mathcal{C}}\frac{k_c}{n}\log \gamma^c\right]\\
+% 	=&O\left(\frac{\log n}{n}\right)-\min_{k\in K_n: \mu_n(k) \in \Gamma}I_J\left(\mu_{n}(k)\right).
+% 	\end{split}
+% \end{equation}
+% 由于 $\cup_{n\in\mathbb{N}} \{\mu_{n}(k):k\in K_n\}$ 在 $\mathcal{V}$ 中稠密，且 $\nu\to I_J(\nu)$ 在 $\mathcal{V}$ 中连续（见命题 \ref{proposition:I}），这保证了对每个 $\nu\in \mathcal{V}$，存在序列 $(k_n)_{n\in \mathbb{N}}$，使得：
+% \begin{equation*}
+% \lim_{n\to\infty} \|\mu_{n}(k_n)-\nu\| = 0, \qquad \lim_{n\to\infty} I_J\left(\mu_{n}(k_n)\right) = I_J(\nu).
+% \end{equation*}
+% 那么对任意开集 $U\subset \mathcal{V}$
+% \begin{equation*}
+% \varlimsup_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in U}I_J\left(\mu_{n}(k)\right)\le I_J(\nu),\quad\forall\nu\in U.
+% \end{equation*}
+% 对 $\nu\in U$ 取极小，可得：
+% \begin{equation}\label{varlimsup}
+% \varlimsup_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in U}I_J\left(\mu_{n}(k)\right)\le \inf_{\nu\in U}I_J(\nu).
+% \end{equation}
+% 结合 \eqref{1 n log P} 和 \eqref{varlimsup}，可得大偏差原理的下界 \eqref{def1}。此外，对任意$\Gamma \subset \mathcal{V}$，同理可得反向的不等式，即
+% \begin{equation}\label{varliminf}
+% \varliminf_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in \Gamma}I_J\left(\mu_{n}(k)\right)\ge \inf_{\nu\in \Gamma}I_J(\nu).
+% \end{equation}
+% 结合 \eqref{1 n log P} 和 \eqref{varliminf}，可得大偏差原理的上界 \eqref{def2}。
 % \end{proof}
 
 
-\section{Proof of Theorem~\ref{thm:LDP}}\label{appendix:LDP}
-这里把大偏差原理的证明 ~\ref{thm:LDP} 分为两部分。首先研究经验环流的速率函数的性质。回顾速率函数 $I_J:\mathcal{V}\to[0,\infty]$ 的形式为：
-\begin{equation*}\label{ratefunction1}
-	\begin{split}
-		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
-		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
-		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
-		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c\\
-		:=&\;I_1(\nu)+I_2(\nu)+I_3(\nu)+I_4(\nu).
-	\end{split}
-\end{equation*}
-\begin{proposition}\label{proposition:I}
-	速率函数 $I_J$ 是有界，连续的凸函数。
-\end{proposition}
-\begin{proof}
-	易知 $I_j$ 有界。首先证明 $I_J$ 连续。易知 $h$ 是定义在 $[0,\infty)$ 的连续函数。那么 $I_1$ 和 $I_3$ 是连续的。注意到  $I_4$ 是关于 $\nu$ 的连续函数，因此还需证明 $I_2$ 是连续函数。令 $Y(\nu)\in V(\nu)$ 是方程 \eqref{equations} 的解，由于 \eqref{equations} 是一个多项式方程组，因此易知 $Y(\nu)$ 是关于变量 $\nu$ 的连续函数。因为 $h$ 是连续的，再根据 \eqref{formula:F}，$\inf_{X\in V(\nu)}F_{\nu}(X)=F_{\nu}(Y(\nu))$ 是关于 $\nu$ 的连续函数。
-	
-	然后证明 $I_J$ 是凸函数。 回顾 log-sum 不等式，对任意 $a_{1},a_{2},b_{1},b_{2}\ge 0$，有：
-	\begin{equation}\label{log sum inequality}
-		(a_1+a_2)\log \frac{a_1+a_2}{b_1+b_2}\le a_{1}\log \frac{a_{1}}{b_{1}}+a_{2}\log \frac{a_{2}}{b_{2}} ,
-	\end{equation}
-	注意到
-	\begin{equation}\label{I_1}
-		I_1(\nu) = \nu^{12}\log\left(\frac{\nu^{12}}{\hat{\nu}}\right)+\nu^{1N}\log\left(\frac{\nu^{1N}}{\hat{\nu}}\right)+\nu^{+}\log\left(\frac{\nu^{+}}{\hat{\nu}}\right)+\nu^{-}\log\left(\frac{\nu^{-}}{\hat{\nu}}\right),
-	\end{equation}
-	其中 $\hat{\nu}=\nu^{12}+\nu^{1N}+\nu^++\nu^-$。对任意满足 $\alpha+\beta=1$ 的 $\alpha,\beta\ge 0$ 和 $\nu,\mu\in \mathcal{V}$，通过log-sum 不等式 \eqref{log sum inequality}，可以得到：
-	\begin{equation*}
-		(\alpha \nu^{12}+\beta \mu^{12})\log\left(\frac{\alpha \nu^{12}+\beta \mu^{12}}{\alpha \hat{\nu}+\beta \hat{\mu}}\right)\le \alpha\nu^{12}\log\left(\frac{\nu^{12}}{\hat{\nu}}\right)+\beta\mu^{12}\log\left(\frac{\mu^{12}}{\hat{\mu}}\right),
-	\end{equation*}
-	其中 $\hat{\mu}=\mu^{12}+\mu^{1N}+\mu^++\mu^-$。这说明 \eqref{I_1} 式的第一项的右边是关于 $\nu$ 的连续函数，同理，其他三项项的右边也是关于 $\nu$ 的连续函数。因此 $I_1(\nu)$ 是凸函数，同理，可以通过log-sum 不等式得到 $I_3(\nu)$也是凸函数。由于 $I_4(\nu)$ 是线性函数，故也是凸函数，最后只需证明 $\inf_{X\in V(\nu)}F_{\nu}(X)$ 是凸函数。 吧\eqref{formula:F} 重写为：
-	\begin{align*}
-		F_{\nu}(X)=&\;\sum_{i=2}^{N-1}\left[(x^{i-1}+\nu^+)\log\left(\frac{x^{i-1}+\nu^+}{x^{i-1}+x^i+\nu^+}\right)+x^i\log\left(\frac{x^{i}}{x^{i-1}+x^i+\nu^+}\right)\right]\\
-		&\;+\sum_{i=2}^{N-1}\left[y^i\log\left(\frac{y^{i}}{y^{i}+y^{i+1}+\nu^-}\right)+(y^{i+1}+\nu^-)\log\left(\frac{y^{i+1}+\nu^-}{y^{i}+y^{i+1}+\nu^-}\right)\right]\\
-		:=&\;\sum_{i=2}^{N-1}[A_1^i(\nu,X)+A_2^i(\nu,X)+A_3^i(\nu,X)+A_4^i(\nu,X)].
-	\end{align*}
-	注意到对任意 $X=(x^i,y^i)\in V(\nu)$ 和 $Z=(z^i,w^i)\in V(\mu)$，有 $\alpha X+\beta Z\in V(\alpha\nu+\beta\mu)$。那么通过 log-sum 不等式，可得：
-	\begin{align*}
-		&\;A_1^i(\alpha\nu+\beta \mu,\alpha X+\beta Y)\\
-		=&\;(\alpha x^{i-1}+\beta z^{i-1}+\alpha\nu^++\beta \mu^+ )\log\left(\frac{\alpha x^{i-1}+\beta z^{i-1}+\alpha\nu^++\beta \mu^+}{\alpha x^{i-1}+\alpha x^i+\beta z^{i-1}+\beta z^i+\alpha\nu^++\beta \mu^+}\right)\\
-		=&\;(\alpha (x^{i-1}+\nu^+)+\beta (z^{i-1}+ \mu^+) )\log\left(\frac{\alpha (x^{i-1}+\nu^+)+\beta (z^{i-1}+ \mu^+)}{\alpha (x^{i-1}+ x^i+\nu^+)+\beta (z^{i-1}+ z^i+ \mu^+)}\right)\\
-		\le &\; \alpha (x^{i-1}+\nu^+)\log\left(\frac{x^{i-1}+\nu^+}{x^{i-1}+ x^i+\nu^+}\right)+\beta (z^{i-1}+ \mu^+)\log\left(\frac{z^{i-1}+ \mu^+}{z^{i-1}+ z^i+ \mu^+}\right)\\
-		=&\;\alpha A^i_1(\nu,X)+\beta A^i_1(\mu,Y).
-	\end{align*}
-	同理, 对任意 $j=2,3,4$ 有 $A^i_j(\alpha \nu+\beta \mu,\alpha X+\beta Y)\le \alpha A^i_j(\nu,X)+\beta A^i_j (\mu,Y)$。这说明
-	\begin{equation*}
-		F_{\alpha \nu+\beta \mu}(\alpha X+\beta Y)\le \alpha F_{\nu}(X)+\beta F_{\mu}(Y).
-	\end{equation*}
-	针对 $X$ 和 $Y$ 取极小，可以得到：
-	\begin{align*}
-		\inf_{Z\in V(\alpha\nu+\beta\mu)}F_{\alpha\nu+\beta\mu}( Z)\le\alpha \inf_{X\in V(\nu)} F_{\nu}(X)+\beta \inf_{Y\in V(\mu)} F_{\mu}(Y).
-	\end{align*}
-	证毕。
-\end{proof}
-下面给出 LDP 原理的严格证明。
-\begin{proposition}\label{theorem:LDP}
-	经验环流 $(J^c_n)_{c\in\mathcal{C}}$ 满足速率为 $n$ 的大偏差原理，并且相应的速率函数为 $I_J:\mathcal{V}\to [0,\infty]$。此外，它的上界可以提升为：对任意集合 $\Gamma \subset \mathcal{V}$，有：
-	\begin{align}\label{upper bound}
-		\varlimsup_{n\to+\infty}\;
-		\frac 1n \log \mathbb  P \left( (J^c_n)_{c\in \mathcal{C}} \in \Gamma \right)
-		\le -\inf_{\nu\in \Gamma} I_J(\nu).
-	\end{align}
-\end{proposition}
-\begin{proof}
-记
-\begin{align}\label{set:K_n}
-K_n := \left\{(k^c)_{c\in \mathcal{C}}\in \mathbb{N}^{2N+2}: \sum_{c \in \mathcal{C}} k^{c} |c| =n \right\}.
-\end{align}
-接下来的证明将假设马氏链从状态 1 出发，这并不会降低命题的一般性。那么，对任意 $k=(k^c)_{c\in\mathcal{C}}\in K_n$，由 \eqref{joint} 式，可得：
-\begin{align}\label{Jnxi}
-\mathbb{P}_1\left(J^c_{n}= \frac{k^c}{n},\ \forall c\in \mathcal{C}\right)
-= |G_n(k)| \prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c},
-\end{align}
-令 $\mu_n(k) = k/n\in\mathcal{V}$。对任意 $\Gamma\subset \mathcal{V}$，令
-\begin{align*}
-Q_n(\Gamma) = \max_{k\in K_n: \mu_n(k) \in \Gamma}
-\mathbb{P}_1\left(J^c_{n} = \frac{k^c}{n},\ \forall c\in\mathcal{C}\right).
-\end{align*}
-显然有：
-\begin{align}\label{Qn gamma}
-	Q_n(\Gamma)
-	\le \mathbb{P}_1\left(J_{n} \in \Gamma\right)
-	\le |K_n| Q_n(\Gamma).
-\end{align}
-易知 $|K_n| \le (2N+2)(n+1)^{2N+3}$，那么有公式 \eqref{Jnxi}，\eqref{Qn gamma}，\eqref{log A1}，\eqref{log A3}，和\eqref{log A2}
-\begin{equation}\label{1 n log P}
-	\begin{split}
-	\frac{1}{n}\log\mathbb{P}_1\left(J_{n} \in \Gamma\right)=&O\left(\frac{\log n}{n}\right)+\frac{1}{n}\log Q_n(\Gamma)\\
-	=&O\left(\frac{\log n}{n}\right)+\max_{k\in K_n: \mu_n(k) \in \Gamma}\left[\frac{1}{n}\log |G_{n}(k)|+\sum_{c \in \mathcal{C}}\frac{k_c}{n}\log \gamma^c\right]\\
-	=&O\left(\frac{\log n}{n}\right)-\min_{k\in K_n: \mu_n(k) \in \Gamma}I_J\left(\mu_{n}(k)\right).
-	\end{split}
-\end{equation}
-由于 $\cup_{n\in\mathbb{N}} \{\mu_{n}(k):k\in K_n\}$ 在 $\mathcal{V}$ 中稠密，且 $\nu\to I_J(\nu)$ 在 $\mathcal{V}$ 中连续（见命题 \ref{proposition:I}），这保证了对每个 $\nu\in \mathcal{V}$，存在序列 $(k_n)_{n\in \mathbb{N}}$，使得：
-\begin{equation*}
-\lim_{n\to\infty} \|\mu_{n}(k_n)-\nu\| = 0, \qquad \lim_{n\to\infty} I_J\left(\mu_{n}(k_n)\right) = I_J(\nu).
-\end{equation*}
-那么对任意开集 $U\subset \mathcal{V}$
-\begin{equation*}
-\varlimsup_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in U}I_J\left(\mu_{n}(k)\right)\le I_J(\nu),\quad\forall\nu\in U.
-\end{equation*}
-对 $\nu\in U$ 取极小，可得：
-\begin{equation}\label{varlimsup}
-\varlimsup_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in U}I_J\left(\mu_{n}(k)\right)\le \inf_{\nu\in U}I_J(\nu).
-\end{equation}
-结合 \eqref{1 n log P} 和 \eqref{varlimsup}，可得大偏差原理的下界 \eqref{def1}。此外，对任意$\Gamma \subset \mathcal{V}$，同理可得反向的不等式，即
-\begin{equation}\label{varliminf}
-\varliminf_{n\to\infty}\min_{k\in K_n: \mu_n(k) \in \Gamma}I_J\left(\mu_{n}(k)\right)\ge \inf_{\nu\in \Gamma}I_J(\nu).
-\end{equation}
-结合 \eqref{1 n log P} 和 \eqref{varliminf}，可得大偏差原理的上界 \eqref{def2}。
-\end{proof}
+% \section{简化速率函数 $I_J$}\label{appendix:threestate}
+% 这里将对两种特殊情况，给出速率函数 $I_J$ 的简化形式，1）三状态马氏链。2）状态 1 到状态 N 的转移概率为 0 的单环马氏系统。回顾速率函数 $I_J:\mathcal{V}\to[0,\infty]$ 的公式为：
+% \begin{equation*}\label{ratefunction1}
+% 	\begin{split}
+% 		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
+% 		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
+% 		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
+% 		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c\\
+% 		:=&\;I_1(\nu)+I_2(\nu)+I_3(\nu)+I_4(\nu).
+% 	\end{split}
+% \end{equation*}
+% \begin{proposition}
+% 三状态马氏链的速率函数为
+% \begin{align*}
+% I_J(\nu) =
+% \sum_{i\in S} \left[\nu^{i}\log \left(\frac{\nu^{i}/\nu_i}{J^i/J_i}\right) + (\nu_i - \nu^i)\log \left(\frac{(\nu_i - \nu^i)/\nu_i}{(J_i - J^i)/J_i} \right)
+% \right]
+% + \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \left(\frac{\nu^{c}/\tilde{\nu}}{J^c/\tilde{J}}\right).
+% \end{align*}
+% \end{proposition}
+% \begin{proof}
+% 	易知 $X=(x^2,y^2)$ 为方程 \eqref{equations} 的解，其中
+% \begin{equation*}
+% 	x^{2}=\frac{\nu^{23}\left(\nu^{12}+\nu^+\right)}{\nu^{12}+\nu^{13}+\nu^++\nu^-},\quad y^{2}=\frac{\nu^{23}\left(\nu^{13}+\nu^-\right)}{\nu^{12}+\nu^{13}+\nu^++\nu^-}.
+% \end{equation*}
+% 根据引理 ~\ref{lemma:mininum}
+% \begin{equation*}\label{Fnu2}
+% I_2(\nu)=F_{\nu}(X)=\nu^{23}\log\frac{\nu^{23}}{\tilde{\nu}}+\left(\nu^{12}+\nu^{13}+\nu^++\nu^-\right)\log\frac{\tilde{\nu}-\nu^{23}}{\tilde{\nu}}.
+% \end{equation*}
+% 那么通过计算，可以得到：
+% \begin{equation}\label{I1I2I3}
+% 	I_1(\nu)+I_2(\nu)+I_3(\nu) = \sum_{i\in S} \left[\nu^{i}\log \frac{\nu^{i}}{\nu_i} + (\nu_i - \nu^i)\log \frac{\nu_i - \nu^i}{\nu_i} 
+% 	\right]
+% 	+ \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \frac{\nu^{c}}{\tilde{\nu}}.
+% \end{equation}
+% 回顾环流的表达 \cite[Theorem.1.3.3]{jiang2004mathematical}，有
+% \begin{equation}\label{J+J-Jii+1}
+% J^+=\gamma^+\frac{1}{C},\quad J^-=\gamma^-\frac{1}{C},\quad J^{i,i+1}=\gamma^{i,i+1}\frac{1-p_{i-1,i-1}}{C}, \quad 1\le i\le 3,
+% \end{equation}
+% 其中ere $C=3+\sum_{i\in S}[p_{ii}p_{i+1,i+1}-p_{i,i+1}p_{i+1,i}-2(p_{ii}+p_{i+1,i+1})]$. 根据 \eqref{decomposition}，
+% \begin{equation}\label{pij}
+% 	p_{ij}=\frac{\sum_{c \ni \langle i,j\rangle}J^c}{\sum_{c\ni i}J^c}.
+% \end{equation}
+% 结合 \eqref{J+J-Jii+1} 和 \eqref{pij}，有：
+% \begin{equation}\label{nucgamma2}
+% 	\begin{split}
+% 		&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\left(\nu_i-\nu^i\right)\log\frac{J_i-J^i}{J_i}\right]+ \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \left(\frac{J^c}{\tilde{J}}\right)\\
+% 		=&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\left(\left(1-\frac{J^i}{J_i}\right)\left(1-\frac{J^{i+1}}{J_{i+1}}\right)\frac{J^{i,i+1}}{\tilde{J}}\right)\right]\\
+% 		&\;+\nu^+\log\left(\frac{J^+}{\tilde{J}}\prod_{i\in\mathcal{C}}\left(1-\frac{J^i}{J_i}\right)\right)+\nu^-\log\left(\frac{J^-}{\tilde{J}}\prod_{i\in\mathcal{C}}\left(1-\frac{J^i}{J_i}\right)\right)\\
+% 		=&\;\sum_{c \in \mathcal{C}}\nu^c \log\gamma^c=-I_4(\nu).
+% 	\end{split}
+% \end{equation}
+% 结合 \eqref{I1I2I3} 和 \eqref{nucgamma2}，得证。
+% \end{proof}
+% \begin{proposition}
+% 	状态 1 到状态 N 的转移概率为 0 的单环马氏链的速率函数为：
+% 	\begin{equation*}
+% 		\begin{split}
+% 			I_J(\nu) = \sum_{i\in S}\left[\nu^i\log\left(\frac{\nu^i/\nu_i}{J^i/J_i}\right)
+% 			+\nu^{i,i+1}\log\left(\frac{\nu^{i,i+1}/\nu_i}{J^{i,i+1}/J_i}\right)+\left(\nu^{i-1,i}+\nu^+\right)\log\left(\frac{\left(\nu^{i-1,i}+\nu^+\right)/\nu_i}
+% 			{\left(J^{i-1,i}+J^+\right)/J_i}\right)\right].
+% 		\end{split}
+% 	\end{equation*}
+% \end{proposition}
+% \begin{proof}
+% 	在 $p_{1N}=0$ 的条件下，环 $(1,N)$ 和环 $(1,N,\cdots,2)$ 不会被形成。因此，可以得到\eqref{equation} 中的 $\nu^{1N}=\nu^{-}=0$ ，并且 $x^{i}=\nu^{i,i+1}$, $y^{i}=0$ 是方程 \eqref{equation}的解，那么
+% 	\begin{equation*}
+% 		I_2(\nu)=F_{\nu}(x^i,y^i)=\sum_{i=2}^{N-1}\left[-\lambda_{i}\nu^{i,i+1}+\nu^+\log\frac{\nu^{i-1,i}+\nu^+}{\nu^{i-1,i}+\nu^{i,i+1}+\nu^+}\right]+\nu^{12}\log\frac{\nu^{12}+\nu^+}{\nu^{12}+\nu^{23}+\nu^+},
+% 	\end{equation*}
+% 	其中 
+% 	\begin{equation*}
+% 		\lambda_i=-\log\left(\frac{\nu^{i,i+1}}{\nu^{i-1,i}+\nu^{i,i+1}+\nu^+}\,\frac{\nu^{i,i+1}+\nu^+}{\nu^{i,i+1}+\nu^{i+1,i+2}+\nu^+}\right).
+% 	\end{equation*}
+% 	通过 $\nu_i$ 的定义，有
+% 	\begin{equation*}
+% 		\nu_1=\nu^{1}+\nu^{12}+\nu^+,\quad \nu_i=\nu^i+\nu^{i-1,i}+\nu^{i,i+1}+\nu^+,\ 2\le i\le N-1,\quad \nu_N=\nu^N+\nu^{N-1,N}+\nu^+.
+% 	\end{equation*} 
+% 然后通过计算，可以得到：	
+% \begin{equation}\label{I1lack}
+% 	I_1(\nu)=\nu^{12}\log\frac{\nu^{12}}{\nu_1-\nu^{12}}+\nu^+\log\frac{\nu^+}{\nu_1-\nu^1},
+% \end{equation}
+% 	\begin{align}\label{I2lack}
+% 	I_2(\nu)
+% 	=\sum_{i=2}^{N}\left[\nu^{i,i+1}\log\frac{\nu^{i,i+1}}{\nu_i-\nu^i}+\nu^+\log\frac{\nu^{i-1,i}+\nu^+}{\nu_i-\nu^i}\right]+\sum_{i=1}^{N}\nu^{i,i+1}\log\frac{\nu^{i,i+1}+\nu^+}{\nu_{i+1}-\nu^{i+1}},
+%    \end{align}
+% 和
+% 	\begin{equation}\label{I3lack}
+% 		\begin{split}
+% 			I_3(\nu)=\sum_{i\in S}\left[\nu^i\log\frac{\nu^i}{\nu_i}+\nu^+\log\frac{\nu_i-\nu^i}{\nu_i}\right]+\sum_{i\in S}\nu^{i,i+1}\left(\log\frac{\nu_i-\nu^i}{\nu_i}
+% 			+\log\frac{\nu_{i+1}-\nu^{i+1}}{\nu_{i+1}}\right).
+% 		\end{split}
+% 	\end{equation}
+%     根据 \eqref{pij}，可得
+% 	\begin{equation}\label{nucgammac}
+% 		\begin{split}
+% 			&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\frac{J^{i,i+1}}{J_i}+(\nu^{i-1,i}+\nu^+)\log\frac{J^{i-1,i}+J^+}{J_i}\right]\\
+% 			=&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\frac{J^{i,i+1}(J^{i,i+1}+J^+)}{J_{i+1}J_i}\right]+\nu^+\log\frac{\prod_{i=1}^N\left(J^{i,i+1}+J^+\right)}{\prod_{i=1}^N J_i}\\
+% 			=&\;\sum_{c \in \mathcal{C}}\nu^c \log\gamma^c=-I_4(\nu).
+% 		\end{split}
+% 	\end{equation}
+% 	结合 \eqref{I1lack}，\eqref{I2lack}，\eqref{I3lack}，和 \eqref{nucgammac}，证毕。
+% \end{proof}
 
-
-\section{简化速率函数 $I_J$}\label{appendix:threestate}
-这里将对两种特殊情况，给出速率函数 $I_J$ 的简化形式，1）三状态马氏链。2）状态 1 到状态 N 的转移概率为 0 的单环马氏系统。回顾速率函数 $I_J:\mathcal{V}\to[0,\infty]$ 的公式为：
-\begin{equation*}\label{ratefunction1}
-	\begin{split}
-		I_J(\nu) =&\; \left[h\left(\nu^{12}\right)+h\left(\nu^{1N}\right)
-		+h\left(\nu^+\right)+h\left(\nu^-\right)-h\left(\nu^{12}+\nu^{1N}+\nu^++\nu^-\right)\right] \\
-		&\;+\inf_{X\in V(\nu)}F_{\nu}(X)+\sum_{i\in S}\left[ h\left(\nu_i-\nu^i\right)+h\left(\nu^i\right)
-		-h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c\\
-		:=&\;I_1(\nu)+I_2(\nu)+I_3(\nu)+I_4(\nu).
-	\end{split}
-\end{equation*}
-\begin{proposition}
-三状态马氏链的速率函数为
-\begin{align*}
-I_J(\nu) =
-\sum_{i\in S} \left[\nu^{i}\log \left(\frac{\nu^{i}/\nu_i}{J^i/J_i}\right) + (\nu_i - \nu^i)\log \left(\frac{(\nu_i - \nu^i)/\nu_i}{(J_i - J^i)/J_i} \right)
-\right]
-+ \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \left(\frac{\nu^{c}/\tilde{\nu}}{J^c/\tilde{J}}\right).
-\end{align*}
-\end{proposition}
-\begin{proof}
-	易知 $X=(x^2,y^2)$ 为方程 \eqref{equations} 的解，其中
-\begin{equation*}
-	x^{2}=\frac{\nu^{23}\left(\nu^{12}+\nu^+\right)}{\nu^{12}+\nu^{13}+\nu^++\nu^-},\quad y^{2}=\frac{\nu^{23}\left(\nu^{13}+\nu^-\right)}{\nu^{12}+\nu^{13}+\nu^++\nu^-}.
-\end{equation*}
-根据引理 ~\ref{lemma:mininum}
-\begin{equation*}\label{Fnu2}
-I_2(\nu)=F_{\nu}(X)=\nu^{23}\log\frac{\nu^{23}}{\tilde{\nu}}+\left(\nu^{12}+\nu^{13}+\nu^++\nu^-\right)\log\frac{\tilde{\nu}-\nu^{23}}{\tilde{\nu}}.
-\end{equation*}
-那么通过计算，可以得到：
-\begin{equation}\label{I1I2I3}
-	I_1(\nu)+I_2(\nu)+I_3(\nu) = \sum_{i\in S} \left[\nu^{i}\log \frac{\nu^{i}}{\nu_i} + (\nu_i - \nu^i)\log \frac{\nu_i - \nu^i}{\nu_i} 
-	\right]
-	+ \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \frac{\nu^{c}}{\tilde{\nu}}.
-\end{equation}
-回顾环流的表达 \cite[Theorem.1.3.3]{jiang2004mathematical}，有
-\begin{equation}\label{J+J-Jii+1}
-J^+=\gamma^+\frac{1}{C},\quad J^-=\gamma^-\frac{1}{C},\quad J^{i,i+1}=\gamma^{i,i+1}\frac{1-p_{i-1,i-1}}{C}, \quad 1\le i\le 3,
-\end{equation}
-其中ere $C=3+\sum_{i\in S}[p_{ii}p_{i+1,i+1}-p_{i,i+1}p_{i+1,i}-2(p_{ii}+p_{i+1,i+1})]$. 根据 \eqref{decomposition}，
-\begin{equation}\label{pij}
-	p_{ij}=\frac{\sum_{c \ni \langle i,j\rangle}J^c}{\sum_{c\ni i}J^c}.
-\end{equation}
-结合 \eqref{J+J-Jii+1} 和 \eqref{pij}，有：
-\begin{equation}\label{nucgamma2}
-	\begin{split}
-		&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\left(\nu_i-\nu^i\right)\log\frac{J_i-J^i}{J_i}\right]+ \sum_{c \in \mathcal{C}, |c|\neq 1} \nu^{c} \log \left(\frac{J^c}{\tilde{J}}\right)\\
-		=&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\left(\left(1-\frac{J^i}{J_i}\right)\left(1-\frac{J^{i+1}}{J_{i+1}}\right)\frac{J^{i,i+1}}{\tilde{J}}\right)\right]\\
-		&\;+\nu^+\log\left(\frac{J^+}{\tilde{J}}\prod_{i\in\mathcal{C}}\left(1-\frac{J^i}{J_i}\right)\right)+\nu^-\log\left(\frac{J^-}{\tilde{J}}\prod_{i\in\mathcal{C}}\left(1-\frac{J^i}{J_i}\right)\right)\\
-		=&\;\sum_{c \in \mathcal{C}}\nu^c \log\gamma^c=-I_4(\nu).
-	\end{split}
-\end{equation}
-结合 \eqref{I1I2I3} 和 \eqref{nucgamma2}，得证。
-\end{proof}
-\begin{proposition}
-	状态 1 到状态 N 的转移概率为 0 的单环马氏链的速率函数为：
-	\begin{equation*}
-		\begin{split}
-			I_J(\nu) = \sum_{i\in S}\left[\nu^i\log\left(\frac{\nu^i/\nu_i}{J^i/J_i}\right)
-			+\nu^{i,i+1}\log\left(\frac{\nu^{i,i+1}/\nu_i}{J^{i,i+1}/J_i}\right)+\left(\nu^{i-1,i}+\nu^+\right)\log\left(\frac{\left(\nu^{i-1,i}+\nu^+\right)/\nu_i}
-			{\left(J^{i-1,i}+J^+\right)/J_i}\right)\right].
-		\end{split}
-	\end{equation*}
-\end{proposition}
-\begin{proof}
-	在 $p_{1N}=0$ 的条件下，环 $(1,N)$ 和环 $(1,N,\cdots,2)$ 不会被形成。因此，可以得到\eqref{equation} 中的 $\nu^{1N}=\nu^{-}=0$ ，并且 $x^{i}=\nu^{i,i+1}$, $y^{i}=0$ 是方程 \eqref{equation}的解，那么
-	\begin{equation*}
-		I_2(\nu)=F_{\nu}(x^i,y^i)=\sum_{i=2}^{N-1}\left[-\lambda_{i}\nu^{i,i+1}+\nu^+\log\frac{\nu^{i-1,i}+\nu^+}{\nu^{i-1,i}+\nu^{i,i+1}+\nu^+}\right]+\nu^{12}\log\frac{\nu^{12}+\nu^+}{\nu^{12}+\nu^{23}+\nu^+},
-	\end{equation*}
-	其中 
-	\begin{equation*}
-		\lambda_i=-\log\left(\frac{\nu^{i,i+1}}{\nu^{i-1,i}+\nu^{i,i+1}+\nu^+}\,\frac{\nu^{i,i+1}+\nu^+}{\nu^{i,i+1}+\nu^{i+1,i+2}+\nu^+}\right).
-	\end{equation*}
-	通过 $\nu_i$ 的定义，有
-	\begin{equation*}
-		\nu_1=\nu^{1}+\nu^{12}+\nu^+,\quad \nu_i=\nu^i+\nu^{i-1,i}+\nu^{i,i+1}+\nu^+,\ 2\le i\le N-1,\quad \nu_N=\nu^N+\nu^{N-1,N}+\nu^+.
-	\end{equation*} 
-然后通过计算，可以得到：	
-\begin{equation}\label{I1lack}
-	I_1(\nu)=\nu^{12}\log\frac{\nu^{12}}{\nu_1-\nu^{12}}+\nu^+\log\frac{\nu^+}{\nu_1-\nu^1},
-\end{equation}
-	\begin{align}\label{I2lack}
-	I_2(\nu)
-	=\sum_{i=2}^{N}\left[\nu^{i,i+1}\log\frac{\nu^{i,i+1}}{\nu_i-\nu^i}+\nu^+\log\frac{\nu^{i-1,i}+\nu^+}{\nu_i-\nu^i}\right]+\sum_{i=1}^{N}\nu^{i,i+1}\log\frac{\nu^{i,i+1}+\nu^+}{\nu_{i+1}-\nu^{i+1}},
-   \end{align}
-和
-	\begin{equation}\label{I3lack}
-		\begin{split}
-			I_3(\nu)=\sum_{i\in S}\left[\nu^i\log\frac{\nu^i}{\nu_i}+\nu^+\log\frac{\nu_i-\nu^i}{\nu_i}\right]+\sum_{i\in S}\nu^{i,i+1}\left(\log\frac{\nu_i-\nu^i}{\nu_i}
-			+\log\frac{\nu_{i+1}-\nu^{i+1}}{\nu_{i+1}}\right).
-		\end{split}
-	\end{equation}
-    根据 \eqref{pij}，可得
-	\begin{equation}\label{nucgammac}
-		\begin{split}
-			&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\frac{J^{i,i+1}}{J_i}+(\nu^{i-1,i}+\nu^+)\log\frac{J^{i-1,i}+J^+}{J_i}\right]\\
-			=&\;\sum_{i \in S}\left[\nu^i\log\frac{J^i}{J_i}+\nu^{i,i+1}\log\frac{J^{i,i+1}(J^{i,i+1}+J^+)}{J_{i+1}J_i}\right]+\nu^+\log\frac{\prod_{i=1}^N\left(J^{i,i+1}+J^+\right)}{\prod_{i=1}^N J_i}\\
-			=&\;\sum_{c \in \mathcal{C}}\nu^c \log\gamma^c=-I_4(\nu).
-		\end{split}
-	\end{equation}
-	结合 \eqref{I1lack}，\eqref{I2lack}，\eqref{I3lack}，和 \eqref{nucgammac}，证毕。
-\end{proof}
-
-\section{经验 LE 环流的暂态涨落定理的证明}
-在此，将给出无周期条件下，经验 LE 环流的暂态涨落定理的证明。
-记 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$。在时间步 $n$,轨迹中环 $c$ 形成 $k^c$ 次，因此有：
-\begin{equation*}
-	n=\sum_{c\in\mathcal{C}}k^c|c|+|\eta|,
-\end{equation*}
-其中 $\eta$ 表示剩下的导出链，且 $0\le |\eta|\le N-1$。假设系统从状态 1 出发，这并不降低命题的一般性。令 $[\eta]=t$，那么 $\eta=\eta_1$ 或者 $\eta_2$，其中 $\eta_1=[1,2,\cdots,t+1]$ 且 $\eta_2=[1,N,\cdots,N+1-t]$。同时, \eqref{joint} 可以被写为：
-\begin{equation}\label{joint2}
-	\begin{split}
-		\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C}\right)
-		=&\;\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_1\right)+\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_2\right)\\
-		=&\;\left|G^{\eta_1}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_1}+\left|G^{\eta_2}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_2},
-	\end{split}
-\end{equation}
-其中 $\gamma^{\eta_1}=p_{12}\cdots p_{t,t+1}$ 且 $\gamma^{\eta_2}=p_{1N}\cdots p_{N+2-t,N+1-t}$。那么有
-\begin{align*}
-	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)
-	&= (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
-	&\qquad\left[|G^{\eta_1}(k^+,k^-,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^+,k^-,\cdots)|\gamma^{\eta_2}\right].
-\end{align*}
-同理，如果交换上述方程中的 $k^+$ 和 $k^-$，可以得到：
-\begin{align*}
-	\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)
-	&= (\gamma^+)^{k^-}(\gamma^-)^{k^+}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
-	&\qquad\left[|G^{\eta_1}(k^-,k^+,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^-,k^+,\cdots)|\gamma^{\eta_2}\right].
-\end{align*}
-根据 \eqref{EGetan} 式，可以得到下列的暂态涨落定理成立：
-\begin{equation*}
-	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)=\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)\left(\frac{\gamma^+}{\gamma^-}\right)^{k^+-k^-}.
-\end{equation*}
+% \section{经验 LE 环流的暂态涨落定理的证明}
+% 在此，将给出无周期条件下，经验 LE 环流的暂态涨落定理的证明。
+% 记 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$。在时间步 $n$,轨迹中环 $c$ 形成 $k^c$ 次，因此有：
+% \begin{equation*}
+% 	n=\sum_{c\in\mathcal{C}}k^c|c|+|\eta|,
+% \end{equation*}
+% 其中 $\eta$ 表示剩下的导出链，且 $0\le |\eta|\le N-1$。假设系统从状态 1 出发，这并不降低命题的一般性。令 $[\eta]=t$，那么 $\eta=\eta_1$ 或者 $\eta_2$，其中 $\eta_1=[1,2,\cdots,t+1]$ 且 $\eta_2=[1,N,\cdots,N+1-t]$。同时, \eqref{joint} 可以被写为：
+% \begin{equation}\label{joint2}
+% 	\begin{split}
+% 		\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C}\right)
+% 		=&\;\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_1\right)+\mathbb{P}\left(N^c_n=k^c,\;\forall c\in\mathcal{C},\tilde{\xi}_n=\eta_2\right)\\
+% 		=&\;\left|G^{\eta_1}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_1}+\left|G^{\eta_2}(k)\right|\left[\prod_{c\in\mathcal{C}}\left(\gamma^c\right)^{k^c}\right]\gamma^{\eta_2},
+% 	\end{split}
+% \end{equation}
+% 其中 $\gamma^{\eta_1}=p_{12}\cdots p_{t,t+1}$ 且 $\gamma^{\eta_2}=p_{1N}\cdots p_{N+2-t,N+1-t}$。那么有
+% \begin{align*}
+% 	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)
+% 	&= (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
+% 	&\qquad\left[|G^{\eta_1}(k^+,k^-,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^+,k^-,\cdots)|\gamma^{\eta_2}\right].
+% \end{align*}
+% 同理，如果交换上述方程中的 $k^+$ 和 $k^-$，可以得到：
+% \begin{align*}
+% 	\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)
+% 	&= (\gamma^+)^{k^-}(\gamma^-)^{k^+}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}\\
+% 	&\qquad\left[|G^{\eta_1}(k^-,k^+,\cdots)|\gamma^{\eta_1}+|G^{\eta_2}(k^-,k^+,\cdots)|\gamma^{\eta_2}\right].
+% \end{align*}
+% 根据 \eqref{EGetan} 式，可以得到下列的暂态涨落定理成立：
+% \begin{equation*}
+% 	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)=\mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)\left(\frac{\gamma^+}{\gamma^-}\right)^{k^+-k^-}.
+% \end{equation*}

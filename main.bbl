@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -216,5 +216,29 @@ Jia C, Li Y.
 \newblock Analytical time-dependent distributions for gene expression models
   with complex promoter switching mechanisms[J].
 \newblock bioRxiv, 2022.
+
+\bibitem[Mehl et al.(2012)]{mehl2012role}
+Mehl J, Lander B, Bechinger C, et al.
+\newblock Role of hidden slow degrees of freedom in the fluctuation theorem[J].
+\newblock Physical Review Letters, 2012, 108(22):220601.
+
+\bibitem[Polettini and Esposito(2017)]{polettini2017effective}
+Polettini M, Esposito M.
+\newblock Effective thermodynamics for a marginal observer[J].
+\newblock Physical review letters, 2017, 119(24):240601.
+
+\bibitem[Uhl et al.(2018)]{uhl2018fluctuations}
+Uhl M, Pietzonka P, Seifert U.
+\newblock Fluctuations of apparent entropy production in networks with hidden
+  slow degrees of freedom[J].
+\newblock Journal of Statistical Mechanics: Theory and Experiment, 2018,
+  2018(2):023203.
+
+\bibitem[Kahlen and Ehrich(2018)]{kahlen2018hidden}
+Kahlen M, Ehrich J.
+\newblock Hidden slow degrees of freedom and fluctuation theorems: an
+  analytically solvable model[J].
+\newblock Journal of statistical mechanics: theory and experiment, 2018,
+  2018(6):063204.
 
 \end{thebibliography}

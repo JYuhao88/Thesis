@@ -33,8 +33,6 @@ format.conference.title is an unknown function---line 5243 of file GBT7714-2005N
 format.cconference.title is an unknown function---line 5313 of file GBT7714-2005NLang.bst
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: reference.bib
-Warning--I didn't find a database entry for "den2008large"
-Warning--I didn't find a database entry for "brian1990optimization"
 You can't pop an empty literal stack for entry annurev-conmatphys
 while executing---line 7119 of file GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry Seifert_2012
@@ -105,45 +103,53 @@ You can't pop an empty literal stack for entry jia2022analytical
 while executing---line 7119 of file GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry jia2022analytical
 while executing---line 7119 of file GBT7714-2005NLang.bst
-You've used 33 entries,
+You can't pop an empty literal stack for entry mehl2012role
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry polettini2017effective
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry uhl2018fluctuations
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry kahlen2018hidden
+while executing---line 7119 of file GBT7714-2005NLang.bst
+You've used 37 entries,
             6727 wiz_defined-function locations,
-            1426 strings with 14499 characters,
-and the built_in function-call counts, 10962 in all, are:
-= -- 999
-> -- 269
-< -- 25
-+ -- 159
-- -- 62
-* -- 809
-:= -- 1569
-add.period$ -- 113
-call.type$ -- 33
-change.case$ -- 33
-chr.to.int$ -- 31
-cite$ -- 33
-duplicate$ -- 500
-empty$ -- 1353
-format.name$ -- 142
-if$ -- 2579
+            1447 strings with 15142 characters,
+and the built_in function-call counts, 12378 in all, are:
+= -- 1124
+> -- 317
+< -- 27
++ -- 185
+- -- 73
+* -- 922
+:= -- 1772
+add.period$ -- 125
+call.type$ -- 37
+change.case$ -- 37
+chr.to.int$ -- 35
+cite$ -- 37
+duplicate$ -- 564
+empty$ -- 1517
+format.name$ -- 165
+if$ -- 2907
 int.to.chr$ -- 3
-int.to.str$ -- 34
-missing$ -- 41
-newline$ -- 187
-num.names$ -- 66
-pop$ -- 235
+int.to.str$ -- 38
+missing$ -- 45
+newline$ -- 207
+num.names$ -- 74
+pop$ -- 265
 preamble$ -- 1
-purify$ -- 33
+purify$ -- 37
 quote$ -- 0
-skip$ -- 355
+skip$ -- 402
 stack$ -- 0
-substring$ -- 598
-swap$ -- 37
+substring$ -- 678
+swap$ -- 41
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
+type$ -- 132
 warning$ -- 0
-while$ -- 67
+while$ -- 75
 width$ -- 0
-write$ -- 480
-(There were 53 error messages)
+write$ -- 536
+(There were 57 error messages)
