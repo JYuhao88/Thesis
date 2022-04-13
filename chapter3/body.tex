@@ -25,7 +25,7 @@
 \BiSection{单环马氏链LE环流的大偏差}
 首先讨论经验LE环流的大偏差原理。一般的马氏链中，速率函数的解析表达式$I_J$很难求出，因此下面将关注单环马氏链。单环系统中所有可能形成的环都已在 (\ref{cycle_space})中列出。
 
-简化叙述推导过程，假设系统从状态$1$出发，这并不会降低命题的一般性。为了求出速率函数$I_J$，需要计算经验LE环流的联合分布。对任意环$c=(i_1, i_2, \cdots, i_s)$，令$\gamma^c = p_{i_1i_2}p_{i_2i_3}\cdots p_{i_si_1}$表示沿着环$c$产生的所有转移概率的乘积。对任意满足$\sum_{c \subset \mathcal{C}} |c| k^c=n$的负整数序列$k=(k^c)_{c\subset \mathcal{C}}$，因为假设周期边界条件，经验LE环流的联合分布为：
+为简化叙述推导过程，下面假设系统从状态$1$出发，这并不会降低命题的一般性。为了求出速率函数$I_J$，需要计算经验LE环流的联合分布。对任意环$c=(i_1, i_2, \cdots, i_s)$，令$\gamma^c = p_{i_1i_2}p_{i_2i_3}\cdots p_{i_si_1}$表示沿着环$c$产生的所有转移概率的乘积。对任意满足$\sum_{c \subset \mathcal{C}} |c| k^c=n$的负整数序列$k=(k^c)_{c\subset \mathcal{C}}$，因为假设周期边界条件，经验LE环流的联合分布为：
 \begin{equation}\label{joint}
     \begin{split}
     \mathbb{P}\left(J^c_n=\nu^c,\;\forall c\in\mathcal{C}\right)
@@ -198,7 +198,7 @@
     x^{i} + y^{i} &= \nu^{i,i+1},
     \end{split}
 \end{equation}
-这里$x^1=\nu^{12}$，$x^N=0$，$y^1=0$，并且$y^N=\nu^{1N}$。
+这里$x^1=\nu^{12}$，$x^N=0$，$y^1=0$，且$y^N=\nu^{1N}$。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \subsubsection{附录 A：单环马氏链速率函数 $I_J$ 的表达式 }{} \label{appendix:explicit}
