@@ -1,9 +1,9 @@
 % !Mode:: "TeX:UTF-8"
 
 \BiChapter{模型介绍}{}
-本文基于离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$，对随机热力学系统建模，该模型的状态空间是$S = \{1, \dots N\}$，转移概率矩阵是$P=(p_{ij})_{i,j \in S}$，其中$p_{ij}$表示从状态$i$到状态$j$的转移概率。记该马氏链对应的转移图为$G=(S, E)$，其中顶点集合$S$是状态空间，$E$是转移概率有向边的集合 \ref{figure:transitiongraph}。本文用$\langle i, j\rangle$表示状态$i$到状态$j$的有向边，因此有$E = \{\langle \langle i, j\rangle \in S \times S: p_{ij}>0\}$，并且令$|E| = M$，其中$|E|$表示集合$E$中元素的数量。本文所考虑的马氏链都是不可约的，也就是有向图$G$是连通的。因此对某个状态，图$G$不仅包含其他状态到其的边，还包括它到其自身的边，也就是自循环 \ref{figure:transitiongraph}。
+本文基于离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$，对随机热力学系统建模，该模型的状态空间是$S = \{1, \dots N\}$，转移概率矩阵是$P=(p_{ij})_{i,j \in S}$，从状态$i$到状态$j$的转移概率为$p_{ij}$。记该马氏链对应的转移图为$G=(S, E)$，其中顶点集合是状态空间$S$，有向边的集合是转移概率$E$ \ref{figure:transitiongraph}。本文用$\langle i, j\rangle$表示状态$i$到状态$j$的有向边，因此有$E = \{\langle \langle i, j\rangle \in S \times S: p_{ij}>0\}$，并且令$|E| = M$，其中$|E|$表示集合$E$中元素的数量。本文所考虑的马氏链都是不可约的，也就是有向图$G$是连通的。因此对某个状态，图$G$不仅包含其他状态到其的边，还包括它到其自身的边，也就是自循环 \ref{figure:transitiongraph}。
 
-转移图$G$中如果有一个如图 \ref{figure:transitiongraph}所示的图拓扑（除了自循环），将被视为一种特殊情形，在以往的研究中称该系统为单环马氏链。具体来说，如果马氏链$\xi$满足 $p_{ij}=0$且$|i-j| \ge 2$（其中的$i,j$是模$N$运算后的结果），则称为单环马氏链。单环系统在生物学方面具有特殊的意义。许多重要的生化过程，如酶和离子通道的构象变化\cite{cornish2013fundamentals,sakmann2013single}，磷酸化-磷酸化循环\cite{beard2008chemical}，甲基化-去甲基化循环\cite{jia2017nonequilibrium}，以及染色体重塑导致的启动子的激活\cite{pedraza2008effects,jia2022analytical}都可以被建模为单环马氏链。下文中，主要关注单环系统，大部分的结论也可以扩展到一般系统。
+图\ref{figure:transitiongraph}(c)所示的图拓扑是转移图$G$中的特殊情形，在以往的研究中称该系统为单环马氏链。具体来说，如果马氏链$\xi$满足 $p_{ij}=0$且$|i-j| \ge 2$（其中的$i,j$是模$N$运算后的结果），则称为单环马氏链。单环系统在生物学方面具有特殊的意义。许多重要的生化过程，如酶和离子通道的构象变化\cite{cornish2013fundamentals,sakmann2013single}，磷酸化-磷酸化循环\cite{beard2008chemical}，甲基化-去甲基化循环\cite{jia2017nonequilibrium}，以及染色体重塑导致的启动子的激活\cite{pedraza2008effects,jia2022analytical}都可以被建模为单环马氏链。下文中，主要关注单环系统，大部分的结论也可以扩展到一般系统。
 
 \begin{figure}[h]\label{figure:transitiongraph}
 \centering
