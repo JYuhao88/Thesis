@@ -3,8 +3,8 @@
 \contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 一\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 绪论}{1}{section*.12}%
 \contentsline {section}{\numberline {1.1}问题的背景和研究现状}{1}{section*.14}%
 \contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 二\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 模型介绍}{3}{section*.17}%
-\contentsline {section}{\numberline {2.1}环擦除模式定义的环流}{4}{section*.20}%
-\contentsline {section}{\numberline {2.2}生成树定义的环流}{5}{section*.23}%
+\contentsline {section}{\numberline {2.1}环擦除方式定义的环流}{4}{section*.20}%
+\contentsline {section}{\numberline {2.2}生成树方式定义的环流}{5}{section*.23}%
 \contentsline {section}{\numberline {2.3}两种类型环流的比较}{6}{section*.25}%
 \contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 三\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 环流的大偏差原理}{8}{section*.28}%
 \contentsline {section}{\numberline {3.1}单环马氏链LE环流的大偏差}{8}{section*.30}%
