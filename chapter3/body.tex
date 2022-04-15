@@ -105,9 +105,9 @@
 \begin{equation*}\label{formula:A3}
     A_3 = \prod_{i=2}^N\binom{\sum_{c\ni i}k^{c}-1}{k^{i}}.
 \end{equation*}
-例子 \ref{trajectory_ex}中，步骤3）中的插入方式在图 \ref{figure:insertion}的右部分。
+例子 \ref{trajectory_ex}中，步骤3）的插入方式在图 \ref{figure:insertion}的右部分。
 
-结合上述三个步骤，最终可以得到容许轨道的数量为：$|G_n(k)|=A_1A_2A_3$。因此经验LE环流的联合分布为：
+结合上述三个步骤，最终可以得到容许轨道的数量为：$|G_n(k)|=A_1A_2A_3$。因此LE经验环流的联合分布为：
 \begin{equation} \label{trajectories}
     \mathbb{P}\left(J^c_n=\nu^c,\;\forall c\in\mathcal{C}\right)
     = A_1 A_2 A_3 \Pi_{c\in\mathcal{C}} (\gamma^c)^{K^c}
@@ -116,7 +116,7 @@
 \begin{equation*}
     \log n! = n\log n-n+O(\log n)=h(n)-n+O(\log n),
 \end{equation*}
-其中$h(x)=x \log x, x \geqslant 0$。记$k_i=\sum_{c\ni i}k^c$且$\nu_i=\sum_{c\ni i}\nu^c$，注意到$k_i$和$k^i$的定义是不同的，那么$Stirling$公式有：
+其中$h(x)=x \log x, x \geqslant 0$。记$k_i=\sum_{c\ni i}k^c$且$\nu_i=\sum_{c\ni i}\nu^c$，注意到$k_i$和$k^i$的定义是不同的，因此有$Stirling$可得：
 \begin{equation}\label{log A1}
     \begin{split}
     \log A_1&=\log\frac{(k^1+k^{12}+k^{1N}+k^{+}+k^{-})!}{k^1!\;k^{12}!\;k^{1N}!\;k^{+}!\;k^{-}!}\\
@@ -137,7 +137,7 @@
 \begin{equation*}
     B_L=\prod_{i=2}^{N-1}\binom{l^{i}+l^{i-1}+k^{+}-1}{l^{i}}\binom{m^{i}+m^{i+1}+k^{-}-1}{m^{i}}.
 \end{equation*}
-表示在给定$l^i$和$m^i$时，步骤 2）中插入方式的数量。易知$|D| \leqslant n^{N-2}$，因此，可以得到：
+表示在给定$l^i$和$m^i$时，步骤 2）中插入方式的数量。易知$|D| \leqslant n^{N-2}$，因此，可得：
 \begin{equation}\label{inequality}
     \max_{L\in D}B_L \le A_2 \le (n+1)^{N-2} \max_{L\in D}B_L,
 \end{equation}
@@ -162,7 +162,7 @@
     &+ \sum_{i=2}^{N-1} \left[h\left(y^{i}\right) + h\left(y^{i+1} +\nu^-\right)-h\left(y^{i} +y^{i+1} +\nu^-\right)\right].
     \end{split}
 \end{equation}
-其中$x^1=\nu^{12}$且$y^N=\nu^{N1}$，由式联系 \ref{inequality}的结果，可得：
+其中$x^1=\nu^{12}$，$y^N=\nu^{N1}$，再由式联系 \ref{inequality}的结论，可得：
 \begin{equation}\label{log A2}
     \log A_2 = \max_{L\in D}\log B_L+O(\log n)
     = n\sup_{X\in V(\nu)}F_{\nu}(X)+O(\log n).
@@ -183,9 +183,9 @@
     -h\left(\nu_i\right)\right]-\sum_{c\in\mathcal{C}}\nu^c\log\gamma^c,
     \end{split}
 \end{equation}
-其中$h(x) = x \log x$且$\nu_i=\sum_{c\ni i}\nu^c$。这就是经验LE完整的环流速率函数表达式。该式中的$\inf_{X\in V(\nu)}F_{\nu}(X)$难以直接计算，不过可以通过拉格朗日乘子法得到。
+其中$h(x) = x \log x$，$\nu_i=\sum_{c\ni i}\nu^c$。这就是LE经验完整的环流速率函数表达式。该式中的$\inf_{X\in V(\nu)}F_{\nu}(X)$难以直接计算，不过可以通过拉格朗日乘子法得到。
 
-下面将要证明：
+下面将给出证明：
 % 在附录 A 中，证明了
 \begin{equation*}
     \inf_{X\in V(\nu)}F_{\nu}(X) = F_{\nu}(x^i,y^i),
