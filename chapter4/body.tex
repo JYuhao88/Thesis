@@ -1,24 +1,23 @@
 \BiChapter{环流的涨落定理}{Fluctuation theorems of cycle currents}
 
-\BiSection{单环马氏链 LE 环流的涨落定理}{}
-一个重要的问题是经验环流是否满足各种对称关系和涨落定理。LE经验环流的暂态涨落定理已经在文献 \cite{andrieux2007network} 中证明。这里将证明单环马氏链的对称关系，它甚至强于暂态涨落定理。记单环系统中两个 N 状态环为  $C^+ = (1,2,\cdots,N)$ 和 $C^- = (1,N,\cdots,2)$，令 $N^+_n$ 和 $N^-_n$ 分别表示 n 时刻环  $C^+$ 和 $C^-$ 分别形成的数量。强对称关系为：
+\BiSection{单环马氏链LE环流的涨落定理}{}
+下面将讨论一个重要的问题，经验环流是否满足各种对称关系和涨落定理。LE经验环流的暂态涨落定理已经在文献 \cite{andrieux2007network} 中证明。这里将证明单环马氏链的对称关系，它甚至强于暂态涨落定理。记单环系统中两个 N 元环为  $C^+ = (1,2,\cdots,N)$ 和 $C^- = (1,N,\cdots,2)$，令 $N^+_n$ 和 $N^-_n$ 分别表示 n 时刻环  $C^+$ 和 $C^-$ 分别形成的数量。强对称关系为：
 \begin{align} \label{strong_symmetric}
     &\;k^+ \mathbb{P}\left(N^+_n=k^+,N^-_n=k^- -1,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
     =&\; \left(\frac{\gamma^+}{\gamma^-}\right)\mathbb{P}\left(N^+_n=k^+ -1,N^-_n=k^-,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
 \end{align}
-其中 $\gamma^+ = p_{12}p_{23}\cdots p_{N1}$ 和 $\gamma^- = p_{1N}p_{N,N-1}\cdots p_{21}$ 分别是环 $C^+$ 和环 $C^-$中的转移概率的乘积。对于序列匹配中得到的另一种环流，也可以得到类似的等式\cite{pietzonka2021cycle}。接下来。针对LE环流，证明\ref{strong_symmetric}。在周围边界条件下，由
-公式 \eqref{trajectories} 可以得到：
+其中 $\gamma^+ = p_{12}p_{23}\cdots p_{N1}$ 和 $\gamma^- = p_{1N}p_{N,N-1}\cdots p_{21}$ 分别是环 $C^+$ 和环 $C^-$中的转移概率的乘积。对于序列匹配方式定义的环流，也可以得到类似的等式\cite{pietzonka2021cycle}。接下来。针对LE环流，证明\ref{strong_symmetric}。在周期边界条件下，由公式 \eqref{trajectories} 可以得到：
 \begin{align*}
     &\;\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
     =&\; (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}
     \left(\gamma^c\right)^{k^c}\left|G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})\right|,
 \end{align*}
-其中$G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})$ 表示n时刻所有容许轨迹的集合，那么 $C^+$ 形成 $k^+$ 次，$C^-$ 形成 $k^- -1$ 次，环 $c\neq C^+,C^-$ 形成 $k^c$ 次。简化记号，上述方程可以重写为：
+其中$G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})$ 表示n时刻所有可能出现的轨道的集合，那么 $C^+$ 形成 $k^+$ 次，$C^-$ 形成 $k^- -1$ 次，环 $c\neq C^+,C^-$ 形成 $k^c$ 次。简化记号，上述方程可以重写为：
 \begin{equation}\label{temp1}
     \mathbb{P}\left(N^+_n=k^+,N^-_n=k^- -1,\cdots\right)
     = (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}|G_n(k^+,k^- -1,\cdots)|.
 \end{equation}
-类似地, 如果交换上式中的 $k^+$ 和 $k^- -1$，可以得到
+类似地, 如果把上式中的 $k^+$ 替换为 $k^+ -1$， $k^- -1$ 替换为 $k^-$，可以得到
 \begin{equation}\label{temp2}
 \mathbb{P}\left(N^+_n=k^+ -1,N^-_n=k^-,\cdots\right)
 = (\gamma^+)^{k^+ -1}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}|G_n(k^+ -1,k^-,\cdots)|.
@@ -29,7 +28,7 @@
 \end{equation}
 % 文献 \cite{andrieux2007network} 中的证明是基于 $G_n(k^+,k^-,\cdots)$ 与 $G_n(k^-,k^+,\cdots)$ 之间的一一对应关系的，即
 
-对于 $G_n(k^+,k^- -1,\cdots)$ 中的任意轨迹 $(\xi_0,\xi_1,\cdots,\xi_n)$，因为$C^+$形成$k^+$次，这个环有$k^+$个初始时刻和$k^+$个终止时刻。令$T_i^{begin}$和$T_i^{end}$分别表示环$C^+$的第$i$个初试时刻和第$i$个终止时刻。例如，表 \ref{trajectory}中的轨迹，环$(1,2,3,4)$的首次初始时刻是$n=0$，首次终止时刻是$n=7$。如果在$T_i^{begin}$和$T_i^{end}$之间翻转轨迹$\xi$，那么得到新轨迹$\tilde{\xi}$，即：
+对于 $G_n(k^+,k^- -1,\cdots)$ 中的任意轨道 $(\xi_0,\xi_1,\cdots,\xi_n)$，由于$C^+$形成$k^+$次，这个环有$k^+$个初始时刻和$k^+$个终止时刻。令$T_i^{begin}$和$T_i^{end}$分别表示环$C^+$的第$i$个初试时刻和第$i$个终止时刻。例如，表 \ref{trajectory}中的轨道，环$(1,2,3,4)$的首次初始时刻是$n=0$，首次终止时刻是$n=7$。如果在$T_i^{begin}$和$T_i^{end}$之间翻转轨道$\xi$，那么得到新轨道$\tilde{\xi}$，即：
 \begin{equation*}
     \tilde{\xi}
     =\left\{\begin{aligned}
@@ -37,7 +36,7 @@
         \xi_m, &   && \text{otherwise}.\\
         \end{aligned}\right.
 \end{equation*}
-易知，逆轨迹一定处于集合$G_n(k^+ -1,k^-,\cdots)$。因为环$C^+$形成$k^+$次，所以有$k^+|G_n(k^+,k^- -1, \cdots)|$种可能的轨迹。在这些逆轨迹中，$k^-$轨迹是完全相同的，因此被重复计算。例如，如果环$C^+=(1,2,3)$，那么$G_8(2,1,\cdots)$中的轨迹$\{1,2,3,1,2,3,1,3,2\}$和轨迹$\{1,2,3,1,3,2,1,2,3\}$都是$G_8(1,2,\cdots)$中$\{1,2,3,1,3,2,1,3,2\}$的逆轨迹，因此被计算两次。因此，$G_n(k^+ -1,k^-,\cdots)$的所有可能的轨迹数是：
+易知，逆轨道必定处于集合$G_n(k^+ -1,k^-,\cdots)$。因为环$C^+$形成$k^+$次，所以有$k^+|G_n(k^+,k^- -1, \cdots)|$种可能的轨道。在这些逆轨道中，$k^-$轨道是完全相同的，因此被重复计算。例如，如果环$C^+=(1,2,3)$，那么$G_8(2,1,\cdots)$中的轨道$\{1,2,3,1,2,3,1,3,2\}$和轨道$\{1,2,3,1,3,2,1,2,3\}$都是$G_8(1,2,\cdots)$中$\{1,2,3,1,3,2,1,3,2\}$的逆轨道，被计算了两次。因此，$G_n(k^+ -1,k^-,\cdots)$的所有可能的轨道数是：
 \begin{equation}\label{equal}
     |G_n(k^+ -1,k^-,\cdots)| = \frac{k^+}{k^-}|G_n(k^+,k^- -1,\cdots)|.
 \end{equation}
@@ -49,7 +48,7 @@
 
 目前，在周期边界条件下，已经证明了对称关系 \ref{strong_symmetric}和涨落定理 \ref{thm:transition fluatuation}。没有周期边界条件，两个等式在单环系统下也是成立的；证明过程类似，在此省略。
 
-% 然而，上面也指出直观的想法是基于周期边界条件。例如，表\ref{example} 中的四状态单环系统的轨迹，其中环 $C^+$ 形成一次，然而相应的反环并没有形成$C^+$ 和 $C^-$。这说明逆轨迹并没有 $G_n(k^+,k^-,\cdots)$ 和 $G_n(k^-,k^+,\cdots)$ 之间的一一对应关系。
+% 然而，上面也指出直观的想法是基于周期边界条件。例如，表\ref{example} 中的四状态单环系统的轨道，其中环 $C^+$ 形成一次，然而相应的反环并没有形成$C^+$ 和 $C^-$。这说明逆轨道并没有 $G_n(k^+,k^-,\cdots)$ 和 $G_n(k^-,k^+,\cdots)$ 之间的一一对应关系。
 % % \begin{table}[htb!]
 % % \renewcommand\arraystretch{1.3}\centering
 % % \begin{tabular}{cccccccccc} \hline\hline
@@ -64,9 +63,9 @@
 % % \end{tabular}
 % % \caption{环擦除方式形成环的例子}\label{example}
 % % \end{table}
-% 通过上述论证，确实可以通过假设周期边界条件简化，简化论证。只是逆轨迹无法做到两个集合之间的一一映射，但这并不能否认暂态涨落定理 \eqref{theorem:transient fluatuation} 是错误的。在附录 E 中，给出了暂态涨落定理的严格证明。该证明的出发点是式 \eqref{trajectories} 中 $|G_n(k)|$ 的非平凡对称性。因为证明过于复杂，所以放在附录部分。这表明 LE 经验环流的联合分布满足一种非平凡对称性。
+% 通过上述论证，确实可以通过假设周期边界条件简化，简化论证。只是逆轨道无法做到两个集合之间的一一映射，但这并不能否认暂态涨落定理 \eqref{theorem:transient fluatuation} 是错误的。在附录 E 中，给出了暂态涨落定理的严格证明。该证明的出发点是式 \eqref{trajectories} 中 $|G_n(k)|$ 的非平凡对称性。因为证明过于复杂，所以放在附录部分。这表明LE经验环流的联合分布满足一种非平凡对称性。
 
-暂态涨落定理可以进用来其他两种涨落定理。回顾经验LE环流的矩母函数：
+暂态涨落定理可以进用来其他两种涨落定理。回顾LE经验环流的矩母函数：
 \begin{equation*}
     g_n(\lambda^+,\lambda^-,\cdots)
     = \mathbb{E}\left[e^{\lambda^+N^+_n+\lambda^-N^-_n+\sum_{c\neq C^+,C^-}\lambda^cN^c_n}\right].
@@ -84,7 +83,7 @@
     &= g_n\left(\lambda^--\log\frac{\gamma^+}{\gamma^-},
     \lambda^++\log\frac{\gamma^+}{\gamma^-},\cdots\right),
 \end{align*}
-其中 $\log(\gamma^+/\gamma^-)$ 是环 $C^+$ 的匹配度。接下来，考虑单环系统的极限行为，当n趋于无穷是时，易知：
+其中 $\log(\gamma^+/\gamma^-)$ 是环 $C^+$ 的匹配度。接下来，考虑单环系统的极限行为，当n趋于无穷时，易知：
 \begin{align*}
 e^{-nI_J(\cdots,\nu^+,\nu^-)}
 &\propto \mathbb{P}\left(J^+_n=\nu^+, J^-_n=\nu^-, \cdots\right)\\
@@ -120,14 +119,14 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
 \tilde{I}_J(x)=\tilde{I}_J(-x)-\left(\log\frac{\gamma^+}{\gamma^-}\right)x.
 \end{equation*}
 
-因此熵产生可以分解为LE净环流\cite{Seifert_2012}的和，上述结论可以用来证明熵产生的涨落定理。
+因此熵产生可以分解为LE净环流\cite{Seifert_2012}的和，上述结论还能用来证明熵产生的涨落定理。
 
 
-\BiSection{一般马氏链 LE 环流的涨落定理}{}
-目前，已经验证了单环系统中马氏链环流相关的涨落定理，自然会联想到这些结论是否会适用于一般的马氏链。再开始讨论之前，先回顾文献 \cite{jia2016cycle}中的定义。记 $c_1=(i_1,i_2,\cdots,i_s)$ 和 $c_2=(j_1,j_2,\cdots,j_r)$ 是两个环。如果 $s=r$ 且 $\{i_1,i_2,\cdots,i_s\}=\{j_1,j_2,\cdots,j_r\}$，则称环 $c_1$ 和环 $c_2$ 相似。
-换句话说，如果两个环包含的状态完全一致，则称两个环相似。例如，下面六个环 $(1,2,3,4)$，$(1,2,4,3)$，$(1,3,2,4)$，$(1,3,4,2)$，$(1,4,2,3)$ 和 $(1,4,3,2)$，互为相似关系。根据这个定义，环任意 $c$ 和它的反环 $c^-$ 一定是相似的。
+\BiSection{一般马氏链LE环流的涨落定理}{}
+目前，已经验证了单环系统中马氏链环流相关的涨落定理，自然会联想到这些结论是否会适用于一般的马氏链。在开始讨论之前，先回顾文献 \cite{jia2016cycle}中的定义。记 $c_1=(i_1,i_2,\cdots,i_s)$ 和 $c_2=(j_1,j_2,\cdots,j_r)$ 是两个环。如果 $s=r$ 且 $\{i_1,i_2,\cdots,i_s\}=\{j_1,j_2,\cdots,j_r\}$，则称环 $c_1$ 和环 $c_2$ 相似。
+换句话说，如果两个环包含的状态完全一致，则称两个环相似。例如，下面六个环 $(1,2,3,4)$，$(1,2,4,3)$，$(1,3,2,4)$，$(1,3,4,2)$，$(1,4,2,3)$ 和 $(1,4,3,2)$，互为相似关系。依据这个定义，任意环 $c$ 和它的反环 $c^-$ 一定是相似的。
 
-首先考虑 LE 经验环流 $(J^c_n)_{c\in\mathcal{C}}$，其中$J_n^c=N_n^c/n$。对于一般马氏链，如果环$c_1$和$c_2$相似，有下列的对称关系成立：
+首先考虑LE经验环流 $(J^c_n)_{c\in\mathcal{C}}$，其中$J_n^c=N_n^c/n$。对于一般马氏链，如果环$c_1$和$c_2$相似，有下列的对称关系成立：
 \begin{equation}\label{transient1}
     \frac{k^{c_1} \Pnum(N^{c_1}_n=k^{c_1},N^{c_2}_n=k^{c_2}-1,N^{c}_n=k^{c},\;\forall c\neq c_1,c_2)}
     {k^{c_2} \Pnum(N^{c_1}_n=k^{c_1} -1,N^{c_2}_n=k^{c_2},N^{c}_n=k^{c},\;\forall c\neq c_1,c_2)}
@@ -145,9 +144,8 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
     {\Pnum(N^{c_1}_n=k^{c_2},N^{c_2}_n=k^{c_1},N^{c}_n=k^{c},\;\forall c\neq c_1,c_2)}
     = \left(\frac{\gamma^{c_1}}{\gamma^{c_t}}\right)^{k^{c_1}-k^{c_2}}.
 \end{equation}
-这表明如果环 $c_s$ 和环 $c_t$ 相似，那么 LE 经验环流的联合分布满足非平凡的对称关系。实际上，对于具有下面限制条件的情况，公式\ref{transient1}的证明已经在 \cite{jia2016cycle}中给出：1）所有环都通过状态$i\in S$；2）马氏链也是从状态$i$出发。
+这表明如果环 $c_s$ 和环 $c_t$ 相似，那么LE经验环流的联合分布满足非平凡的对称关系。实际上，对于具有下面限制条件的情况，公式\ref{transient1}的证明已经在 \cite{jia2016cycle}中给出：1）所有环都通过状态$i\in S$；2）马氏链也是从状态$i$出发。
 % 值得庆幸的是，这个假设条件可以移除，而且结论依然成立（整理中）
-
 
 接下来考虑经验LE净环流$(\tilde{J}^{c}_n)_{c\in C}$。令$\{c_1,c_2,\cdots,c_r\}$表示所有环的集合，那么环$c$和它的反环$c^-$只出现一次，那么由\ref{transient2}，可得：
 \begin{align*}
@@ -158,22 +156,22 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
     =&\; \Pnum\left(N^{c_1}_n-N^{c_1-}_n=-n x_1, N^{c_m}_n-N^{c_m-}_n=n x_m,\;\forall 2\le m \le r\right) e^{n x_1 \log \frac{\gamma^{c_1}}{\gamma^{c_1-}}} \\
     =&\; \Pnum\left(\tilde{J}^{c_1}_n=-x_1,\tilde{J}^{c_m}_n=x_m,\;\forall 2\le m \le r\right) e^{n x_1 \log \frac{\gamma^{c_1}}{\gamma^{c_1-}}} .
 \end{align*}
-因此最终可得到下列的 LE 环流的暂态涨落定理：
+因此最终可得到下列的LE环流的暂态涨落定理：
 \begin{equation}\label{strong}
     \Pnum(\tilde{J}^{c_1}_n=x_s,\tilde{J}^{c_m}_n=x_m,\;\forall 2\le m \le r) \\
     = \Pnum(\tilde{J}^{c_1}_n=-x_s,\tilde{J}^{c_m}_n=x_m,\;\forall 2\le m \le r)e^{nx_s\log\frac{\gamma^{c_1}}{\gamma^{c_1-}}}.
 \end{equation}
-这表明对于任意环$c_i$，经验LE净环流满足对称关系。如果对所有$1\le i \le r$，在上述方程中交换$x_i$和$-x_i$，那么可以得到：
-\begin{equation}\label{weak}
+这表明对于任意环$c_i$，LE经验净环流满足对称关系。如果对所有$1\le i \le r$，在上述方程中交换$x_i$和$-x_i$，那么可以得到：
+\begin{equation}\label{weak1}
     \begin{split}
     \frac{\Pnum\left(\tilde{J}^{c_1}_n=x_1,\tilde{J}^{c_2}_n=x_2,\cdots,\tilde{J}^{c_{r}}_n=x_{r}\right)}
     {\Pnum\left(\tilde{J}^{c_1}_n=-x_1,\tilde{J}^{c_2}_n=-x_2,\cdots,\tilde{J}^{c_{r}}_n=-x_{r}\right)}
     =e^{n\sum_{i=1}^{r}x_i\log\frac{\gamma^{c_i}}{\gamma^{c_i-}}}.
     \end{split}
 \end{equation}
-通过对比，可以看到\eqref{weak}式的结论弱于 \eqref{strong}式。因此，本文称 \eqref{strong} 式为强形式的暂态涨落定理，\eqref{weak}式为弱形式的暂态涨落定理。
+通过对比，可以看到\eqref{weak1}式的结论弱于 \eqref{strong}式。因此，本文称 \eqref{strong} 式为强形式的暂态涨落定理，\eqref{weak1}式为弱形式的暂态涨落定理。
 
-有关 LE 经验环流和 LE 经验净环流的其他类型涨落定理都可以通过暂态涨落定理得到。这里主要关注强形式；弱形式也可以通过类似的方式得到。令$g_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^r\lambda_i J^{c_i}_n}]$和$\tilde{g}_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^{r}\lambda_i\tilde{J}^{c_i}_n}]$ 分别为 $(J^{c_i}_n)_{1\le i\le r}$ 和 $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ 的矩母函数，并且令 $I_{J}(x)$ 和 $I_{\tilde{J}}(x)$ 为相应的速率函数。
+其他类型LE经验（净）环流的涨落定理都可以通过暂态涨落定理得到。这里主要关注强形式；弱形式也可以通过类似的方式得到。令$g_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^r\lambda_i J^{c_i}_n}]$和$\tilde{g}_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^{r}\lambda_i\tilde{J}^{c_i}_n}]$ 分别为 $(J^{c_i}_n)_{1\le i\le r}$ 和 $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ 的矩母函数，并且令 $I_{J}(x)$ 和 $I_{\tilde{J}}(x)$ 为相应的速率函数。
 
 1）Kurchan-Lebowitz-Spohn 类型涨落定理：对任意相似的两个环 $c_s$ 和 $c_t$ ($1\le s,t\le r$)，下列公式成立：
 \begin{equation*}
@@ -196,8 +194,8 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
 	I_{\tilde{J}}(\cdots,x_s,\cdots) = I_{\tilde{J}}(\cdots,-x_s,\cdots)-\left(\log\frac{\gamma^{c_s}}{\gamma^{c_s-}}\right)x_s.
 \end{equation*}
 
-\BiSection{一般马氏链 ST 环流的涨落定理}
-现已经清楚了 LE 经验环流和 LE 经验净环流满足的各种涨落定理。自然会想到是否 ST 经验环流和 ST 经验净环流是否也满足类似的关系。事实上，所有的涨落定理对于经验ST环流都是不成立的，即使考虑单环系统。考虑全连接三状态马氏链，并且令 $T = 1\to 2\to 3$ 是一个生成树，那么相应基本集为$\mathcal{L} = \{(1),(2),(3),(1,2),(2,3),(1,2,3),(1,3,2)\}.$回顾式 \eqref{formula:I_Q} 中的 ST 经验环流的速率函数为：
+\BiSection{一般马氏链ST环流的涨落定理}
+现已经清楚了LE经验（净）环流满足的各种涨落定理。自然会想到是否ST经验（净）环流是否也满足类似的关系。事实上，所有的涨落定理对于经验ST环流都是不成立的，即使考虑单环系统。考虑全连接三状态马氏链，并且令 $T = 1\to 2\to 3$ 是一个生成树，那么相应基本集为$\mathcal{L} = \{(1),(2),(3),(1,2),(2,3),(1,2,3),(1,3,2)\}.$回顾式 \eqref{formula:I_Q} 中的ST经验环流的速率函数为：
 \begin{equation*}
 I_Q(\mu) = \sum_{\langle i,j\rangle\in E}R^{\mu}(i,j)\log\frac{R^{\mu}(i,j)}{R^{\mu}(i)p_{ij}},
 \end{equation*}
@@ -206,14 +204,16 @@ I_Q(\mu) = \sum_{\langle i,j\rangle\in E}R^{\mu}(i,j)\log\frac{R^{\mu}(i,j)}{R^{
 I_Q(\cdots,\mu^+,\mu^-)
 \neq I_Q(\cdots,\mu^-,\mu^+)-\left(\log\frac{\gamma^+}{\gamma^-}\right)(\mu^+-\mu^-),
 \end{equation*}
-这说明了 Gallavotti-Cohen 类型涨落定理对于 ST 环流不成立。且由于Gallavotti-Cohen 类型涨落定理成立条件最弱，所以其他类型涨落定理也不成立。
+这说明了 Gallavotti-Cohen 类型涨落定理对于ST环流不成立。且由于Gallavotti-Cohen 类型涨落定理成立条件最弱，所以其他类型涨落定理也不成立。
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.25]{chart/ratefunction.pdf}
-	\caption{ST 经验环流和经验净环流的速率函数图像 (a) $\rho=I_Q(\cdots,\mu^+,\mu^-)-I_Q(\cdots,\mu^-,\mu^+)+(\log\frac{\gamma^+}{\gamma^-})(\mu^+-\mu^-)$. (b) $\rho=I_{\tilde{Q}}(\tilde{\mu}^{c_1},\tilde{\mu}^{c_2},\tilde{\mu}^{c_3})- I_{\tilde{Q}}(-\tilde{\mu}^{c_1},\tilde{\mu}^{c_2},\tilde{\mu}^{c_3})
-		+(\log\frac{\gamma^{c_1}}{\gamma^{c_1-}})\tilde{\mu}^{c_1}$}\label{figure:ratefunction}
+	\caption{ST经验（净）环流的速率函数图像 (a) 三状态全连接马氏链，$\rho=I_Q(\cdots,\mu^+,\mu^-)-I_Q(\cdots,\mu^-,\mu^+)+(\log\frac{\gamma^+}{\gamma^-})(\mu^+-\mu^-)$的热力图，表明Gallavotti-Cohen 类型涨落定理对ST环流不成立。选择的参数是：$\mu^1=15, \mu^2=20, \mu^3=3, \mu^{12}=21, \mu^{23}=37, p_{11}=0.28, p_{12}=0.22, p_{13}=0.5, p_{21}=0.1,  p_{22} = 0.6, p_{23}=0.3, p_{31}=0.3, p_{32}=0.3, p_{33}=0.4$
+    (b) 四状态全连接马氏链，$\rho=I_{\tilde{Q}}(\tilde{\mu}^{c_1},\tilde{\mu}^{c_2},\tilde{\mu}^{c_3})- I_{\tilde{Q}}(-\tilde{\mu}^{c_1},\tilde{\mu}^{c_2},\tilde{\mu}^{c_3})+(\log\frac{\gamma^{c_1}}{\gamma^{c_1-}})\tilde{\mu}^{c_1}$的函数图像，表明Gallavotti-Cohen 类型涨落定理对ST净环流不成立。选择的参数是：$x_2 = 2, x_3 = 3, p_{11} = 0.1, p_{12} = 0.2, p_{13} = 0.3,
+    p_{14} = 0.4, p_{21} = 0.5, p_{22} = 0.15, p_{23} = 0.15, p_{24} = 0.2, p_{31} = 0.1, p_{32} = 0.4, p_{33} = 0.25, p_{34} = 0.25,
+    p_{41} = 0.2, p_{42} = 0.2, p_{43} = 0.3, p_{44} = 0.3$}\label{figure:ratefunction}
 \end{figure}
-尽管 ST 经验环流无法满足各种涨落定理，ST经验净环流在很多情况下成立却是可以的（参考 \cite{andrieux2007fluctuation}）。对于单环系统，只需考虑环$C^+$的经验净环流$\tilde{Q}^+_n$。假设选定生成树为$T = 1 \rightarrow 2 \rightarrow \cdots N$。在周期边界条件下，由公式 \ref{conversion}可得$Q_n^+=J_n^- + J^{(N,1)}$和$Q_n^-=J_n^- + J^{(N,1)}$。这两个方程表明 $\tilde{Q}_n^+ = \tilde{J}_n^+$，因此 ST净环流的涨落定理自然可以由LE净环流的涨落定理得出。如果没有周期边界条件，Gallavotti-Cohen型涨落定理仍然成立，因为它反映了系统的长期行为，是否假设周期边界条件并不会影响大偏差速率函数，然而其他三种类型的涨落定理将不会成立。文献\cite{polettini2014transient} 表明针对ST净环流，四种类型的涨落定理都成立。
+尽管ST经验环流无法满足各种涨落定理，ST经验净环流在很多情况下成立却是可以的（参考 \cite{andrieux2007fluctuation}）。对于单环系统，只需考虑环$C^+$的经验净环流$\tilde{Q}^+_n$。假设选定生成树为$T = 1 \rightarrow 2 \rightarrow \cdots N$。在周期边界条件下，由公式 \ref{conversion}可得$Q_n^+=J_n^- + J^{(N,1)}$和$Q_n^-=J_n^- + J^{(N,1)}$。这两个方程表明 $\tilde{Q}_n^+ = \tilde{J}_n^+$，因此 ST净环流的涨落定理自然可以由LE净环流的涨落定理得出。如果没有周期边界条件，Gallavotti-Cohen型涨落定理仍然成立，因为它反映了系统的长期行为，是否假设周期边界条件并不会影响大偏差速率函数，然而其他三种类型的涨落定理将不会成立。文献\cite{polettini2014transient} 表明针对ST净环流，四种类型的涨落定理都成立。
 
 上述结论可以扩展到一般马氏链。对于一状态和两状态的环，ST经验净环流为0，只需考虑有三状态或者更多状态的环。令$\{c_{l_1}, c_{l_2},\cdots, c_{l_s}\} \subset \mathcal{L}$表示基本集中所有三状态及更多状态的环，那么环$c$及相应的反环$c^-$只出现一次。事实上，文献\cite{andrieux2007fluctuation}已经证明了ST净环流满足弱形式下的Gallavotti-Cohen型涨落定理：
 \begin{equation} \label{Gallavotti}
@@ -231,9 +231,9 @@ I_Q(\cdots,\mu^+,\mu^-)
 因此ST经验净环流可以分解为LE经验净环流的和。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsubsection{经验 LE 环流的暂态涨落定理的证明}
-% 在此，将给出无周期条件下，经验 LE 环流的暂态涨落定理的证明。
-% 记 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$。在时间步 $n$,轨迹中环 $c$ 形成 $k^c$ 次，因此有：
+% \subsubsection{经验LE环流的暂态涨落定理的证明}
+% 在此，将给出无周期条件下，经验LE环流的暂态涨落定理的证明。
+% 记 $k=(k^c)_{c\in\mathcal{C}}\in \mathbb{N}^{2N+2}$。在时间步 $n$,轨道中环 $c$ 形成 $k^c$ 次，因此有：
 % \begin{equation*}
 % 	n=\sum_{c\in\mathcal{C}}k^c|c|+|\eta|,
 % \end{equation*}
@@ -263,18 +263,23 @@ I_Q(\cdots,\mu^+,\mu^-)
 % \end{equation*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-由公式\ref{weak}(附录D)，可得：
-\begin{equation}\label{weak}
+% 由公式\ref{weak1}，可得：
+
+% 这表明周期边界条件下，ST净环流满足暂态涨落定理的弱形式。由于是否假设周期边界条件不会影响大偏差速率函数，则Gallavotti-Cohen类型涨落定理的弱形式 \cite{pedraza2008effects} 成立。
+
+
+由于是否假设周期边界条件不会影响大偏差速率函数，则Gallavotti-Cohen类型涨落定理的弱形式 \cite{pedraza2008effects} 成立。下面证明，在周期边界条件下，ST净环流满足暂态涨落定理的弱形式，即：
+\begin{equation}\label{weak2}
     \begin{split}
     \frac{\Pnum\left(\tilde{Q}^{c_{l_1}}_n=x_1,\cdots, \tilde{Q}^{c_{l_s}}_n=x_{s}\right)}
     {\Pnum\left(\tilde{Q}^{c_{l_1}}_n=-x_1,\cdots, \tilde{Q}^{c_{l_s}}_n=-x_{s}\right)}
     =e^{n\sum_{i=1}^{s}x_i\log\frac{\gamma^{c_{l_i}}}{\gamma^{c_{l_i}-}}}.
     \end{split}
 \end{equation}
-这表明周期边界条件下，ST净环流满足暂态涨落定理的弱形式。由于是否假设周期边界条件不会影响大偏差速率函数，则Gallavotti-Cohen类型涨落定理的弱形式 \cite{pedraza2008effects} 成立。
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-接下来在周期边界条件下证明\ref{weak}。由公式\ref{circulation}，对任意三状态或者更多状态的环$c_l \in \mathcal{L}$，有：
+% 接下来在周期边界条件下证明\ref{weak2}。
+\begin{proof}
+    由公式\ref{circulation}，对任意三状态或者更多状态的环$c_l \in \mathcal{L}$，有：
 \begin{equation*}
     \tilde{Q}_{n}^{c_{t}}=\sum_{i=1}^{r} \tilde{J}_{n}^{c_{i}}\left[1_{\left\{l \in c_{i}\right\}}-1_{\left\{l \in c_{i}-\right\}}\right]
 \end{equation*}
@@ -295,7 +300,7 @@ I_Q(\cdots,\mu^+,\mu^-)
 \begin{equation} \label{constraint}
     \sum_{i=1}^{r} y_{i} \log \frac{\gamma^{c_{i}}}{\gamma^{c_{i}-}}=\sum_{j=1}^{s} x_{j} \log \frac{\gamma^{c_{l_{j}}}}{\gamma^{c_{l_{j}}-}}
 \end{equation}
-这个等式是非平凡的，下面将会证明它。对于任意环$c$，令$L^c$为E上的函数：
+这个等式是非平凡的，接下来下面会证明它。对于任意环$c$，令$L^c$为E上的函数：
 \begin{equation*}
     L^{c}(i, j)= \begin{cases}1, & \text { if }\langle i, j\rangle \in c \\ 0, & \text { otherwise }\end{cases}
 \end{equation*}
@@ -329,15 +334,14 @@ I_Q(\cdots,\mu^+,\mu^-)
     &=\sum_{i=1}^{r} y_{i}\left\langle w, L^{c_{i}}\right\rangle=\sum_{i=1}^{r} y_{i} \log \frac{\gamma^{c_{i}}}{\gamma^{c_{i}-}}
     \end{aligned}
 \end{equation*}
-\ref{constraint}的证明完成了，同时暂态涨落定理的证明也完成了。
+\ref{constraint}得证，同时弱形式暂态涨落定理的证明也完成了。
+
+\end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-对比 LE 经验净环流，会发现 ST 经验净环流不满足强形式下的 Gallavotti-Cohen 类型涨落定理，可以参考文献 \cite{mehl2012role,polettini2017effective,uhl2018fluctuations,kahlen2018hidden}。为举出反例，考虑图 \ref{figure:transitiongraph}(b) 中的具有全连接的四状态马氏链。由于基本集中的其他环要不是它的反环，要不就是就是一状态和两状态环，所以选定生成树为 $T=1\to2\to3\to4$，只需考虑三个环$c_1=(1,2,3)$，$c_2=(2,3,4)$和$c_3=(1,2,3,4)$的ST净环流。回顾ST经验净环流的速率函数$(\tilde{Q}_n^{c_1}, \tilde{Q}_n^{c_2}, \tilde{Q}_n^{c_3})$为：
-
+对比LE经验净环流，会发现ST经验净环流不满足强形式下的 Gallavotti-Cohen 类型涨落定理，可以参考文献 \cite{mehl2012role,polettini2017effective,uhl2018fluctuations,kahlen2018hidden}。为举出反例，考虑图 \ref{figure:transitiongraph}(b) 中的具有全连接的四状态马氏链。由于基本集中的其他环或者是它的反环，或者就是一元环和二元环，所以选定生成树为 $T=1\to2\to3\to4$，只需考虑三个环$c_1=(1,2,3)$，$c_2=(2,3,4)$和$c_3=(1,2,3,4)$的ST净环流。回顾ST经验净环流的速率函数$(\tilde{Q}_n^{c_1}, \tilde{Q}_n^{c_2}, \tilde{Q}_n^{c_3})$为：
 
 \begin{equation}
 	I_{\tilde{Q}}(x)=\inf_{\{\mu\in\mathcal{M}:\mu^{c_i}-\mu^{c_i-}= x_i,\forall 1\le i\le 3\}}I_Q(\mu).
@@ -347,4 +351,4 @@ I_Q(\cdots,\mu^+,\mu^-)
 \begin{equation}
     I_{\tilde{Q}}(x_1, x_2, x_3) \neq I_{\tilde{Q}}(-x_1, x_2, x_3) -\left(\log\frac{\gamma^{c_1}}{\gamma^{c_1-}}\right)\tilde{\mu}^{c_1},
 \end{equation}
-因此 ST 经验净环流不满足 Gallavotti-Cohen 类型涨落定理的强形式。
+因此ST经验净环流不满足 Gallavotti-Cohen 类型涨落定理的强形式。
