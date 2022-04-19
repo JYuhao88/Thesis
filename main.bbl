@@ -1,0 +1,244 @@
+\begin{thebibliography}{37}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Jarzynski(2011)]{annurev-conmatphys}
+Jarzynski C.
+\newblock Equalities and Inequalities: Irreversibility and the Second Law of
+  Thermodynamics at the Nanoscale[J].
+\newblock Annual Review of Condensed Matter Physics, 2011, 2(1):329--351.
+\newblock \url{https://doi.org/10.1146/annurev-conmatphys-062910-140506}.
+
+\bibitem[Seifert(2012)]{Seifert_2012}
+Seifert U.
+\newblock Stochastic thermodynamics, fluctuation theorems and molecular
+  machines[J].
+\newblock Reports on Progress in Physics, 2012, 75(12):126001.
+\newblock \url{https://doi.org/10.1088/0034-4885/75/12/126001}.
+
+\bibitem[{Van den Broeck} and Esposito(2015)]{VANDENBROECK20156}
+{Van den Broeck} C, Esposito M.
+\newblock Ensemble and trajectory thermodynamics: A brief introduction[J].
+\newblock Physica A: Statistical Mechanics and its Applications, 2015,
+  418:6--16.
+\newblock
+  \url{https://www.sciencedirect.com/science/article/pii/S037843711400346X}.
+\newblock Proceedings of the 13th International Summer School on Fundamental
+  Problems in Statistical Physics.
+
+\bibitem[Onsager and Machlup(1953)]{PhysRev.91.1505}
+Onsager L, Machlup S.
+\newblock Fluctuations and Irreversible Processes[J].
+\newblock Phys. Rev., 1953, 91:1505--1512.
+\newblock \url{https://link.aps.org/doi/10.1103/PhysRev.91.1505}.
+
+\bibitem[Kolmogoroff(1936)]{Math.Ann.112}
+Kolmogoroff A.
+\newblock Zur Theorie der Markoffschen Ketten.[J].
+\newblock Math. Ann, 1936, 112:155–160.
+\newblock \url{https://link.springer.com/article/10.1007/BF01565412}.
+
+\bibitem[Schnakenberg(1976)]{Schnakenberg1976NetworkTO}
+Schnakenberg J.
+\newblock Network theory of microscopic and macroscopic behavior of master
+  equation systems[J].
+\newblock Reviews of Modern Physics, 1976, 48:571--585.
+
+\bibitem[Zhang et al.(2012)]{ZHANG20121}
+Zhang X~J, Qian H, Qian M.
+\newblock Stochastic theory of nonequilibrium steady states and its
+  applications. Part I[J].
+\newblock Physics Reports, 2012, 510(1):1--86.
+\newblock
+  \url{https://www.sciencedirect.com/science/article/pii/S0370157311002420}.
+\newblock Stochastic Theory of Nonequilibrium Steady States and Its
+  Applications: Part I.
+
+\bibitem[Ge et al.(2012)]{GE201287}
+Ge H, Qian M, Qian H.
+\newblock Stochastic theory of nonequilibrium steady states. Part II:
+  Applications in chemical biophysics[J].
+\newblock Physics Reports, 2012, 510(3):87--118.
+\newblock
+  \url{https://www.sciencedirect.com/science/article/pii/S0370157311002419}.
+\newblock Stochastic theory of nonequilibrium steady states (Part II):
+  Applications in chemical biophysics.
+
+\bibitem[Hill and Kedem(1966)]{Hill1966StudiesIIa}
+Hill T~L, Kedem O.
+\newblock Studies in irreversible thermodynamics. 3. Models for steady state
+  and active transport across membranes.[J].
+\newblock Journal of theoretical biology, 1966, 10 3:399--441.
+
+\bibitem[Hill(1966)]{Hill1966StudiesIIb}
+Hill T~L.
+\newblock Studies in irreversible thermodynamics. IV. Diagrammatic
+  representation of steady state fluxes for unimolecular systems.[J].
+\newblock Journal of theoretical biology, 1966, 10 3:442--59.
+
+\bibitem[Hill(2013)]{hill2013free}
+Hill T~L.
+\newblock
+\newblock Free energy transduction and biochemical cycle kinetics[M].[S.l.]:
+  Courier Corporation, 2013.
+
+\bibitem[Minping and Min(1982)]{minping1982circulation}
+Minping Q, Min Q.
+\newblock Circulation for recurrent Markov chains[J].
+\newblock Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und Verwandte Gebiete,
+  1982, 59(2):203--210.
+
+\bibitem[JIAN et al.(1984)]{jian1984circulations}
+JIAN M~B, JIAN M, JIAN C.
+\newblock Circulations of Markov chains with continuous time and the
+  probability interpretation of some determinants[J].
+\newblock Science in China Series A-Mathematics, Physics, Astronomy \&
+  Technological Science, 1984, 27(5):470--481.
+
+\bibitem[Jiang and Jiang(2004)]{jiang2004mathematical}
+Jiang D~Q, Jiang D.
+\newblock
+\newblock Mathematical theory of nonequilibrium steady states: on the frontier
+  of probability and dynamical systems[M].[S.l.]: Springer Science \& Business
+  Media, 2004.
+
+\bibitem[Kalpazidou(2007)]{kalpazidou2007cycle}
+Kalpazidou S~L.
+\newblock Cycle representations of Markov processes[M].
+\newblock
+\newblock  Vol. 28.[S.l.]: Springer Science \& Business Media, 2007.
+
+\bibitem[Rold{\'a}n and Vivo(2019)]{roldan2019exact}
+Rold{\'a}n {\'E}, Vivo P.
+\newblock Exact distributions of currents and frenesy for Markov bridges[J].
+\newblock Physical Review E, 2019, 100(4):042108.
+
+\bibitem[Biddle and Gunawardena(2020)]{biddle2020reversal}
+Biddle J~W, Gunawardena J.
+\newblock Reversal symmetries for cyclic paths away from thermodynamic
+  equilibrium[J].
+\newblock Physical Review E, 2020, 101(6):062125.
+
+\bibitem[Pietzonka et al.(2021)]{pietzonka2021cycle}
+Pietzonka P, Guioth J, Jack R~L.
+\newblock Cycle counts and affinities in stochastic models of nonequilibrium
+  systems[J].
+\newblock Physical Review E, 2021, 104(6):064137.
+
+\bibitem[Andrieux and Gaspard(2007){\natexlab{a}}]{andrieux2007fluctuation}
+Andrieux D, Gaspard P.
+\newblock Fluctuation theorem for currents and Schnakenberg network theory[J].
+\newblock Journal of statistical physics, 2007, 127(1):107--131.
+
+\bibitem[Polettini and Esposito(2014)]{polettini2014transient}
+Polettini M, Esposito M.
+\newblock Transient fluctuation theorems for the currents and initial
+  equilibrium ensembles[J].
+\newblock Journal of Statistical Mechanics: Theory and Experiment, 2014,
+  2014(10):P10033.
+
+\bibitem[Andrieux and Gaspard(2007){\natexlab{b}}]{andrieux2007network}
+Andrieux D, Gaspard P.
+\newblock Network and thermodynamic conditions for a single macroscopic current
+  fluctuation theorem[J].
+\newblock Comptes Rendus Physique, 2007, 8(5-6):579--590.
+
+\bibitem[Jia et al.(2016)]{jia2016cycle}
+Jia C, Jiang D~Q, Qian M~P.
+\newblock Cycle symmetries and circulation fluctuations for discrete-time and
+  continuous-time Markov chains[J].
+\newblock The Annals of Applied Probability, 2016, 26(4):2454--2493.
+
+\bibitem[Ge et al.(2017)]{ge2017cycle}
+Ge H, Jia C, Jiang D~Q.
+\newblock Cycle symmetry, limit theorems, and fluctuation theorems for
+  diffusion processes on the circle[J].
+\newblock Stochastic Processes and their Applications, 2017, 127(6):1897--1925.
+
+\bibitem[Varadhan(1984)]{varadhan1984large}
+Varadhan S~S.
+\newblock
+\newblock Large deviations and applications[M].[S.l.]: SIAM, 1984.
+
+\bibitem[Den~Hollander(2000)]{den2000large}
+Den~Hollander F.
+\newblock Large deviations[M].
+\newblock
+\newblock  Vol. 14.[S.l.]: American Mathematical Soc., 2000.
+
+\bibitem[Bertini et al.(2015){\natexlab{a}}]{bertini2015flows}
+Bertini L, Faggionato A, Gabrielli D.
+\newblock Flows, currents, and cycles for Markov chains: large deviation
+  asymptotics[J].
+\newblock Stochastic Processes and their Applications, 2015, 125(7):2786--2819.
+
+\bibitem[Bertini et al.(2015){\natexlab{b}}]{bertini2015large}
+Bertini L, Faggionato A, Gabrielli D.
+\newblock
+\newblock Large deviations of the empirical flow for continuous time Markov
+  chains[C]//Annales de l'IHP Probabilit{\'e}s et statistiques.
+\newblock .[S.l.]: [s.n.] , 2015{\natexlab{b}}，51:867--900.
+
+\bibitem[Cornish-Bowden(2013)]{cornish2013fundamentals}
+Cornish-Bowden A.
+\newblock
+\newblock Fundamentals of enzyme kinetics[M].[S.l.]: John Wiley \& Sons, 2013.
+
+\bibitem[Sakmann(2013)]{sakmann2013single}
+Sakmann B.
+\newblock
+\newblock Single-channel recording[M].[S.l.]: Springer Science \& Business
+  Media, 2013.
+
+\bibitem[Beard and Qian(2008)]{beard2008chemical}
+Beard D~A, Qian H.
+\newblock Chemical biophysics: quantitative analysis of cellular systems[M].
+\newblock
+\newblock  Vol. 126.[S.l.]: Cambridge University Press Cambridge, 2008.
+
+\bibitem[Jia(2017)]{jia2017nonequilibrium}
+Jia C.
+\newblock Nonequilibrium nature of adaptation in bacterial chemotaxis: A
+  fluctuation-dissipation theorem approach[J].
+\newblock Physical Review E, 2017, 95(4):042116.
+
+\bibitem[Pedraza and Paulsson(2008)]{pedraza2008effects}
+Pedraza J~M, Paulsson J.
+\newblock Effects of molecular memory and bursting on fluctuations in gene
+  expression[J].
+\newblock Science, 2008, 319(5861):339--343.
+
+\bibitem[Jia and Li(2022)]{jia2022analytical}
+Jia C, Li Y.
+\newblock Analytical time-dependent distributions for gene expression models
+  with complex promoter switching mechanisms[J].
+\newblock bioRxiv, 2022.
+
+\bibitem[Mehl et al.(2012)]{mehl2012role}
+Mehl J, Lander B, Bechinger C, et al.
+\newblock Role of hidden slow degrees of freedom in the fluctuation theorem[J].
+\newblock Physical Review Letters, 2012, 108(22):220601.
+
+\bibitem[Polettini and Esposito(2017)]{polettini2017effective}
+Polettini M, Esposito M.
+\newblock Effective thermodynamics for a marginal observer[J].
+\newblock Physical review letters, 2017, 119(24):240601.
+
+\bibitem[Uhl et al.(2018)]{uhl2018fluctuations}
+Uhl M, Pietzonka P, Seifert U.
+\newblock Fluctuations of apparent entropy production in networks with hidden
+  slow degrees of freedom[J].
+\newblock Journal of Statistical Mechanics: Theory and Experiment, 2018,
+  2018(2):023203.
+
+\bibitem[Kahlen and Ehrich(2018)]{kahlen2018hidden}
+Kahlen M, Ehrich J.
+\newblock Hidden slow degrees of freedom and fluctuation theorems: an
+  analytically solvable model[J].
+\newblock Journal of statistical mechanics: theory and experiment, 2018,
+  2018(6):063204.
+
+\end{thebibliography}

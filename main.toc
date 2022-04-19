@@ -1,0 +1,24 @@
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont \CJKfamily {song}摘\hskip 1em\relax 要}{I}{section*.4}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont \CJKfamily {song}Abstract}{II}{section*.8}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 一\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 绪论}{1}{section*.12}%
+\contentsline {section}{\numberline {1.1}问题的背景和研究现状}{1}{section*.14}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 二\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 模型介绍}{3}{section*.17}%
+\contentsline {section}{\numberline {2.1}环擦除方式定义的环流}{4}{section*.20}%
+\contentsline {section}{\numberline {2.2}生成树方式定义的环流}{5}{section*.23}%
+\contentsline {section}{\numberline {2.3}两种类型环流的比较}{6}{section*.25}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 三\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 环流的大偏差原理}{8}{section*.28}%
+\contentsline {section}{\numberline {3.1}单环马氏链LE环流的大偏差}{8}{section*.30}%
+\contentsline {subsection}{\numberline {3.1.1}大偏差速率函数的基本推导}{8}{section*.32}%
+\contentsline {subsection}{\numberline {3.1.2}速率函数的对称性}{15}{section*.38}%
+\contentsline {subsection}{\numberline {3.1.3}大偏差原理的严格证明和速率函数的性质}{19}{section*.45}%
+\contentsline {subsection}{\numberline {3.1.4}大偏差速率函数的简化形式}{22}{section*.50}%
+\contentsline {section}{\numberline {3.2}一般马氏链的ST环流的大偏差}{24}{section*.54}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 四\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 环流的涨落定理}{27}{section*.57}%
+\contentsline {section}{\numberline {4.1}单环马氏链LE环流的涨落定理}{27}{section*.59}%
+\contentsline {section}{\numberline {4.2}一般马氏链LE环流的涨落定理}{29}{section*.61}%
+\contentsline {section}{\numberline {4.3}一般马氏链ST环流的涨落定理}{31}{section*.63}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 五\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 总结和讨论}{35}{section*.67}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont \CJKfamily {song}致\hskip 1em\relax 谢}{36}{section*.71}%
+\contentsline {chapter}{参考文献}{37}{section*.73}%
+\contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 附录 6\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 攻读硕士学位期间发表的论文及其他成果}{40}{section*.78}%
+\contentsfinish 
