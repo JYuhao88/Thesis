@@ -128,6 +128,30 @@ Pietzonka P, Guioth J, Jack R~L.
   systems[J].
 \newblock Physical Review E, 2021, 104(6):064137.
 
+\bibitem[Varadhan(1984)]{varadhan1984large}
+Varadhan S~S.
+\newblock
+\newblock Large deviations and applications[M].[S.l.]: SIAM, 1984.
+
+\bibitem[Den~Hollander(2000)]{den2000large}
+Den~Hollander F.
+\newblock Large deviations[M].
+\newblock
+\newblock  Vol. 14.[S.l.]: American Mathematical Soc., 2000.
+
+\bibitem[Bertini et al.(2015){\natexlab{a}}]{bertini2015flows}
+Bertini L, Faggionato A, Gabrielli D.
+\newblock Flows, currents, and cycles for Markov chains: large deviation
+  asymptotics[J].
+\newblock Stochastic Processes and their Applications, 2015, 125(7):2786--2819.
+
+\bibitem[Bertini et al.(2015){\natexlab{b}}]{bertini2015large}
+Bertini L, Faggionato A, Gabrielli D.
+\newblock
+\newblock Large deviations of the empirical flow for continuous time Markov
+  chains[C]//Annales de l'IHP Probabilit{\'e}s et statistiques.
+\newblock .[S.l.]: [s.n.] , 2015{\natexlab{b}}，51:867--900.
+
 \bibitem[Andrieux and Gaspard(2007){\natexlab{a}}]{andrieux2007fluctuation}
 Andrieux D, Gaspard P.
 \newblock Fluctuation theorem for currents and Schnakenberg network theory[J].
@@ -157,30 +181,6 @@ Ge H, Jia C, Jiang D~Q.
 \newblock Cycle symmetry, limit theorems, and fluctuation theorems for
   diffusion processes on the circle[J].
 \newblock Stochastic Processes and their Applications, 2017, 127(6):1897--1925.
-
-\bibitem[Varadhan(1984)]{varadhan1984large}
-Varadhan S~S.
-\newblock
-\newblock Large deviations and applications[M].[S.l.]: SIAM, 1984.
-
-\bibitem[Den~Hollander(2000)]{den2000large}
-Den~Hollander F.
-\newblock Large deviations[M].
-\newblock
-\newblock  Vol. 14.[S.l.]: American Mathematical Soc., 2000.
-
-\bibitem[Bertini et al.(2015){\natexlab{a}}]{bertini2015flows}
-Bertini L, Faggionato A, Gabrielli D.
-\newblock Flows, currents, and cycles for Markov chains: large deviation
-  asymptotics[J].
-\newblock Stochastic Processes and their Applications, 2015, 125(7):2786--2819.
-
-\bibitem[Bertini et al.(2015){\natexlab{b}}]{bertini2015large}
-Bertini L, Faggionato A, Gabrielli D.
-\newblock
-\newblock Large deviations of the empirical flow for continuous time Markov
-  chains[C]//Annales de l'IHP Probabilit{\'e}s et statistiques.
-\newblock .[S.l.]: [s.n.] , 2015{\natexlab{b}}，51:867--900.
 
 \bibitem[Cornish-Bowden(2013)]{cornish2013fundamentals}
 Cornish-Bowden A.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  13 APR 2022 21:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  22 APR 2022 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -67,286 +67,51 @@ l.3 \BiChapter{模型介绍
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
+! Undefined control sequence.
+l.5 \BiSection
+              {环形动力学介绍}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! LaTeX Error: Unicode character 在 (U+5728)
+
+! LaTeX Error: Unicode character 环 (U+73AF)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 在
-       此考虑基于离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
+l.5 \BiSection{环
+                  形动力学介绍}{}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-! LaTeX Error: Unicode character 此 (U+6B64)
+! LaTeX Error: Unicode character 形 (U+5F62)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 在此
-          考虑基于离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
+l.5 \BiSection{环形
+                     动力学介绍}{}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-! LaTeX Error: Unicode character 考 (U+8003)
+! LaTeX Error: Unicode character 动 (U+52A8)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 在此考
-             虑基于离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 虑 (U+8651)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑
-                基于离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 基 (U+57FA)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基
-                   于离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 于 (U+4E8E)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于
-                      离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 离 (U+79BB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于离
-                         散时间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 散 (U+6563)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于离散
-                            时间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 时 (U+65F6)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于离散时
-                               间马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 间 (U+95F4)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于离散时间
-                                  马氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 马 (U+9A6C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于离散时间马
-                                     氏链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 氏 (U+6C0F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于离散时间马氏
-                                        链$\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 链 (U+94FE)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于离散时间马氏链
-                                           $\xi = (\xi_n)_{n \ge 0}$建模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 在此考虑基于离散时间马氏链$
-                                            \xi = (\xi_n)_{n \ge 0}$建模�...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
-
-! LaTeX Error: Unicode character 建 (U+5EFA)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...时间马氏链$\xi = (\xi_n)_{n \ge 0}$建
-                                                  模的随机热力学系�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 模 (U+6A21)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...间马氏链$\xi = (\xi_n)_{n \ge 0}$建模
-                                                  的随机热力学系统�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 的 (U+7684)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...马氏链$\xi = (\xi_n)_{n \ge 0}$建模的
-                                                  随机热力学系统，�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 随 (U+968F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...氏链$\xi = (\xi_n)_{n \ge 0}$建模的随
-                                                  机热力学系统，该�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 机 (U+673A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...链$\xi = (\xi_n)_{n \ge 0}$建模的随机
-                                                  热力学系统，该模�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 热 (U+70ED)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...$\xi = (\xi_n)_{n \ge 0}$建模的随机热
-                                                  力学系统，该模型�...
-
+l.5 \BiSection{环形动
+                        力学介绍}{}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -358,8 +123,158 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...i = (\xi_n)_{n \ge 0}$建模的随机热力
-                                                  学系统，该模型的�...
+l.5 \BiSection{环形动力
+                           学介绍}{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 学 (U+5B66)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \BiSection{环形动力学
+                              介绍}{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 介 (U+4ECB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \BiSection{环形动力学介
+                                 绍}{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 绍 (U+7ECD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \BiSection{环形动力学介绍
+                                    }{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 环 (U+73AF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环
+       形结构在自然科学中极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 形 (U+5F62)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形
+          结构在自然科学中极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 结 (U+7ED3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结
+             构在自然科学中极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 构 (U+6784)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构
+                在自然科学中极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 在 (U+5728)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在
+                   自然科学中极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 自 (U+81EA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自
+                      然科学中极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 然 (U+7136)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自然
+                         科学中极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 科 (U+79D1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自然科
+                            学中极为常见，在生化系统中，系统...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -372,8 +287,134 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ... (\xi_n)_{n \ge 0}$建模的随机热力学
-                                                  系统，该模型的状�...
+l.6 环形结构在自然科学
+                               中极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 中 (U+4E2D)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自然科学中
+                                  极为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 极 (U+6781)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自然科学中极
+                                     为常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 为 (U+4E3A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自然科学中极为
+                                        常见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 常 (U+5E38)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自然科学中极为常
+                                           见，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 见 (U+89C1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自然科学中极为常见
+                                              ，在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ， (U+FF0C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 环形结构在自然科学中极为常见，
+                                                 在生化系统中，系统...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 在 (U+5728)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�结构在自然科学中极为常见，在
+                                                  生化系统中，系统�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 生 (U+751F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�构在自然科学中极为常见，在生
+                                                  化系统中，系统完�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 化 (U+5316)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�在自然科学中极为常见，在生化
+                                                  系统中，系统完成�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -386,8 +427,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...xi_n)_{n \ge 0}$建模的随机热力学系
-                                                  统，该模型的状态�...
+l.6 ...�自然科学中极为常见，在生化系
+                                                  统中，系统完成封�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -400,7 +441,1326 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...n)_{n \ge 0}$建模的随机热力学系统
+l.6 ...�然科学中极为常见，在生化系统
+                                                  中，系统完成封闭�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 中 (U+4E2D)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�科学中极为常见，在生化系统中
+                                                  ，系统完成封闭的�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ， (U+FF0C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�学中极为常见，在生化系统中，
+                                                  系统完成封闭的环�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 系 (U+7CFB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�中极为常见，在生化系统中，系
+                                                  统完成封闭的环形�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 统 (U+7EDF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�极为常见，在生化系统中，系统
+                                                  完成封闭的环形运�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 完 (U+5B8C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�为常见，在生化系统中，系统完
+                                                  成封闭的环形运动�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 成 (U+6210)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�常见，在生化系统中，系统完成
+                                                  封闭的环形运动，�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 封 (U+5C01)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�见，在生化系统中，系统完成封
+                                                  闭的环形运动，标�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 闭 (U+95ED)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�，在生化系统中，系统完成封闭
+                                                  的环形运动，标志�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 的 (U+7684)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�在生化系统中，系统完成封闭的
+                                                  环形运动，标志着�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 环 (U+73AF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�生化系统中，系统完成封闭的环
+                                                  形运动，标志着生�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 形 (U+5F62)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�化系统中，系统完成封闭的环形
+                                                  运动，标志着生物�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 运 (U+8FD0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�系统中，系统完成封闭的环形运
+                                                  动，标志着生物活�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 动 (U+52A8)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�统中，系统完成封闭的环形运动
+                                                  ，标志着生物活动�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ， (U+FF0C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�中，系统完成封闭的环形运动，
+                                                  标志着生物活动的�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 标 (U+6807)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�，系统完成封闭的环形运动，标
+                                                  志着生物活动的进�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 志 (U+5FD7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�系统完成封闭的环形运动，标志
+                                                  着生物活动的进行�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 着 (U+7740)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�统完成封闭的环形运动，标志着
+                                                  生物活动的进行。�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 生 (U+751F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�完成封闭的环形运动，标志着生
+                                                  物活动的进行。下�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 物 (U+7269)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�成封闭的环形运动，标志着生物
+                                                  活动的进行。下面�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 活 (U+6D3B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�封闭的环形运动，标志着生物活
+                                                  动的进行。下面通�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 动 (U+52A8)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�闭的环形运动，标志着生物活动
+                                                  的进行。下面通过�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 的 (U+7684)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�的环形运动，标志着生物活动的
+                                                  进行。下面通过酶�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 进 (U+8FDB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�环形运动，标志着生物活动的进
+                                                  行。下面通过酶促�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 行 (U+884C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�形运动，标志着生物活动的进行
+                                                  。下面通过酶促反�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 。 (U+3002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�运动，标志着生物活动的进行。
+                                                  下面通过酶促反应�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 下 (U+4E0B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�动，标志着生物活动的进行。下
+                                                  面通过酶促反应的�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 面 (U+9762)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�，标志着生物活动的进行。下面
+                                                  通过酶促反应的例�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 通 (U+901A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�标志着生物活动的进行。下面通
+                                                  过酶促反应的例子�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 过 (U+8FC7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�志着生物活动的进行。下面通过
+                                                  酶促反应的例子，�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 酶 (U+9176)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�着生物活动的进行。下面通过酶
+                                                  促反应的例子，理�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 促 (U+4FC3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�生物活动的进行。下面通过酶促
+                                                  反应的例子，理解�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 反 (U+53CD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�物活动的进行。下面通过酶促反
+                                                  应的例子，理解环�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 应 (U+5E94)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�活动的进行。下面通过酶促反应
+                                                  的例子，理解环形�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 的 (U+7684)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�动的进行。下面通过酶促反应的
+                                                  例子，理解环形结�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 例 (U+4F8B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�的进行。下面通过酶促反应的例
+                                                  子，理解环形结构�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 子 (U+5B50)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�进行。下面通过酶促反应的例子
+                                                  ，理解环形结构和�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ， (U+FF0C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�行。下面通过酶促反应的例子，
+                                                  理解环形结构和环�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 理 (U+7406)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�。下面通过酶促反应的例子，理
+                                                  解环形结构和环形�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 解 (U+89E3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�下面通过酶促反应的例子，理解
+                                                  环形结构和环形动�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 环 (U+73AF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�面通过酶促反应的例子，理解环
+                                                  形结构和环形动力�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 形 (U+5F62)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�通过酶促反应的例子，理解环形
+                                                  结构和环形动力学�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 结 (U+7ED3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�过酶促反应的例子，理解环形结
+                                                  构和环形动力学在�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 构 (U+6784)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�酶促反应的例子，理解环形结构
+                                                  和环形动力学在生�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 和 (U+548C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�促反应的例子，理解环形结构和
+                                                  环形动力学在生化�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 环 (U+73AF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�反应的例子，理解环形结构和环
+                                                  形动力学在生化系�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 形 (U+5F62)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�应的例子，理解环形结构和环形
+                                                  动力学在生化系统�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 动 (U+52A8)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�的例子，理解环形结构和环形动
+                                                  力学在生化系统中�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 力 (U+529B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�例子，理解环形结构和环形动力
+                                                  学在生化系统中的�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 学 (U+5B66)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�子，理解环形结构和环形动力学
+                                                  在生化系统中的重�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 在 (U+5728)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�，理解环形结构和环形动力学在
+                                                  生化系统中的重要�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 生 (U+751F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�理解环形结构和环形动力学在生
+                                                  化系统中的重要作�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 化 (U+5316)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�解环形结构和环形动力学在生化
+                                                  系统中的重要作用。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 系 (U+7CFB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�环形结构和环形动力学在生化系
+                                                  统中的重要作用。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 统 (U+7EDF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�形结构和环形动力学在生化系统
+                                                  中的重要作用。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 中 (U+4E2D)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�结构和环形动力学在生化系统中
+                                                  的重要作用。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 的 (U+7684)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�构和环形动力学在生化系统中的
+                                                  重要作用。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 重 (U+91CD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�和环形动力学在生化系统中的重
+                                                  要作用。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 要 (U+8981)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�环形动力学在生化系统中的重要
+                                                  作用。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 作 (U+4F5C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�形动力学在生化系统中的重要作
+                                                  用。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 用 (U+7528)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�动力学在生化系统中的重要作用
+                                                  。
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 。 (U+3002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...�力学在生化系统中的重要作用。
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Environment align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{align}
+                  \label{eq:model}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8     A
+          \xrightleftharpoons[\mathit{below}]{\mathit{above}} B
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+! Undefined control sequence.
+l.8     A \xrightleftharpoons
+                             [\mathit{below}]{\mathit{above}} B
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+
+! LaTeX Error: \mathit allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8     A \xrightleftharpoons[\mathit{below}
+                                            ]{\mathit{above}} B
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+! LaTeX Error: \mathit allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ...leftharpoons[\mathit{below}]{\mathit{above}
+                                                  } B
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no B in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{align}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \end{align}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--10
+[]
+ []
+
+! Undefined control sequence.
+l.12 \BiSection
+               {马氏链的环}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Unicode character 马 (U+9A6C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \BiSection{马
+                   氏链的环}{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 氏 (U+6C0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \BiSection{马氏
+                      链的环}{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 链 (U+94FE)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \BiSection{马氏链
+                         的环}{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 的 (U+7684)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \BiSection{马氏链的
+                            环}{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 环 (U+73AF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \BiSection{马氏链的环
+                               }{}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 本 (U+672C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本
+        文通过离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 文 (U+6587)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文
+           通过离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 通 (U+901A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通
+              过离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 过 (U+8FC7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过
+                 离散时间马氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 离 (U+79BB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过离
+                    散时间马氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 散 (U+6563)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过离散
+                       时间马氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 时 (U+65F6)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过离散时
+                          间马氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 间 (U+95F4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过离散时间
+                             马氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 马 (U+9A6C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过离散时间马
+                                氏链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 氏 (U+6C0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过离散时间马氏
+                                   链$\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 链 (U+94FE)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过离散时间马氏链
+                                      $\xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 本文通过离散时间马氏链$
+                                       \xi = (\xi_n)_{n \ge 0}$对随机热�...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
+
+! LaTeX Error: Unicode character 对 (U+5BF9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...��间马氏链$\xi = (\xi_n)_{n \ge 0}$对
+                                                  随机热力学系统建�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 随 (U+968F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...��马氏链$\xi = (\xi_n)_{n \ge 0}$对随
+                                                  机热力学系统建模�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 机 (U+673A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...��氏链$\xi = (\xi_n)_{n \ge 0}$对随机
+                                                  热力学系统建模，�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 热 (U+70ED)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...��链$\xi = (\xi_n)_{n \ge 0}$对随机热
+                                                  力学系统建模，该�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 力 (U+529B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...��$\xi = (\xi_n)_{n \ge 0}$对随机热力
+                                                  学系统建模，该模�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 学 (U+5B66)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...\xi = (\xi_n)_{n \ge 0}$对随机热力学
+                                                  系统建模，该模型�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 系 (U+7CFB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ... = (\xi_n)_{n \ge 0}$对随机热力学系
+                                                  统建模，该模型的�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 统 (U+7EDF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...(\xi_n)_{n \ge 0}$对随机热力学系统
+                                                  建模，该模型的状�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 建 (U+5EFA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...i_n)_{n \ge 0}$对随机热力学系统建
+                                                  模，该模型的状态�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 模 (U+6A21)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...)_{n \ge 0}$对随机热力学系统建模
                                                   ，该模型的状态空�...
 
 You may provide a definition with
@@ -414,7 +1774,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...{n \ge 0}$建模的随机热力学系统，
+l.13 ...n \ge 0}$对随机热力学系统建模，
                                                   该模型的状态空间�...
 
 You may provide a definition with
@@ -428,7 +1788,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...\ge 0}$建模的随机热力学系统，该
+l.13 ...ge 0}$对随机热力学系统建模，该
                                                   模型的状态空间是$S...
 
 You may provide a definition with
@@ -442,7 +1802,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ... 0}$建模的随机热力学系统，该模
+l.13 ...0}$对随机热力学系统建模，该模
                                                   型的状态空间是$S = ...
 
 You may provide a definition with
@@ -456,7 +1816,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...$建模的随机热力学系统，该模型
+l.13 ...对随机热力学系统建模，该模型
                                                   的状态空间是$S = \{1...
 
 You may provide a definition with
@@ -470,7 +1830,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�模的随机热力学系统，该模型的
+l.13 ...随机热力学系统建模，该模型的
                                                   状态空间是$S = \{1, \...
 
 You may provide a definition with
@@ -484,7 +1844,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�的随机热力学系统，该模型的状
+l.13 ...机热力学系统建模，该模型的状
                                                   态空间是$S = \{1, \dot...
 
 You may provide a definition with
@@ -498,7 +1858,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�随机热力学系统，该模型的状态
+l.13 ...热力学系统建模，该模型的状态
                                                   空间是$S = \{1, \dots N...
 
 You may provide a definition with
@@ -512,7 +1872,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�机热力学系统，该模型的状态空
+l.13 ...力学系统建模，该模型的状态空
                                                   间是$S = \{1, \dots N\}$...
 
 You may provide a definition with
@@ -526,8 +1886,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�热力学系统，该模型的状态空间
-                                                  是$S = \{1, \dots N\}$转...
+l.13 ...学系统建模，该模型的状态空间
+                                                  是$S = \{1, \dots N\}$，...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -540,8 +1900,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�力学系统，该模型的状态空间是
-                                                  $S = \{1, \dots N\}$转移...
+l.13 ...系统建模，该模型的状态空间是
+                                                  $S = \{1, \dots N\}$，转...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ， (U+FF0C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...�的状态空间是$S = \{1, \dots N\}$，
+                                                  转移概率矩阵是$P=(p...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -554,7 +1928,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��的状态空间是$S = \{1, \dots N\}$转
+l.13 ...�状态空间是$S = \{1, \dots N\}$，转
                                                   移概率矩阵是$P=(p_{i...
 
 You may provide a definition with
@@ -568,7 +1942,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��状态空间是$S = \{1, \dots N\}$转移
+l.13 ...�态空间是$S = \{1, \dots N\}$，转移
                                                   概率矩阵是$P=(p_{ij})...
 
 You may provide a definition with
@@ -582,7 +1956,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��态空间是$S = \{1, \dots N\}$转移概
+l.13 ...�空间是$S = \{1, \dots N\}$，转移概
                                                   率矩阵是$P=(p_{ij})_{i...
 
 You may provide a definition with
@@ -596,7 +1970,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��空间是$S = \{1, \dots N\}$转移概率
+l.13 ...�间是$S = \{1, \dots N\}$，转移概率
                                                   矩阵是$P=(p_{ij})_{i,j ...
 
 You may provide a definition with
@@ -610,7 +1984,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��间是$S = \{1, \dots N\}$转移概率矩
+l.13 ...�是$S = \{1, \dots N\}$，转移概率矩
                                                   阵是$P=(p_{ij})_{i,j \in...
 
 You may provide a definition with
@@ -624,7 +1998,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��是$S = \{1, \dots N\}$转移概率矩阵
+l.13 ...�$S = \{1, \dots N\}$，转移概率矩阵
                                                   是$P=(p_{ij})_{i,j \in S}...
 
 You may provide a definition with
@@ -638,7 +2012,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��$S = \{1, \dots N\}$转移概率矩阵是
+l.13 ... = \{1, \dots N\}$，转移概率矩阵是
                                                   $P=(p_{ij})_{i,j \in S}$�...
 
 You may provide a definition with
@@ -652,63 +2026,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�概率矩阵是$P=(p_{ij})_{i,j \in S}$，
-                                                  其中$p_{ij}$表示从状...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 其 (U+5176)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�率矩阵是$P=(p_{ij})_{i,j \in S}$，其
-                                                  中$p_{ij}$表示从状态...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 中 (U+4E2D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�矩阵是$P=(p_{ij})_{i,j \in S}$，其中
-                                                  $p_{ij}$表示从状态$i$...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 表 (U+8868)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...P=(p_{ij})_{i,j \in S}$，其中$p_{ij}$表
-                                                  示从状态$i$到状态$j...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 示 (U+793A)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...p_{ij})_{i,j \in S}$，其中$p_{ij}$表示
+l.13 ...概率矩阵是$P=(p_{ij})_{i,j \in S}$，
                                                   从状态$i$到状态$j$�...
 
 You may provide a definition with
@@ -722,7 +2040,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...ij})_{i,j \in S}$，其中$p_{ij}$表示从
+l.13 ...率矩阵是$P=(p_{ij})_{i,j \in S}$，从
                                                   状态$i$到状态$j$的�...
 
 You may provide a definition with
@@ -736,7 +2054,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...)_{i,j \in S}$，其中$p_{ij}$表示从状
+l.13 ...矩阵是$P=(p_{ij})_{i,j \in S}$，从状
                                                   态$i$到状态$j$的转�...
 
 You may provide a definition with
@@ -750,7 +2068,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...i,j \in S}$，其中$p_{ij}$表示从状态
+l.13 ...阵是$P=(p_{ij})_{i,j \in S}$，从状态
                                                   $i$到状态$j$的转移�...
 
 You may provide a definition with
@@ -764,8 +2082,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...n S}$，其中$p_{ij}$表示从状态$i$到
-                                                  状态$j$的转移概率�...
+l.13 ...$P=(p_{ij})_{i,j \in S}$，从状态$i$到
+                                                  状态$j$的转移概率�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -778,8 +2096,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...}$，其中$p_{ij}$表示从状态$i$到状
-                                                  态$j$的转移概率。�...
+l.13 ...(p_{ij})_{i,j \in S}$，从状态$i$到状
+                                                  态$j$的转移概率为$p...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -792,8 +2110,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��其中$p_{ij}$表示从状态$i$到状态
-                                                  $j$的转移概率。该�...
+l.13 ...{ij})_{i,j \in S}$，从状态$i$到状态
+                                                  $j$的转移概率为$p_{i...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -806,8 +2124,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��$p_{ij}$表示从状态$i$到状态$j$的
-                                                  转移概率。该马氏�...
+l.13 ...{i,j \in S}$，从状态$i$到状态$j$的
+                                                  转移概率为$p_{ij}$。...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -820,8 +2138,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...p_{ij}$表示从状态$i$到状态$j$的转
-                                                  移概率。该马氏链�...
+l.13 ...j \in S}$，从状态$i$到状态$j$的转
+                                                  移概率为$p_{ij}$。记...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -834,8 +2152,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...ij}$表示从状态$i$到状态$j$的转移
-                                                  概率。该马氏链对�...
+l.13 ...in S}$，从状态$i$到状态$j$的转移
+                                                  概率为$p_{ij}$。记该...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -848,8 +2166,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...$表示从状态$i$到状态$j$的转移概
-                                                  率。该马氏链对应�...
+l.13 ...S}$，从状态$i$到状态$j$的转移概
+                                                  率为$p_{ij}$。记该马...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -862,8 +2180,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�示从状态$i$到状态$j$的转移概率
-                                                  。该马氏链对应的�...
+l.13 ...，从状态$i$到状态$j$的转移概率
+                                                  为$p_{ij}$。记该马氏...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 为 (U+4E3A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...从状态$i$到状态$j$的转移概率为
+                                                  $p_{ij}$。记该马氏链...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -876,7 +2208,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�从状态$i$到状态$j$的转移概率。
+l.13 ...$到状态$j$的转移概率为$p_{ij}$。
+                                                  记该马氏链对应的�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 记 (U+8BB0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...�状态$j$的转移概率为$p_{ij}$。记
                                                   该马氏链对应的转�...
 
 You may provide a definition with
@@ -890,7 +2236,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�状态$i$到状态$j$的转移概率。该
+l.13 ...�态$j$的转移概率为$p_{ij}$。记该
                                                   马氏链对应的转移�...
 
 You may provide a definition with
@@ -904,7 +2250,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�态$i$到状态$j$的转移概率。该马
+l.13 ...�$j$的转移概率为$p_{ij}$。记该马
                                                   氏链对应的转移图�...
 
 You may provide a definition with
@@ -918,7 +2264,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�$i$到状态$j$的转移概率。该马氏
+l.13 ...$的转移概率为$p_{ij}$。记该马氏
                                                   链对应的转移图为$G...
 
 You may provide a definition with
@@ -932,7 +2278,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...$到状态$j$的转移概率。该马氏链
+l.13 ...�转移概率为$p_{ij}$。记该马氏链
                                                   对应的转移图为$G=(S...
 
 You may provide a definition with
@@ -946,7 +2292,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�状态$j$的转移概率。该马氏链对
+l.13 ...�移概率为$p_{ij}$。记该马氏链对
                                                   应的转移图为$G=(S, E...
 
 You may provide a definition with
@@ -960,7 +2306,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�态$j$的转移概率。该马氏链对应
+l.13 ...�概率为$p_{ij}$。记该马氏链对应
                                                   的转移图为$G=(S, E)$�...
 
 You may provide a definition with
@@ -974,8 +2320,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�$j$的转移概率。该马氏链对应的
-                                                  转移图为$G=(S, E)$，�...
+l.13 ...�率为$p_{ij}$。记该马氏链对应的
+                                                  转移图为$G=(S, E)$，�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -988,8 +2334,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...$的转移概率。该马氏链对应的转
-                                                  移图为$G=(S, E)$，其�...
+l.13 ...�为$p_{ij}$。记该马氏链对应的转
+                                                  移图为$G=(S, E)$，顶�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1002,8 +2348,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�转移概率。该马氏链对应的转移
-                                                  图为$G=(S, E)$，其中�...
+l.13 ...�$p_{ij}$。记该马氏链对应的转移
+                                                  图为$G=(S, E)$，顶点�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1016,8 +2362,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�移概率。该马氏链对应的转移图
-                                                  为$G=(S, E)$，其中顶�...
+l.13 ..._{ij}$。记该马氏链对应的转移图
+                                                  为$G=(S, E)$，顶点集�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1030,8 +2376,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�概率。该马氏链对应的转移图为
-                                                  $G=(S, E)$，其中顶点�...
+l.13 ...j}$。记该马氏链对应的转移图为
+                                                  $G=(S, E)$，顶点集是�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1044,36 +2390,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...马氏链对应的转移图为$G=(S, E)$，
-                                                  其中顶点集合$S$是�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 其 (U+5176)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...氏链对应的转移图为$G=(S, E)$，其
-                                                  中顶点集合$S$是状�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 中 (U+4E2D)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...链对应的转移图为$G=(S, E)$，其中
-                                                  顶点集合$S$是状态�...
+l.13 ...��氏链对应的转移图为$G=(S, E)$，
+                                                  顶点集是状态空间$S...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1086,8 +2404,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...对应的转移图为$G=(S, E)$，其中顶
-                                                  点集合$S$是状态空�...
+l.13 ...��链对应的转移图为$G=(S, E)$，顶
+                                                  点集是状态空间$S$�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1100,8 +2418,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...应的转移图为$G=(S, E)$，其中顶点
-                                                  集合$S$是状态空间�...
+l.13 ...��对应的转移图为$G=(S, E)$，顶点
+                                                  集是状态空间$S$，�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1114,22 +2432,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...的转移图为$G=(S, E)$，其中顶点集
-                                                  合$S$是状态空间，$E...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 合 (U+5408)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...转移图为$G=(S, E)$，其中顶点集合
-                                                  $S$是状态空间，$E$�...
+l.13 ...��应的转移图为$G=(S, E)$，顶点集
+                                                  是状态空间$S$，有�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1142,8 +2446,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...图为$G=(S, E)$，其中顶点集合$S$是
-                                                  状态空间，$E$是转�...
+l.13 ...��的转移图为$G=(S, E)$，顶点集是
+                                                  状态空间$S$，有向�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1156,8 +2460,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...为$G=(S, E)$，其中顶点集合$S$是状
-                                                  态空间，$E$是转移�...
+l.13 ...��转移图为$G=(S, E)$，顶点集是状
+                                                  态空间$S$，有向边�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1170,8 +2474,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...$G=(S, E)$，其中顶点集合$S$是状态
-                                                  空间，$E$是转移概�...
+l.13 ...��移图为$G=(S, E)$，顶点集是状态
+                                                  空间$S$，有向边集�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1184,8 +2488,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...(S, E)$，其中顶点集合$S$是状态空
-                                                  间，$E$是转移概率�...
+l.13 ...��图为$G=(S, E)$，顶点集是状态空
+                                                  间$S$，有向边集是�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1198,8 +2502,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ... E)$，其中顶点集合$S$是状态空间
-                                                  ，$E$是转移概率有�...
+l.13 ...��为$G=(S, E)$，顶点集是状态空间
+                                                  $S$，有向边集是所�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1212,78 +2516,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...$，其中顶点集合$S$是状态空间，
-                                                  $E$是转移概率有向�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 是 (U+662F)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�中顶点集合$S$是状态空间，$E$是
-                                                  转移概率有向边的�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 转 (U+8F6C)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�顶点集合$S$是状态空间，$E$是转
-                                                  移概率有向边的集�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 移 (U+79FB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�点集合$S$是状态空间，$E$是转移
-                                                  概率有向边的集合 \...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 概 (U+6982)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�集合$S$是状态空间，$E$是转移概
-                                                  率有向边的集合 \ref...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 率 (U+7387)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�合$S$是状态空间，$E$是转移概率
-                                                  有向边的集合 \ref{fi...
+l.13 ...G=(S, E)$，顶点集是状态空间$S$，
+                                                  有向边集是所有正�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1296,8 +2530,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�$S$是状态空间，$E$是转移概率有
-                                                  向边的集合 \ref{figur...
+l.13 ...S, E)$，顶点集是状态空间$S$，有
+                                                  向边集是所有正转�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1310,8 +2544,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...$是状态空间，$E$是转移概率有向
-                                                  边的集合 \ref{figure:t...
+l.13 ...E)$，顶点集是状态空间$S$，有向
+                                                  边集是所有正转移�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1324,22 +2558,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�状态空间，$E$是转移概率有向边
-                                                  的集合 \ref{figure:tran...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 的 (U+7684)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�态空间，$E$是转移概率有向边的
-                                                  集合 \ref{figure:transit...
+l.13 ...，顶点集是状态空间$S$，有向边
+                                                  集是所有正转移概�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1352,22 +2572,148 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�空间，$E$是转移概率有向边的集
-                                                  合 \ref{figure:transition...
+l.13 ...顶点集是状态空间$S$，有向边集
+                                                  是所有正转移概率�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-! LaTeX Error: Unicode character 合 (U+5408)
+! LaTeX Error: Unicode character 是 (U+662F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�间，$E$是转移概率有向边的集合
-                                                   \ref{figure:transitiongra...
+l.13 ...点集是状态空间$S$，有向边集是
+                                                  所有正转移概率的�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 所 (U+6240)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...集是状态空间$S$，有向边集是所
+                                                  有正转移概率的边$E...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 有 (U+6709)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...是状态空间$S$，有向边集是所有
+                                                  正转移概率的边$E$ \...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 正 (U+6B63)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...状态空间$S$，有向边集是所有正
+                                                  转移概率的边$E$ \ref...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 转 (U+8F6C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...态空间$S$，有向边集是所有正转
+                                                  移概率的边$E$ \ref{fi...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 移 (U+79FB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...空间$S$，有向边集是所有正转移
+                                                  概率的边$E$ \ref{figur...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 概 (U+6982)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...间$S$，有向边集是所有正转移概
+                                                  率的边$E$ \ref{figure:t...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 率 (U+7387)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...$S$，有向边集是所有正转移概率
+                                                  的边$E$ \ref{figure:tran...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 的 (U+7684)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...，有向边集是所有正转移概率的
+                                                  边$E$ \ref{figure:transit...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 边 (U+8FB9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...有向边集是所有正转移概率的边
+                                                  $E$ \ref{figure:transition...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1375,8 +2721,8 @@ You may provide a definition with
 ! Undefined control sequence.
 <write> ...gure:transitiongraph' on page \thepage 
                                                   \space undefined\on@line .
-l.4 ...��边的集合 \ref{figure:transitiongraph}
-                                                  。本文用$\langle i, j\...
+l.13 ...�率的边$E$ \ref{figure:transitiongraph}
+                                                  。令$\langle i, j\rangle...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1385,7 +2731,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `figure:transitiongraph' on page  undefined on input l
-ine 4.
+ine 13.
 
 
 ! LaTeX Error: Unicode character 。 (U+3002)
@@ -1395,49 +2741,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��的集合 \ref{figure:transitiongraph}。
-                                                  本文用$\langle i, j\ran...
+l.13 ...�的边$E$ \ref{figure:transitiongraph}。
+                                                  令$\langle i, j\rangle$�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-! LaTeX Error: Unicode character 本 (U+672C)
+! LaTeX Error: Unicode character 令 (U+4EE4)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...��集合 \ref{figure:transitiongraph}。本
-                                                  文用$\langle i, j\rangle...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 文 (U+6587)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...��合 \ref{figure:transitiongraph}。本文
-                                                  用$\langle i, j\rangle$�...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 用 (U+7528)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...�� \ref{figure:transitiongraph}。本文用
+l.13 ...�边$E$ \ref{figure:transitiongraph}。令
                                                   $\langle i, j\rangle$表�...
 
 You may provide a definition with
@@ -1451,7 +2769,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...ngraph}。本文用$\langle i, j\rangle$表
+l.13 ...sitiongraph}。令$\langle i, j\rangle$表
                                                   示状态$i$到状态$j$�...
 
 You may provide a definition with
@@ -1465,7 +2783,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...aph}。本文用$\langle i, j\rangle$表示
+l.13 ...iongraph}。令$\langle i, j\rangle$表示
                                                   状态$i$到状态$j$的�...
 
 You may provide a definition with
@@ -1479,7 +2797,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...}。本文用$\langle i, j\rangle$表示状
+l.13 ...graph}。令$\langle i, j\rangle$表示状
                                                   态$i$到状态$j$的有�...
 
 You may provide a definition with
@@ -1493,7 +2811,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�本文用$\langle i, j\rangle$表示状态
+l.13 ...ph}。令$\langle i, j\rangle$表示状态
                                                   $i$到状态$j$的有向�...
 
 You may provide a definition with
@@ -1507,7 +2825,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�用$\langle i, j\rangle$表示状态$i$到
+l.13 ...令$\langle i, j\rangle$表示状态$i$到
                                                   状态$j$的有向边，�...
 
 You may provide a definition with
@@ -1521,7 +2839,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�$\langle i, j\rangle$表示状态$i$到状
+l.13 ...$\langle i, j\rangle$表示状态$i$到状
                                                   态$j$的有向边，因�...
 
 You may provide a definition with
@@ -1535,7 +2853,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...langle i, j\rangle$表示状态$i$到状态
+l.13 ...angle i, j\rangle$表示状态$i$到状态
                                                   $j$的有向边，因此�...
 
 You may provide a definition with
@@ -1549,7 +2867,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ... i, j\rangle$表示状态$i$到状态$j$的
+l.13 ...i, j\rangle$表示状态$i$到状态$j$的
                                                   有向边，因此有$E = ...
 
 You may provide a definition with
@@ -1563,7 +2881,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ... j\rangle$表示状态$i$到状态$j$的有
+l.13 ...j\rangle$表示状态$i$到状态$j$的有
                                                   向边，因此有$E = \{\...
 
 You may provide a definition with
@@ -1577,7 +2895,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...rangle$表示状态$i$到状态$j$的有向
+l.13 ...angle$表示状态$i$到状态$j$的有向
                                                   边，因此有$E = \{\lan...
 
 You may provide a definition with
@@ -1591,7 +2909,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...gle$表示状态$i$到状态$j$的有向边
+l.13 ...le$表示状态$i$到状态$j$的有向边
                                                   ，因此有$E = \{\langle...
 
 You may provide a definition with
@@ -1605,7 +2923,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...$表示状态$i$到状态$j$的有向边，
+l.13 ...表示状态$i$到状态$j$的有向边，
                                                   因此有$E = \{\langle \l...
 
 You may provide a definition with
@@ -1619,7 +2937,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�示状态$i$到状态$j$的有向边，因
+l.13 ...示状态$i$到状态$j$的有向边，因
                                                   此有$E = \{\langle \lang...
 
 You may provide a definition with
@@ -1633,7 +2951,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�状态$i$到状态$j$的有向边，因此
+l.13 ...状态$i$到状态$j$的有向边，因此
                                                   有$E = \{\langle \langle ...
 
 You may provide a definition with
@@ -1647,16 +2965,58 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...�态$i$到状态$j$的有向边，因此有
+l.13 ...态$i$到状态$j$的有向边，因此有
                                                   $E = \{\langle \langle i, ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ， (U+FF0C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...i, j\rangle \in S \times S: p_{ij}>0\}$，
+                                                  且记$|E| = M$集合$E$�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 且 (U+4E14)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...j\rangle \in S \times S: p_{ij}>0\}$，且
+                                                  记$|E| = M$集合$E$中�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character 记 (U+8BB0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...angle \in S \times S: p_{ij}>0\}$，且记
+                                                  $|E| = M$集合$E$中元�...
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 83 strings out of 478268
- 992 string characters out of 5843326
+ 123 strings out of 478268
+ 1234 string characters out of 5850346
  289375 words of memory out of 5000000
- 18390 multiletter control sequences out of 15000+600000
+ 18430 multiletter control sequences out of 15000+600000
  469567 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,2n,14p,907b,91s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 18i,2n,14p,866b,91s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 !  ==> Fatal error occurred, no output PDF file produced!
