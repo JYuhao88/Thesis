@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.1}问题的背景和研究现状}{1}{section*.14}%
 \contentsline {chapter}{\fontsize {12pt}{12pt}\selectfont 第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 二\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.5em} 模型介绍}{3}{section*.17}%
 \contentsline {section}{\numberline {2.1}环形动力学介绍}{3}{section*.19}%
-\contentsline {section}{\numberline {2.2}马氏链的环}{3}{section*.21}%
+\contentsline {section}{\numberline {2.2}马氏链中的环}{3}{section*.21}%
 \contentsline {section}{\numberline {2.3}环擦除方式定义的环流}{4}{section*.24}%
 \contentsline {section}{\numberline {2.4}生成树方式定义的环流}{5}{section*.27}%
 \contentsline {section}{\numberline {2.5}两种类型环流的比较}{6}{section*.29}%

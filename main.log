@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  22 APR 2022 20:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  22 APR 2022 21:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1434,24 +1434,13 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
  (./chapter2/body.tex
 
-Package hyperref Warning: Suppressing empty link on input line 18.
-
-
-Package hyperref Warning: Suppressing empty link on input line 18.
+Package hyperref Warning: Suppressing empty link on input line 20.
 
 
 Package hyperref Warning: Suppressing empty link on input line 20.
 
-<chart/transitiongraph.pdf, id=475, 694.595pt x 510.40688pt>
-File: chart/transitiongraph.pdf Graphic file (type pdf)
-<use chart/transitiongraph.pdf>
-Package pdftex.def Info: chart/transitiongraph.pdf  used on input line 24.
-(pdftex.def)             Requested size: 347.29665pt x 255.2028pt.
-LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10.5> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 26.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 26.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package hyperref Warning: Suppressing empty link on input line 22.
 
 
 Overfull \hbox (2.28854pt too wide) has occurred while \output is active
@@ -1472,7 +1461,25 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 
 ]
-Underfull \hbox (badness 1968) in paragraph at lines 48--49
+<chart/transitiongraph.pdf, id=492, 694.595pt x 510.40688pt>
+File: chart/transitiongraph.pdf Graphic file (type pdf)
+<use chart/transitiongraph.pdf>
+Package pdftex.def Info: chart/transitiongraph.pdf  used on input line 26.
+(pdftex.def)             Requested size: 347.29665pt x 255.2028pt.
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10.5> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 28.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 28.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.454pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.454pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
+
+[4 <./chart/transitiongraph.pdf>]
+Underfull \hbox (badness 1968) in paragraph at lines 50--51
 []\C70/song/m/n/12/66 Ù \C70/song/m/n/12/4e : \C70/song/b/n/12/51 ∆ \C70/song/m
 /n/12/78 n \C70/song/m/n/12/57 0 \C70/song/m/n/12/8b Ù|\C70/song/b/n/12/ff ^^L|
  \C70/song/m/n/12/5b ¸ \C70/song/b/n/12/51 ˙ \C70/song/m/n/12/94 ˛ \C70/song/m/
@@ -1484,30 +1491,11 @@ m/n/12/96 P \C70/song/m/n/12/5e è \C70/song/m/n/12/52 ^^W|\C70/song/b/n/12/ff ^
 ^L| \C70/song/m/n/12/4e ^^@ \C70/song/m/n/12/82 , \C70/song/m/n/12/8b ∞
  []
 
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.454pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.454pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
-
-[4 <./chart/transitiongraph.pdf>]
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
-7.
-
+9.
 (e:/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-
-Package hyperref Warning: Suppressing empty link on input line 72.
-
-
-Package hyperref Warning: Suppressing empty link on input line 74.
-
-
-Package hyperref Warning: Suppressing empty link on input line 74.
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1518,7 +1506,16 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [5]
 
-Package hyperref Warning: Suppressing empty link on input line 91.
+Package hyperref Warning: Suppressing empty link on input line 74.
+
+
+Package hyperref Warning: Suppressing empty link on input line 76.
+
+
+Package hyperref Warning: Suppressing empty link on input line 76.
+
+
+Package hyperref Warning: Suppressing empty link on input line 93.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1530,7 +1527,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [6]
 
-Package hyperref Warning: Suppressing empty link on input line 108.
+Package hyperref Warning: Suppressing empty link on input line 110.
 
 )
 
@@ -1863,7 +1860,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 [30]
 Missing character: There is no é in font txr!
 Missing character: There is no ∞ in font txr!
-<chart/ratefunction.pdf, id=1034, 1634.105pt x 691.58376pt>
+<chart/ratefunction.pdf, id=1033, 1634.105pt x 691.58376pt>
 File: chart/ratefunction.pdf Graphic file (type pdf)
 <use chart/ratefunction.pdf>
 Package pdftex.def Info: chart/ratefunction.pdf  used on input line 210.
@@ -2053,50 +2050,55 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4F660E1BC0036DE1F22BBFBE186E15FC;3879.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 4F660E1BC0036DE1F22BBFBE186E15FC;3879
+(rerunfilecheck)             After:  9CE1FF5C29540C2A347BC7877D5C6E08;3887.
  ) 
 Here is how much of TeX's memory you used:
- 29033 strings out of 478268
- 508282 string characters out of 5850346
- 735244 words of memory out of 5000000
- 45555 multiletter control sequences out of 15000+600000
+ 29050 strings out of 478268
+ 508539 string characters out of 5850346
+ 735290 words of memory out of 5000000
+ 45569 multiletter control sequences out of 15000+600000
  645805 words of font info for 579 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,19n,78p,1574b,874s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{equation.2.5.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{equation.2.3.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/sim
-hei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
-onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
-indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
-tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/
-simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Window
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/s
+imhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
+/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
+/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
+.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Font
+s/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Wind
+ows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf>
+<c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/sim
+sun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/F
+onts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/W
+indows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.t
+tf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/
+simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Window
 s/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c
-:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsu
-n.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fon
+:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhe
+i.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fon
 ts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Win
 dows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf
 ><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/si
 mhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/
 Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/
 Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.
-ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts
-/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windo
-ws/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><
-c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simh
-ei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fo
-nts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Wi
-ndows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.tt
-f><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
-imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
-/Fonts/simsun.ttc>{e:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/W
+ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts
+/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windo
+ws/Fonts/simsun.ttc>{e:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:
+/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
+.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Font
+s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
+ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
+sun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
+onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
 indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
 tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
 simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Window
@@ -2122,49 +2124,42 @@ imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
 /Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
 .ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Font
 s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
-ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
-sun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
-onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
+ows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf>
+<c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/sim
+kai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
+onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/W
 indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
-tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
-simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Window
-s/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c
-:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simka
-i.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fon
-ts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Win
-dows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc
-><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/si
+tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/
+simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Window
+s/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c
+:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simka
+i.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fon
+ts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Win
+dows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf
+><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/si
 mkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/
-Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/
-Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.
-ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts
-/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windo
-ws/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><
-c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simk
-ai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fo
-nts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Wi
-ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.tt
-c><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
-imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
-/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
-/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
-.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Font
-s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
-ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><e:/texlive/2022/texmf-dist/f
-onts/type1/public/txfonts/rtcxr.pfb><e:/texlive/2022/texmf-dist/fonts/type1/pub
-lic/txfonts/rtxmi.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rt
-xr.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txex.pfb><e:/texl
-ive/2022/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><e:/texlive/2022/texmf-
-dist/fonts/type1/public/txfonts/txsya.pfb><e:/texlive/2022/texmf-dist/fonts/typ
-e1/public/txfonts/txsyb.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfo
-nts/txsyc.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><e:/
-texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><e:/texlive/2022/texmf
--dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (50 pages, 3330015 bytes).
+Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/
+Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.
+ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts
+/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windo
+ws/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><
+c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sims
+un.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
+nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wi
+ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><e:/texlive/2022/texmf-dist
+/fonts/type1/public/txfonts/rtcxr.pfb><e:/texlive/2022/texmf-dist/fonts/type1/p
+ublic/txfonts/rtxmi.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/
+rtxr.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txex.pfb><e:/te
+xlive/2022/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><e:/texlive/2022/texm
+f-dist/fonts/type1/public/txfonts/txsya.pfb><e:/texlive/2022/texmf-dist/fonts/t
+ype1/public/txfonts/txsyb.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/tx
+fonts/txsyc.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><e
+:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><e:/texlive/2022/tex
+mf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (50 pages, 3332435 bytes).
 PDF statistics:
- 1950 PDF objects out of 2073 (max. 8388607)
- 1470 compressed objects within 15 object streams
- 258 named destinations out of 1000 (max. 500000)
+ 1948 PDF objects out of 2073 (max. 8388607)
+ 1468 compressed objects within 15 object streams
+ 256 named destinations out of 1000 (max. 500000)
  549 words of extra memory for PDF output out of 10000 (max. 10000000)
 
