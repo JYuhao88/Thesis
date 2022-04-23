@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  23 APR 2022 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  23 APR 2022 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1455,13 +1455,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
  (./chapter2/body.tex
 
-Package hyperref Warning: Suppressing empty link on input line 20.
+Package hyperref Warning: Suppressing empty link on input line 19.
 
 
-Package hyperref Warning: Suppressing empty link on input line 20.
-
-
-Package hyperref Warning: Suppressing empty link on input line 22.
+Package hyperref Warning: Suppressing empty link on input line 19.
 
 
 Overfull \hbox (2.28854pt too wide) has occurred while \output is active
@@ -1482,15 +1479,17 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 
 ]
+
+Package hyperref Warning: Suppressing empty link on input line 21.
+
 <chart/transitiongraph.pdf, id=492, 694.595pt x 510.40688pt>
 File: chart/transitiongraph.pdf Graphic file (type pdf)
 <use chart/transitiongraph.pdf>
-Package pdftex.def Info: chart/transitiongraph.pdf  used on input line 26.
+Package pdftex.def Info: chart/transitiongraph.pdf  used on input line 25.
 (pdftex.def)             Requested size: 347.29665pt x 255.2028pt.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10.5> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 28.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 28.
-
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 27.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 27.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1500,7 +1499,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
 [4 <./chart/transitiongraph.pdf>]
-Underfull \hbox (badness 1968) in paragraph at lines 50--51
+Underfull \hbox (badness 1968) in paragraph at lines 49--50
 []\C70/song/m/n/12/66 ô \C70/song/m/n/12/4e : \C70/song/b/n/12/51 Æ \C70/song/m
 /n/12/78 n \C70/song/m/n/12/57 0 \C70/song/m/n/12/8b ô|\C70/song/b/n/12/ff ^^L|
  \C70/song/m/n/12/5b ü \C70/song/b/n/12/51 ú \C70/song/m/n/12/94 þ \C70/song/m/
@@ -1513,7 +1512,7 @@ m/n/12/96 P \C70/song/m/n/12/5e  \C70/song/m/n/12/52 ^^W|\C70/song/b/n/12/ff ^
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
-9.
+8.
 (d:/Program Files/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
@@ -1527,16 +1526,13 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [5]
 
-Package hyperref Warning: Suppressing empty link on input line 74.
+Package hyperref Warning: Suppressing empty link on input line 73.
 
 
-Package hyperref Warning: Suppressing empty link on input line 76.
+Package hyperref Warning: Suppressing empty link on input line 75.
 
 
-Package hyperref Warning: Suppressing empty link on input line 76.
-
-
-Package hyperref Warning: Suppressing empty link on input line 93.
+Package hyperref Warning: Suppressing empty link on input line 75.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1548,7 +1544,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [6]
 
-Package hyperref Warning: Suppressing empty link on input line 110.
+Package hyperref Warning: Suppressing empty link on input line 92.
+
+
+Package hyperref Warning: Suppressing empty link on input line 109.
 
 )
 
@@ -2071,20 +2070,14 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 4DCF443699F2310C37A9340CAF503F62;3913
-(rerunfilecheck)             After:  9CE1FF5C29540C2A347BC7877D5C6E08;3887.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 9CE1FF5C29540C2A347BC7877D5C6E08;3887.
  ) 
 Here is how much of TeX's memory you used:
- 29050 strings out of 478268
- 513855 string characters out of 5843326
- 735290 words of memory out of 5000000
- 45569 multiletter control sequences out of 15000+600000
+ 29062 strings out of 478268
+ 514050 string characters out of 5843326
+ 735385 words of memory out of 5000000
+ 45575 multiletter control sequences out of 15000+600000
  645805 words of font info for 579 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,19n,78p,1574b,874s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2179,7 +2172,7 @@ s/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb><d:/Program File
 s/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Program Files/te
 xlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Program Files/texliv
 e/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (50 pages, 3332431 bytes).
+Output written on main.pdf (50 pages, 3332370 bytes).
 PDF statistics:
  1948 PDF objects out of 2073 (max. 8388607)
  1468 compressed objects within 15 object streams
