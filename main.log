@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  27 APR 2022 02:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  27 APR 2022 09:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2044,13 +2044,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 352FB9DF6E9F5C884E72C65C56871E59;3887.
  ) 
 Here is how much of TeX's memory you used:
- 29054 strings out of 478268
- 513975 string characters out of 5843326
- 735544 words of memory out of 5000000
- 45562 multiletter control sequences out of 15000+600000
+ 29063 strings out of 478268
+ 514123 string characters out of 5843326
+ 735640 words of memory out of 5000000
+ 45565 multiletter control sequences out of 15000+600000
  648284 words of font info for 584 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,19n,78p,1574b,873s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,19n,78p,1580b,872s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/s
 imhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
 /Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
@@ -2143,7 +2143,7 @@ dist/fonts/type1/public/txfonts/txsyc.pfb><d:/Program Files/texlive/2022/texmf-
 dist/fonts/type1/urw/times/utmb8a.pfb><d:/Program Files/texlive/2022/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb><d:/Program Files/texlive/2022/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (49 pages, 3332313 bytes).
+Output written on main.pdf (49 pages, 3331502 bytes).
 PDF statistics:
  1959 PDF objects out of 2073 (max. 8388607)
  1479 compressed objects within 15 object streams
