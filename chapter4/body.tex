@@ -1,46 +1,95 @@
 \BiChapter{环流的涨落定理}{Fluctuation theorems of cycle currents}
 
 \BiSection{单环马氏链LE环流的涨落定理}{}
-下面我们将讨论一个重要的物理问题，经验环流是否满足各种对称关系和涨落定理。LE经验环流的暂态涨落定理已经在文献 \cite{andrieux2007network} 中证明。这里将证明单环马氏链的对称关系，它甚至强于暂态涨落定理。记单环系统中两个 N 元环为  $C^+ = (1,2,\cdots,N)$ 和 $C^- = (1,N,\cdots,2)$，令 $N^+_n$ 和 $N^-_n$ 分别表示 n 时刻环  $C^+$ 和 $C^-$ 分别形成的数量。强对称关系为：
-\begin{align} \label{strong_symmetric}
-    &\;k^+ \mathbb{P}\left(N^+_n=k^+,N^-_n=k^- -1,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
-    =&\; \left(\frac{\gamma^+}{\gamma^-}\right)\mathbb{P}\left(N^+_n=k^+ -1,N^-_n=k^-,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)
-\end{align}
-其中 $\gamma^+ = p_{12}p_{23}\cdots p_{N1}$ 和 $\gamma^- = p_{1N}p_{N,N-1}\cdots p_{21}$ 分别是环 $C^+$ 和环 $C^-$中的转移概率的乘积。对于序列匹配方式定义的环流，也可以得到类似的等式\cite{pietzonka2021cycle}。接下来。针对LE环流，证明\ref{strong_symmetric}。在周期边界条件下，由公式 \eqref{trajectories} 可以得到：
-\begin{align*}
-    &\;\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
-    =&\; (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}
-    \left(\gamma^c\right)^{k^c}\left|G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})\right|,
-\end{align*}
-其中$G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})$ 表示n时刻所有可能出现的轨道的集合，那么 $C^+$ 形成 $k^+$ 次，$C^-$ 形成 $k^- -1$ 次，环 $c\neq C^+,C^-$ 形成 $k^c$ 次。简化记号，上述方程可以重写为：
-\begin{equation}\label{temp1}
-    \mathbb{P}\left(N^+_n=k^+,N^-_n=k^- -1,\cdots\right)
-    = (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}|G_n(k^+,k^- -1,\cdots)|.
-\end{equation}
-类似地, 如果把上式中的 $k^+$ 替换为 $k^+ -1$， $k^- -1$ 替换为 $k^-$，可以得到
-\begin{equation}\label{temp2}
-\mathbb{P}\left(N^+_n=k^+ -1,N^-_n=k^-,\cdots\right)
-= (\gamma^+)^{k^+ -1}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}|G_n(k^+ -1,k^-,\cdots)|.
-\end{equation}
-因此，为证明公式 \ref{strong_symmetric}，只需说明：
-\begin{equation} \label{equal0}
-    k^+ |G_n(k^+, k^- -1, \cdots)| = k^-|G_n(k^+ -1,k^-,\cdots)|.
-\end{equation}
-% 文献 \cite{andrieux2007network} 中的证明是基于 $G_n(k^+,k^-,\cdots)$ 与 $G_n(k^-,k^+,\cdots)$ 之间的一一对应关系的，即
+下面我们将讨论一个重要的物理问题，经验环流是否满足各种对称关系和涨落定理。LE经验环流的暂态涨落定理已经在文献 \cite{andrieux2007network} 中证明。这里将证明单环马氏链LE环流的对称关系，它甚至强于暂态涨落定理。
 
-对于 $G_n(k^+,k^- -1,\cdots)$ 中的任意轨道 $(\xi_0,\xi_1,\cdots,\xi_n)$，由于$C^+$形成$k^+$次，这个环有$k^+$个初始时刻和$k^+$个终止时刻。令$T_i^{begin}$和$T_i^{end}$分别表示环$C^+$的第$i$个初试时刻和第$i$个终止时刻。例如，表 \ref{trajectory}中的轨道，环$(1,2,3,4)$的首次初始时刻是$n=0$，首次终止时刻是$n=7$。如果在$T_i^{begin}$和$T_i^{end}$之间翻转轨道$\xi$，那么得到新轨道$\tilde{\xi}$，即：
-\begin{equation*}
-    \tilde{\xi}
-    =\left\{\begin{aligned}
-        \xi_{T_i^{begin}+T_i^{end}-m},&   &&if ~ T_i^{begin} \le m \le T_i^{end}\\
-        \xi_m, &   && \text{otherwise}.\\
-        \end{aligned}\right.
-\end{equation*}
-易知，逆轨道必定处于集合$G_n(k^+ -1,k^-,\cdots)$。因为环$C^+$形成$k^+$次，所以有$k^+|G_n(k^+,k^- -1, \cdots)|$种可能的轨道。在这些逆轨道中，$k^-$轨道是完全相同的，因此被重复计算。例如，如果环$C^+=(1,2,3)$，那么$G_8(2,1,\cdots)$中的轨道$\{1,2,3,1,2,3,1,3,2\}$和轨道$\{1,2,3,1,3,2,1,2,3\}$都是$G_8(1,2,\cdots)$中$\{1,2,3,1,3,2,1,3,2\}$的逆轨道，被计算了两次。因此，$G_n(k^+ -1,k^-,\cdots)$的所有可能的轨道数是：
-\begin{equation}\label{equal}
-    |G_n(k^+ -1,k^-,\cdots)| = \frac{k^+}{k^-}|G_n(k^+,k^- -1,\cdots)|.
-\end{equation}
-这恰好就是公式\ref{equal0}。因此已经证明了强对称关系\ref{strong_symmetric}。应用对称关系$|k^+ -k^-|$次，我们可以得到暂态涨落定理：
+\begin{proposition} \label{strong_symmetric}
+    单环马氏链LE环流满足强对称关系，即：
+    \begin{align} 
+        &\;k^+ \mathbb{P}\left(N^+_n=k^+,N^-_n=k^- -1,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
+        =&\; \left(\frac{\gamma^+}{\gamma^-}\right)\mathbb{P}\left(N^+_n=k^+ -1,N^-_n=k^-,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)
+    \end{align}
+    该式中 $C^+ = (1,2,\cdots,N)$ 和 $C^- = (1,N,\cdots,2)$ 表示单环系统中两个 N 元环，$N^+_n$ 和 $N^-_n$ 分别表示 n 时刻环  $C^+$ 和 $C^-$ 分别形成的数量。并且 $\gamma^+ = p_{12}p_{23}\cdots p_{N1}$ 和 $\gamma^- = p_{1N}p_{N,N-1}\cdots p_{21}$ 分别是环 $C^+$ 和环 $C^-$中的转移概率的乘积。对于序列匹配方式定义的环流，也可以得到类似的等式\cite{pietzonka2021cycle}。
+\end{proposition}
+\begin{proof}
+    依据周期边界条件，由公式 \eqref{trajectories} 可以得到：
+    \begin{align*}
+        &\;\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
+        =&\; (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}
+        \left(\gamma^c\right)^{k^c}\left|G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})\right|,
+    \end{align*}
+    其中$G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})$ 表示n时刻所有可能出现的轨道的集合，那么 $C^+$ 形成 $k^+$ 次，$C^-$ 形成 $k^- -1$ 次，环 $c\neq C^+,C^-$ 形成 $k^c$ 次。简化记号，上述方程可以重写为：
+    \begin{equation}\label{temp1}
+        \mathbb{P}\left(N^+_n=k^+,N^-_n=k^- -1,\cdots\right)
+        = (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}|G_n(k^+,k^- -1,\cdots)|.
+    \end{equation}
+    类似地, 如果把上式中的 $k^+$ 替换为 $k^+ -1$， $k^- -1$ 替换为 $k^-$，可以得到
+    \begin{equation}\label{temp2}
+    \mathbb{P}\left(N^+_n=k^+ -1,N^-_n=k^-,\cdots\right)
+    = (\gamma^+)^{k^+ -1}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}|G_n(k^+ -1,k^-,\cdots)|.
+    \end{equation}
+    因此，为证明公式 \ref{strong_symmetric}，只需证明：
+    \begin{equation} \label{equal0}
+        k^+ |G_n(k^+, k^- -1, \cdots)| = k^-|G_n(k^+ -1,k^-,\cdots)|.
+    \end{equation}
+    对于 $G_n(k^+,k^- -1,\cdots)$ 中的任意轨道 $(\xi_0,\xi_1,\cdots,\xi_n)$，由于$C^+$形成$k^+$次，这个环有$k^+$个初始时刻和$k^+$个终止时刻。令$T_i^{begin}$和$T_i^{end}$分别表示环$C^+$的第$i$个初试时刻和第$i$个终止时刻。例如，表 \ref{trajectory}中的轨道，环$(1,2,3,4)$的首次初始时刻是$n=0$，首次终止时刻是$n=7$。如果在$T_i^{begin}$和$T_i^{end}$之间翻转轨道$\xi$，那么得到新轨道$\tilde{\xi}$，即：
+    \begin{equation*}
+        \tilde{\xi}
+        =\left\{\begin{aligned}
+            \xi_{T_i^{begin}+T_i^{end}-m},&   &&if ~ T_i^{begin} \le m \le T_i^{end}\\
+            \xi_m, &   && \text{otherwise}.\\
+            \end{aligned}\right.
+    \end{equation*}
+    易知，逆轨道必定处于集合$G_n(k^+ -1,k^-,\cdots)$。因为环$C^+$形成$k^+$次，所以有$k^+|G_n(k^+,k^- -1, \cdots)|$种可能的轨道。在这些逆轨道中，$k^-$轨道是完全相同的，因此被重复计算。例如，如果环$C^+=(1,2,3)$，那么$G_8(2,1,\cdots)$中的轨道$\{1,2,3,1,2,3,1,3,2\}$和轨道$\{1,2,3,1,3,2,1,2,3\}$都是$G_8(1,2,\cdots)$中$\{1,2,3,1,3,2,1,3,2\}$的逆轨道，被计算了两次。因此，$G_n(k^+ -1,k^-,\cdots)$的所有可能的轨道数是：
+    \begin{equation}\label{equal}
+        |G_n(k^+ -1,k^-,\cdots)| = \frac{k^+}{k^-}|G_n(k^+,k^- -1,\cdots)|.
+    \end{equation}
+    这恰好就是公式\ref{equal0}。因此强对称关系\ref{strong_symmetric}得证。
+\end{proof}
+
+% 记单环系统中两个 N 元环为  $C^+ = (1,2,\cdots,N)$ 和 $C^- = (1,N,\cdots,2)$，令 $N^+_n$ 和 $N^-_n$ 分别表示 n 时刻环  $C^+$ 和 $C^-$ 分别形成的数量。强对称关系为：
+% \begin{align} \label{strong_symmetric}
+%     &\;k^+ \mathbb{P}\left(N^+_n=k^+,N^-_n=k^- -1,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
+%     =&\; \left(\frac{\gamma^+}{\gamma^-}\right)\mathbb{P}\left(N^+_n=k^+ -1,N^-_n=k^-,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)
+% \end{align}
+% 其中 $\gamma^+ = p_{12}p_{23}\cdots p_{N1}$ 和 $\gamma^- = p_{1N}p_{N,N-1}\cdots p_{21}$ 分别是环 $C^+$ 和环 $C^-$中的转移概率的乘积。
+% 对于序列匹配方式定义的环流，也可以得到类似的等式\cite{pietzonka2021cycle}。接下来。针对LE环流，证明\ref{strong_symmetric}。在周期边界条件下，由公式 \eqref{trajectories} 可以得到：
+% \begin{align*}
+%     &\;\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,N^c_n=k^c,\;\forall c\neq C^+,C^-\right)\\
+%     =&\; (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}
+%     \left(\gamma^c\right)^{k^c}\left|G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})\right|,
+% \end{align*}
+% 其中$G_n(k^+,k^-,(k^c)_{c\neq C^+,C^-})$ 表示n时刻所有可能出现的轨道的集合，那么 $C^+$ 形成 $k^+$ 次，$C^-$ 形成 $k^- -1$ 次，环 $c\neq C^+,C^-$ 形成 $k^c$ 次。简化记号，上述方程可以重写为：
+% \begin{equation}\label{temp1}
+%     \mathbb{P}\left(N^+_n=k^+,N^-_n=k^- -1,\cdots\right)
+%     = (\gamma^+)^{k^+}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}|G_n(k^+,k^- -1,\cdots)|.
+% \end{equation}
+% 类似地, 如果把上式中的 $k^+$ 替换为 $k^+ -1$， $k^- -1$ 替换为 $k^-$，可以得到
+% \begin{equation}\label{temp2}
+% \mathbb{P}\left(N^+_n=k^+ -1,N^-_n=k^-,\cdots\right)
+% = (\gamma^+)^{k^+ -1}(\gamma^-)^{k^-}\prod_{c\neq C^+,C^-}\left(\gamma^c\right)^{k^c}|G_n(k^+ -1,k^-,\cdots)|.
+% \end{equation}
+% 因此，为证明公式 \ref{strong_symmetric}，只需说明：
+% \begin{equation} \label{equal0}
+%     k^+ |G_n(k^+, k^- -1, \cdots)| = k^-|G_n(k^+ -1,k^-,\cdots)|.
+% \end{equation}
+%% 文献 \cite{andrieux2007network} 中的证明是基于 $G_n(k^+,k^-,\cdots)$ 与 $G_n(k^-,k^+,\cdots)$ 之间的一一对应关系的，即
+
+% 对于 $G_n(k^+,k^- -1,\cdots)$ 中的任意轨道 $(\xi_0,\xi_1,\cdots,\xi_n)$，由于$C^+$形成$k^+$次，这个环有$k^+$个初始时刻和$k^+$个终止时刻。令$T_i^{begin}$和$T_i^{end}$分别表示环$C^+$的第$i$个初试时刻和第$i$个终止时刻。例如，表 \ref{trajectory}中的轨道，环$(1,2,3,4)$的首次初始时刻是$n=0$，首次终止时刻是$n=7$。如果在$T_i^{begin}$和$T_i^{end}$之间翻转轨道$\xi$，那么得到新轨道$\tilde{\xi}$，即：
+% \begin{equation*}
+%     \tilde{\xi}
+%     =\left\{\begin{aligned}
+%         \xi_{T_i^{begin}+T_i^{end}-m},&   &&if ~ T_i^{begin} \le m \le T_i^{end}\\
+%         \xi_m, &   && \text{otherwise}.\\
+%         \end{aligned}\right.
+% \end{equation*}
+% 易知，逆轨道必定处于集合$G_n(k^+ -1,k^-,\cdots)$。因为环$C^+$形成$k^+$次，所以有$k^+|G_n(k^+,k^- -1, \cdots)|$种可能的轨道。在这些逆轨道中，$k^-$轨道是完全相同的，因此被重复计算。例如，如果环$C^+=(1,2,3)$，那么$G_8(2,1,\cdots)$中的轨道$\{1,2,3,1,2,3,1,3,2\}$和轨道$\{1,2,3,1,3,2,1,2,3\}$都是$G_8(1,2,\cdots)$中$\{1,2,3,1,3,2,1,3,2\}$的逆轨道，被计算了两次。因此，$G_n(k^+ -1,k^-,\cdots)$的所有可能的轨道数是：
+% \begin{equation}\label{equal}
+%     |G_n(k^+ -1,k^-,\cdots)| = \frac{k^+}{k^-}|G_n(k^+,k^- -1,\cdots)|.
+% \end{equation}
+% 这恰好就是公式\ref{equal0}。因此已经证明了强对称关系\ref{strong_symmetric}。
+
+应用对称关系$|k^+ -k^-|$次，我们可以得到暂态涨落定理：
 \begin{equation}\label{theorem:transient fluatuation}
 	\mathbb{P}\left(N^+_n=k^+,N^-_n=k^-,\cdots\right)
 	= \mathbb{P}\left(N^+_n=k^-,N^-_n=k^+,\cdots\right)\left(\frac{\gamma^+}{\gamma^-}\right)^{k^+-k^-}.
@@ -128,7 +177,7 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
 换句话说，如果两个环包含的状态完全一致，则称两个环相似。例如，下面六个环 $(1,2,3,4)$，$(1,2,4,3)$，$(1,3,2,4)$，$(1,3,4,2)$，$(1,4,2,3)$ 和 $(1,4,3,2)$，互为相似关系。依据这个定义，任意环 $c$ 和它的反环 $c^-$ 一定是相似的。
 
 首先考虑LE经验环流 $(J^c_n)_{c\in\mathcal{C}}$，其中$J_n^c=N_n^c/n$。对于一般马氏链，如果环$c_1$和$c_2$相似，有下列的对称关系成立：
-\begin{equation}\label{transienn1}
+\begin{equation}\label{transient1}
     \frac{k^{c_1} \Pnum(N^{c_1}_n=k^{c_1},N^{c_2}_n=k^{c_2}-1,N^{c}_n=k^{c},\;\forall c\neq c_1,c_2)}
     {k^{c_2} \Pnum(N^{c_1}_n=k^{c_1} -1,N^{c_2}_n=k^{c_2},N^{c}_n=k^{c},\;\forall c\neq c_1,c_2)}
     = \frac{\gamma^{c_s}}{\gamma^{c_t}}.
@@ -172,7 +221,7 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
 \end{equation}
 通过对比，可以看到\eqref{weak1}式的结论弱于 \eqref{strong}式。因此，本文称 \eqref{strong} 式为强形式的暂态涨落定理，\eqref{weak1}式为弱形式的暂态涨落定理。
 
-其他类型LE经验（净）环流的涨落定理都可以通过暂态涨落定理得到。这里主要关注强形式；弱形式也可以通过类似的方式得到。令$g_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^r\lambda_i J^{c_i}_n}]$和$\tilde{g}_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^{r}\lambda_i\tilde{J}^{c_i}_n}]$ 分别为 $(J^{c_i}_n)_{1\le i\le r}$ 和 $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ 的矩母函数，并且令 $I_{J}(x)$ 和 $I_{\tilde{J}}(x)$ 为相应的速率函数。
+其他类型LE经验（净）环流的涨落定理都可以通过暂态涨落定理得到。这里主要关注强形式；弱形式也可以通过类似的方式得到。下面令$g_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^r\lambda_i J^{c_i}_n}]$和$\tilde{g}_n(\lambda) = \mathbb{E}[e^{n\sum_{i=1}^{r}\lambda_i\tilde{J}^{c_i}_n}]$ 分别为 $(J^{c_i}_n)_{1\le i\le r}$ 和 $(\tilde{J}^{c_i}_n)_{1\le i\le r}$ 的矩母函数，并且令 $I_{J}(x)$ 和 $I_{\tilde{J}}(x)$ 为相应的速率函数。
 
 1）Kurchan-Lebowitz-Spohn 类型涨落定理：对任意相似的两个环 $c_s$ 和 $c_t$ ($1\le s,t\le r$)，下列公式成立：
 \begin{equation*}
