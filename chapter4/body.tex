@@ -188,13 +188,13 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
     {k^{-} \Pnum(N^{+}_n=k^{+} -1,N^{-}_n=k^{-},N^{c}_n=k^{c},\;\forall c\neq C^+,C^-)}
     = \frac{\gamma^{c_s}}{\gamma^{c_t}}.
 \end{equation*}
-这可以被看做单环\ref{strong_symmetric}的一般情形。重复利用\ref{transienn1}，可以给出下面LE环流的暂态涨落定理：
+这可以被看做单环\ref{strong_symmetric}的一般情形。重复利用\ref{transient1}，可以给出下面LE环流的暂态涨落定理：
 \begin{equation}\label{transient2}
     \frac{\Pnum(N^{c_1}_n=k^{c_1},N^{c_2}_n=k^{c_2},N^{c}_n=k^{c},\;\forall c\neq c_1,c_2)}
     {\Pnum(N^{c_1}_n=k^{c_2},N^{c_2}_n=k^{c_1},N^{c}_n=k^{c},\;\forall c\neq c_1,c_2)}
     = \left(\frac{\gamma^{c_1}}{\gamma^{c_t}}\right)^{k^{c_1}-k^{c_2}}.
 \end{equation}
-这表明如果环 $c_s$ 和环 $c_t$ 相似，那么LE经验环流的联合分布满足非平凡的对称关系。实际上，对于具有下面限制条件的情况，公式\ref{transient1}的证明已经在 \cite{jia2016cycle}中给出：1）所有环都通过状态$i\in S$；2）马氏链也是从状态$i$出发。
+这表明如果环 $c_s$ 和环 $c_t$ 相似，那么LE经验环流的联合分布满足非平凡的对称关系。实际上，对于具有下面限制条件 1）所有环都通过状态$i\in S$；2）马氏链也是从状态$i$出发，\ref{transient1}式的证明已经在 \cite{jia2016cycle}中给出：。
 % 值得庆幸的是，这个假设条件可以移除，而且结论依然成立（整理中）
 
 接下来考虑经验LE净环流$(\tilde{J}^{c}_n)_{c\in C}$。令$\{c_1,c_2,\cdots,c_r\}$表示所有环的集合，那么环$c$和它的反环$c^-$只出现一次，那么由\ref{transient2}，可得：
@@ -206,7 +206,7 @@ e^{-nI_J(\cdots,\nu^+,\nu^-)}
     =&\; \Pnum\left(N^{c_1}_n-N^{c_1-}_n=-n x_1, N^{c_m}_n-N^{c_m-}_n=n x_m,\;\forall 2\le m \le r\right) e^{n x_1 \log \frac{\gamma^{c_1}}{\gamma^{c_1-}}} \\
     =&\; \Pnum\left(\tilde{J}^{c_1}_n=-x_1,\tilde{J}^{c_m}_n=x_m,\;\forall 2\le m \le r\right) e^{n x_1 \log \frac{\gamma^{c_1}}{\gamma^{c_1-}}} .
 \end{align*}
-最终可得到下列的LE环流的暂态涨落定理：
+最终可得到下列的LE净环流的暂态涨落定理：
 \begin{equation}\label{strong}
     \Pnum(\tilde{J}^{c_1}_n=x_s,\tilde{J}^{c_m}_n=x_m,\;\forall 2\le m \le r) \\
     = \Pnum(\tilde{J}^{c_1}_n=-x_s,\tilde{J}^{c_m}_n=x_m,\;\forall 2\le m \le r)e^{nx_s\log\frac{\gamma^{c_1}}{\gamma^{c_1-}}}.

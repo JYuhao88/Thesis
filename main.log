@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  16 MAY 2022 21:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  17 MAY 2022 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1809,9 +1809,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [27]
 
-LaTeX Warning: Reference `transienn1' on page 28 undefined on input line 191.
-
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.454pt}.
@@ -1829,7 +1826,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
 [29]
-<chart/ratefunction.pdf, id=1039, 1634.105pt x 691.58376pt>
+<chart/ratefunction.pdf, id=1040, 1634.105pt x 691.58376pt>
 File: chart/ratefunction.pdf Graphic file (type pdf)
 <use chart/ratefunction.pdf>
 Package pdftex.def Info: chart/ratefunction.pdf  used on input line 260.
@@ -2026,9 +2023,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -2036,8 +2030,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  29090 strings out of 478268
- 509276 string characters out of 5850346
- 735696 words of memory out of 5000000
+ 509297 string characters out of 5850346
+ 735668 words of memory out of 5000000
  45586 multiletter control sequences out of 15000+600000
  649094 words of font info for 587 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2132,10 +2126,10 @@ b><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><e:/texlive/2
 ublic/txfonts/txsyc.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8
 a.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><e:/texlive/
 2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (49 pages, 3338826 bytes).
+Output written on main.pdf (49 pages, 3338664 bytes).
 PDF statistics:
- 1964 PDF objects out of 2073 (max. 8388607)
- 1483 compressed objects within 15 object streams
+ 1965 PDF objects out of 2073 (max. 8388607)
+ 1484 compressed objects within 15 object streams
  256 named destinations out of 1000 (max. 500000)
  545 words of extra memory for PDF output out of 10000 (max. 10000000)
 
