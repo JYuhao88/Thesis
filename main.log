@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  17 MAY 2022 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  18 MAY 2022 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -943,6 +943,9 @@ File: ot1txr.fd 2000/12/15 v3.1
 
 LaTeX Warning: Label `ratefunction1' multiply defined.
 
+
+LaTeX Warning: Label `formula:I_Q' multiply defined.
+
 ) (./chapter4/body.aux) (./chapter5/body.aux) (./appendix/acknowledgements.aux)
 (./appendix/publications.aux))
 \openout1 = `main.aux'.
@@ -1742,7 +1745,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[24])
+[24]
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1751,7 +1754,16 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[25]
+[25])
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.454pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.454pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
+
+[26]
 \openout2 = `chapter4/body.aux'.
 
  (./chapter4/body.tex
@@ -1781,7 +1793,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[26
+[27
 
 
 
@@ -1807,15 +1819,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[27]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.454pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.454pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
-
 [28]
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1826,7 +1829,16 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
 [29]
-<chart/ratefunction.pdf, id=1040, 1634.105pt x 691.58376pt>
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.454pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.454pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
+
+[30]
+<chart/ratefunction.pdf, id=1048, 1634.105pt x 691.58376pt>
 File: chart/ratefunction.pdf Graphic file (type pdf)
 <use chart/ratefunction.pdf>
 Package pdftex.def Info: chart/ratefunction.pdf  used on input line 260.
@@ -1843,7 +1855,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[30]
+[31]
 
 Package hyperref Warning: Suppressing empty link on input line 332.
 
@@ -1855,7 +1867,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[31 <./chart/ratefunction.pdf>]
+[32 <./chart/ratefunction.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1864,7 +1876,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[32]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 399--400
 []\C70/song/b/n/12/57 ( \C70/song/b/n/12/90 	 \C70/song/m/n/12/5b š \C70/song/b
 /n/12/90 ^^B \C70/song/b/n/12/5f S \C70/song/b/n/12/53 Â \C70/song/m/n/12/65 p 
@@ -1885,7 +1897,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[33]
+[34]
 \openout2 = `chapter5/body.aux'.
 
  (./chapter5/body.tex)
@@ -1901,7 +1913,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[34
+[35
 
 
 
@@ -1952,7 +1964,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[35
+[36
 
 
 
@@ -1970,7 +1982,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[36
+[37
 
 
 
@@ -1983,7 +1995,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[37])
+[38])
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.454pt, for example:
@@ -1992,7 +2004,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[38]
+[39]
 \openout2 = `appendix/publications.aux'.
 
  (./appendix/publications.tex)
@@ -2008,7 +2020,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.22763pt}.
 
-[39
+[40
 
 
 ]
@@ -2026,14 +2038,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 12942FCE240AC9FA603345588485DF46;3887.
+(rerunfilecheck)             Checksum: 98BAF5360498796B0083A9B6FD9C8EA2;3887.
  ) 
 Here is how much of TeX's memory you used:
- 29090 strings out of 478268
- 509297 string characters out of 5850346
- 735668 words of memory out of 5000000
- 45586 multiletter control sequences out of 15000+600000
- 649094 words of font info for 587 fonts, out of 8000000 for 9000
+ 29102 strings out of 478268
+ 509488 string characters out of 5850346
+ 735715 words of memory out of 5000000
+ 45592 multiletter control sequences out of 15000+600000
+ 649634 words of font info for 589 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,19n,78p,1580b,872s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/s
@@ -2126,10 +2138,10 @@ b><e:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><e:/texlive/2
 ublic/txfonts/txsyc.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8
 a.pfb><e:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><e:/texlive/
 2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (49 pages, 3338664 bytes).
+Output written on main.pdf (50 pages, 3340580 bytes).
 PDF statistics:
- 1965 PDF objects out of 2073 (max. 8388607)
- 1484 compressed objects within 15 object streams
- 256 named destinations out of 1000 (max. 500000)
+ 1974 PDF objects out of 2073 (max. 8388607)
+ 1492 compressed objects within 15 object streams
+ 260 named destinations out of 1000 (max. 500000)
  545 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -555,7 +555,7 @@
 \end{proof}
 下面给出 LDP 原理的严格证明。
 \\
-\begin{proposition}\label{theorem:LDP}
+\begin{proposition} \label{theorem:LDP}
 	经验环流 $(J^c_n)_{c\in\mathcal{C}}$ 满足速率为 $n$ 的大偏差原理，并且相应的速率函数为 $I_J:\mathcal{V}\to [0,\infty]$。此外，它的上界可以为：对任意集合 $\Gamma \subset \mathcal{V}$，有：
 	\begin{align}\label{upper bound}
 		\varlimsup_{n\to+\infty}\;
@@ -610,6 +610,7 @@ Q_n(\Gamma) = \max_{k\in K_n: \mu_n(k) \in \Gamma}
 \end{equation}
 结合 \eqref{1 n log P} 和 \eqref{varliminf}，可得大偏差原理的上界 \eqref{def2}。
 \end{proof}
+命题\ref{theorem:LDP}也可以通过更新过程的大偏差原理得到。
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -780,29 +781,64 @@ R_n(i,j) = \frac{1}{n}\sum_{m=1}^n1_{\{\xi_{m-1}=i,\xi_m=j\}},
 \begin{equation*}
 I_{\mathrm{pair}}(R) = \sum_{\langle i,j\rangle\in E}R(i,j)\log\frac{R(i,j)}{R(i)p_{ij}}
 \end{equation*}
-其中$R(i)=\sum_{j\in S}R(i,j)$，可以看到，对经验测度的速率函数具有相对熵形式。给定生成树$T$，定义在空间$E$上的函数$H^{c_l}$为：
-\begin{equation*}\label{cycle function2}
-H^{c_l}(i,j)
-    =\left\{\begin{aligned}
-    1, &   && \text{if } \langle i,j\rangle \in c_l \text{ and }\langle i,j\rangle \in T, \text{ or } \langle i,j\rangle=l,\\
-    -1,&   && \text{if } \langle i,j\rangle\notin c_l,\langle j,i\rangle \in c_l,\text{ and }\langle i,j\rangle \in T,\\
-    0, &   && \text{otherwise}.\\
-    \end{aligned}\right.
-\end{equation*}
-对经验测度可以被分解为下面ST环流的加权和：
-\begin{equation*}
-R_n(i,j) = \sum_{c_l\in\mathcal{L}}H^{c_l}(i,j)Q^{c_l}_n,
-\end{equation*}
-且由文献 \cite{kalpazidou2007cycle}可知，该分解是唯一的。也就是说，如果$R_n =\sum_{c_l \in \mathcal{L}}\nu^{c_l}H^{c_l}$，那么对任意$c_l \in \mathcal{L}$会有$\nu^{c_l}=Q_n^{c_l}$。由上述表达式的唯一性，可得：
-\begin{equation*}
-    \mathbb{P}(Q_n^{c_l}=\mu^{c_l},\;\forall c_l\in\mathcal{L})
-    =\mathbb{P}\left(R_n(i,j)=\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}(i,j),\;\forall\langle i,j\rangle\in E\right)
-    \propto e^{-n I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right)}.
-\end{equation*}
-这表明ST经验环流$(Q_n^{c_l})_{c_l\in\mathcal{L}}$满足大偏差原理，相应的速率函数$I_Q:\mathcal{M}\rightarrow[0,\infty]$为：
-\begin{equation}\label{formula:I_Q}
-I_Q(\mu)=I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right).
-\end{equation}
+其中$R(i)=\sum_{j\in S}R(i,j)$，可以看到，对经验测度的速率函数具有相对熵形式。
+
+
+\begin{proposition}
+	ST经验环流$(Q_n^{c_l})_{c_l\in\mathcal{L}}$满足速率函数$I_Q:\mathcal{M}\rightarrow[0,\infty]$为：
+	\begin{equation}\label{formula:I_Q}
+	I_Q(\mu)=I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right).
+	\end{equation}
+	的大偏差原理。其中，给定生成树$T$，定义在空间$E$上的函数$H^{c_l}$为：
+	\begin{equation*}\label{cycle function2}
+	H^{c_l}(i,j)
+		=\left\{\begin{aligned}
+		1, &   && \text{if } \langle i,j\rangle \in c_l \text{ and }\langle i,j\rangle \in T, \text{ or } \langle i,j\rangle=l,\\
+		-1,&   && \text{if } \langle i,j\rangle\notin c_l,\langle j,i\rangle \in c_l,\text{ and }\langle i,j\rangle \in T,\\
+		0, &   && \text{otherwise}.\\
+		\end{aligned}\right.
+	\end{equation*}
+\end{proposition}
+\begin{proof}
+	易知，对经验测度可以被分解为下面ST环流的加权和：
+	\begin{equation*}
+	R_n(i,j) = \sum_{c_l\in\mathcal{L}}H^{c_l}(i,j)Q^{c_l}_n,
+	\end{equation*}
+	且由文献 \cite{kalpazidou2007cycle}可知，该分解是唯一的。也就是说，如果$R_n =\sum_{c_l \in \mathcal{L}}\nu^{c_l}H^{c_l}$，那么对任意$c_l \in \mathcal{L}$会有$\nu^{c_l}=Q_n^{c_l}$。由上述表达式的唯一性，可得：
+	\begin{equation*}
+		\mathbb{P}(Q_n^{c_l}=\mu^{c_l},\;\forall c_l\in\mathcal{L})
+		=\mathbb{P}\left(R_n(i,j)=\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}(i,j),\;\forall\langle i,j\rangle\in E\right)
+		\propto e^{-n I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right)}.
+	\end{equation*}
+	因此，速率函数为
+	\begin{equation}\label{formula:I_Q}
+		I_Q(\mu)=I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right).
+	\end{equation}
+\end{proof}
+
+% 给定生成树$T$，定义在空间$E$上的函数$H^{c_l}$为：
+% \begin{equation*}\label{cycle function2}
+% H^{c_l}(i,j)
+%     =\left\{\begin{aligned}
+%     1, &   && \text{if } \langle i,j\rangle \in c_l \text{ and }\langle i,j\rangle \in T, \text{ or } \langle i,j\rangle=l,\\
+%     -1,&   && \text{if } \langle i,j\rangle\notin c_l,\langle j,i\rangle \in c_l,\text{ and }\langle i,j\rangle \in T,\\
+%     0, &   && \text{otherwise}.\\
+%     \end{aligned}\right.
+% \end{equation*}
+% 对经验测度可以被分解为下面ST环流的加权和：
+% \begin{equation*}
+% R_n(i,j) = \sum_{c_l\in\mathcal{L}}H^{c_l}(i,j)Q^{c_l}_n,
+% \end{equation*}
+% 且由文献 \cite{kalpazidou2007cycle}可知，该分解是唯一的。也就是说，如果$R_n =\sum_{c_l \in \mathcal{L}}\nu^{c_l}H^{c_l}$，那么对任意$c_l \in \mathcal{L}$会有$\nu^{c_l}=Q_n^{c_l}$。由上述表达式的唯一性，可得：
+% \begin{equation*}
+%     \mathbb{P}(Q_n^{c_l}=\mu^{c_l},\;\forall c_l\in\mathcal{L})
+%     =\mathbb{P}\left(R_n(i,j)=\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}(i,j),\;\forall\langle i,j\rangle\in E\right)
+%     \propto e^{-n I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right)}.
+% \end{equation*}
+% 这表明ST经验环流$(Q_n^{c_l})_{c_l\in\mathcal{L}}$满足大偏差原理，相应的速率函数$I_Q:\mathcal{M}\rightarrow[0,\infty]$为：
+% \begin{equation}\label{formula:I_Q}
+% I_Q(\mu)=I_{\mathrm{pair}}\left(\sum_{c_l\in\mathcal{L}}\mu^{c_l}H^{c_l}\right).
+% \end{equation}
 
 目前，已经得到了单环马氏链经验环流的速率函数，和一般马氏链的经验ST环流的速率函数。我们将阐述两种速率函数的关系。前面也说过 ST 环流可以通过 LE 表示为$Q_n^{c_l} = \sum_{c\in\mathcal{C}}J^c_n1_{\{l\in c\}}$。从收缩原理中，可以得到：
 \begin{align*}
